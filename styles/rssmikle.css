@@ -1,0 +1,138 @@
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+img {border: none;}
+#container {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: Quicksand, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  border: 0 solid #ccc;
+}
+#header {
+  padding: 5px 5px 5px 5px;
+  margin: 0;
+  color: #fff;
+  background-color: #06f;
+  background-image: none;
+}
+#header .feed_title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+#header .feed_title a:link,
+#header .feed_title a:visited,
+#header .feed_title a:active {
+  color: #fff;
+  text-decoration: none;
+}
+#header .feed_title a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+#content {
+  overflow: hidden;
+  /*padding: 5px 0 0 0;*/
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+}
+#content .feed_item {
+  clear: both;
+  padding: 0 0 7px 0;
+  margin: 0 0 7px 0;
+  border-bottom: 0 dashed #ccc;
+}
+#content .feed_item_title {
+  padding: 1px 2px 1px 3px;
+  margin: 1px 0 1px 3px;
+  font-weight: bold;
+  color: #818181;
+}
+#content .feed_item_title a {transition: color .25s cubic-bezier(.4,0,1,1);}
+#content .feed_item_title a:link,
+#content .feed_item_title a:visited,
+#content .feed_item_title a:active {
+  color: #818181;
+  text-decoration: none;
+}
+#content .feed_item_title a:hover {
+  color: #fff;
+  /*text-decoration: underline;*/
+}
+#content .feed_item_podcast {
+  padding: 0 0 0 3px;
+  margin: 0 0 0 3px;
+}
+#content .feed_item_date {
+  clear: both;
+  overflow: hidden;
+  padding: 0 2px 0 3px;
+  margin: 0 0 0 3px;
+  color: #ddd;
+  text-overflow: ellipsis;
+}
+#content .feed_item_link {
+  clear: both;
+  overflow: hidden;
+  padding: 0 2px 0 3px;
+  margin: 0 0 0 3px;
+  color: #ddd;
+  text-overflow: ellipsis;
+}
+#content .feed_item_link a:link {
+  color: #ddd;
+  text-decoration: none;
+}
+#content .feed_item_link a:visited {
+  color: #ddd;
+  text-decoration: none;
+}
+#content .feed_item_link a:hover {
+  color: #ddd;
+  text-decoration: none;
+}
+#content .feed_item_link a:active {
+  color: #ddd;
+  text-decoration: none;
+}
+#content .feed_item_description {
+  clear: both;
+  padding: 0 2px 0 3px;
+  margin: 0 0 0 3px;
+  color: #ddd;
+  line-height: 135%;
+  word-wrap: break-word;
+}
+#content .feed_item_thumbnail {
+  float: left;
+  overflow: hidden;
+  margin: 5px;
+  width: 110px;
+  height: 100px;
+}
+#footer {
+  display: none;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  color: #fff;
+  background-color: transparent;
+  background-image: none;
+}
+.scroll-pane {
+  overflow: auto;
+  width: 100%;
+}
+
+#header .feed_title,
+#content .feed_item_title {
+  font-weight: 300 !important;
+}
