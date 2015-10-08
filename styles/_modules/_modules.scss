@@ -137,6 +137,10 @@
 .icon-home {
   cursor: pointer;
 }
+.icon-home i {
+  &:focus,
+  &:hover {color: darken(#fff, 11%);}
+}
 .icon--burger {
   position: relative;
   display: inline-block;
@@ -253,7 +257,7 @@ section[class*="part_"] {
   color: #fff;
 }
 .hero--about {background-image: url(../images/hero--about.jpg);}
-.hero--main {background-image: url(../images/bcg--store--big.jpg);}
+.hero--main {background-image: url(../images/face-dark.jpg);}
 .hero--process {background-image: url(../images/hero--process.jpg);}
 .hero--terms {background-image: url(../images/hero--terms.jpg);}
 .hero--work {background-image: url(../images/hero--work.jpg);}
@@ -296,15 +300,32 @@ section[class*="part_"] {
 }
 .nav--main {
   -webkit-justify-content: flex-end;
-                 -ms-flex-pack: end;
+  -ms-flex-pack: end;
           justify-content: flex-end;
-}
-.nav--main li:nth-of-type(n+2)/*,
-.nav--media li:nth-of-type(n+2)*/ {margin-left: 1rem;}
-.nav--main {
   -webkit-align-items: center;
-       -ms-flex-align: center;
+  -ms-flex-align: center;
           align-items: center;
+  @media screen and (max-width: 550px) {
+    display: none;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: .5rem;
+  }
+}
+.checkbox--nav:checked + .nav__container > .nav--main {
+  display: -webkit-flex;
+   display: -ms-flexbox;
+          display: flex;
+}
+@media screen and (min-width: 550px) {
+  .nav--main li:nth-of-type(n+2) {margin-left: 1rem;}
 }
 .nav--media i {
   width: 38px;
