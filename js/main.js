@@ -40,6 +40,7 @@ $(function() {
   });
   // Google Maps Scripts
   // When the window has finished loading create our google map below
+  if ($(".page--contact").length > 0) {
   google.maps.event.addDomListener(window, 'load', init);
   function init() {
   // Basic options for a simple Google Map
@@ -232,5 +233,6 @@ $(function() {
       map: map,
       icon: image
     });
+  }
   }
 });
