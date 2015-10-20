@@ -324,6 +324,12 @@ section[class*="part_"] {
    display: -ms-flexbox;
           display: flex;
 }
+@media screen and (max-width: 550px) {
+  .nav--main li {
+    margin-top: .35rem;
+    margin-bottom: .35rem;
+  }
+}
 @media screen and (min-width: 550px) {
   .nav--main li:nth-of-type(n+2) {margin-left: 1rem;}
 }
