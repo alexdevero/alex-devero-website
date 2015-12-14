@@ -1,0 +1,62 @@
+/**
+ * Portfolio Page
+ */
+/* About section */
+.page--portfolio .sec__about {
+  position: relative;
+  color: #fff;
+  background-image: url(../images/Alex-Devero--zero--mobile.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  @media screen and (min-width: rem(480px)) {background-image: url(../images/Alex-Devero--zero--tablet.jpg);}
+  @media screen and (min-width: rem(768px)) {background-image: url(../images/Alex-Devero--zero--desktop.jpg);}
+  @media screen and (min-width: rem(992px)) {background-image: url(../images/Alex-Devero--zero--large.jpg);}
+  @media screen and (min-width: rem(1400px)) {background-image: url(../images/Alex-Devero--zero--xlarge.jpg);}
+}
+.page--portfolio .sec__about .container {
+  position: relative;
+  z-index: 2;
+}
+/* Personal section */
+.page--portfolio .sec__personal {
+  background: url(../images/Alex-Devero--who-am-I--mobile);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  @media screen and (min-width: rem(480px)) {background-image: url(../images/Alex-Devero--who-am-I--tablet.jpg);}
+  @media screen and (min-width: rem(768px)) {background-image: url(../images/Alex-Devero--who-am-I--desktop.jpg);}
+  @media screen and (min-width: rem(992px)) {background-image: url(../images/Alex-Devero--who-am-I--large.jpg);}
+  @media screen and (min-width: rem(1400px)) {background-image: url(../images/Alex-Devero--who-am-I--xlarge.jpg);}
+}
+/* Services section */
+.page--portfolio .sec__services {
+  color: #fff;
+  background: url(../images/Alex-Devero--what-i-do--mobile);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  @media screen and (min-width: rem(480px)) {background-image: url(../images/Alex-Devero--what-i-do--tablet.jpg);}
+  @media screen and (min-width: rem(768px)) {background-image: url(../images/Alex-Devero--what-i-do--desktop.jpg);}
+  @media screen and (min-width: rem(992px)) {background-image: url(../images/Alex-Devero--what-i-do--large.jpg);}
+  @media screen and (min-width: rem(1400px)) {background-image: url(../images/Alex-Devero--what-i-do--xlarge.jpg);}
+}
+.page--portfolio .sec__services .divider {background-color: #fff;}
+/* Works */
+main .sec__works {
+  padding-bottom: 0;
+  background-color: #ececec;
+}
+.sec__works [class*="col-"] {padding: 0;}
+.works__thumbnail {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  @include transition(all);
+}
+.works__thumbnail:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}

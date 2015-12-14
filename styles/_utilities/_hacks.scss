@@ -1,0 +1,12 @@
+/**
+ * Scrollbar Hacks
+ */
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {width: 10px;}
+::-webkit-scrollbar-track {background: $color--gainsboro;}
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 50px;
+  background: $color--jet;
+}
+::-webkit-scrollbar-thumb:hover {background: $color--oil;}

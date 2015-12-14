@@ -1,0 +1,23 @@
+/**
+ * Footer
+ */
+footer {
+  padding-top: 3rem;
+  background-color: #262626;
+}
+.footer__main {padding-bottom: 2.5rem;}
+.footer__main p {color: #818181;}
+footer a {
+  color: #818181;
+  &:focus,
+  &:hover {color: #fff;}
+}
+.footer__copy {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #1b1b1b;
+}
+.footer__copy p {
+  margin-bottom: 0;
+  color: #818181;
+}

@@ -1,0 +1,35 @@
+/**
+ * Overlays
+ */
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+}
+.overlay__content {
+  @extend .vertical-align;
+  color: #fff;
+  text-align: center;
+}
+.overlay--thumbnail {
+  z-index: 2;
+  background-color: rgba(0,0,0,1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: .85;
+  @include transition(opacity);
+  &:focus,
+  &:hover {opacity: 0;}
+}
+.overlay--thumbnail:hover + .works__thumbnail,
+.overlay--thumbnail:hover + .works__thumbnail + noscript > .works__thumbnail {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.overlay--sumava {background-image: url(../images/sumava_hipsterlogogenerator--white.png);}
+.overlay--trinity {background-image: url(../images/trinity_hipsterlogogenerator--white.png);}
+.overlay--material {background-image: url(../images/material_hipsterlogogenerator--white.png);}
+.overlay--nemesis {background-image: url(../images/nemesis_hipsterlogogenerator--white.png);}

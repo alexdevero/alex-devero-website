@@ -1,0 +1,31 @@
+/**
+ * Homepage
+ */
+section[class*="part_"] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.part__blog,
+.part__portfolio,
+.part__store {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.part__blog {background-image: url(../images/bcg--blog--big.jpg);}
+.part__portfolio {background-image: url(../images/bcg--store--big.jpg);}
+.part__store {background-image: url(../images/bcg--portfolio--big.jpg);}
+.part__blog a,
+.part__portfolio a,
+.part__store a {
+  font-family: $font--raleway;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  &:focus,
+  &:hover {color: darken(#fff, 45%);}
+}
