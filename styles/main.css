@@ -4079,7 +4079,7 @@ section[class*="part_"] {
 
 /* Personal section */
 .page--portfolio .sec__personal {
-  background: url(../images/Alex-Devero--who-am-I--mobile);
+  background: url(../images/Alex-Devero--who-am-I--mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -4100,7 +4100,7 @@ section[class*="part_"] {
 /* Services section */
 .page--portfolio .sec__services {
   color: #fff;
-  background: url(../images/Alex-Devero--what-i-do--mobile);
+  background: url(../images/Alex-Devero--what-i-do--mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
