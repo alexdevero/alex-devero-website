@@ -2,9 +2,12 @@
   * Navigations
   */
 .nav {
-  display: -webkit-flex;
-   display: -ms-flexbox;
-          display: flex;
+  display: none;
+  @media only screen and (min-width: 768px) {
+    display: -webkit-flex;
+     display: -ms-flexbox;
+            display: flex;
+  }
 }
 .nav--main {
   -webkit-justify-content: flex-end;
@@ -13,18 +16,24 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
           align-items: center;
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 768px) {
+    position: relative;
+    top: 2.5rem;
+    right: -2.25rem;
     display: none;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
             align-items: flex-start;
+    float: right;
+    padding: 1rem;
     margin-left: .5rem;
+    background: rgba(255,255,255,.85);
   }
 }
 .checkbox--nav:checked + .nav__container > .nav--main {
@@ -32,14 +41,44 @@
    display: -ms-flexbox;
           display: flex;
 }
-@media screen and (max-width: 550px) {
-  .nav--main li {
+@media screen and (max-width: 768px) {
+  .nav--main li:nth-child(n+2) {
     margin-top: .35rem;
-    margin-bottom: .35rem;
+  }
+  .nav--main a {
+    color: #333;
+    &:focus,
+    &:hover {
+      color: #010101;
+    }
   }
 }
-@media screen and (min-width: 550px) {
-  .nav--main li:nth-of-type(n+2) {margin-left: 1rem;}
+@media screen and (min-width: 768px) {
+  .nav--main li:nth-of-type(n+2) {
+    margin-left: 1rem;
+  }
+}
+.navbar-toggler {
+  padding: .5rem .75rem;
+  font-size: 1.75rem;
+  color: #fff;
+  line-height: 1;
+  background: 0 0;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+  @include transition(color);
+  &:focus,
+  &:hover {
+    color: #333;
+  }
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  text-decoration: none;
 }
 .nav--media i {
   width: 38px;
