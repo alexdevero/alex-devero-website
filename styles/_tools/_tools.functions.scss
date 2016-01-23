@@ -1,7 +1,7 @@
 ///
 // Px to rem
 ///
-@function rem($target) {
+@function remy($target) {
   @return ($target / 16px) * 1rem;
 }
 ///

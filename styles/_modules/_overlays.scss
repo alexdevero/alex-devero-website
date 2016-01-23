@@ -9,9 +9,10 @@
   background: rgba(0,0,0,.5);
 }
 .overlay__content {
-  @extend .vertical-align;
   color: #fff;
   text-align: center;
+
+  @extend .vertical-align;
 }
 .overlay--thumbnail {
   z-index: 2;
@@ -20,16 +21,28 @@
   background-position: center;
   background-size: cover;
   opacity: .85;
+
   @include transition(opacity);
   &:focus,
-  &:hover {opacity: 0;}
+  &:hover {
+    opacity: 0;
+  }
 }
-.overlay--thumbnail:hover + .works__thumbnail,
-.overlay--thumbnail:hover + .works__thumbnail + noscript > .works__thumbnail {
-  -webkit-filter: grayscale(0);
+.overlay--thumbnail:hover+.works__thumbnail,
+.overlay--thumbnail:hover+.works__thumbnail+noscript>.works__thumbnail {
           filter: grayscale(0);
+
+  -webkit-filter: grayscale(0);
 }
-.overlay--sumava {background-image: url(../images/sumava_hipsterlogogenerator--white.png);}
-.overlay--trinity {background-image: url(../images/trinity_hipsterlogogenerator--white.png);}
-.overlay--material {background-image: url(../images/material_hipsterlogogenerator--white.png);}
-.overlay--nemesis {background-image: url(../images/nemesis_hipsterlogogenerator--white.png);}
+.overlay--sumava {
+  background-image: url(../images/thumbnails/thumbnail--sumava_hipsterlogogenerator--white.png);
+}
+.overlay--trinity {
+  background-image: url(../images/thumbnails/thumbnail--trinity_hipsterlogogenerator--white.png);
+}
+.overlay--material {
+  background-image: url(../images/thumbnails/thumbnail--material_hipsterlogogenerator--white.png);
+}
+.overlay--nemesis {
+  background-image: url(../images/thumbnails/thumbnail--nemesis_hipsterlogogenerator--white.png);
+}

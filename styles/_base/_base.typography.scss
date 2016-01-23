@@ -1,10 +1,14 @@
 /**
  * Typography
  */
+a {
+  text-decoration: none;
+  @include transition(all);
+}
 h1,
 h2,
 h3 {
-  margin: 1.414em 0 0.5em;
+  margin: 1.414em 0 .5em;
   font-family: $font--raleway;
   font-weight: 200;
   line-height: 1.2;
@@ -16,15 +20,31 @@ h1 {
 h2 {
   font-size: 1.777rem;/*1.55rem*/
 }
-h3 {font-size: 1.333rem;/*1.275rem*/}
-p {
-  margin-bottom: 1.3rem;
-  max-width: rem(520px);
+h3 {
+  font-size: 1.333rem;/*1.275rem*/
 }
-em {font-style: italic;}
-small {font-size: .75rem;/*.741rem*/}
-strong {font-weight: bold;}
-a {
-  text-decoration: none;
-  @include transition(all);
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: .75rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1.3rem;
+  max-width: remy(520px);
+}
+em {
+  font-style: italic;
+}
+small {
+  font-size: .75rem;/*.741rem*/
+}
+strong {
+  font-weight: bold;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }

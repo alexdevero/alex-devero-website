@@ -10,10 +10,10 @@
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  @media screen and (min-width: rem(480px)) {background-image: url(../images/Alex-Devero--zero--tablet.jpg);}
-  @media screen and (min-width: rem(768px)) {background-image: url(../images/Alex-Devero--zero--desktop.jpg);}
-  @media screen and (min-width: rem(992px)) {background-image: url(../images/Alex-Devero--zero--large.jpg);}
-  @media screen and (min-width: rem(1400px)) {background-image: url(../images/Alex-Devero--zero--xlarge.jpg);}
+  @media screen and (min-width: remy(480px)) {background-image: url(../images/Alex-Devero--zero--tablet.jpg);}
+  @media screen and (min-width: remy(768px)) {background-image: url(../images/Alex-Devero--zero--desktop.jpg);}
+  @media screen and (min-width: remy(992px)) {background-image: url(../images/Alex-Devero--zero--large.jpg);}
+  @media screen and (min-width: remy(1400px)) {background-image: url(../images/Alex-Devero--zero--xlarge.jpg);}
 }
 .page--portfolio .sec__about .container {
   position: relative;
@@ -26,10 +26,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
-  @media screen and (min-width: rem(480px)) {background-image: url(../images/Alex-Devero--who-am-I--tablet.jpg);}
-  @media screen and (min-width: rem(768px)) {background-image: url(../images/Alex-Devero--who-am-I--desktop.jpg);}
-  @media screen and (min-width: rem(992px)) {background-image: url(../images/Alex-Devero--who-am-I--large.jpg);}
-  @media screen and (min-width: rem(1400px)) {background-image: url(../images/Alex-Devero--who-am-I--xlarge.jpg);}
+  @media screen and (min-width: remy(480px)) {background-image: url(../images/Alex-Devero--who-am-I--tablet.jpg);}
+  @media screen and (min-width: remy(768px)) {background-image: url(../images/Alex-Devero--who-am-I--desktop.jpg);}
+  @media screen and (min-width: remy(992px)) {background-image: url(../images/Alex-Devero--who-am-I--large.jpg);}
+  @media screen and (min-width: remy(1400px)) {background-image: url(../images/Alex-Devero--who-am-I--xlarge.jpg);}
 }
 /* Services section */
 .page--portfolio .sec__services {
@@ -39,10 +39,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
-  @media screen and (min-width: rem(480px)) {background-image: url(../images/Alex-Devero--what-i-do--tablet.jpg);}
-  @media screen and (min-width: rem(768px)) {background-image: url(../images/Alex-Devero--what-i-do--desktop.jpg);}
-  @media screen and (min-width: rem(992px)) {background-image: url(../images/Alex-Devero--what-i-do--large.jpg);}
-  @media screen and (min-width: rem(1400px)) {background-image: url(../images/Alex-Devero--what-i-do--xlarge.jpg);}
+  @media screen and (min-width: remy(480px)) {background-image: url(../images/Alex-Devero--what-i-do--tablet.jpg);}
+  @media screen and (min-width: remy(768px)) {background-image: url(../images/Alex-Devero--what-i-do--desktop.jpg);}
+  @media screen and (min-width: remy(992px)) {background-image: url(../images/Alex-Devero--what-i-do--large.jpg);}
+  @media screen and (min-width: remy(1400px)) {background-image: url(../images/Alex-Devero--what-i-do--xlarge.jpg);}
 }
 .page--portfolio .sec__services .divider {background-color: #fff;}
 /* Works */

@@ -14,10 +14,15 @@ html {
 }
 *,
 :after,
-:before {box-sizing: inherit;}
+:before {
+  box-sizing: inherit;
+}
 body {
   font-family: $font--quicksand;
   font-weight: 400;
-  line-height: 1.45;
   color: $color--oil;
+  line-height: 1.45;
+}
+fieldset {
+  border: 0;
 }

@@ -1,10 +1,14 @@
 /**
  * Icons
  */
-.icon-home {cursor: pointer;}
+.icon-home {
+  cursor: pointer;
+}
 .icon-home i {
   &:focus,
-  &:hover {color: darken(#fff, 11%);}
+  &:hover {
+    color: darken(#fff, 11%);
+  }
 }
 .icon--burger {
   position: relative;
@@ -16,11 +20,16 @@
   color: #ddd;
   text-align: left;
   text-indent: -9999px;
-  box-shadow: inset 0 0 0 32px,0 -6px,0 6px;
   vertical-align: middle;
+  box-shadow: inset 0 0 0 32px,0 -6px,0 6px;
+
   direction: ltr;
-  &:before {content: "";}
-  &:after {content: "";}
+  &:before {
+    content: "";
+  }
+  &:after {
+    content: "";
+  }
 }
 .icon {
   display: block;
@@ -28,5 +37,9 @@
   margin-left: auto;
   width: 100%;
 }
-.icon--medium {max-width: rem(200px);}
-.icon--small {max-width: rem(100px);}
+.icon--medium {
+  max-width: remy(200px);
+}
+.icon--small {
+  max-width: remy(100px);
+}

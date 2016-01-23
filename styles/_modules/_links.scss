@@ -4,26 +4,46 @@
 .link--default {
   color: $color--flat-pete-river;
   &:focus,
-  &:hover {color: $color--flat-belize-hole;}
+  &:hover {
+    color: $color--flat-belize-hole;
+  }
 }
 .link--black {
   color: $color--jet;
   &:focus,
-  &:hover {color: $color--oil;}
+  &:hover {
+    color: $color--oil;
+  }
 }
 .link--gold {
   color: palette(yellow);
   &:focus,
-  &:hover {color: palette(amber);}
+  &:hover {
+    color: palette(amber);
+  }
 }
 .link--grey {
   color: $color--jumbo;
   &:focus,
-  &:hover {color: $color--white;}
+  &:hover {
+    color: $color--white;
+  }
 }
-.link--underline {text-decoration: underline;}
+.link--underline {
+  text-decoration: underline;
+}
 .link--white {
   color: #fff;
   &:focus,
-  &:hover {color: $color--aluminum;}
+  &:hover {
+    color: $color--aluminum;
+  }
+}
+.link--disabled {
+  color: $color--jet;
+  cursor: default;
+  &:focus,
+  &:hover {
+    color: $color--jet;
+  }
 }
