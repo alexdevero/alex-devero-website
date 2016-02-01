@@ -5,8 +5,8 @@
   display: none;
   @media only screen and (min-width: 768px) {
     display: -webkit-flex;
-     display: -ms-flexbox;
-            display: flex;
+    display: -ms-flexbox;
+    display:         flex;
   }
 }
 .nav--main {
@@ -17,7 +17,7 @@
   -ms-flex-align: center;
           align-items: center;
   @media screen and (max-width: 767px) {
-    position: relative;
+    /*position: relative;
     top: 2.5rem;
     right: -2.25rem;
     display: none;
@@ -33,24 +33,53 @@
     float: right;
     padding: 1rem;
     margin-left: .5rem;
-    background: rgba(255,255,255,.85);
+    background: rgba(255,255,255,.85);*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    overflow-y: auto;
+    text-align: center;
+    background-color: rgba(0,0,0,.95);
+    opacity: 0;
+
+    @include transition(all);
   }
 }
-.checkbox--nav:checked + .nav__container > .nav--main {
+.checkbox--nav:checked+.nav__container>.nav--main {
   display: -webkit-flex;
-   display: -ms-flexbox;
-          display: flex;
+  display: -ms-flexbox;
+  display:         flex;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  width: 100%;
+  height: 100%;
+  opacity: 1;
 }
 @media screen and (max-width: 767px) {
   .nav--main li:nth-child(n+2) {
     margin-top: .35rem;
   }
   .nav--main a {
+    font-size: 1.65rem;
+    color: $color--gold;
+    &:focus,
+    &:hover {
+      color: darken($color--gold, 18%);
+    }
+    /*
     color: #333;
     &:focus,
     &:hover {
       color: #010101;
     }
+    */
   }
 }
 @media screen and (min-width: 768px) {
@@ -67,10 +96,11 @@
   border: 1px solid transparent;
   border-radius: .25rem;
   cursor: pointer;
+
   @include transition(color);
   &:focus,
   &:hover {
-    color: #333;
+    color: $color--gold;
   }
   @media only screen and (min-width: 768px) {
     display: none;
@@ -80,18 +110,38 @@
 .navbar-toggler:hover {
   text-decoration: none;
 }
+.nav--main .navbar-toggler {
+  color: $color--gold;
+  &:focus,
+  &:hover {
+    color: darken($color--gold, 18%);
+  }
+}
 .nav--media i {
-  width: 38px;
+  //width: 38px;
   font-size: 1.5rem;
-  color: #818181;
 }
 .nav--media a {
   font-weight: 700;
-  vertical-align: text-bottom;
+  //vertical-align: text-bottom;
+  color: #666;
+  &:focus,
+  &:hover {
+    color: $color--gold;
+  }
 }
 .nav--footer {
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
 }
-.nav--footer li:nth-of-type(n+2) {margin-top: .5rem;}
+//.nav--footer li:nth-of-type(n+2) {margin-top: .5rem;}
+.nav--footer li:nth-of-type(n+2) {
+  margin-left: 1rem;
+}

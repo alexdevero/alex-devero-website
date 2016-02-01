@@ -14,7 +14,13 @@ header a {
   color: #fff;
   &:focus,
   &:hover {
+    color: $color--gold;
+  }
+  /*
+  &:focus,
+  &:hover {
     color: #707070;
     border-bottom: 1px solid;
   }
+  */
 }

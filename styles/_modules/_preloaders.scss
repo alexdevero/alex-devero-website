@@ -46,7 +46,7 @@
     left: remy(15px);
     content: "";
     border: remy(3px) solid transparent;
-    border-top-color: #f9c922;
+    border-top-color: $color--gold;/*#f9c922;*/
     border-radius: 50%;
     -webkit-animation: spin 1.5s linear infinite;
             animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -78,7 +78,7 @@
   z-index: 1000;
   width: 50%;
   height: 100%;
-  background: #222;
+  background: #010101;
   transition: all .7s .3s cubic-bezier(.645, .045, .355, 1.000);
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);

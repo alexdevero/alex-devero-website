@@ -10,47 +10,87 @@
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  @media screen and (min-width: remy(480px)) {background-image: url(../images/Alex-Devero--zero--tablet.jpg);}
-  @media screen and (min-width: remy(768px)) {background-image: url(../images/Alex-Devero--zero--desktop.jpg);}
-  @media screen and (min-width: remy(992px)) {background-image: url(../images/Alex-Devero--zero--large.jpg);}
-  @media screen and (min-width: remy(1400px)) {background-image: url(../images/Alex-Devero--zero--xlarge.jpg);}
+  @media screen and (min-width: remy(480px)) {
+    background-image: url(../images/Alex-Devero--zero--tablet.jpg);
+  }
+  @media screen and (min-width: remy(768px)) {
+    background-image: url(../images/Alex-Devero--zero--desktop.jpg);
+  }
+  @media screen and (min-width: remy(992px)) {
+    background-image: url(../images/Alex-Devero--zero--large.jpg);
+  }
+  @media screen and (min-width: remy(1400px)) {
+    background-image: url(../images/Alex-Devero--zero--xlarge.jpg);
+  }
 }
 .page--portfolio .sec__about .container {
   position: relative;
   z-index: 2;
 }
+.page--portfolio .row:last-of-type .about__icon {
+  margin-top: 4rem;
+}
+.page--portfolio .nutshell__heading {
+  margin-top: 1rem;
+}
+.page--portfolio .nutshell__text {
+  margin-bottom: 2rem;
+}
 /* Personal section */
 .page--portfolio .sec__personal {
   background: url(../images/Alex-Devero--who-am-I--mobile.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
-  @media screen and (min-width: remy(480px)) {background-image: url(../images/Alex-Devero--who-am-I--tablet.jpg);}
-  @media screen and (min-width: remy(768px)) {background-image: url(../images/Alex-Devero--who-am-I--desktop.jpg);}
-  @media screen and (min-width: remy(992px)) {background-image: url(../images/Alex-Devero--who-am-I--large.jpg);}
-  @media screen and (min-width: remy(1400px)) {background-image: url(../images/Alex-Devero--who-am-I--xlarge.jpg);}
+  background-size: cover;
+  @media screen and (min-width: remy(480px)) {
+    background-image: url(../images/Alex-Devero--who-am-I--tablet.jpg);
+  }
+  @media screen and (min-width: remy(768px)) {
+    background-image: url(../images/Alex-Devero--who-am-I--desktop.jpg);
+  }
+  @media screen and (min-width: remy(992px)) {
+    background-image: url(../images/Alex-Devero--who-am-I--large.jpg);
+  }
+  @media screen and (min-width: remy(1400px)) {
+    background-image: url(../images/Alex-Devero--who-am-I--xlarge.jpg);
+  }
 }
 /* Services section */
 .page--portfolio .sec__services {
+  position: relative;
   color: #fff;
   background: url(../images/Alex-Devero--what-i-do--mobile.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
-  @media screen and (min-width: remy(480px)) {background-image: url(../images/Alex-Devero--what-i-do--tablet.jpg);}
-  @media screen and (min-width: remy(768px)) {background-image: url(../images/Alex-Devero--what-i-do--desktop.jpg);}
-  @media screen and (min-width: remy(992px)) {background-image: url(../images/Alex-Devero--what-i-do--large.jpg);}
-  @media screen and (min-width: remy(1400px)) {background-image: url(../images/Alex-Devero--what-i-do--xlarge.jpg);}
+  background-size: cover;
+  @media screen and (min-width: remy(480px)) {
+    background-image: url(../images/Alex-Devero--what-i-do--tablet.jpg);
+  }
+  @media screen and (min-width: remy(768px)) {
+    background-image: url(../images/Alex-Devero--what-i-do--desktop.jpg);
+  }
+  @media screen and (min-width: remy(992px)) {
+    background-image: url(../images/Alex-Devero--what-i-do--large.jpg);
+  }
+  @media screen and (min-width: remy(1400px)) {
+    background-image: url(../images/Alex-Devero--what-i-do--xlarge.jpg);
+  }
 }
-.page--portfolio .sec__services .divider {background-color: #fff;}
+.page--portfolio .sec__services .container {
+  position: relative;
+  z-index: 2;
+}
+/*.page--portfolio .sec__services .divider {background-color: #fff;}*/
 /* Works */
 main .sec__works {
   padding-bottom: 0;
   background-color: #ececec;
 }
-.sec__works [class*="col-"] {padding: 0;}
+.sec__works [class*="col-"] {
+  padding: 0;
+}
 .works__thumbnail {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);

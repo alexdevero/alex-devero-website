@@ -101,8 +101,8 @@
             // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
             var mapOptions = {
               // How zoomed in you want the map to start at (always required)
-              zoom: 15,
-              // The latitude and longitude to center the map (always required) - Prague
+              zoom: 6,
+              // The latitude and longitude to center the map (always required) - Prague - (50.078807, 14.4263349)
               center: new google.maps.LatLng(50.078807, 14.4263349),
               // Disables the default Google Maps UI components
               disableDefaultUI: true,
@@ -274,8 +274,8 @@
             // Create the Google Map using out element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
             // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-            var image = 'img/map-marker-white.png';
-            var myLatLng = new google.maps.LatLng(50.078807, 14.4263349);
+            var image = 'images/icons/icon--map-marker-6511--gold.png';
+            var myLatLng = new google.maps.LatLng/*(49.8584759, 12.926904)*/(50.078807, 14.4263349);
             var beachMarker = new google.maps.Marker({
               position: myLatLng,
               map: map,

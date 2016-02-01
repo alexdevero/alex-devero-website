@@ -37,8 +37,11 @@
   margin-left: auto;
   width: 100%;
 }
+.icon--big {
+  max-width: remy(272px);
+}
 .icon--medium {
-  max-width: remy(200px);
+  max-width: remy(256px);
 }
 .icon--small {
   max-width: remy(100px);

@@ -1,12 +1,15 @@
 /**
  * Buttons
  */
-.btn__container {text-align: center;}
+.btn__container {
+  text-align: center;
+}
 .btn {
   font-family: $font--quicksand;
   font-size: 1rem;
-  cursor: pointer;
   border-radius: $radius;
+  cursor: pointer;
+
   @include transition(all);
 }
 .btn--full {
@@ -17,7 +20,9 @@
   color: #fff;
   background-color: $color--jet;
   &:focus,
-  &:hover {background-color: palette(grey, 600);}
+  &:hover {
+    background-color: palette(grey, 600);
+  }
 }
 .btn--full--white {
   color: $color--jet;
@@ -28,6 +33,15 @@
     background-color: palette(grey, 600);
   }
 }
+.btn--full--gold {
+  color: rgba(0,0,0,.85);/*rgba(255,255,255,.85);*/
+  background-color: $color--gold;
+  &:focus,
+  &:hover {
+    //color: rgba(255,255,255,.85);
+    background-color: darken($color--gold, 18%);
+  }
+}
 .btn--ghost {
   padding: .5rem 2rem;
   background: transparent;
@@ -36,12 +50,16 @@
 .btn--ghost--black {
   color: $color--jet;
   &:focus,
-  &:hover {color: $color--oil;}
+  &:hover {
+    color: $color--oil;
+  }
 }
 .btn--ghost--gold {
-  color: palette(yellow);
+  color: $color--gold;
   &:focus,
-  &:hover {color: palette(amber);}
+  &:hover {
+    color: darken($color--gold, 18%);
+  }
 }
 .btn--ghost--white {
   color: #fff;

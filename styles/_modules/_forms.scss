@@ -10,13 +10,22 @@
   font-family: $font--quicksand;
   font-size: 1rem;
   border: 1px solid #ccc;
+  &:focus {
+    outline-color: $color--gold;
+  }
 }
 .form__details,
-.form__message {margin-bottom: 1em;}
-.form__message textarea {resize: vertical;}
+.form__message {
+  margin-bottom: 1em;
+}
+.form__message textarea {
+  resize: vertical;
+}
 .form__check,
 .form__robot,
-.form__robot div {margin-bottom: 1em;}
+.form__robot div {
+  margin-bottom: 1em;
+}
 .form__switch {
   position: relative;
   padding: 0;
@@ -59,9 +68,12 @@
     @include transition(all);
   }
 }
-.form__switch input:checked + label {
-  background-color: $color--jet;
-  &:after {left: 3.25rem;}
+.form__switch input:checked+label {
+  //background-color: $color--jet;
+  background-color: $color--gold;
+  &:after {
+    left: 3.25rem;
+  }
 }
 .label--robot {
   position: relative;

@@ -12,3 +12,6 @@ Navigation static as default. When user scroll up, the navigation will slide dow
 - http://www.uipalette.net/
 - https://creativemarket.com/pankogut/221871-Biscuit-Food-Wordpress-Theme
 - http://lazylinepainter.info/
+
+## Colors:
+- gold: #ba8747
