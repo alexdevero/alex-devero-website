@@ -16,11 +16,16 @@ header a {
   &:hover {
     color: $color--gold;
   }
-  /*
+}
+.logo {
+  float: left;
+  font-family: "Prometheus", arial, sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.logo a {
   &:focus,
   &:hover {
-    color: #707070;
-    border-bottom: 1px solid;
+    color: $color--gold;
   }
-  */
 }
