@@ -2,15 +2,17 @@
  * Footer
  */
 footer {
-  padding-top: 3rem;
-  background-color: #1b1b1b;/*#262626;*/
+  //padding-top: 2rem;
+  background-color: #fff;/*#1b1b1b, #262626*/
 }
+/*
 .footer__main {
-  padding-bottom: 2.5rem;
-}
+  padding-bottom: 1.5rem;
+}*/
+/*
 .footer__main p {
   color: #818181;
-}
+}*/
 footer a {
   color: #818181;
   &:focus,
@@ -18,10 +20,13 @@ footer a {
     color: $color--gold;
   }
 }
+.footer__media {
+  padding-bottom: 1rem;
+}
 .footer__copy {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  background-color: #000;/*#1b1b1b;*/
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: #111;/*#1b1b1b*/
 }
 .footer__copy p {
   margin-bottom: 0;

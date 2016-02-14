@@ -23,18 +23,19 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: .85;
+  opacity: 0;
 
   @include transition(opacity);
   &:focus,
   &:hover {
-    opacity: 0;
+    opacity: .85;
   }
 }
-.overlay--thumbnail:hover+.works__thumbnail,
-.overlay--thumbnail:hover+.works__thumbnail+noscript>.works__thumbnail {
-  -webkit-filter: grayscale(0);
+.overlay--thumbnail:hover + .works__thumbnail,
+.overlay--thumbnail:hover + .works__thumbnail + noscript > .works__thumbnail {
           filter: grayscale(0);
+
+  -webkit-filter: grayscale(0);
 }
 .overlay--sumava {
   background-image: url(../images/thumbnails/thumbnail--sumava_hipsterlogogenerator--gold.png);

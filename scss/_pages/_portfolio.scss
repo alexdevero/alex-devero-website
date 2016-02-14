@@ -2,6 +2,24 @@
  * Portfolio Page
  */
 /* About section */
+.page--portfolio .hero__overlay {
+  background: rgba(0,0,0,.55);
+}
+.page--portfolio .hero__arrow {
+  position: absolute;
+  right: 0;
+  bottom: 3rem;
+  left: 0;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 50%;
+}
 .page--portfolio .sec__about {
   position: relative;
   color: #fff;
@@ -85,6 +103,7 @@
 /*.page--portfolio .sec__services .divider {background-color: #fff;}*/
 /* Works */
 main .sec__works {
+  padding-top: 0;
   padding-bottom: 0;
   background-color: #ececec;
 }
@@ -92,9 +111,9 @@ main .sec__works {
   padding: 0;
 }
 .works__thumbnail {
-  -webkit-filter: grayscale(1);
+  /*-webkit-filter: grayscale(1);
           filter: grayscale(1);
-  @include transition(all);
+  @include transition(all);*/
 }
 .works__thumbnail:hover {
   -webkit-filter: grayscale(0);

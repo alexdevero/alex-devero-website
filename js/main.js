@@ -6,7 +6,8 @@
       googleMap: $(".js-map"),
       iconHome: $(".js-icon-home"),
       lazyImages: $(".lazy"),
-      preloader: (".js-preloader")
+      preloader: $(".js-preloader"),
+      heroArrow: $(".hero__arrow")
     },
     controllers: function() {
       /**
@@ -30,6 +31,20 @@
           });
         })();
       };
+
+      /**
+       *
+       */
+      if (this.settings.heroArrow.length > 0) {
+        (function() {
+          $(document).on("click", ".hero__arrow", function(e) {
+            e.preventDefault();
+            $("html, body").animate({
+              scrollTop: $("" + $(this).attr("href") + "").offset().top
+            }, 750);
+          });
+        })();
+      }
 
       /**
        * Preloader

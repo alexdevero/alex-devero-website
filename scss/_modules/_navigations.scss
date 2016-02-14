@@ -124,10 +124,15 @@
 .nav--media a {
   font-weight: 700;
   //vertical-align: text-bottom;
-  color: #666;
+  /*color: #666;
   &:focus,
   &:hover {
     color: $color--gold;
+  }*/
+  color: $color--gold;/*#818181*/
+  &:focus,
+  &:hover {
+    color: #333;
   }
 }
 .nav--footer {

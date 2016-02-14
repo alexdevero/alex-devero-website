@@ -1,0 +1,14 @@
+{
+  "name" : "Alex Devero Portfolio v4",
+  "version" : "0.1.0",
+  "author" : "Alex Devero",
+  "email" : "deveroalex@gmail.com",
+  "url" : "http://alexdevero.com/",
+  "private" : true,
+  "devDependencies" : {
+    "grunt" : "~0.4.0",
+    "grunt-contrib-uglify": "*",
+    "grunt-htmlhint": "*",
+    "matchdep": "*"
+  }
+}
