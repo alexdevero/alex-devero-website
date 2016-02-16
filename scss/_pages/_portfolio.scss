@@ -15,7 +15,6 @@
   margin-left: auto;
   width: 40px;
   font-size: 2rem;
-  color: #fff;
   text-align: center;
   border: 2px solid;
   border-radius: 50%;
@@ -118,4 +117,12 @@ main .sec__works {
 .works__thumbnail:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+.thumbnail__info {
+  padding-left: 2rem;
+  color: $color--gold;
+}
+.thumbnail__info h3,
+.thumbnail__info h4 {
+  font-weight: 400;
 }

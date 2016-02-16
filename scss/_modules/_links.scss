@@ -16,10 +16,10 @@
   }
 }
 .link--gold {
-  color: palette(yellow);
+  color: $color--gold;
   &:focus,
   &:hover {
-    color: palette(amber);
+    color: $color--oil;
   }
 }
 .link--grey {
