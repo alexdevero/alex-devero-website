@@ -6,6 +6,7 @@ Navigation static as default. When user scroll up, the navigation will slide dow
 
 ## Case study example:
 - http://www.sarahevansdesign.co.uk/work/design-quality
+- http://headscape.co.uk/casestudies/rafbf/
 
 ## Useful links:
 - http://glyphsearch.com/
@@ -15,3 +16,6 @@ Navigation static as default. When user scroll up, the navigation will slide dow
 
 ## Colors:
 - gold: #ba8747
+
+## Interesting:
+- box-shadow: 0 0 1px rgba(0,0,0,0.15),0 20px 20px -20px rgba(0,0,0,0.2);
