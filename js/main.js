@@ -96,21 +96,25 @@
           //document.body.appendChild(renderer.domElement);
           //document.getElementById('sec__main').appendChild(renderer.domElement);
     
-          var geometry = new THREE.BoxGeometry(620, 620, 620, 10, 10, 10);
-          var geometry1 = new THREE.DodecahedronGeometry(480);
+          //var geometryBox = new THREE.BoxGeometry(620, 620, 620, 10, 10, 10);
+          var geometryDodecahedron = new THREE.DodecahedronGeometry(480);
           var material = new THREE.MeshBasicMaterial({
             color: 0xfffff,
             wireframe: true
           });
-          var cube = new THREE.Mesh(geometry1, material);
-          scene.add(cube);
+          //var cube = new THREE.Mesh(geometryBox, material);
+          var docahedron = new THREE.Mesh(geometryDodecahedron, material);
+          //scene.add(cube);
+          scene.add(docahedron);
     
           camera.position.z = 1000;
     
           function render() {
             requestAnimationFrame(render);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
+            //cube.rotation.x += 0.01;
+            //cube.rotation.y += 0.01;
+            docahedron.rotation.x += 0.01;
+            docahedron.rotation.y += 0.01;
             renderer.render(scene, camera);
           };
           render();
