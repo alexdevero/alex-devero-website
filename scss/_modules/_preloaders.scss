@@ -27,8 +27,8 @@
     width: 0%;
     height: 14px;
     background: #ba8747;
-    -webkit-animation: underline 3s linear .8s;
-            animation: underline 3s linear .8s;
+    -webkit-animation: underline 2.15s linear 2s;
+            animation: underline 2.15s linear 2s;
   }
   @-webkit-keyframes underline {
     0% {
@@ -74,8 +74,8 @@
     text-transform: uppercase;
   }
   @include transition(opacity);
-  -webkit-animation: show .75s linear;
-          animation: show .75s linear;
+  -webkit-animation: show 2s linear;
+          animation: show 2s linear;
   @-webkit-keyframes show {
     0% {
       opacity: 0;

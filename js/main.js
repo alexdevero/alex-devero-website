@@ -53,10 +53,7 @@
        */
       if (this.settings.preloader.length > 0) {
         (function() {
-          var number = 3720/*Math.floor(Math.random() * 1500)*/;
-          /*if (number < 2500) {
-            number += (3511 - number + Math.floor(Math.random() * 10));
-          }*/
+          var number = 4000;
           setTimeout(function() {
             $("body").toggleClass("loaded");
           }, number);
