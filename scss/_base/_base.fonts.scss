@@ -34,7 +34,7 @@
   src: url(../fonts/Raleway-Bold.otf) format("truetype");
 }
 //
-// Raleway
+// Prometheus
 //
 @font-face {
   font-family: "Prometheus";
@@ -46,4 +46,18 @@
        url(../fonts/prometheus-webfont.woff) format("woff"),
        url(../fonts/prometheus-webfont.ttf) format("truetype"),
        url(../fonts/prometheus-webfont.svg#prometheusregular) format("svg");
+}
+//
+// Anurati
+//
+@font-face {
+  font-family: "Anurati";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/anurati-regular-webfont.eot);
+  src: url(../fonts/anurati-regular-webfont.eot?#iefix) format("embedded-opentype"),
+       url(../fonts/anurati-regular-webfont.woff2) format("woff2"),
+       url(../fonts/anurati-regular-webfont.woff) format("woff"),
+       url(../fonts/anurati-regular-webfont.ttf) format("truetype"),
+       url(../fonts/anurati-regular-webfont.svg#anuratiregular) format("svg");
 }
