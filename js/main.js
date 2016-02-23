@@ -7,7 +7,8 @@
       iconHome: $(".js-icon-home"),
       lazyImages: $(".lazy"),
       preloader: $(".js-preloader"),
-      heroArrow: $(".hero__arrow")
+      heroArrow: $(".hero__arrow"),
+      chart: $('.js-chart')
     },
     controllers: function() {
       /**
@@ -52,10 +53,10 @@
        */
       if (this.settings.preloader.length > 0) {
         (function() {
-          var number = Math.floor(Math.random() * 3500);
-          if (number < 2000) {
+          var number = 3720/*Math.floor(Math.random() * 1500)*/;
+          /*if (number < 2500) {
             number += (3511 - number + Math.floor(Math.random() * 10));
-          }
+          }*/
           setTimeout(function() {
             $("body").toggleClass("loaded");
           }, number);
@@ -102,6 +103,149 @@
             effect: "fadeIn"
           });
         })();
+      }
+
+      /**
+      * Chart Graphs
+      * Info: http://www.chartjs.org/
+      */
+      if (this.settings.chart.length > 0 ) {
+        //
+        // Radar Chart - Design Skills
+        //
+        var windowWidth = $(window).width(),
+            chartRadar = $(".js-chart");
+
+        // Resize the graph according to screen resolution
+        if (windowWidth > 440) {
+          $(chartRadar).attr({
+            'width': 420,
+            'height': 420
+          });
+        } else {
+          $(chartRadar).attr({
+            'width': 300,
+            'height': 300
+          });
+        }
+
+        // Get context of the canvas
+        var contextRadarDesign = document.getElementById("chartDesign").getContext("2d"),
+            dataRadarDesign = {
+              labels: ['Graphic Design', 'Information Architecture', 'Interaction Design', 'User Interface', 'User Experience', 'Visual Design', 'Web Design'],
+              datasets: [{
+                label: 'Design Skills',
+                fillColor: 'rgba(186,135,71,0.1)',
+                strokeColor: 'rgba(186,135,71,1)',
+                pointColor: 'rgba(186,135,71,1)',
+                pointStrokeColor: '#fff',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(186,135,71,1)',
+                data: [60, 64, 73, 74, 71, 63, 85]
+              }]
+            },
+            newRadarChartDesign = new Chart(contextRadarDesign).Radar(dataRadarDesign);
+
+        //
+        // Radar Chart - Web Development Skills
+        //
+        // Get context of the canvas
+        var contextRadarWeb = document.getElementById("chartWeb").getContext("2d"),
+            dataRadarWeb = {
+              labels: ['CSS', 'HTML', 'JavaScript', 'jQuery', 'CoffeeScript', 'Bootstrap', 'Foundation', 'PHP', 'Ruby on Rails', 'WordPress'],
+              datasets: [{
+                label: 'Design Skills',
+                fillColor: 'rgba(186,135,71,0.1)',
+                strokeColor: 'rgba(186,135,71,1)',
+                pointColor: 'rgba(186,135,71,1)',
+                pointStrokeColor: '#fff',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(186,135,71,1)',
+                data: [89, 86, 72, 78, 54, 72, 81, 15, 32, 9]
+              }]
+            },
+            newRadarChartWeb = new Chart(contextRadarWeb).Radar(dataRadarWeb);
+
+        //
+        // Radar Chart - Branding
+        //
+        // Get context of the canvas
+        var contextRadarBranding = document.getElementById("chartBranding").getContext("2d"),
+            dataRadarBranding = {
+              labels: ['Brand Identity', 'Brand Management', 'Marketing', 'Market Research', 'Style Guides', 'Copywriting'],
+              datasets: [{
+                label: 'Design Skills',
+                fillColor: 'rgba(186,135,71,0.1)',
+                strokeColor: 'rgba(186,135,71,1)',
+                pointColor: 'rgba(186,135,71,1)',
+                pointStrokeColor: '#fff',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(186,135,71,1)',
+                data: [72, 61, 71, 69, 75, 62]
+              }]
+            },
+            newRadarChartBranding = new Chart(contextRadarBranding).Radar(dataRadarBranding);
+
+        //
+        // Radar Chart - Digital Strategy
+        //
+        // Get context of the canvas
+        var contextRadarStrategy = document.getElementById("chartStrategy").getContext("2d"),
+            dataRadarStrategy = {
+              labels: ['Analytics', 'Brand Strategy', 'Content Marketing', 'Mobile', 'SEO', 'Social Media'],
+              datasets: [{
+                label: 'Design Skills',
+                fillColor: 'rgba(186,135,71,0.1)',
+                strokeColor: 'rgba(186,135,71,1)',
+                pointColor: 'rgba(186,135,71,1)',
+                pointStrokeColor: '#fff',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(186,135,71,1)',
+                data: [89, 63, 43, 79, 91, 93]
+              }]
+            },
+            newRadarChartStrategy = new Chart(contextRadarStrategy).Radar(dataRadarStrategy);
+
+        //
+        // Radar Chart - Soft Skills
+        //
+        // Get context of the canvas
+        var contextRadarSoft = document.getElementById("chartSoft").getContext("2d"),
+            dataRadarSoft = {
+              labels: ['Cognitive Science', 'Psychology', 'Philosophy', 'Sociology', 'Usability', 'Writing'],
+              datasets: [{
+                label: 'Design Skills',
+                fillColor: 'rgba(186,135,71,0.1)',
+                strokeColor: 'rgba(186,135,71,1)',
+                pointColor: 'rgba(186,135,71,1)',
+                pointStrokeColor: '#fff',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(186,135,71,1)',
+                data: [60, 84, 83, 79, 76, 71]
+              }]
+            },
+            newRadarChartSoft = new Chart(contextRadarSoft).Radar(dataRadarSoft);
+
+        //
+        // Radar Chart - Tools
+        //
+        // Get context of the canvas
+        var contextRadarTools = document.getElementById("chartTools").getContext("2d"),
+            dataRadarTools = {
+              labels: ['Filezilla', 'Git', 'Adobe Illustrator', 'Adobe InDesign', 'Notepad', 'Adobe Photoshop', 'Sublime Text'],
+              datasets: [{
+                label: 'Design Skills',
+                fillColor: 'rgba(186,135,71,0.1)',
+                strokeColor: 'rgba(186,135,71,1)',
+                pointColor: 'rgba(186,135,71,1)',
+                pointStrokeColor: '#fff',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(186,135,71,1)',
+                data: [80, 89, 63, 43, 91, 76, 90]
+              }]
+            },
+            newRadarChartTools = new Chart(contextRadarTools).Radar(dataRadarTools);
+
       }
 
       /**
