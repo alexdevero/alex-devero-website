@@ -8,7 +8,8 @@
       lazyImages: $(".lazy"),
       preloader: $(".js-preloader"),
       heroArrow: $(".hero__arrow"),
-      chart: $('.js-chart')
+      chart: $('.js-chart'),
+      canvas: $('#canvasCube')
     },
     controllers: function() {
       /**
@@ -65,7 +66,7 @@
        * Info: http://threejs.org/
        * Tutorial: http://www.awwwards.com/creating-3d-cube-a-practical-guide-to-three-js-with-live-demo.html
        */
-      if (window.innerWidth > 550) {
+      if (window.innerWidth > 550 && this.settings.canvas.length > 0) {
         (function() {
           function webglAvailable() {
             try {
