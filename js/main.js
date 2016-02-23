@@ -61,6 +61,63 @@
       }
 
       /**
+       * ThreeJS - cube
+       * Info: http://threejs.org/
+       * Tutorial: http://www.awwwards.com/creating-3d-cube-a-practical-guide-to-three-js-with-live-demo.html
+       */
+      if (window.innerWidth > 550) {
+        (function() {
+          function webglAvailable() {
+            try {
+              var canvas = document.createElement( 'canvas' );
+              return !!( window.WebGLRenderingContext && (
+                canvas.getContext( 'webgl' ) ||
+                canvas.getContext( 'experimental-webgl' ) )
+              );
+            } catch ( e ) {
+              return false;
+            }
+          }
+
+          var scene = new THREE.Scene();
+          var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 1, 10000);
+          var canvas = document.getElementById('canvasCube');
+          var renderer;
+          if ( webglAvailable() ) {
+            renderer = new THREE.WebGLRenderer({canvas: canvas});
+          } else {
+            renderer = new THREE.CanvasRenderer({canvas: canvas});
+          }
+          //var renderer = new THREE.WebGLRenderer({canvas: canvas});
+          canvas.width  = canvas.clientWidth;
+          canvas.height = canvas.clientHeight;
+          renderer.setViewport(0, 0, canvas.clientWidth, canvas.clientHeight);
+          //renderer.setSize(window.innerWidth, window.innerHeight);
+          //document.body.appendChild(renderer.domElement);
+          //document.getElementById('sec__main').appendChild(renderer.domElement);
+    
+          var geometry = new THREE.BoxGeometry(620, 620, 620, 10, 10, 10);
+          var geometry1 = new THREE.DodecahedronGeometry(480);
+          var material = new THREE.MeshBasicMaterial({
+            color: 0xfffff,
+            wireframe: true
+          });
+          var cube = new THREE.Mesh(geometry1, material);
+          scene.add(cube);
+    
+          camera.position.z = 1000;
+    
+          function render() {
+            requestAnimationFrame(render);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+          };
+          render();
+        })();
+      }
+
+      /**
        * Form controller
        */
       if (this.settings.contactForm.length > 0) {
@@ -242,7 +299,6 @@
               }]
             },
             newRadarChartTools = new Chart(contextRadarTools).Radar(dataRadarTools);
-
       }
 
       /**
