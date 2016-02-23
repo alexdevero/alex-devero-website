@@ -2,6 +2,9 @@
 // Px to rem
 ///
 @function remy($target) {
+  @return ($target / 18px) * 1rem;// HTML font-size is set to 18px
+}
+@function rem($target) {
   @return ($target / 16px) * 1rem;
 }
 ///
