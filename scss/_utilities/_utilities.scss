@@ -36,11 +36,29 @@
     height: 100%;
   }
 }
+.margin-top {
+  margin-top: 1rem;
+}
+.margin-bottom {
+  margin-bottom: 1rem;
+}
 .margin--three {
   display: block;
   float: left;
   margin-bottom: 3rem;
   width: 100%;
+}
+.margin-reset {
+  margin: 0 !important;
+}
+.p-t-6 {
+  padding-top: 6rem;
+}
+.p-b-6 {
+  padding-bottom: 6rem;
+}
+.padding-reset {
+  padding: 0 !important;
 }
 /* Typography Classes */
 .heading--primary {
