@@ -13,19 +13,88 @@
 .preloader {
   position: relative;
   top: 50%;
-  left: 50%;
+  //left: 50%;
   z-index: 1001;/* anything higher than 'z-index: 1000' of .loader-section */
   margin-top: remy(-75px);
   //margin: -75px 0 0 -75px;
-  margin-left: remy(-75px);
-  width: remy(150px);
-  height: remy(150px);
-  border: remy(3px) solid transparent;
-  border-top-color: #3498db;
-  border-radius: 50%;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  //margin-left: remy(-75px);
+  margin-left: auto;
+  margin-right: auto;
+  //width: remy(150px);
+  //height: remy(150px);
+  width: 41.222rem;
+  height: 8rem;
+  /*-webkit-animation: show .5s linear;
+          animation: show .5s linear;*/
   &:before {
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    z-index: 99;
+    width: 0%;
+    height: 14px;
+    background: #ba8747;
+    -webkit-animation: underline 3s linear .75s;
+            animation: underline 3s linear .75s;
+  }
+  @-webkit-keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes underline {
+    0% {
+      width: 0%;
+    }
+    25% {
+      width: 25%;
+    }
+    50% {
+      width: 50%;
+    }
+    75% {
+      width: 75%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes underline {
+    0% {
+      width: 0%;
+    }
+    25% {
+      width: 25%;
+    }
+    50% {
+      width: 50%;
+    }
+    75% {
+      width: 75%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  //-webkit-animation: glow 1.5s linear infinite;
+  //        animation: glow 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  /*border: remy(3px) solid transparent;
+  border-top-color: #3498db;
+  border-radius: 50%;*/
+  /*-webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  /*&:before {
     position: absolute;
     top: remy(5px);
     right: remy(5px);
@@ -36,7 +105,7 @@
     border-top-color: #e74c3c;
     border-radius: 50%;
     -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+            animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera * /
   }
   &:after {
     position: absolute;
@@ -46,31 +115,75 @@
     left: remy(15px);
     content: "";
     border: remy(3px) solid transparent;
-    border-top-color: $color--gold;/*#f9c922;*/
+    border-top-color: $color--gold;/*#f9c922;* /
     border-radius: 50%;
     -webkit-animation: spin 1.5s linear infinite;
-            animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+            animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera * /
   }
   @-webkit-keyframes spin {
     0% {
       -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+              transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera * /
     }
     100% {
       -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+              transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera * /
     }
   }
   @keyframes spin {
     0% {
       -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+              transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera * /
     }
     100% {
       -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+              transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera * /
+    }
+  }*//*
+  @-webkit-keyframes glow {
+    0% {
+      opacity: 0.25;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0.25;
     }
   }
+  @keyframes glow {
+    0% {
+      opacity: 0.25;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0.25;
+    }
+  }*/
+}
+.preloader-logo {
+  .cls-1 {
+    fill: #ba8747;
+    font-family: 'Prometheus';
+    font-size: 140px;
+    text-anchor: middle;
+    text-transform: uppercase;
+  }
+  @include transition(opacity);
 }
 .preloader__section {
   position: fixed;
@@ -91,6 +204,10 @@
   right: 0;
 }
 /* Loaded */
+.loaded .preloader-logo {
+  //display: none;
+  opacity: 0;
+}
 .loaded .preloader__left {
   -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
       -ms-transform: translateX(-100%);  /* IE 9 */
