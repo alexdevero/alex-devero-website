@@ -54,7 +54,7 @@
        */
       if (this.settings.preloader.length > 0) {
         (function() {
-          var number = 4000;
+          var number = 4500;
           setTimeout(function() {
             $("body").toggleClass("loaded");
           }, number);
