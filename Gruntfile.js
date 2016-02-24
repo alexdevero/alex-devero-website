@@ -4,15 +4,18 @@ module.exports = function(grunt) {
   // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
+    copy: {
+      main: {
+        files: [{
+          src: ['fonts/'],
+          dest: 'dist/fonts/'
+        }]
+      }
+    },
     cssmin: {
       build: {
         src: ['css/*.css'], 
         dest: 'build/css/*.min.css'
-      },
-      options: {
-        'banner': null,
-        'keepSpecialComments': '*',
-        'report': 'min'
       }
     },
     jshint: {
@@ -54,6 +57,7 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides tasks
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -61,5 +65,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s)
-  grunt.registerTask('default', ['concat', 'cssmin', 'htmlmin', 'imagemin', 'js-hint', 'uglify']);
+  grunt.registerTask('default', ['concat', 'copy', 'cssmin', 'htmlmin', 'imagemin', 'js-hint', 'uglify']);
 };
