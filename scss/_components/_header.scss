@@ -16,6 +16,13 @@ header a {
   &:hover {
     color: $color--gold;
   }
+  &.active {
+    color: $color--gold;
+    &:focus,
+    &:hover {
+      color: $color--gold;
+    }
+  }
 }
 .logo {
   float: left;
