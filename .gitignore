@@ -24,3 +24,8 @@ css
 # Minified files #
 ##################
 *.min.*
+
+# Development folders #
+#######################
+node_modules
+.sublime-grunt.cache
