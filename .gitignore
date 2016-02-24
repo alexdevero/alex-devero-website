@@ -1,12 +1,12 @@
 # Folders for inspiration and notes #
 #####################################
-_moodboard
-_oldfiles
-_notes
+_moodboard/
+_oldfiles/
+_notes/
 
 # CSS files #
 #############
-css
+css/
 
 # Packages #
 ############
@@ -27,6 +27,6 @@ css
 
 # Development folders #
 #######################
-.tmp
-node_modules
+.tmp/
+node_modules/
 .sublime-grunt.cache
