@@ -24,6 +24,8 @@ css/
 # Minified files #
 ##################
 *.min.*
+*.min.js
+*.min.css
 
 # Development folders #
 #######################
