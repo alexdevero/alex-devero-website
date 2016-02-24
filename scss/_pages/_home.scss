@@ -1,0 +1,30 @@
+/**
+ * Home page
+ */
+.page--home main {
+  position: relative;
+}
+.page--home .sec__main {
+  padding-bottom: 102px;
+}
+.page--home .hero--big {
+  @media screen and (max-width: 550px) {
+    min-height: 100%;
+  }
+}
+.page--home .overlay {
+  background: rgba(0,0,0,.35);
+}
+.page--home footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 102px;
+}
+.page--home .footer__copy {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.page--home .footer__media {
+  padding-bottom: 0;
+}
