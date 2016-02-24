@@ -17,19 +17,59 @@
   margin-top: remy(-75px);
   margin-left: auto;
   margin-right: auto;
-  width: 41.222rem;
+  //width: 41.222rem;
+  width: 0%;
   height: 8rem;
+  overflow: hidden;
+  -webkit-animation: width 2.25s linear 1.5s;
+          animation: width 2.25s linear 1.5s;
   &:before {
     content: '';
     position: absolute;
     bottom: -28px;
     z-index: 99;
-    width: 0%;
+    /*width: 0%;*/
+    width: 100%;
     height: 14px;
     background: #ba8747;
-    -webkit-animation: underline 2.15s linear 2s;
-            animation: underline 2.15s linear 2s;
+    /*-webkit-animation: width 2.15s linear 2s;
+            animation: width 2.15s linear 2s;*/
   }
+  @-webkit-keyframes width {
+    0% {
+      width: 0%;
+    }
+    25% {
+      width: 10.3055rem;
+    }
+    50% {
+      width: 20.611rem;
+    }
+    75% {
+      width: 30.9165rem;
+    }
+    100% {
+      width: 41.222rem;
+    }
+  }
+  @keyframes width {
+    0% {
+      width: 0%;
+    }
+    25% {
+      width: 10.3055rem;
+    }
+    50% {
+      width: 20.611rem;
+    }
+    75% {
+      width: 30.9165rem;
+    }
+    100% {
+      width: 41.222rem;
+    }
+  }
+  /*
   @-webkit-keyframes underline {
     0% {
       width: 0%;
@@ -63,7 +103,7 @@
     100% {
       width: 100%;
     }
-  }
+  }*/
 }
 .preloader-logo {
   .cls-1 {
@@ -74,11 +114,20 @@
     text-transform: uppercase;
   }
   @include transition(opacity);
-  -webkit-animation: show 2s linear;
-          animation: show 2s linear;
+  -webkit-animation: show 6.45s linear;
+          animation: show 6.45s linear;
   @-webkit-keyframes show {
     0% {
       opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
     }
     100% {
       opacity: 1;
@@ -87,6 +136,15 @@
   @keyframes show {
     0% {
       opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
     }
     100% {
       opacity: 1;
