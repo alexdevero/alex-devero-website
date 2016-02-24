@@ -27,5 +27,6 @@ css
 
 # Development folders #
 #######################
+.tmp
 node_modules
 .sublime-grunt.cache
