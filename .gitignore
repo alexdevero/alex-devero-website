@@ -31,3 +31,5 @@ css/
 node_modules/
 .sublime-grunt.cache
 dist/
+alexdevero-portfolio.sublime-project
+alexdevero-portfolio.sublime-workspace
