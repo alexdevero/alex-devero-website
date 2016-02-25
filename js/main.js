@@ -32,7 +32,7 @@
             $(".js-portfolio__showcase").fadeToggle();
           });
         })();
-      };
+      }
 
       /**
        *
@@ -117,7 +117,7 @@
             docahedron.rotation.x += 0.01;
             docahedron.rotation.y += 0.01;
             renderer.render(scene, camera);
-          };
+          }
           render();
         })();
       }
@@ -151,7 +151,7 @@
             }
           });
         })();
-      };
+      }
 
       /**
        * Lazy images
@@ -500,7 +500,7 @@
             });
           }
         })();
-      };
+      }
     },
     init: function() {
       $(".no-js").removeClass("no-js");
