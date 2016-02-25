@@ -4,36 +4,37 @@ module.exports = function(grunt) {
   // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
+    concat: {
+      options: {
+        // define a string to put between each file in the concatenated output
+        separator: ';'
+      },
+      dist: {
+        // the files to concatenate
+        src: ['js/**/*.js'],
+        // the location of the resulting JS file
+        dest: 'dist/<%= pkg.name %>.js'
+      }
+    },
     copy: {
       main: {
         files: [{
-          src: ['fonts/'],
-          dest: 'dist/fonts/'
+          src: ['fonts/*'],
+          dest: 'dist/'
         }]
       }
     },
     cssmin: {
       build: {
         src: ['css/*.css'], 
-        dest: 'build/css/*.min.css'
-      }
-    },
-    jshint: {
-      build: ['js/**/*.js'],
-      options: {
-        'globals': null,
-        'jshintrc': null,
-        'extensions': '',
-        'ignores': null,
-        'force': false,
-        'reporter': null,
-        'reporterOutput': null
+        dest: 'dist/css/*.min.css',
+        ext: '.min.css'
       }
     },
     uglify: {
       build: {
         src: ['js/**/*.js'], 
-        dest: 'build/js/main.min.js'
+        dest: 'dist/js/main.min.js'
       },
       options: {
         'mangle': {},
@@ -61,9 +62,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s)
-  grunt.registerTask('default', ['concat', 'copy', 'cssmin', 'htmlmin', 'imagemin', 'js-hint', 'uglify']);
+  grunt.registerTask('default', ['concat', 'copy', 'cssmin', 'htmlmin', 'imagemin', 'uglify']);
 };
