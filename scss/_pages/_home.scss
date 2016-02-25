@@ -8,7 +8,7 @@
   padding-bottom: 102px;
 }
 .page--home .hero--big {
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 550px), screen and (max-height: 810px) {
     min-height: 100%;
   }
 }
