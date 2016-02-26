@@ -168,7 +168,7 @@
       * Chart Graphs
       * Info: http://www.chartjs.org/
       */
-      if (this.settings.chart.length > 0 ) {
+      if (this.settings.chart.length > 0 && $(window).width() > 767 ) {
         //
         // Radar Chart - Design Skills
         //
@@ -176,7 +176,7 @@
             chartRadar = $(".js-chart");
 
         // Resize the graph according to screen resolution
-        if (windowWidth > 440) {
+        if (windowWidth > 991) {
           $(chartRadar).attr({
             'width': 420,
             'height': 420
@@ -203,7 +203,7 @@
                 data: [60, 64, 73, 74, 71, 63, 85]
               }]
             },
-            newRadarChartDesign = new Chart(contextRadarDesign).Radar(dataRadarDesign);
+            newRadarChartDesign = new Chart(contextRadarDesign).Radar(dataRadarDesign, {showTooltips: true});
 
         //
         // Radar Chart - Web Development Skills
@@ -223,7 +223,7 @@
                 data: [89, 86, 72, 78, 54, 72, 81, 15, 32, 9]
               }]
             },
-            newRadarChartWeb = new Chart(contextRadarWeb).Radar(dataRadarWeb);
+            newRadarChartWeb = new Chart(contextRadarWeb).Radar(dataRadarWeb, {showTooltips: true});
 
         //
         // Radar Chart - Branding
@@ -243,7 +243,7 @@
                 data: [72, 61, 71, 69, 75, 62]
               }]
             },
-            newRadarChartBranding = new Chart(contextRadarBranding).Radar(dataRadarBranding);
+            newRadarChartBranding = new Chart(contextRadarBranding).Radar(dataRadarBranding, {showTooltips: true});
 
         //
         // Radar Chart - Digital Strategy
@@ -263,7 +263,7 @@
                 data: [89, 63, 43, 79, 91, 93]
               }]
             },
-            newRadarChartStrategy = new Chart(contextRadarStrategy).Radar(dataRadarStrategy);
+            newRadarChartStrategy = new Chart(contextRadarStrategy).Radar(dataRadarStrategy, {showTooltips: true});
 
         //
         // Radar Chart - Soft Skills
@@ -283,7 +283,7 @@
                 data: [60, 84, 83, 79, 76, 71]
               }]
             },
-            newRadarChartSoft = new Chart(contextRadarSoft).Radar(dataRadarSoft);
+            newRadarChartSoft = new Chart(contextRadarSoft).Radar(dataRadarSoft, {showTooltips: true});
 
         //
         // Radar Chart - Tools
@@ -303,7 +303,7 @@
                 data: [80, 89, 63, 43, 91, 76, 90]
               }]
             },
-            newRadarChartTools = new Chart(contextRadarTools).Radar(dataRadarTools);
+            newRadarChartTools = new Chart(contextRadarTools).Radar(dataRadarTools, {showTooltips: true});
       }
 
       /**
