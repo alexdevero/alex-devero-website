@@ -2,20 +2,20 @@
   'use strict';
   var app = {
     settings: {
-      contactForm: $(".js-contact-form"),
-      googleMap: $(".js-map"),
-      iconHome: $(".js-icon-home"),
-      lazyImages: $(".lazy"),
+      /*contactForm: $(".js-contact-form"),*/
+      /*googleMap: $(".js-map"),*/
+      /*iconHome: $(".js-icon-home"),*/
+      lazyImages: $(".lazy")/*,
       preloader: $(".js-preloader"),
       heroArrow: $(".hero__arrow"),
       chart: $('.js-chart'),
-      canvas: $('#canvasCube')
+      canvas: $('#canvasCube')*/
     },
     controllers: function() {
       /**
        * Navigation controller
        */
-      if (this.settings.iconHome.length > 0) {
+      /*if (this.settings.iconHome.length > 0) {
         (function() {
           $(document).on("click", ".js-icon-home", function(e) {
             $(this).toggleClass("js-icon-home").toggleClass("js-icon-home--open");
@@ -32,12 +32,12 @@
             $(".js-portfolio__showcase").fadeToggle();
           });
         })();
-      }
+      }*/
 
       /**
-       *
+       * Hero arrow button
        */
-      if (this.settings.heroArrow.length > 0) {
+      /*if (this.settings.heroArrow.length > 0) {
         (function() {
           $(document).on("click", ".hero__arrow", function(e) {
             e.preventDefault();
@@ -46,27 +46,27 @@
             }, 750);
           });
         })();
-      }
+      }*/
 
       /**
        * Preloader
        * Info: https://ihatetomatoes.net/create-custom-preloading-screen/
        */
-      if (this.settings.preloader.length > 0) {
+      /*if (this.settings.preloader.length > 0) {
         (function() {
           var number = 4500;
           setTimeout(function() {
             $("body").toggleClass("loaded");
           }, number);
         })();
-      }
+      }*/
 
       /**
        * ThreeJS - cube
        * Info: http://threejs.org/
        * Tutorial: http://www.awwwards.com/creating-3d-cube-a-practical-guide-to-three-js-with-live-demo.html
        */
-      if (window.innerWidth > 550 && this.settings.canvas.length > 0) {
+      /*if (window.innerWidth > 550 && this.settings.canvas.length > 0) {
         (function() {
           function webglAvailable() {
             try {
@@ -85,10 +85,11 @@
           var canvas = document.getElementById('canvasCube');
           var renderer;
           if ( webglAvailable() ) {
-            renderer = new THREE.WebGLRenderer({canvas: canvas});
+            renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: false});
           } else {
-            renderer = new THREE.CanvasRenderer({canvas: canvas});
+            renderer = new THREE.CanvasRenderer({canvas: canvas, alpha: false});
           }
+          //renderer.setClearColor(0xffffff, 1);// set canvas background to white
           //var renderer = new THREE.WebGLRenderer({canvas: canvas});
           canvas.width  = canvas.clientWidth;
           canvas.height = canvas.clientHeight;
@@ -120,12 +121,12 @@
           }
           render();
         })();
-      }
+      }*/
 
       /**
        * Form controller
        */
-      if (this.settings.contactForm.length > 0) {
+      /*if (this.settings.contactForm.length > 0) {
         (function() {
           $(".js-robot-check").on("click", function() {
             $(".js-robot-check").attr("checked", false).prop("checked", true);
@@ -151,7 +152,7 @@
             }
           });
         })();
-      }
+      }*/
 
       /**
        * Lazy images
@@ -168,7 +169,7 @@
       * Chart Graphs
       * Info: http://www.chartjs.org/
       */
-      if (this.settings.chart.length > 0 && $(window).width() > 767 ) {
+      /*if (this.settings.chart.length > 0 && $(window).width() > 767 ) {
         //
         // Radar Chart - Design Skills
         //
@@ -231,7 +232,7 @@
         // Get context of the canvas
         var contextRadarBranding = document.getElementById("chartBranding").getContext("2d"),
             dataRadarBranding = {
-              labels: ['Brand Identity', 'Brand Management', 'Marketing', 'Market Research', 'Style Guides', 'Copywriting'],
+              labels: ['Brand Identity', 'Brand Management', 'Copywriting', 'Marketing', 'Market Research', 'SEO', 'Social Media', 'Style Guides'],
               datasets: [{
                 label: 'Design Skills',
                 fillColor: 'rgba(186,135,71,0.1)',
@@ -240,7 +241,7 @@
                 pointStrokeColor: '#fff',
                 pointHighlightFill: '#fff',
                 pointHighlightStroke: 'rgba(186,135,71,1)',
-                data: [72, 61, 71, 69, 75, 62]
+                data: [72, 61, 63, 81, 77, 88, 80, 71]
               }]
             },
             newRadarChartBranding = new Chart(contextRadarBranding).Radar(dataRadarBranding, {showTooltips: true});
@@ -249,7 +250,7 @@
         // Radar Chart - Digital Strategy
         //
         // Get context of the canvas
-        var contextRadarStrategy = document.getElementById("chartStrategy").getContext("2d"),
+        /*var contextRadarStrategy = document.getElementById("chartStrategy").getContext("2d"),
             dataRadarStrategy = {
               labels: ['Analytics', 'Brand Strategy', 'Content Marketing', 'Mobile', 'SEO', 'Social Media'],
               datasets: [{
@@ -263,7 +264,7 @@
                 data: [89, 63, 43, 79, 91, 93]
               }]
             },
-            newRadarChartStrategy = new Chart(contextRadarStrategy).Radar(dataRadarStrategy, {showTooltips: true});
+            newRadarChartStrategy = new Chart(contextRadarStrategy).Radar(dataRadarStrategy, {showTooltips: true});*-/
 
         //
         // Radar Chart - Soft Skills
@@ -291,7 +292,7 @@
         // Get context of the canvas
         var contextRadarTools = document.getElementById("chartTools").getContext("2d"),
             dataRadarTools = {
-              labels: ['Filezilla', 'Git', 'Adobe Illustrator', 'Adobe InDesign', 'Notepad', 'Adobe Photoshop', 'Sublime Text'],
+              labels: ['Filezilla', 'Git', 'Gulp', 'Adobe Illustrator', 'Adobe InDesign', 'Notepad', 'Adobe Photoshop', 'Sublime Text'],
               datasets: [{
                 label: 'Design Skills',
                 fillColor: 'rgba(186,135,71,0.1)',
@@ -300,17 +301,17 @@
                 pointStrokeColor: '#fff',
                 pointHighlightFill: '#fff',
                 pointHighlightStroke: 'rgba(186,135,71,1)',
-                data: [80, 89, 63, 43, 91, 76, 90]
+                data: [80, 89, 86, 63, 43, 91, 76, 90]
               }]
             },
             newRadarChartTools = new Chart(contextRadarTools).Radar(dataRadarTools, {showTooltips: true});
-      }
+      }*/
 
       /**
        * Google Maps Scripts
        * When the window has finished loading create our google map below
        */
-      if (this.settings.googleMap.length > 0) {
+      /*if (this.settings.googleMap.length > 0) {
         (function() {
           google.maps.event.addDomListener(window, 'load', init);
           function init() {
@@ -492,7 +493,7 @@
             var map = new google.maps.Map(mapElement, mapOptions);
             // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
             var image = 'images/icons/icon--map-marker-6511--gold.png';
-            var myLatLng = new google.maps.LatLng/*(49.8584759, 12.926904)*/(50.078807, 14.4263349);
+            var myLatLng = new google.maps.LatLng/*(49.8584759, 12.926904)*-/(50.078807, 14.4263349);
             var beachMarker = new google.maps.Marker({
               position: myLatLng,
               map: map,
@@ -500,7 +501,7 @@
             });
           }
         })();
-      }
+      }*/
     },
     init: function() {
       $(".no-js").removeClass("no-js");
