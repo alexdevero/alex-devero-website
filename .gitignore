@@ -29,3 +29,4 @@ node_modules/
 dist/
 alexdevero-portfolio.sublime-project
 alexdevero-portfolio.sublime-workspace
+.sublime-gulp.cache
