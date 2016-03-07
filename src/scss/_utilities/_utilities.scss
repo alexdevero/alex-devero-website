@@ -69,21 +69,21 @@
 /* Typography Classes */
 .heading--primary {
   margin-top: 0;
-  margin-bottom: 2.414rem;
+  //margin-bottom: 2.414rem;
   font-family: $font--raleway;
   font-weight: 300;
   text-transform: uppercase;
 }
 .heading--secondary {
-  margin-top: 1.414rem;
-  margin-bottom: .5rem;
+  //margin-top: 1.414rem;
+  //margin-bottom: .5rem;
 }
 .heading--tertiary {
-  margin-top: 1.014rem;
-  margin-bottom: 1rem;
+  //margin-top: 1.014rem;
+  //margin-bottom: 1rem;
 }
 .heading--footer {
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
   color: #fff;
 }
 .heading--overlay {
@@ -91,11 +91,17 @@
   font-family: "StreetBrush", $font--raleway;
   font-size: 8rem;
   color: $color--gold;
+  @media screen and (max-width: 555px) {
+    font-size: 4rem;
+  }
 }
 .subheading--overlay {
   font-family: $font--raleway;
   font-size: 1.5rem;
   line-height: 1.618;
+  @media screen and (max-width: 555px) {
+    font-size: 1.15rem;
+  }
 }
 .text--big {
   font-size: 2rem;
