@@ -1,8 +1,14 @@
 /**
  * Process Page
  */
-.page--process .sec__about {padding: 0;}
+.page--process .sec__process {
+  padding-top: 2.5rem;
+  padding-bottom: 0;
+}
 .row--process {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+.page--process .nutshell__heading {
+  margin-top: 0;
 }
