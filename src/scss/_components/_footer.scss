@@ -20,13 +20,14 @@ footer a {
     color: $color--gold;
   }
 }
-.footer__media {
-  padding-bottom: 1rem;
-}
+//.footer__media {
+  //padding-bottom: 1rem;
+//}
 .footer__copy {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  background-color: #111;/*#1b1b1b*/
+  height: 100%;
+  //background-color: #111;/*#1b1b1b*/
 }
 .footer__copy p {
   margin-bottom: 0;
