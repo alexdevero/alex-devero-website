@@ -1,12 +1,12 @@
 ﻿<!doctype html>
-<html lang="en" class="no-js">
+<html lang="cs" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Portfolio: Alex Devero • Design • Web Development • Digital Strategy • Branding</title>
+  <title>Portfolio: Alex Devero • Design • Web Development • Branding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="handheldFriendly" content="true">
-  <meta name="description" content="Alex Devero • Design • Web Development • Digital Strategy • Branding">
+  <meta name="description" content="Alex Devero • Design • Web Development • Branding">
   <meta name="author" content="Alex Devero">
   <link rel="author" href="https://plus.google.com/+AlexDevero">
   <!-- Favicons -->
@@ -30,30 +30,70 @@
   <meta name="msapplication-TileImage" content="mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="Alex Devero • Design • Web Development • Digital Strategy • Branding">
+  <meta property="og:title" content="Alex Devero • Design • Web Development • Branding">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Alex Devero • Design • Web Development • Digital Strategy • Branding">
+  <meta property="og:description" content="I am a multidisciplinary designer, web developer &amp; entrepreneur from Czech Republic with more than 7 years of experience. Let's get in touch!">
   <meta property="og:image" content=""><!-- my photo -->
   <meta property="og:url" content="http://www.alexdevero.com">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Alex Devero">
   <!-- Twitter cards tags -->
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@AlexDevero">
   <meta name="twitter:creator" content="@AlexDevero">
-  <meta name="twitter:title" content="Alex Devero • Design • Web Development • Digital Strategy • Branding">
-  <meta name="twitter:description" content="Portfolio : Alex Devero • Design • Web Development • Digital Strategy • Branding">
+  <meta name="twitter:title" content="Alex Devero • Design • Web Development • Branding">
+  <meta name="twitter:description" content="I am a multidisciplinary designer, web developer &amp; entrepreneur from Czech Republic with more than 7 years of experience. Let's get in touch!">
+  <meta name="twitter:image" content="" />
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,latin-ext">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin-ext,latin">
-  <link rel="stylesheet" href="css/main.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,700,200">
+  <link rel="stylesheet" href="css/main.min.css"> -->
 
-  <script src="js/plugins/modernizr-custom.js"></script>
+  <script>
+    window.onload = function () {
+      // Load Font Awesome
+      var stylesheetAwesome = document.createElement('link');
+      stylesheetAwesome.rel = 'stylesheet';
+      stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css';
+      stylesheetAwesome.classList.add('jsLoaded');
+      document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);
+
+      // Load Open Sans font
+      var stylesheetOpenSans = document.createElement('link');
+      stylesheetOpenSans.rel = 'stylesheet';
+      stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300';
+      stylesheetOpenSans.classList.add('jsLoaded');
+      document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);
+
+      // Load Raleway font
+      var stylesheetRaleway = document.createElement('link');
+      stylesheetRaleway.rel = 'stylesheet';
+      stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,700,200';
+      stylesheetRaleway.classList.add('jsLoaded');
+      document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
+    }
+
+    // Load main stylesheet
+    var stylesheetMain = document.createElement('link');
+    stylesheetMain.rel = 'stylesheet';
+    stylesheetMain.href = 'css/main.min.css';
+    stylesheetMain.classList.add('jsLoaded');
+    document.getElementsByTagName('head')[0].appendChild(stylesheetMain);
+  </script>
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,700,200">
+    <link rel="stylesheet" href="css/main.min.css">
+  </noscript>
+
+  <script src="js/plugins/modernizr-custom.js" async defer></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
     <script type="text/javascript" src="selectivizr.js"></script>
     <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
   <![endif]-->
-  <!-- Hotjar Tracking Code for alexdevero.com -->
+  <!-- Hotjar Tracking Code for alexdevero.com - ->
   <script>
     (function(f,b){
       var c;
@@ -64,7 +104,7 @@
       b.getElementsByTagName("head")[0].appendChild(c); 
     })(window,document);
   </script>
-  <!-- start Mixpanel -->
+  <!-- start Mixpanel - ->
   <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
 mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
@@ -95,30 +135,30 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
     \*=================================*/
   -->
   <main role="main">
-    <div class="js-preloader preloader-wrapper">
+    <!-- <div class="js-preloader preloader-wrapper">
       <div class="preloader">
         <svg xmlns="http://www.w3.org/2000/svg" class="preloader-logo" width="742" height="143" viewBox="0 0 742 143"><text id="DEVERO" class="cls-1" x="371" y="142"><tspan x="371">DEVERO</tspan></text></svg>
       </div>
       <div class="preloader__section preloader__left"></div>
       <div class="preloader__section preloader__right"></div>
-    </div>
-    <section id="sec__main" class="sec__main hero hero--main hero--big">
+    </div> -->
+    <section id="sec__main" class="sec__main"><!-- hero hero--main hero--big -->
       <header role="banner">
-        <div class="container">
+        <div class="container-fluid">
           <label for="js-checkbox--nav" class="navbar-toggler pull-right">&#9776;</label>
           <nav role="navigation">
             <input id="js-checkbox--nav" class="checkbox--nav item--hidden" name="checkbox--nav" type="checkbox">
             <div class="nav__container">
-              <h1 class="logo"><a href="index.html">DEVERO</a></h1>
+              <h1 class="logo"><a href="index-cs.html">DEVERO</a></h1>
               <ul class="nav nav--main">
                 <li><a href="#"><label for="js-checkbox--nav" class="navbar-toggler">&Cross;</label></a></li>
-                <li><a class="active" href="index-cs.html">Práce</a></li>
-                <li><a href="about-cs.html">O Mě</a></li>
-                <li><a href="skills-cs.html">Dovednosti</a></li>
+                <li><a class="active" href="work-cs.html">Práce</a></li>
+                <li><a href="about-cs.html">Bio</a></li>
+                <!-- <li><a href="skills-cs.html">Dovednosti</a></li> -->
                 <li><a href="approach-cs.html">Přístup</a></li>
                 <li><a href="http://blog.alexdevero.com/" target="_blank">Blog</a></li>
                 <li><a href="https://creativemarket.com/alexdevero" target="_blank">Obchod</a></li>
-                <li><a href="mailto:deveroalex@gmail.com">Kontakt</a></li>
+                <li><a href="contact-cs.html">Kontakt</a></li>
                 <li><a href="index.html">EN</a></li>
               </ul>
             </div>
@@ -131,7 +171,7 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
         <!-- Begin .row -->
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="http://alexdevero.com/demos/template--sumava2/" target="_blank">
+            <a class="work__item" href="http://alexdevero.com/demos/template--sumava2/" target="_blank">
               <div class="overlay overlay--thumbnail overlay--sumava">
                 <div class="thumbnail__info">
                   <h3>Sumava</h3>
@@ -139,15 +179,15 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web design</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--sumava-ntb--small.jpg" alt="Sumava thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--sumava-ntb--small.jpg" alt=" thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--sumava-ntb--small.jpg" alt="Sumava thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--sumava-ntb--small.jpg" alt=" thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--sumava-ntb--small.jpg" alt="Sumava thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--sumava-ntb--small.jpg" alt="Sumava thumbnail">
               </noscript> -->
             </a>
           </div>
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="http://alexdevero.com/demos/template--trinity/" target="_blank">
+            <a class="work__item" href="http://alexdevero.com/demos/template--trinity/" target="_blank">
               <div class="overlay overlay--thumbnail overlay--trinity">
                 <div class="thumbnail__info">
                   <h3>Trinity</h3>
@@ -155,15 +195,15 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web design</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--trinity-ntb--small.jpg" alt="Trinity thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--trinity-ntb--small.jpg" alt=" thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--trinity-ntb--small.jpg" alt="Trinity thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--trinity-ntb--small.jpg" alt=" thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--trinity-ntb--small.jpg" alt="Trinity thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--trinity-ntb--small.jpg" alt="Trinity thumbnail">
               </noscript> -->
             </a>
           </div>
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="http://alexdevero.com/demos/template--material/" target="_blank">
+            <a class="work__item" href="http://alexdevero.com/demos/template--material/" target="_blank">
               <div class="overlay overlay--thumbnail overlay--material">
                 <div class="thumbnail__info">
                   <h3>Material</h3>
@@ -171,15 +211,15 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web design</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--material-ntb--small.jpg" alt="Material thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--material-ntb--small.jpg" alt=" thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--material-ntb--small.jpg" alt="Material thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--material-ntb--small.jpg" alt=" thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--material-ntb--small.jpg" alt="Material thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--material-ntb--small.jpg" alt="Material thumbnail">
               </noscript> -->
             </a>
           </div>
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="http://alexdevero.com/demos/template--maelstrom/" target="_blank">
+            <a class="work__item" href="http://alexdevero.com/demos/template--maelstrom/" target="_blank">
               <div class="overlay overlay--thumbnail overlay--maelstrom">
                 <div class="thumbnail__info">
                   <h3>Maelstrom</h3>
@@ -187,10 +227,10 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web design</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--maelstrom-ntb--small.jpg" alt="Maelstrom thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--maelstrom-ntb--small.jpg" alt="Maelstrom thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--maelstrom-ntb--small.jpg" alt="Maelstrom thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--maelstrom-ntb--small.jpg" alt="Maelstrom thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--maelstrom-ntb--small.jpg" alt="Maelstrom thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--maelstrom-ntb--small.jpg" alt="Maelstrom thumbnail">
               </noscript> -->
             </a>
           </div>
@@ -198,7 +238,7 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
         <!-- Begin .row -->
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="#" target="_blank">
+            <a class="work__item" href="#" target="_blank">
               <div class="overlay overlay--thumbnail overlay--scala">
                 <div class="thumbnail__info">
                   <h3>Scala</h3>
@@ -206,15 +246,15 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web design</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--scala-ntb--small.jpg" alt="Scala thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--scala-ntb--small.jpg" alt=" thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--scala-ntb--small.jpg" alt="Scala thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--scala-ntb--small.jpg" alt=" thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--scala-ntb--small.jpg" alt="Scala thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--scala-ntb--small.jpg" alt="Scala thumbnail">
               </noscript> -->
             </a>
           </div>
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="http://alexdevero.com/demos/template--posli/" target="_blank">
+            <a class="work__item" href="http://alexdevero.com/demos/template--posli/" target="_blank">
               <div class="overlay overlay--thumbnail overlay--posli">
                 <div class="thumbnail__info">
                   <h3>Posli</h3>
@@ -222,15 +262,15 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web Design, App Design</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--posli-ntb--small.jpg" alt="Posli thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--posli-ntb--small.jpg" alt=" thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--posli-ntb--small.jpg" alt="Posli thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--posli-ntb--small.jpg" alt=" thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--posli-ntb--small.jpg" alt="Posli thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--posli-ntb--small.jpg" alt="Posli thumbnail">
               </noscript> -->
             </a>
           </div>
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="#/" target="_blank">
+            <a class="work__item" href="#/" target="_blank">
               <div class="overlay overlay--thumbnail overlay--cellbay">
                 <div class="thumbnail__info">
                   <h3>CellBay</h3>
@@ -238,15 +278,15 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web Design, Branding</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--cellbay-ntb--small.jpg" alt="Cellbay thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--cellbay-ntb--small.jpg" alt=" thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--cellbay-ntb--small.jpg" alt="Cellbay thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--cellbay-ntb--small.jpg" alt=" thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--cellbay-ntb--small.jpg" alt="Cellbay thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--cellbay-ntb--small.jpg" alt="Cellbay thumbnail">
               </noscript> -->
             </a>
           </div>
           <div class="col-xs-12 col-sm-6 col-lg-3">
-            <a href="http://alexdevero.com/demos/template--nemesis/" target="_blank">
+            <a class="work__item" href="http://alexdevero.com/demos/template--nemesis/" target="_blank">
               <div class="overlay overlay--thumbnail overlay--*">
                 <div class="thumbnail__info">
                   <h3>Nemesis</h3>
@@ -254,10 +294,10 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
                   <h4>Web Design</h4>
                 </div>
               </div>
-              <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--nemesis-ntb--small.jpg" alt="Nemesis thumbnail">
-              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/thumbnails/thumbnail--nemesis-ntb--small.jpg" alt="* thumbnail">
+              <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--nemesis-ntb--small.jpg" alt="Nemesis thumbnail">
+              <!-- <img class="lazy img-responsive works__thumbnail" data-original="images/portfolio/thumbnail--nemesis-ntb--small.jpg" alt="* thumbnail">
               <noscript>
-                <img class="img-responsive works__thumbnail" src="images/thumbnails/thumbnail--nemesis-ntb--small.jpg" alt="* thumbnail">
+                <img class="img-responsive works__thumbnail" src="images/portfolio/thumbnail--nemesis-ntb--small.jpg" alt="* thumbnail">
               </noscript> -->
             </a>
           </div>
@@ -279,22 +319,22 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
             </ul>
           </div>
         </div>
-        <div class="container">
-          <p class="block--center text--center text-ntb--small">&copy; Copyright Alex Devero 2016<!--  | <a href="terms.html">Terms &amp; Conditions</a> --></p>
-        </div>
+        <!-- <div class="container">
+          <p class="block--center text--center text-ntb--small">&copy; Copyright Alex Devero 2016<!--  | <a href="terms.html">Terms &amp; Conditions</a> - -></p>
+        </div> -->
       </div>
     </footer>
   </main>
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.1.min.js"><\/script>')</script>
   <!-- jQuery 2.0 -#->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.0.min.js"><\/script>')</script>
   -->
-  <script src="js/plugins/jquery.lazyload-1.9.7.min.js"></script>
-  <script src="http://threejs.org/build/three.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/plugins/jquery.lazyload-1.9.7.min.js" async></script>
+  <!-- <script src="http://threejs.org/build/three.min.js"></script> -->
+  <script src="js/main.min.js" async></script>
   <!-- Google Analytics -->
   <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -303,7 +343,7 @@ mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");</script>
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-40173486-1','auto');ga('send','pageview');
-    mixpanel.track_forms("#contact-form", "Mail sent");
+    // mixpanel.track_forms("#contact-form", "Mail sent");
   </script>
 </body>
 </html>
