@@ -21,12 +21,17 @@ _notes/
 ##################
 *.min.*
 
+# Photoshop and Illustrator files #
+###################################
+*.ai
+*.eps
+*.psd
+
 # Development folders and files #
 #################################
 .tmp/
-node_modules/
-.sublime-grunt.cache
 dist/
+node_modules/
 alexdevero-portfolio.sublime-project
 alexdevero-portfolio.sublime-workspace
 .sublime-gulp.cache
