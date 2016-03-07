@@ -3,7 +3,7 @@
   */
 .nav {
   display: none;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 864px) {
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
@@ -16,7 +16,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
           align-items: center;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 863px) {
     position: fixed;
     top: 0;
     right: 0;
@@ -28,7 +28,8 @@
             justify-content: center;
     overflow-y: auto;
     text-align: center;
-    background-color: rgba(0,0,0,.95);
+    //background-color: rgba(0,0,0,.95);
+    background-color: rgba(255,255,255,.95);
     opacity: 0;
 
     @include transition(all);
@@ -38,14 +39,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 863px) {
     display: block;
   }
   width: 100%;
   height: 100%;
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 863px) {
   .nav--main li:nth-child(n+2) {
     margin-top: .35rem;
   }
@@ -58,28 +59,30 @@
     }
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 864px) {
   .nav--main li:nth-of-type(n+2) {
     margin-left: 1rem;
   }
 }
 .navbar-toggler {
-  padding: .5rem .75rem;
+  //padding: .5rem .75rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   margin-top: -15px;
   font-size: 1.75rem;
-  color: #fff;
+  //color: #fff;
+  color: #212121;
   line-height: 1;
   background: 0 0;
   border: 1px solid transparent;
   border-radius: .25rem;
   cursor: pointer;
-
   @include transition(color);
   &:focus,
   &:hover {
     color: $color--gold;
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 864px) {
     display: none;
   }
 }
@@ -95,14 +98,16 @@
   }
 }
 .nav--media i {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .nav--media a {
   font-weight: 700;
-  color: $color--gold;
+  //color: $color--gold;
+  color: #212121;
   &:focus,
   &:hover {
-    color: #333;
+    //color: #333;
+    color: $color--gold;
   }
 }
 .nav--footer {

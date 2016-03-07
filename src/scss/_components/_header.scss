@@ -11,7 +11,8 @@ header {
   width: 100%;
 }
 header a {
-  color: #fff;
+  //color: #fff;
+  color: #212121;
   &:focus,
   &:hover {
     color: $color--gold;
@@ -26,9 +27,12 @@ header a {
 }
 .logo {
   float: left;
+  margin: 0;
   font-family: "Prometheus", arial, sans-serif;
   font-size: 1.25rem;
+  font-weight: 200;
   color: #fff;
+  line-height: 1.2;
 }
 .logo a {
   letter-spacing: .65rem;
