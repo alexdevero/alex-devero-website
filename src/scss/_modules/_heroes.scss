@@ -3,14 +3,14 @@
  */
 .hero {
   position: relative;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  background-size: cover;
-}
+  background-size: cover;*/
+}/*
 .hero--about {
   background-position: bottom center;
-}
+}*/
 .hero--big {
   height: 100%;
   min-height: 45rem;
@@ -29,11 +29,12 @@
 
   @extend .vertical-align;
 }
+/*
 .hero--about {
   background-image: url(../images/heroes/hero--about--mobile.jpg);
 }
 .hero--main {
-  background-image: url(../images/heroes/hero--main--mobile.jpg);
+  background-image: url(../images/heroes/hero--about--mobile.jpg);
 }
 .hero--process {
   background-image: url(../images/heroes/hero--process-2--mobile.jpg);
@@ -58,7 +59,7 @@
     background-image: url(../images/heroes/hero--about--tablet.jpg);
   }
   .hero--main {
-    background-image: url(../images/heroes/hero--main--tablet.jpg);
+    background-image: url(../images/heroes/hero--about--tablet.jpg);
   }
   .hero--process {
     background-image: url(../images/heroes/hero--process-2--tablet.jpg);
@@ -84,7 +85,7 @@
     background-image: url(../images/heroes/hero--about--desktop.jpg);
   }
   .hero--main {
-    background-image: url(../images/heroes/hero--main--desktop.jpg);
+    background-image: url(../images/heroes/hero--about--desktop.jpg);
   }
   .hero--process {
     background-image: url(../images/heroes/hero--process-2--desktop.jpg);
@@ -110,7 +111,7 @@
     background-image: url(../images/heroes/hero--about--large.jpg);
   }
   .hero--main {
-    background-image: url(../images/heroes/hero--main--large.jpg);
+    background-image: url(../images/heroes/hero--about--large.jpg);
   }
   .hero--process {
     background-image: url(../images/heroes/hero--process-2--large.jpg);
@@ -136,7 +137,7 @@
     background-image: url(../images/heroes/hero--about--xlarge.jpg);
   }
   .hero--main {
-    background-image: url(../images/heroes/hero--main--xlarge.jpg);
+    background-image: url(../images/heroes/hero--about--xlarge.jpg);
   }
   .hero--process {
     background-image: url(../images/heroes/hero--process-2--xlarge.jpg);
@@ -156,4 +157,4 @@
   .hero--contact {
     background-image: url(../images/heroes/hero--contact--xlarge--2.jpg);
   }
-}
+}*/
