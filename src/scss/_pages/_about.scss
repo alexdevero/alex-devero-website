@@ -2,11 +2,16 @@
  * About page
  */
 .page--about .sec__about {
+  padding-top: 8.5rem;
   background-color: #fff;
 }
 .page--about .sec__about .container {
   position: relative;
   z-index: 2;
+}
+.page--about .about__photo {
+  max-width: 250px;
+  border-radius: 50%;
 }
 /* Services section */
 .page--about .nutshell__heading {
