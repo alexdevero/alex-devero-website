@@ -111,10 +111,15 @@
 main .sec__works {
   padding-top: 0;
   padding-bottom: 0;
-  background-color: #ececec;
+  //background-color: #ececec;
 }
 .sec__works [class*="col-"] {
-  padding: 0;
+  padding: 1rem;
+}
+.work__item {
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 .works__thumbnail {
   /*-webkit-filter: grayscale(1);
