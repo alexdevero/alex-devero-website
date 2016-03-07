@@ -1,7 +1,16 @@
 /**
  * Contact Page
  */
-.page--contact header {
-  /*background-color: $color--jet;
-  @include BoxShadowHelper(1);*/
+.page--contact .sec__main {
+  margin-bottom: -103px;
+  min-height: rem(476px);
+  height: 100%;
 }
+.page--contact .about__contact {
+  //padding-top: 8.5rem;
+  @extend .vertical-align;
+}
+/*.page--contact .hero--big {
+  @media screen and (max-width: 550px), screen and (max-height: 810px) {
+  }
+}*/
