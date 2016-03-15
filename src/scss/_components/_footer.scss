@@ -4,6 +4,8 @@
 footer {
   //padding-top: 2rem;
   background-color: #fff;/*#1b1b1b, #262626*/
+  position: relative;
+  z-index: 2;
 }
 /*
 .footer__main {
