@@ -1,16 +1,17 @@
 'use strict';
 
-var gulp = require('gulp');
-var changed = require('gulp-changed');
-var concat = require('gulp-concat');
-var gulpCopy = require('gulp-copy');
-var htmlmin = require('gulp-htmlmin');
-var imagemin = require('gulp-imagemin');
-var rename = require('gulp-rename');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
-var pngquant = require('imagemin-pngquant');
+var gulp = require('gulp'),
+    changed = require('gulp-changed'),
+    clean = require('gulp-clean'),
+    concat = require('gulp-concat'),
+    gulpCopy = require('gulp-copy'),
+    htmlmin = require('gulp-htmlmin'),
+    imagemin = require('gulp-imagemin'),
+    rename = require('gulp-rename'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    uglify = require('gulp-uglify'),
+    pngquant = require('imagemin-pngquant');
 
 // Concatenate JavaScript files
 /*gulp.task('concatJS', function() {
@@ -39,15 +40,15 @@ gulp.task('copyFonts', function() {
 });
 // Copy JS plugins files
 gulp.task('copyJSPlug', function() {
-  return gulp.src('src/js/plugins/*')
+  return gulp.src(['src/js/plugins/*', '!src/js/plugins/*.rar'])
     .pipe(changed('dist/js/plugins/'))
     .pipe(gulp.dest('dist/js/plugins/'));
 });
 // Copy JS vendor files
 gulp.task('copyJSVen', function() {
-  return gulp.src('src/js/vendor/*')
+  return gulp.src(['src/js/vendor/*', '!src/js/vendor/*.rar'])
     .pipe(changed('dist/js/vendor/'))
-  .pipe(gulp.dest('dist/js/vendor/'));
+    .pipe(gulp.dest('dist/js/vendor/'));
 });
 // Copy other files
 gulp.task('copyOther', function() {
@@ -63,6 +64,12 @@ gulp.task('copyOther', function() {
 });
 // Automate copying
 gulp.task('copyAll', ['copyCSS', 'copyFonts', 'copyJSPlug', 'copyJSVen', 'copyOther'], function() {});
+
+// Clean up dist directory
+gulp.task('clean', function() {
+  return gulp.src('dist', {read : false})
+    .pipe(clean());
+});
 
 // Compress images
 gulp.task('images', function () {
