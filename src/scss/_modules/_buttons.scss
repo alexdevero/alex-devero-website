@@ -5,6 +5,7 @@
   text-align: center;
 }
 .btn {
+  display: inline-block;
   font-family: $font--quicksand;
   font-size: 1rem;
   border-radius: $radius;
@@ -21,7 +22,7 @@
   background-color: $color--jet;
   &:focus,
   &:hover {
-    background-color: palette(grey, 600);
+    background-color: $color--gold;
   }
 }
 .btn--full--white {

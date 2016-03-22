@@ -111,6 +111,7 @@
   }
 }
 .nav--footer {
+  display: inline-block;/* No flexbox fallback */
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
@@ -120,6 +121,9 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
           justify-content: center;
+}
+.nav--footer li {
+  float: left;
 }
 .nav--footer li:nth-of-type(n+2) {
   margin-left: 1rem;
