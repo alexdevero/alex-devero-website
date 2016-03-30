@@ -100,5 +100,11 @@ gulp.task('minifyJS', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/js'));
 });
+// Watch HTML, CSS and JavaScript files
+gulp.task('watch', function() {
+  gulp.watch('src/*.html', ['minifyHTML']);
+  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/js/main.js', ['minifyJS']);
+});
 // Automate tasks (cmd: gulp)
 gulp.task('default', ['minifyHTML', 'copyAll', 'images', 'sass', 'minifyJS'], function() {});
