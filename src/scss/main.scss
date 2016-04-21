@@ -18,7 +18,6 @@
  */
 
 // Base
-//@import '_base/_base.reset';
 @import '_base/_base.normalize';
 @import '_base/_base.fonts';
 @import '_base/_base';
@@ -39,7 +38,6 @@
 //@import '_modules/_forms';
 @import '_modules/_heroes';
 @import '_modules/_icons';
-//@import '_modules/_inserts';
 @import '_modules/_links';
 @import '_modules/_navigations';
 @import '_modules/_overlays';
@@ -50,13 +48,10 @@
 @import '_utilities/_utilities';
 
 // Pages
-//@import '_pages/_homepage';
 @import '_pages/_home';
 @import '_pages/_portfolio';
 @import '_pages/_case-studies';
 @import '_pages/_about';
 @import '_pages/_process';
-//@import '_pages/_skills';
 @import '_pages/_work';
 @import '_pages/_contact';
-//@import '_pages/_terms';
