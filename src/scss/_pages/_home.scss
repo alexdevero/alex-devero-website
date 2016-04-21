@@ -2,60 +2,65 @@
  * Home page
  */
 .page--home main {
-  position: relative;
+	position: relative;
 }
 .page--home .sec__main {
-  margin-bottom: -102px;
+	margin-bottom: -102px;
 }
 .page--home .hero--big {
-  min-height: 31rem;
-  /*@media screen and (min-width: 550px), screen and (min-height: 810px) {
+	min-height: 37.5rem;
+	/*@media screen and (min-width: 550px), screen and (min-height: 810px) {
     min-height: 100%;
   }*/
 }
 .home__intro {
-  text-align: center;
-  color: #212121;
-  @extend .vertical-align;
+	color: #212121;
+	text-align: center;
+
+	@extend .vertical-align;
+}
+.home__intro .about__photo {
+	max-width: 150px;
+	border-radius: 50%;
 }
 .home__intro h1 {
-  margin-top: 0;
-  line-height: 1.1;
-  @media screen and (min-width: 768px) {
-    font-size: 12rem;
-  }
-  @media screen and (max-width: 555px) {
-    font-size: 6rem;
-  }
+	margin-top: 0;
+	line-height: 1.1;
+	@media screen and (min-width: 768px) {
+		font-size: 8rem;
+	}
+	@media screen and (max-width: 555px) {
+		font-size: 6rem;
+	}
 }
 .home__intro h2 {
-  margin-top: 0;
-  color: #212121;
-  @media screen and (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-  @media screen and (max-width: 555px) {
-    font-size: 1.25rem;
-  }
+	margin-top: 0;
+	color: #212121;
+	@media screen and (max-width: 768px) {
+		font-size: 1.5rem;
+	}
+	@media screen and (max-width: 555px) {
+		font-size: 1.25rem;
+	}
 }
 .home__intro h3 {
-  @media screen and (max-width: 768px) {
-    font-size: 1.15rem;
-  }
-  @media screen and (max-width: 555px) {
-    font-size: 1rem;
-  }
+	@media screen and (max-width: 768px) {
+		font-size: 1.15rem;
+	}
+	@media screen and (max-width: 555px) {
+		font-size: 1rem;
+	}
 }
 .page--home footer {
-  //position: absolute;
-  //bottom: 0;
-  width: 100%;
-  height: 102px;
+	//position: absolute;
+	//bottom: 0;
+	width: 100%;
+	height: 102px;
 }
 .page--home .footer__copy {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 .page--home .footer__media {
-  padding-bottom: 0;
+	padding-bottom: 0;
 }
