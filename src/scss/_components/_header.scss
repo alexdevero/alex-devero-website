@@ -2,43 +2,43 @@
  * Header
  */
 header {
-  //position: fixed;
-  position: absolute;
-  top: 0;
-  z-index: 99;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  width: 100%;
+	//position: fixed;
+	position: absolute;
+	top: 0;
+	z-index: 99;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	width: 100%;
 }
 header a {
-  //color: #fff;
-  color: #212121;
-  &:focus,
-  &:hover {
-    color: $color--gold;
-  }
-  &.active {
-    color: $color--gold;
-    &:focus,
-    &:hover {
-      color: $color--gold;
-    }
-  }
+	//color: #fff;
+	color: #212121;
+	&:focus,
+	&:hover {
+		color: $color--gold;
+	}
+	&.active {
+		color: $color--gold;
+		&:focus,
+		&:hover {
+			color: $color--gold;
+		}
+	}
 }
 .logo {
-  float: left;
-  margin: 0;
-  font-family: "Prometheus", arial, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 200;
-  color: #fff;
-  line-height: 1.2;
+	float: left;
+	margin: 0;
+	font-family: "Prometheus", arial, sans-serif;
+	font-size: 1.25rem;
+	font-weight: 200;
+	color: #fff;
+	line-height: 1.2;
 }
 .logo a {
-  letter-spacing: .65rem;
-  color: $color--gold;
-  &:focus,
-  &:hover {
-    color: $color--gold;
-  }
+	letter-spacing: .65rem;
+	//color: $color--gold;
+	&:focus,
+	&:hover {
+		color: #212121;
+	}
 }
