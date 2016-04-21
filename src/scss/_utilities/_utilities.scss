@@ -90,7 +90,8 @@
   margin-bottom: 0;
   font-family: "StreetBrush", $font--raleway;
   font-size: 8rem;
-  color: $color--gold;
+  //color: $color--gold;
+  color: #212121;
   @media screen and (max-width: 555px) {
     font-size: 4rem;
   }
