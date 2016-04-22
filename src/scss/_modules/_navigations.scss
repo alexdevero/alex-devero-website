@@ -52,10 +52,12 @@
   }
   .nav--main a {
     font-size: 1.65rem;
-    color: $color--gold;
+    //color: $color--gold;
+    color: $color--jet;
     &:focus,
     &:hover {
-      color: darken($color--gold, 18%);
+    	color: #8d38c9;
+      //color: darken($color--gold, 18%);
     }
   }
 }
@@ -80,7 +82,8 @@
   @include transition(color);
   &:focus,
   &:hover {
-    color: $color--gold;
+    //color: $color--gold;
+    color: #8d38c9;
   }
   @media only screen and (min-width: 864px) {
     display: none;
@@ -91,10 +94,12 @@
   text-decoration: none;
 }
 .nav--main .navbar-toggler {
-  color: $color--gold;
+  //color: $color--gold;
+  color: $color--jet;
   &:focus,
   &:hover {
-    color: darken($color--gold, 18%);
+    //color: darken($color--gold, 18%);
+    color: #8d38c9;
   }
 }
 .nav--media i {
@@ -107,7 +112,8 @@
   &:focus,
   &:hover {
     //color: #333;
-    color: $color--gold;
+    color: #8d38c9;
+    //color: $color--gold;
   }
 }
 .nav--footer {

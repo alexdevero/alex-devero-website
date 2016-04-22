@@ -30,7 +30,14 @@
   }
 }
 .link--underline {
-  text-decoration: underline;
+  border-bottom: 1px solid;
+}
+.link--violet {
+	color: $color--jet;
+	&:focus,
+	&:hover {
+		color: #8d38c9;
+	}
 }
 .link--white {
   color: #fff;
