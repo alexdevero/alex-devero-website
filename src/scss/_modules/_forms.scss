@@ -2,81 +2,26 @@
  * Forms
  */
 .form__details input,
+.form__subject select,
 .form__message textarea {
-  display: block;
-  padding: 13px;
-  margin: auto;
-  width: 100%;
-  font-family: $font--quicksand;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  &:focus {
-    outline-color: $color--gold;
-  }
+	display: block;
+	padding: 13px;
+	margin: auto;
+	width: 100%;
+	font-family: $font--quicksand;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	&:focus {
+		outline-color: #8d38c9;
+	}
 }
 .form__details,
 .form__message {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 .form__message textarea {
-  resize: vertical;
+	resize: vertical;
 }
-.form__check,
-.form__robot,
-.form__robot div {
-  margin-bottom: 1em;
-}
-.form__switch {
-  position: relative;
-  padding: 0;
-  margin-bottom: 1.5rem;
-  border: none;
-  outline: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.form__switch input {
-  position: absolute;
-  top: 9px;
-  left: 10px;
-  padding: 0;
-  opacity: 0;
-}
-.form__switch input+label {
-  display: inline-block;
-  margin-right: 0;
-  margin-left: 0;
-  width: 5rem;
-  height: 2rem;
-  color: transparent;
-  background: $color--gainsboro;
-  border-radius: remy(15px);
-  cursor: pointer;
-  &:after {
-    position: absolute;
-    top: .25rem;
-    left: .25rem;
-    display: block;
-    width: 1.5rem;
-    height: 1.5rem;
-    content: "";
-    background: #fff;
-    border-radius: 50%;
-
-    @include transition(all);
-  }
-}
-.form__switch input:checked+label {
-  //background-color: $color--jet;
-  background-color: $color--gold;
-  &:after {
-    left: 3.25rem;
-  }
-}
-.label--robot {
-  position: relative;
-  top: -11px;
-  left: 10px;
+.form__button {
+	text-align: center;
 }
