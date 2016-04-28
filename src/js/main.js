@@ -2,7 +2,7 @@
 	'use strict';
 	var app = {
 		settings: {
-			contactForm: $('#adContact'),
+			contactForm: document.getElementById('contactForm'),
 			lazyImages: document.getElementsByClassName('lazy')
 		},
 		controllers: function() {
@@ -10,30 +10,59 @@
 			 * Form controller
 			 */
 			if (this.settings.contactForm.length > 0) {
-				(function(e) {
-					$('#contactForm').submit(function(e) {
+				(function() {
+					console.log('running');
+					/*$('#formButton').on('click', function(e) {
 						e.preventDefault();
+
+						alert('clicked');
+
+						var form = $('#contactForm');
 
 						if (document.getElementById('subject').value == 'subjectBlank') {
 							alert('Please select \'What are you looking for\'.');
 						}
+					});*/
+					$('#contactForm').submit(function(e) {
+						e.preventDefault();
 
-						var $this = $(this);
+						if (document.getElementById('subject').value == 'subjectBlank') {
+							if (window.location.href.split('com/')[1] == 'contact.html') {
+								alert('Please select \'What are you looking for\'.');
+							} else {
+								alert('Prosím zvolte \'Druh projektu\'.');
+							}
 
-						$.ajax({
-							type: 'POST',
-							url: $($this).attr('action'),
-							data: $($this).serialize()
-						}).done(function(response) {
-							e.preventDefault();
-							alert('Thanks!');
+							$('#subject').trigger('focus');
+						} else {
 
-							// Clear the form.
-							$(this).reset();
-						}).fail(function(data) {
-							e.preventDefault();
-							alert('Oops!');
-						});
+							var $this = $(this);
+
+							$.ajax({
+								type: 'POST',
+								url: 'contact.php',
+								data: $($this).serialize()
+							}).done(function(response) {
+								e.preventDefault();
+
+								if (window.location.href.split('com/')[1] == 'contact.html') {
+									alert('Thank you very much for contacting. I will reply in two days.');
+								} else {
+									alert('Děkuji Vám za kontaktování. Do dvou dnů se Vám ozvu.');
+								}
+
+								// Clear the form.
+								$($this)[0].reset();
+							}).fail(function(data) {
+								e.preventDefault();
+
+								if (window.location.href.split('com/')[1] == 'contact.html') {
+									alert('Oops! There was a problem with your submission. Please complete the form and try again.');
+								} else {
+									alert('Během odesílání zprávy došlo k problému. Prosím zkuste to znovu.');
+								}
+							});
+						}
 					});
 				})();
 			}
