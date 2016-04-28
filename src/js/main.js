@@ -128,25 +128,32 @@
 			 * Form controller
 			 */
 			if (this.settings.contactForm.length > 0) {
-				(function() {
+				//(function(e) {
 					$('#contactForm').submit(function(e) {
 						e.preventDefault();
-						var $this = $(this),
-								formMessage = $('.form__message');
+
+						if (document.getElementById('subject').value == 'subjectBlank') {
+							alert('Please select \'What are you looking for\'.');
+						}
+
+						var $this = $(this);
+
 						$.ajax({
 							type: 'POST',
 							url: $($this).attr('action'),
 							data: $($this).serialize()
 						}).done(function(response) {
+							e.preventDefault();
 							alert('Thanks!');
 
 							// Clear the form.
 							$(this).reset();
 						}).fail(function(data) {
+							e.preventDefault();
 							alert('Oops!');
 						});
 					});
-				})();
+				//})();
 			}
 
 			/**
