@@ -2,8 +2,8 @@
 	'use strict';
 	var app = {
 		settings: {
-			contactForm: document.getElementById('contactForm'),
-			lazyImages: document.getElementsByClassName('lazy')
+			lazyImages: document.getElementsByClassName('lazy'),
+			contactForm: document.querySelectorAll('#contactForm')
 		},
 		controllers: function() {
 			/**
@@ -12,17 +12,6 @@
 			if (this.settings.contactForm.length > 0) {
 				(function() {
 					console.log('running');
-					/*$('#formButton').on('click', function(e) {
-						e.preventDefault();
-
-						alert('clicked');
-
-						var form = $('#contactForm');
-
-						if (document.getElementById('subject').value == 'subjectBlank') {
-							alert('Please select \'What are you looking for\'.');
-						}
-					});*/
 					$('#contactForm').submit(function(e) {
 						e.preventDefault();
 
