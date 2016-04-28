@@ -1,6 +1,7 @@
 /**
  * Forms
  */
+ 
 .form__details input,
 .form__subject select,
 .form__message textarea {
@@ -11,17 +12,21 @@
 	font-family: $font--quicksand;
 	font-size: 1rem;
 	border: 1px solid #ccc;
+	border-radius: $radius;
 	&:focus {
 		outline-color: #8d38c9;
 	}
 }
+
 .form__details,
 .form__message {
 	margin-bottom: 1em;
 }
+
 .form__message textarea {
 	resize: vertical;
 }
+
 .form__button {
 	text-align: center;
 }
