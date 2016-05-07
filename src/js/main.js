@@ -71,11 +71,13 @@
 							rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 						);
 					}
+
 					// Add event listeners to images
 					window.addEventListener('DOMContentLoaded', lazyLoadImages);
 					window.addEventListener('load', lazyLoadImages);
 					window.addEventListener('resize', lazyLoadImages);
 					window.addEventListener('scroll', lazyLoadImages);
+
 					// lazyLoadImages function
 					function lazyLoadImages() {
 						var lazyImagesArray = document.querySelectorAll('img[data-src]');
@@ -85,6 +87,7 @@
 								lazyImagesArray[i].removeAttribute('data-src');
 							}
 						}
+
 						// Remove event listeners if all images are loaded
 						if (lazyImagesArray.length == 0) {
 							window.removeEventListener('DOMContentLoaded', lazyLoadImages);
@@ -100,14 +103,17 @@
 			if (document.getElementsByClassName('no-js').length > 0) {
 				document.getElementsByClassName('no-js')[0].classList.remove('no-js');
 			}
+
 			if (document.querySelectorAll('.no-js-img').length > 0) {
 				var imagesArray = document.querySelectorAll('.no-js-img');
 				for (var i = 0; i < imagesArray.length; i++) {
 					imagesArray[i].classList.remove('no-js-img');
 				}
 			}
+
 			app.controllers();
 		}
 	};
+
 	app.init();
 })();
