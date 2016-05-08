@@ -15,7 +15,7 @@
 					$('#contactForm').submit(function(e) {
 						e.preventDefault();
 
-						if (document.getElementById('subject').value == 'subjectBlank') {
+						if (document.getElementById('subject').value.length === 0) {
 							if (window.location.href.split('com/')[1] == 'contact.html') {
 								alert('Please select \'What are you looking for\'.');
 							} else {
