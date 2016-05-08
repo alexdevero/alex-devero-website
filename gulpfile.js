@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     gulpCopy = require('gulp-copy'),
+    html5Lint = require('gulp-html5-lint'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
@@ -24,6 +25,7 @@ var gulp = require('gulp'),
 gulp.task('minifyHTML', function() {
   return gulp.src('src/*.html')
     .pipe(changed('dist'))
+    .pipe(html5Lint())
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
     .pipe(gulp.dest('dist'))
 });
