@@ -26,7 +26,7 @@ var gulp = require('gulp'),
 gulp.task('minifyHTML', function() {
 	return gulp.src('src/*.html')
 		.pipe(changed('dist'))
-		.pipe(html5Lint())
+		//.pipe(html5Lint())
 		.pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
 		.pipe(gulp.dest('dist'))
 });
