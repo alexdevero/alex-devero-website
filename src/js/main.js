@@ -1,119 +1,129 @@
 (function() {
-	'use strict';
-	var app = {
-		settings: {
-			lazyImages: document.getElementsByClassName('lazy'),
-			contactForm: document.querySelectorAll('#contactForm')
-		},
-		controllers: function() {
-			/**
-			 * Form controller
-			 */
-			if (this.settings.contactForm.length > 0) {
-				(function() {
-					console.log('running');
-					$('#contactForm').submit(function(e) {
-						e.preventDefault();
+  'use strict';
+  var app = {
+    settings: {
+      indexCanvas: document.querySelectorAll('#indexCanvas'),
+      lazyImages: document.getElementsByClassName('lazy'),
+      contactForm: document.querySelectorAll('#contactForm')
+    },
+    controllers: function() {
+      /**
+        * Index Canvas
+        */
+      if (this.settings.indexCanvas.length > 0) {
+        (function() {
+          console.log('Canvas');
+        })();
+      }
 
-						if (document.getElementById('subject').value.length === 0) {
-							if (window.location.href.split('com/')[1] == 'contact.html') {
-								alert('Please select \'What are you looking for\'.');
-							} else {
-								alert('Prosím zvolte \'Druh projektu\'.');
-							}
+      /**
+       * Form controller
+       */
+      if (this.settings.contactForm.length > 0) {
+        (function() {
+          console.log('running');
+          $('#contactForm').submit(function(e) {
+            e.preventDefault();
 
-							$('#subject').trigger('focus');
-						} else {
+            if (document.getElementById('subject').value.length === 0) {
+              if (window.location.href.split('com/')[1] == 'contact.html') {
+                alert('Please select \'What are you looking for\'.');
+              } else {
+                alert('Prosím zvolte \'Druh projektu\'.');
+              }
 
-							var $this = $(this);
+              $('#subject').trigger('focus');
+            } else {
 
-							$.ajax({
-								type: 'POST',
-								url: 'contact.php',
-								data: $($this).serialize()
-							}).done(function(response) {
-								e.preventDefault();
+              var $this = $(this);
 
-								if (window.location.href.split('com/')[1] == 'contact.html') {
-									alert('Thank you very much for contacting. I will reply in two days.');
-								} else {
-									alert('Děkuji Vám za kontaktování. Do dvou dnů se Vám ozvu.');
-								}
+              $.ajax({
+                type: 'POST',
+                url: 'contact.php',
+                data: $($this).serialize()
+              }).done(function(response) {
+                e.preventDefault();
 
-								// Clear the form.
-								$($this)[0].reset();
-							}).fail(function(data) {
-								e.preventDefault();
+                if (window.location.href.split('com/')[1] == 'contact.html') {
+                  alert('Thank you very much for contacting. I will reply in two days.');
+                } else {
+                  alert('Děkuji Vám za kontaktování. Do dvou dnů se Vám ozvu.');
+                }
 
-								if (window.location.href.split('com/')[1] == 'contact.html') {
-									alert('Oops! There was a problem with your submission. Please complete the form and try again.');
-								} else {
-									alert('Během odesílání zprávy došlo k problému. Prosím zkuste to znovu.');
-								}
-							});
-						}
-					});
-				})();
-			}
+                // Clear the form.
+                $($this)[0].reset();
+              }).fail(function(data) {
+                e.preventDefault();
 
-			/**
-			 * Lazy images
-			 */
-			if (this.settings.lazyImages.length > 0) {
-				(function() {
-					// Test if image is in the viewport
-					function isImageInViewport(img) {
-						var rect = img.getBoundingClientRect();
-						return (
-							rect.top >= 0 &&
-							rect.left >= 0 &&
-							rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-							rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-						);
-					}
+                if (window.location.href.split('com/')[1] == 'contact.html') {
+                  alert('Oops! There was a problem with your submission. Please complete the form and try again.');
+                } else {
+                  alert('Během odesílání zprávy došlo k problému. Prosím zkuste to znovu.');
+                }
+              });
+            }
+          });
+        })();
+      }
 
-					// Add event listeners to images
-					window.addEventListener('DOMContentLoaded', lazyLoadImages);
-					window.addEventListener('load', lazyLoadImages);
-					window.addEventListener('resize', lazyLoadImages);
-					window.addEventListener('scroll', lazyLoadImages);
+      /**
+       * Lazy images
+       */
+      if (this.settings.lazyImages.length > 0) {
+        (function() {
+          // Test if image is in the viewport
+          function isImageInViewport(img) {
+            var rect = img.getBoundingClientRect();
+            return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+          }
 
-					// lazyLoadImages function
-					function lazyLoadImages() {
-						var lazyImagesArray = document.querySelectorAll('img[data-src]');
-						for (var i = 0; i < lazyImagesArray.length; i++) {
-							if (isImageInViewport(lazyImagesArray[i])) {
-								lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
-								lazyImagesArray[i].removeAttribute('data-src');
-							}
-						}
+          // Add event listeners to images
+          window.addEventListener('DOMContentLoaded', lazyLoadImages);
+          window.addEventListener('load', lazyLoadImages);
+          window.addEventListener('resize', lazyLoadImages);
+          window.addEventListener('scroll', lazyLoadImages);
 
-						// Remove event listeners if all images are loaded
-						if (lazyImagesArray.length == 0) {
-							window.removeEventListener('DOMContentLoaded', lazyLoadImages);
-							window.removeEventListener('load', lazyLoadImages);
-							window.removeEventListener('resize', lazyLoadImages);
-							window.removeEventListener('scroll', lazyLoadImages);
-						}
-					}
-				})();
-			}
-		},
-		init: function() {
-			if (document.getElementsByClassName('no-js').length > 0) {
-				document.getElementsByClassName('no-js')[0].classList.remove('no-js');
-			}
+          // lazyLoadImages function
+          function lazyLoadImages() {
+            var lazyImagesArray = document.querySelectorAll('img[data-src]');
+            for (var i = 0; i < lazyImagesArray.length; i++) {
+              if (isImageInViewport(lazyImagesArray[i])) {
+                lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
+                lazyImagesArray[i].removeAttribute('data-src');
+              }
+            }
 
-			if (document.querySelectorAll('.no-js-img').length > 0) {
-				var imagesArray = document.querySelectorAll('.no-js-img');
-				for (var i = 0; i < imagesArray.length; i++) {
-					imagesArray[i].classList.remove('no-js-img');
-				}
-			}
+            // Remove event listeners if all images are loaded
+            if (lazyImagesArray.length == 0) {
+              window.removeEventListener('DOMContentLoaded', lazyLoadImages);
+              window.removeEventListener('load', lazyLoadImages);
+              window.removeEventListener('resize', lazyLoadImages);
+              window.removeEventListener('scroll', lazyLoadImages);
+            }
+          }
+        })();
+      }
+    },
+    init: function() {
+      if (document.getElementsByClassName('no-js').length > 0) {
+        document.getElementsByClassName('no-js')[0].classList.remove('no-js');
+      }
 
-			app.controllers();
-		}
-	};
+      if (document.querySelectorAll('.no-js-img').length > 0) {
+        var imagesArray = document.querySelectorAll('.no-js-img');
+        for (var i = 0; i < imagesArray.length; i++) {
+          imagesArray[i].classList.remove('no-js-img');
+        }
+      }
 
-	app.init();
+      app.controllers();
+    }
+  };
+
+  app.init();
 })();
