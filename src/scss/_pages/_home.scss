@@ -29,6 +29,22 @@
   border-radius: 50%;
 }
 
+.home__intro h2,
+.home__intro h3 {
+  display: inline-block;
+  padding-top: .25rem;
+  padding-right: .95rem;
+  padding-bottom: .25rem;
+  padding-left: .95rem;
+  background: rgba(255,255,255,.95);
+}
+
+.break-invisible {
+  visibility: hidden;
+  margin: 0;
+  border: 0;
+}
+
 .home__intro h1 {
   margin-top: 0;
   line-height: 1.1;
@@ -56,6 +72,7 @@
 }
 
 .home__intro h3 {
+  margin-top: 0.8125rem;
   @media screen and (max-width: 768px) {
     font-size: 1.15rem;
   }
