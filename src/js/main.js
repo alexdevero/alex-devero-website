@@ -4,7 +4,8 @@
     settings: {
       indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.getElementsByClassName('lazy'),
-      contactForm: document.querySelectorAll('#contactForm')
+      contactForm: document.querySelectorAll('#contactForm'),
+      portfolioItem: document.querySelectorAll('.work__item')
     },
     controllers: function() {
       /**
@@ -173,6 +174,21 @@
           }
         })();
       }
+
+      /**
+       * Portfolio click blocker
+       */
+      if (this.settings.portfolioItem.length > 0) {
+        (function() {
+          // Get all portfolio items and store them inside an array
+          var portfolioItems = document.querySelectorAll('.work__item');
+
+          // Cycle through array of portfolio items and temporarily change 'href' attribute
+          for (var i = 0, j = portfolioItems.length; i<j; i++) {
+            portfolioItems[i].setAttribute('href', '#');
+          }
+        })();
+      }
     },
     init: function() {
       if (document.getElementsByClassName('no-js').length > 0) {
@@ -181,6 +197,7 @@
 
       if (document.querySelectorAll('.no-js-img').length > 0) {
         var imagesArray = document.querySelectorAll('.no-js-img');
+
         for (var i = 0; i < imagesArray.length; i++) {
           imagesArray[i].classList.remove('no-js-img');
         }
