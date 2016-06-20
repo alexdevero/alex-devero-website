@@ -185,7 +185,7 @@
 
           // Cycle through array of portfolio items and temporarily change 'href' attribute
           for (var i = 0, j = portfolioItems.length; i<j; i++) {
-            portfolioItems[i].setAttribute('href', '#');
+            //portfolioItems[i].setAttribute('href', '#');
           }
         })();
       }
