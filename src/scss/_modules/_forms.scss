@@ -1,32 +1,33 @@
 /**
  * Forms
  */
- 
+
 .form__details input,
 .form__subject select,
 .form__message textarea {
-	display: block;
-	padding: 13px;
-	margin: auto;
-	width: 100%;
-	font-family: $font--quicksand;
-	font-size: 1rem;
-	border: 1px solid #ccc;
-	border-radius: $radius;
-	&:focus {
-		outline-color: $color--red;
-	}
+  display: block;
+  padding: 13px;
+  margin: auto;
+  width: 100%;
+  font-family: $font--quicksand;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: $radius;
+
+  &:focus {
+    outline-color: $color--red;
+  }
 }
 
 .form__details,
 .form__message {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .form__message textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 .form__button {
-	text-align: center;
+  text-align: center;
 }
