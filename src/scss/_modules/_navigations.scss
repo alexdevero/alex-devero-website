@@ -38,7 +38,8 @@
     visibility: hidden;
     overflow-y: auto;
     text-align: center;
-    background-color: rgba(255,255,255,.95);
+    //background-color: rgba(255,255,255,.95);
+    background-color: rgba(1,1,1,.95);
     opacity: 0;
 
     @include transition(all);
@@ -57,7 +58,8 @@
 
   .nav--main a {
     font-size: 1.65rem;
-    color: $color--jet;
+    //color: $color--jet;
+    color: #fff;
 
     &:focus,
     &:hover {
@@ -74,9 +76,9 @@
 
 .navbar-toggler {
   padding-top: .5rem;
-  padding-right: 1.1rem;
+  padding-right:  rem(9.43px);
   padding-bottom: .5rem;
-  padding-left: 1.1rem;
+  padding-left:  rem(9.43px);
   margin-top: -15px;
   font-size: 1.75rem;
   color: #212121;
@@ -102,7 +104,13 @@
   text-decoration: none;
 }
 .nav--main .navbar-toggler {
-  color: $color--jet;
+  padding-top: .25rem;
+  padding-right: 1.1rem;
+  padding-bottom: .25rem;
+  padding-left: 1.1rem;
+  font-size: 2rem;
+  //color: $color--jet;
+  color: #fff;
 
   &:focus,
   &:hover {
