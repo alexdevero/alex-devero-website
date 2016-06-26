@@ -41,17 +41,13 @@
     background-color: rgba(255,255,255,.95);
     opacity: 0;
 
-    @include transition(opacity);
+    @include transition(all);
   }
 }
 
 .checkbox--nav:checked + .nav__container > .nav--main {
   opacity: 1;
   visibility: visible;
-
-  /*@media screen and (max-width: 863px) {
-    display: block;
-  }*/
 }
 
 @media screen and (max-width: 863px) {
@@ -61,14 +57,11 @@
 
   .nav--main a {
     font-size: 1.65rem;
-    //color: $color--gold;
     color: $color--jet;
 
     &:focus,
     &:hover {
       color: $color--red;
-      color: #de1e10;
-      //color: darken($color--gold, 18%);
     }
   }
 }
@@ -80,12 +73,12 @@
 }
 
 .navbar-toggler {
-  //padding: .5rem .75rem;
   padding-top: .5rem;
+  padding-right: 1.1rem;
   padding-bottom: .5rem;
+  padding-left: 1.1rem;
   margin-top: -15px;
   font-size: 1.75rem;
-  //color: #fff;
   color: #212121;
   line-height: 1;
   background: 0 0;
@@ -97,7 +90,6 @@
 
   &:focus,
   &:hover {
-    //color: $color--gold;
     color: $color--red;
   }
 
@@ -110,12 +102,10 @@
   text-decoration: none;
 }
 .nav--main .navbar-toggler {
-  //color: $color--gold;
   color: $color--jet;
 
   &:focus,
   &:hover {
-    //color: darken($color--gold, 18%);
     color: $color--red;
   }
 }
@@ -126,14 +116,11 @@
 
 .nav--media a {
   font-weight: 700;
-  //color: $color--gold;
   color: #212121;
 
   &:focus,
   &:hover {
-    //color: #333;
     color: $color--red;
-    //color: $color--gold;
   }
 }
 
