@@ -2,6 +2,7 @@
  * Preloaders
  * Info: https://ihatetomatoes.net/create-custom-preloading-screen/
  */
+
 .preloader-wrapper {
   position: fixed;
   top: 0;
@@ -10,6 +11,7 @@
   width: 100%;
   height: 100%;
 }
+
 .preloader {
   position: relative;
   top: 50%;
@@ -20,8 +22,8 @@
   width: 0%;
   height: 8rem;
   overflow: hidden;
-  -webkit-animation: width 2.25s linear 1.5s;
-          animation: width 2.25s linear 1.5s;
+  animation: width 2.25s linear 1.5s;
+
   &:before {
     content: '';
     position: absolute;
@@ -31,36 +33,46 @@
     height: 14px;
     background: #ba8747;
   }
+
   @-webkit-keyframes width {
     0% {
       width: 0%;
     }
+
     25% {
       width: 10.3055rem;
     }
+
     50% {
       width: 20.611rem;
     }
+
     75% {
       width: 30.9165rem;
     }
+
     100% {
       width: 41.222rem;
     }
   }
+
   @keyframes width {
     0% {
       width: 0%;
     }
+
     25% {
       width: 10.3055rem;
     }
+
     50% {
       width: 20.611rem;
     }
+
     75% {
       width: 30.9165rem;
     }
+
     100% {
       width: 41.222rem;
     }
@@ -74,44 +86,56 @@
     text-anchor: middle;
     text-transform: uppercase;
   }
+
+  animation: show 6.45s linear;
+
   @include transition(opacity);
-  -webkit-animation: show 6.45s linear;
-          animation: show 6.45s linear;
+
   @-webkit-keyframes show {
     0% {
       opacity: 0;
     }
+
     25% {
       opacity: 1;
     }
+
     50% {
       opacity: 1;
     }
+
     75% {
       opacity: 1;
     }
+
     100% {
       opacity: 1;
     }
   }
+
   @keyframes show {
     0% {
       opacity: 0;
     }
+
     25% {
       opacity: 1;
     }
+
     50% {
       opacity: 1;
     }
+
     75% {
       opacity: 1;
     }
+
     100% {
       opacity: 1;
     }
   }
 }
+
 .preloader__section {
   position: fixed;
   top: 0;
@@ -120,42 +144,41 @@
   height: 100%;
   background: #010101;
   transition: all .7s .3s cubic-bezier(.645, .045, .355, 1.000);
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
+
 .preloader__left {
   left: 0;
 }
 .preloader__right {
   right: 0;
 }
+
 /* Loaded */
+
 .loaded .preloader-logo {
   opacity: 0;
 }
+
 .loaded .preloader__left {
-  -webkit-transform: translateX(-100%);/* Chrome, Opera 15+, Safari 3.1+ */
-      -ms-transform: translateX(-100%);/* IE 9 */
-          transform: translateX(-100%);/* Firefox 16+, IE 10+, Opera */
+  transform: translateX(-100%);
 }
 
 .loaded .preloader__right {
-  -webkit-transform: translateX(100%);/* Chrome, Opera 15+, Safari 3.1+ */
-      -ms-transform: translateX(100%);/* IE 9 */
-          transform: translateX(100%);/* Firefox 16+, IE 10+, Opera */
+  transform: translateX(100%);
 }
+
 .loaded .preloader {
   opacity: 0;
   transition: all .3s ease-out;
 }
+
 .loaded .preloader-wrapper {
   visibility: hidden;
   transition: all .3s 1s ease-out;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
+
 .no-js .preloader-wrapper {
   display: none;
 }
