@@ -1,39 +1,49 @@
 /**
  * Dividers
  */
+
 .divider {
-	max-width: remy(32px);
-	height: 2px;
-	background-color: #1b1b1b;
-	border: 0;
+  max-width: remy(32px);
+  height: 2px;
+  background-color: #1b1b1b;
+  border: 0;
 }
+
 .divider--primary {
-	margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
+
 .divider--secondary {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
+
 .divider--svg {
-	display: block;
-	margin-right: auto;
-	margin-bottom: 3rem;
-	margin-left: auto;
+  display: block;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  margin-left: auto;
 }
+
 .divider--full {
-	max-width: 100%;
+  max-width: 100%;
 }
+
 .divider--gold {
-	background-color: $color--gold;
+  background-color: $color--gold;
 }
+
 .divider--violet {
-	background-color: $color--red;
+  background-color: $color--red;
 }
+
 .divider--left {
-	margin-left: 0;
+  margin-left: 0;
 }
+
 .divider--light {
-	background-color: #eee;
+  background-color: #eee;
 }
+
 .divider--thin {
-	height: 1px;
+  height: 1px;
 }
