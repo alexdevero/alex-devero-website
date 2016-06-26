@@ -1,10 +1,10 @@
 {
   "name": "alex-devero-portfolio",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "author": "Alex Devero",
   "email": "deveroalex@gmail.com",
   "url": "http://alexdevero.com/",
-  "description": "Personal portfolio",
+  "description": "Personal portfolio of Alex Devero",
   "private": true,
   "devDependencies": {
     "gulp": "^3.9.1",
