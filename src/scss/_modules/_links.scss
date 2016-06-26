@@ -1,54 +1,69 @@
 /**
  * Links
  */
+
 .link--default {
   color: $color--flat-pete-river;
+
   &:focus,
   &:hover {
     color: $color--flat-belize-hole;
   }
 }
+
 .link--black {
   color: $color--jet;
+
   &:focus,
   &:hover {
     color: $color--gold;
   }
 }
+
 .link--gold {
   color: $color--gold;
+
   &:focus,
   &:hover {
     color: $color--oil;
   }
 }
+
 .link--grey {
   color: $color--jumbo;
+
   &:focus,
   &:hover {
     color: $color--white;
   }
 }
+
 .link--underline {
   border-bottom: 1px solid;
 }
+
 .link--violet {
-	color: $color--jet;
-	&:focus,
-	&:hover {
-		color: $color--red;
-	}
+  color: $color--jet;
+
+  &:focus,
+  &:hover {
+    color: $color--red;
+  }
 }
+
 .link--white {
   color: #fff;
+
   &:focus,
   &:hover {
     color: $color--aluminum;
   }
 }
+
 .link--disabled {
   color: $color--jet;
   cursor: default;
+
   &:focus,
   &:hover {
     color: $color--jet;
