@@ -15,15 +15,15 @@ header a {
 	color: #212121;
 	&:focus,
 	&:hover {
-		color: #8d38c9;
+		color: $color--red;
 		// color: $color--gold;
 	}
 	&.active {
-		color: #8d38c9;
+		color: $color--red;
 		// color: $color--gold;
 		&:focus,
 		&:hover {
-			color: #8d38c9;
+			color: $color--red;
 			//color: $color--gold;
 		}
 	}

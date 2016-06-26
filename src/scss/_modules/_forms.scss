@@ -14,7 +14,7 @@
 	border: 1px solid #ccc;
 	border-radius: $radius;
 	&:focus {
-		outline-color: #8d38c9;
+		outline-color: $color--red;
 	}
 }
 

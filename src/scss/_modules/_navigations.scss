@@ -56,7 +56,8 @@
     color: $color--jet;
     &:focus,
     &:hover {
-    	color: #8d38c9;
+    	color: $color--red;
+      color: #de1e10;
       //color: darken($color--gold, 18%);
     }
   }
@@ -83,7 +84,7 @@
   &:focus,
   &:hover {
     //color: $color--gold;
-    color: #8d38c9;
+    color: $color--red;
   }
   @media only screen and (min-width: 864px) {
     display: none;
@@ -99,7 +100,7 @@
   &:focus,
   &:hover {
     //color: darken($color--gold, 18%);
-    color: #8d38c9;
+    color: $color--red;
   }
 }
 .nav--media i {
@@ -112,7 +113,7 @@
   &:focus,
   &:hover {
     //color: #333;
-    color: #8d38c9;
+    color: $color--red;
     //color: $color--gold;
   }
 }
