@@ -7,7 +7,7 @@
 }
 
 .page--home .sec__main {
-  margin-bottom: rem(-63px);
+  margin-bottom: remy(-63px);
 }
 
 .page--home .hero--big {
@@ -72,7 +72,6 @@
 }
 
 .home__intro h3 {
-  //margin-top: 0.8125rem;
   margin-top: 0;
   @media screen and (max-width: 768px) {
     font-size: 1.15rem;
@@ -95,11 +94,9 @@
 }
 
 .page--home footer {
-  //position: absolute;
-  //bottom: 0;
   padding-bottom: 0;
   width: 100%;
-  height: rem(63px);
+  height: remy(63px);
   background-color: transparent;
 }
 
