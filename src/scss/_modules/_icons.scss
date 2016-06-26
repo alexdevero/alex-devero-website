@@ -1,15 +1,18 @@
 /**
  * Icons
  */
+
 .icon-home {
   cursor: pointer;
 }
+
 .icon-home i {
   &:focus,
   &:hover {
     color: darken(#fff, 11%);
   }
 }
+
 .icon--burger {
   position: relative;
   display: inline-block;
@@ -24,28 +27,32 @@
   box-shadow: inset 0 0 0 32px,0 -6px,0 6px;
 
   direction: ltr;
-  &:before {
-    content: "";
-  }
+
+  &:before,
   &:after {
     content: "";
   }
 }
+
 .icon {
   display: block;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
 }
+
 .icon--big {
   max-width: remy(272px);
 }
+
 .icon--medium {
   max-width: remy(256px);
 }
+
 .icon--smaller {
   max-width: remy(200px);
 }
+
 .icon--small {
   max-width: remy(100px);
 }
