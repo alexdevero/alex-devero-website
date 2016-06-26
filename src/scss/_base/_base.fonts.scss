@@ -1,6 +1,9 @@
 //
-// StreetBrush
+// Font imports
 //
+
+// StreetBrush
+
 @font-face {
   font-family: "StreetBrush";
   src: url(../fonts/streetbrush-webfont.eot?v=4.4.0);
@@ -13,31 +16,8 @@
   font-weight: 700;
 }
 
-//
-// Raleway
-//
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 300;
-  src: url(../fonts/Raleway-Light.otf) format("truetype");
-}
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/Raleway-Regular.otf) format("truetype");
-}
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  src: url(../fonts/Raleway-Bold.otf) format("truetype");
-}
-
-//
 // Prometheus
-//
+
 @font-face {
   font-family: "Prometheus";
   font-style: normal;
@@ -48,19 +28,4 @@
        url(../fonts/prometheus-webfont.woff) format("woff"),
        url(../fonts/prometheus-webfont.ttf) format("truetype"),
        url(../fonts/prometheus-webfont.svg#prometheusregular) format("svg");
-}
-
-//
-// Anurati
-//
-@font-face {
-  font-family: "Anurati";
-  font-style: normal;
-  font-weight: normal;
-  src: url(../fonts/anurati-regular-webfont.eot);
-  src: url(../fonts/anurati-regular-webfont.eot?#iefix) format("embedded-opentype"),
-       url(../fonts/anurati-regular-webfont.woff2) format("woff2"),
-       url(../fonts/anurati-regular-webfont.woff) format("woff"),
-       url(../fonts/anurati-regular-webfont.ttf) format("truetype"),
-       url(../fonts/anurati-regular-webfont.svg#anuratiregular) format("svg");
 }
