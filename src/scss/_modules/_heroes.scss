@@ -1,26 +1,24 @@
 /**
  * Heroes
  */
+
 .hero {
   position: relative;
-  /*background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;*/
-}/*
-.hero--about {
-  background-position: bottom center;
-}*/
+}
+
 .hero--big {
   height: 100%;
   min-height: 45rem;
 }
+
 .hero--small {
   min-height: 26.75rem;
+
   @media screen and (max-width: remy(768px)) {
     min-height: 27rem;
   }
 }
+
 .hero__content {
   position: absolute;
   padding-top: 4rem;
@@ -29,132 +27,3 @@
 
   @extend .vertical-align;
 }
-/*
-.hero--about {
-  background-image: url(../images/heroes/hero--about--mobile.jpg);
-}
-.hero--main {
-  background-image: url(../images/heroes/hero--about--mobile.jpg);
-}
-.hero--process {
-  background-image: url(../images/heroes/hero--process-2--mobile.jpg);
-}
-.hero--skills {
-  background-image: url(../images/heroes/hero--skills--mobile.jpg);
-}
-.hero--terms {
-  background-image: url(../images/heroes/hero--terms--mobile.jpg);
-}
-.hero--work {
-  background-image: url(../images/heroes/hero--work--mobile.jpg);
-}
-.hero--quest {
-  background-image: url(../images/heroes/hero--quest-2--mobile.jpg);
-}
-.hero--contact {
-  background-image: url(../images/heroes/hero--contact--mobile--2.jpg);
-}
-@media screen and (min-width: remy(480px)) {
-  .hero--about {
-    background-image: url(../images/heroes/hero--about--tablet.jpg);
-  }
-  .hero--main {
-    background-image: url(../images/heroes/hero--about--tablet.jpg);
-  }
-  .hero--process {
-    background-image: url(../images/heroes/hero--process-2--tablet.jpg);
-  }
-  .hero--skills {
-    background-image: url(../images/heroes/hero--skills--tablet.jpg);
-  }
-  .hero--terms {
-    background-image: url(../images/heroes/hero--terms--tablet.jpg);
-  }
-  .hero--work {
-    background-image: url(../images/heroes/hero--work--tablet.jpg);
-  }
-  .hero--quest {
-    background-image: url(../images/heroes/hero--quest-2--tablet.jpg);
-  }
-  .hero--contact {
-    background-image: url(../images/heroes/hero--contact--tablet--2.jpg);
-  }
-}
-@media screen and (min-width: remy(768px)) {
-  .hero--about {
-    background-image: url(../images/heroes/hero--about--desktop.jpg);
-  }
-  .hero--main {
-    background-image: url(../images/heroes/hero--about--desktop.jpg);
-  }
-  .hero--process {
-    background-image: url(../images/heroes/hero--process-2--desktop.jpg);
-  }
-  .hero--skills {
-    background-image: url(../images/heroes/hero--skills--desktop.jpg);
-  }
-  .hero--terms {
-    background-image: url(../images/heroes/hero--terms--desktop.jpg);
-  }
-  .hero--work {
-    background-image: url(../images/heroes/hero--work--desktop.jpg);
-  }
-  .hero--quest {
-    background-image: url(../images/heroes/hero--quest-2--desktop.jpg);
-  }
-  .hero--contact {
-    background-image: url(../images/heroes/hero--contact--desktop--2.jpg);
-  }
-}
-@media screen and (min-width: remy(992px)) {
-  .hero--about {
-    background-image: url(../images/heroes/hero--about--large.jpg);
-  }
-  .hero--main {
-    background-image: url(../images/heroes/hero--about--large.jpg);
-  }
-  .hero--process {
-    background-image: url(../images/heroes/hero--process-2--large.jpg);
-  }
-  .hero--skills {
-    background-image: url(../images/heroes/hero--skills--large.jpg);
-  }
-  .hero--terms {
-    background-image: url(../images/heroes/hero--terms--large.jpg);
-  }
-  .hero--work {
-    background-image: url(../images/heroes/hero--work--large.jpg);
-  }
-  .hero--quest {
-    background-image: url(../images/heroes/hero--quest-2--large.jpg);
-  }
-  .hero--contact {
-    background-image: url(../images/heroes/hero--contact--large--2.jpg);
-  }
-}
-@media screen and (min-width: remy(1400px)) {
-  .hero--about {
-    background-image: url(../images/heroes/hero--about--xlarge.jpg);
-  }
-  .hero--main {
-    background-image: url(../images/heroes/hero--about--xlarge.jpg);
-  }
-  .hero--process {
-    background-image: url(../images/heroes/hero--process-2--xlarge.jpg);
-  }
-  .hero--skills {
-    background-image: url(../images/heroes/hero--skills--xlarge.jpg);
-  }
-  .hero--terms {
-    background-image: url(../images/heroes/hero--terms--xlarge.jpg);
-  }
-  .hero--work {
-    background-image: url(../images/heroes/hero--work--xlarge.jpg);
-  }
-  .hero--quest {
-    background-image: url(../images/heroes/hero--quest-2--xlarge.jpg);
-  }
-  .hero--contact {
-    background-image: url(../images/heroes/hero--contact--xlarge--2.jpg);
-  }
-}*/
