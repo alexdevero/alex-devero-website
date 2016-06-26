@@ -1,6 +1,7 @@
 /**
  * Overlays
  */
+
 .overlay {
   position: absolute;
   top: 0;
@@ -8,15 +9,18 @@
   height: 100%;
   background: rgba(0,0,0,.85);
 }
+
 .overlay--light {
   background: rgba(0,0,0,.65);
 }
+
 .overlay__content {
   color: #fff;
   text-align: center;
 
   @extend .vertical-align;
 }
+
 .overlay--thumbnail {
   z-index: 2;
   background-color: rgba(0,0,0,1);
@@ -26,28 +30,9 @@
   opacity: 0;
 
   @include transition(opacity);
+
   &:focus,
   &:hover {
     opacity: .85;
   }
 }
-/*
-.overlay--thumbnail:hover + .works__thumbnail,
-.overlay--thumbnail:hover + .works__thumbnail + noscript > .works__thumbnail {
-          filter: grayscale(0);
-
-  -webkit-filter: grayscale(0);
-}*/
-/*
-.overlay--sumava {
-  background-image: url(../images/thumbnails/thumbnail--sumava_hipsterlogogenerator--gold.png);
-}
-.overlay--trinity {
-  background-image: url(../images/thumbnails/thumbnail--trinity_hipsterlogogenerator--gold.png);
-}
-.overlay--material {
-  background-image: url(../images/thumbnails/thumbnail--material_hipsterlogogenerator--gold.png);
-}
-.overlay--nemesis {
-  background-image: url(../images/thumbnails/thumbnail--nemesis_hipsterlogogenerator--gold.png);
-}*/
