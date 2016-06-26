@@ -1,15 +1,19 @@
 ///
 // Px to rem
 ///
-@function remy($target) {
+
+/*@function remy($target) {
   @return ($target / 18px) * 1rem;// HTML font-size is set to 18px
+}*/
+
+@function remy($target) {
+  @return ($target / $base--font--size) * 1rem;
 }
-@function rem($target) {
-  @return ($target / 16px) * 1rem;
-}
+
 ///
 // Color grabber
 ///
+
 @function palette($color, $shade: 500) {
   $colorMap: map-get($palette, $color);
   $result: map-get($colorMap, $shade);
