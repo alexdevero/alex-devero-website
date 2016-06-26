@@ -1,4 +1,5 @@
 // Core variables and mixins
+
 @import '_settings/_settings.colors';
 @import '_settings/_settings.variables';
 
@@ -18,21 +19,25 @@
  */
 
 // Base
+
 @import '_base/_base.normalize';
 @import '_base/_base.fonts';
 @import '_base/_base';
 @import '_base/_base.typography';
 
 // Layout
+
 @import '_layout/_layout.grid';
 @import '_layout/_layout.print';
 
 // Components
+
 @import '_components/_header';
 @import '_components/_sections';
 @import '_components/_footer';
 
 // Modules
+
 @import '_modules/_buttons';
 @import '_modules/_dividers';
 @import '_modules/_forms';
@@ -41,17 +46,17 @@
 @import '_modules/_links';
 @import '_modules/_navigations';
 @import '_modules/_overlays';
-//@import '_modules/_preloaders';
 
 // Utilities
+
 @import '_utilities/_hacks';
 @import '_utilities/_utilities';
 
 // Pages
+
 @import '_pages/_home';
 @import '_pages/_portfolio';
 @import '_pages/_case-studies';
 @import '_pages/_about';
 @import '_pages/_process';
-@import '_pages/_work';
 @import '_pages/_contact';
