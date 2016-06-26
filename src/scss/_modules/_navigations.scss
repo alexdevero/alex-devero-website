@@ -1,14 +1,17 @@
 /**
   * Navigations
   */
+
 .nav {
   display: none;
+
   @media only screen and (min-width: 864px) {
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
   }
 }
+
 .nav--main {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -16,6 +19,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
           align-items: center;
+
   @media screen and (max-width: 863px) {
     position: fixed;
     top: 0;
@@ -26,47 +30,55 @@
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
     overflow-y: auto;
     text-align: center;
-    //background-color: rgba(0,0,0,.95);
     background-color: rgba(255,255,255,.95);
     opacity: 0;
 
-    @include transition(all);
+    @include transition(opacity);
   }
 }
-.checkbox--nav:checked+.nav__container>.nav--main {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-  @media screen and (max-width: 863px) {
-    display: block;
-  }
-  width: 100%;
-  height: 100%;
+
+.checkbox--nav:checked + .nav__container > .nav--main {
   opacity: 1;
+  visibility: visible;
+
+  /*@media screen and (max-width: 863px) {
+    display: block;
+  }*/
 }
+
 @media screen and (max-width: 863px) {
   .nav--main li:nth-child(n+2) {
     margin-top: .35rem;
   }
+
   .nav--main a {
     font-size: 1.65rem;
     //color: $color--gold;
     color: $color--jet;
+
     &:focus,
     &:hover {
-    	color: $color--red;
+      color: $color--red;
       color: #de1e10;
       //color: darken($color--gold, 18%);
     }
   }
 }
+
 @media screen and (min-width: 864px) {
   .nav--main li:nth-of-type(n+2) {
     margin-left: 1rem;
   }
 }
+
 .navbar-toggler {
   //padding: .5rem .75rem;
   padding-top: .5rem;
@@ -80,12 +92,15 @@
   border: 1px solid transparent;
   border-radius: .25rem;
   cursor: pointer;
+
   @include transition(color);
+
   &:focus,
   &:hover {
     //color: $color--gold;
     color: $color--red;
   }
+
   @media only screen and (min-width: 864px) {
     display: none;
   }
@@ -97,19 +112,23 @@
 .nav--main .navbar-toggler {
   //color: $color--gold;
   color: $color--jet;
+
   &:focus,
   &:hover {
     //color: darken($color--gold, 18%);
     color: $color--red;
   }
 }
+
 .nav--media i {
   font-size: 1.25rem;
 }
+
 .nav--media a {
   font-weight: 700;
   //color: $color--gold;
   color: #212121;
+
   &:focus,
   &:hover {
     //color: #333;
@@ -117,6 +136,7 @@
     //color: $color--gold;
   }
 }
+
 .nav--footer {
   display: inline-block;/* No flexbox fallback */
   display: -webkit-flex;
@@ -129,9 +149,11 @@
   -ms-flex-pack: center;
           justify-content: center;
 }
+
 .nav--footer li {
   float: left;
 }
+
 .nav--footer li:nth-of-type(n+2) {
   margin-left: 1rem;
 }
