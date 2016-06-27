@@ -1,0 +1,33 @@
+/**
+ * Tooltips
+ */
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-container .tooltiptext {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  z-index: 1;
+  visibility: hidden;
+  padding: remy(5px) 0;
+  margin-left: remy(-50px);
+  width: remy(100px);
+  font-size: .85rem;
+  color: #fff;
+  text-align: center;
+  background-color: black;
+  border-radius: $radius;
+  opacity: 0;
+
+  @include transition(all);
+}
+
+.tooltip-container:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
