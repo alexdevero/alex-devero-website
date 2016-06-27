@@ -47,13 +47,14 @@
 .home__intro h1 {
   margin-top: 0;
   line-height: 1.1;
+  font-size: 4rem;
+
+  @media screen and (min-width: 331px) {
+    font-size: 6rem;
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 8rem;
-  }
-
-  @media screen and (max-width: 555px) {
-    font-size: 6rem;
   }
 }
 
