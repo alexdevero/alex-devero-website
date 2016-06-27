@@ -61,24 +61,23 @@
 .home__intro h2 {
   margin-top: 0;
   color: #212121;
+  font-size: 1.25rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 555px) {
     font-size: 1.5rem;
-  }
-
-  @media screen and (max-width: 555px) {
-    font-size: 1.25rem;
   }
 }
 
 .home__intro h3 {
   margin-top: 0;
-  @media screen and (max-width: 768px) {
+  font-size: 1rem;
+
+  @media screen and (min-width: 555px) {
     font-size: 1.15rem;
   }
 
-  @media screen and (max-width: 555px) {
-    font-size: 1rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.5rem;
   }
 }
 
