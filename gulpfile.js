@@ -25,7 +25,7 @@ var gulp = require('gulp'),
 
 // Minify HTML files
 
-gulp.task('minifyHTML', function() {
+gulp.task('minHTML', function() {
   return gulp.src('src/*.html')
     .pipe(changed('dist'))
     //.pipe(html5Lint())
@@ -120,7 +120,7 @@ gulp.task('sass', function() {
 
 // Minify JavaScript files
 
-gulp.task('minifyJS', function() {
+gulp.task('minJS', function() {
   return gulp.src('src/js/main.js')
     .pipe(changed('dist/js'))
     .pipe(uglify().on('error', gulpUtil.log))
@@ -131,12 +131,12 @@ gulp.task('minifyJS', function() {
 // Watch HTML, CSS and JavaScript files
 
 gulp.task('watch', function() {
-  gulp.watch('src/*.html', ['minifyHTML']);
+  gulp.watch('src/*.html', ['minHTML']);
   gulp.watch('src/*.php', ['copyOther']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/js/main.js', ['minifyJS']);
+  gulp.watch('src/js/main.js', ['minJS']);
 });
 
 // Automate tasks (cmd: gulp)
 
-gulp.task('default', ['minifyHTML', 'copyAll', 'images', 'sass', 'minifyJS'], function() {});
+gulp.task('default', ['minHTML', 'copyAll', 'images', 'sass', 'minJS'], function() {});
