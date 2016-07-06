@@ -29,7 +29,7 @@ header a {
   }
 }
 
-.logo {
+header .logo {
   float: left;
   margin: 0;
   font-family: "Prometheus", arial, sans-serif;
@@ -39,7 +39,7 @@ header a {
   line-height: 1.2;
 }
 
-.logo a {
+header .logo a {
   letter-spacing: .65rem;
 
   &:focus,
