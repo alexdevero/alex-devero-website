@@ -39,7 +39,7 @@
 
 .btn--full--red {
   color: #fff;
-  background-color: $color--red;
+  background-color: $color--red-alt;
 
   &:focus,
   &:hover {
@@ -94,7 +94,7 @@
 }
 
 .btn--ghost--red {
-  color: $color--red;
+  color: $color--red-alt;
 
   &:focus,
   &:hover {
