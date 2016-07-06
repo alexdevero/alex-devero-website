@@ -12,73 +12,50 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
+  margin-top: 0;
   font-family: $font--raleway;
   font-weight: 200;
 }
 
-/*
 h1 {
-  margin-top: 0;
-  font-size: 2.369rem;
-}
-
-h2 {
-  font-size: 1.618rem;
-}
-
-h3 {
-  font-size: 1.333rem;
-}
-
-h4 {
-  font-size: 1rem;
-}
-
-h5 {
-  font-size: .75rem;
-}
-*/
-
-/* Guttenberg */
-
-h1 {
-  margin-top: remy(104px);
+  //margin-top: remy(104px);
   margin-bottom: remy(26px);
   font-size: remy(40px);
   line-height: remy(52px);
 }
 
 h2 {
-  margin-top: remy(65px);
+  //margin-top: remy(65px);
   margin-bottom: remy(13px);
   font-size: remy(27px);
   line-height: remy(39px);
 }
 
 h3 {
-  margin-top: remy(52px);
+  //margin-top: remy(52px);
   margin-bottom: remy(13px);
   font-size: remy(22px);
   line-height: remy(26px);
 }
 
 h4 {
-  margin-top: remy(39px);
+  //margin-top: remy(39px);
   margin-bottom: remy(13px);
   font-size: remy(19.2px);
   line-height: remy(26px);
 }
 
 h5 {
-  margin-top: remy(65px);
+  //margin-top: remy(65px);
   margin-bottom: remy(13px);
   font-size: remy(16px);
   line-height: remy(26px);
 }
 
 h6 {
-  margin-top: remy(65px);
+  //margin-top: remy(65px);
   margin-bottom: remy(13px);
   font-size: remy(16px);
   line-height: remy(26px);
