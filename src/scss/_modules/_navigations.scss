@@ -51,7 +51,7 @@
 
     &:focus,
     &:hover {
-      color: $color--red;
+      color: $color--red-alt;
     }
   }
 }
@@ -80,7 +80,7 @@
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: $color--red-alt;
   }
 
   @media only screen and (min-width: 864px) {
@@ -102,7 +102,7 @@
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: $color--red-alt;
   }
 }
 
@@ -116,7 +116,7 @@
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: $color--red-alt;
   }
 }
 
