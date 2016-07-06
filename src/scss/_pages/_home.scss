@@ -99,6 +99,15 @@
   li:nth-of-type(n+2) {
     margin-left: 1rem;
   }
+
+  i {
+    @include transition(color);
+
+    &:focus,
+    &:hover {
+      color: $color--red;
+    }
+  }
 }
 
 .index-canvas {
