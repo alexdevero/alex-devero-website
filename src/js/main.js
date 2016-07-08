@@ -22,29 +22,37 @@
         document.addEventListener('click', function(e) {
           var elTarget = e.target;
 
-          // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
-          while (elTarget && !elTarget.href) {
-            elTarget = elTarget.parentNode;
-          }
-
-          // Change current URL
-          if (elTarget) {
+          if (elTarget.href.indexOf('.html') != -1) {
             e.preventDefault();
 
-            setTimeout(changePage, 750)
+            alert('html');
 
-            function changePage() {
-              history.pushState(null, elTarget.title, elTarget.href);
-
-              location.replace(elTarget.href);
+            // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
+            while (elTarget && !elTarget.href) {
+              elTarget = elTarget.parentNode;
             }
 
-            //changePage();
+            // Change current URL
+            if (elTarget) {
+              e.preventDefault();
 
-            return;
+              setTimeout(changePage, 750)
+
+              function changePage() {
+                history.pushState(null, elTarget.title, elTarget.href);
+
+                location.replace(elTarget.href);
+              }
+
+              //changePage();
+
+              return;
+            }
+
+            //window.addEventListener('popstate', changePage);
+          } else {
+            alert('doesn');
           }
-
-          //window.addEventListener('popstate', changePage);
         });
       })();
 
