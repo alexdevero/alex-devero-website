@@ -11,13 +11,48 @@
       portfolioItem: document.querySelectorAll('.work__item')
     },
     controllers: function() {
+
+      /**
+       * Custom transitions for page loading and closing
+       * info: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
+       */
+      (function() {
+        console.log('transition running');
+
+        document.addEventListener('click', function(e) {
+          var elTarget = e.target;
+
+          // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
+          while (elTarget && !elTarget.href) {
+            elTarget = elTarget.parentNode;
+          }
+
+          // Change current URL
+          if (elTarget) {
+            e.preventDefault();
+
+            setTimeout(changePage, 750)
+
+            function changePage() {
+              history.pushState(null, elTarget.title, elTarget.href);
+
+              location.replace(elTarget.href);
+            }
+
+            //changePage();
+
+            return;
+          }
+
+          //window.addEventListener('popstate', changePage);
+        });
+      })();
+
       /**
         * Index Canvas
         */
       if (this.settings.indexCanvas.length > 0) {
         (function() {
-          console.log('Canvas');
-
           var canvas = document.getElementById('indexCanvas');
           var ctx = canvas.getContext('2d');
 
