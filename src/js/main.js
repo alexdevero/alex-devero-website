@@ -25,7 +25,7 @@
           if (elTarget.href.indexOf('.html') != -1) {
             e.preventDefault();
 
-            alert('html');
+            console.log('Inbound link');
 
             // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
             while (elTarget && !elTarget.href) {
@@ -51,7 +51,7 @@
 
             //window.addEventListener('popstate', changePage);
           } else {
-            alert('doesn');
+            console.log('Outbound link');
           }
         });
       })();
