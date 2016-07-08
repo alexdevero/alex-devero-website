@@ -46,6 +46,13 @@
   max-width: 100%;
   max-height: remy(50px);
   filter: grayscale(100%);
+
+  @include transition(all);
+
+  &:focus,
+  &:hover {
+    filter: grayscale(0);
+  }
 }
 
 .about-clients .logo--codementor {
