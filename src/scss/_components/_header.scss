@@ -32,15 +32,17 @@ header a {
 header .logo {
   float: left;
   margin: 0;
-  font-family: "Prometheus", arial, sans-serif;
-  font-size: 1.25rem;
+  font-family: "Devero", arial, sans-serif;
+  font-size: 1.65rem;
+  //font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1;
+  //line-height: 1.2;
 }
 
 header .logo a {
-  letter-spacing: .65rem;
+  //letter-spacing: .65rem;
 
   &:focus,
   &:hover {
