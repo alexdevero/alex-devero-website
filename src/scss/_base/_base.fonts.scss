@@ -29,3 +29,14 @@
        url(../fonts/prometheus-webfont.ttf) format("truetype"),
        url(../fonts/prometheus-webfont.svg#prometheusregular) format("svg");
 }
+
+// Devero
+
+@font-face {
+  font-family: "Devero";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/devero.woff2) format("woff2"),
+       url(../fonts/devero.woff) format("woff"),
+       url(../fonts/devero.otf) format("opentype");
+}
