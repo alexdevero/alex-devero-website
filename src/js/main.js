@@ -19,6 +19,44 @@
       (function() {
         console.log('transition running');
 
+        // Custom fade in function
+        function fadeInCustom(el, display) {
+          el.style.opacity = 0;
+          el.style.display = display || 'block';
+
+          (function fade() {
+            var val = parseFloat(el.style.opacity);
+
+            if (!((val += .1) > 1)) {
+              el.style.opacity = val;
+              requestAnimationFrame(fade);
+            }
+          })();
+        }
+
+        function fadeOutCustom(el) {
+           el.style.opacity = 1;
+
+           (function fade() {
+            if ((el.style.opacity -= .1) < 0) {
+              el.style.display = 'none';
+            } else {
+              requestAnimationFrame(fade);
+            }
+           })();
+        }
+
+        window.onload = function() {
+          var el = document.querySelector('body');
+          el.style.display = 'none';
+
+          setTimeout(function() {
+            //$('body').attr('id', 'loaded');
+
+            fadeInCustom(el);
+          }, 350);
+        }
+
         document.addEventListener('click', function(e) {
           var elTarget = e.target;
 
@@ -36,12 +74,21 @@
             if (elTarget) {
               e.preventDefault();
 
-              setTimeout(changePage, 750)
+              setTimeout(changePage, 100);
 
               function changePage() {
+                var el = document.querySelector('body');
+
                 history.pushState(null, elTarget.title, elTarget.href);
 
-                location.replace(elTarget.href);
+                //$('html').fadeOut(350);
+                fadeOutCustom(el);
+
+                setTimeout(function() {
+                  location.replace(elTarget.href);
+                },750);
+
+                //location.replace(elTarget.href);
               }
 
               //changePage();
@@ -52,6 +99,12 @@
             //window.addEventListener('popstate', changePage);
           } else {
             console.log('Outbound link');
+
+            $('html').fadeOut(350);
+
+            setTimeout(function() {
+              return true;
+            },750);
           }
         });
       })();
