@@ -17,41 +17,50 @@
        * info: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
        */
       (function() {
-        console.log('transition running');
-
         // Custom fade in function
-        function fadeInCustom(el, display) {
-          el.style.opacity = 0;
-          el.style.display = display || 'block';
+        function fadeOutCustom(element) {
+          var elementOpacity = 1;// initial opacity
 
-          (function fade() {
-            var val = parseFloat(el.style.opacity);
+          var timer = setInterval(function () {
+            if (elementOpacity <= 0.1){
+              clearInterval(timer);
 
-            if (!((val += .1) > 1)) {
-              el.style.opacity = val;
-              requestAnimationFrame(fade);
+              element.style.display = 'none';
             }
-          })();
+
+            element.style.opacity = elementOpacity;
+
+            element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+
+            elementOpacity -= elementOpacity * 0.1;
+          }, 15);
         }
 
-        function fadeOutCustom(el) {
-           el.style.opacity = 1;
+        function fadeInCustom(element) {
+          var elementOpacity = 0.1;// initial opacity
 
-           (function fade() {
-            if ((el.style.opacity -= .1) < 0) {
-              el.style.display = 'none';
-            } else {
-              requestAnimationFrame(fade);
+          element.style.display = 'block';
+
+          var timer = setInterval(function () {
+            if (elementOpacity >= 1){
+              clearInterval(timer);
             }
-           })();
+
+            element.style.opacity = elementOpacity;
+
+            element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+
+            elementOpacity += elementOpacity * 0.1;
+          }, 15);
         }
 
         window.onload = function() {
-          var el = document.querySelector('body');
-          el.style.display = 'none';
+          var el = document.querySelector('html');
+          //el.style.display = 'none';
 
           setTimeout(function() {
-            //$('body').attr('id', 'loaded');
+            //$('html').attr('id', 'loaded');
+            el.setAttribute('id', 'loaded');
 
             fadeInCustom(el);
           }, 350);
@@ -62,8 +71,6 @@
 
           if (elTarget.href.indexOf('.html') != -1) {
             e.preventDefault();
-
-            console.log('Inbound link');
 
             // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
             while (elTarget && !elTarget.href) {
@@ -77,7 +84,7 @@
               setTimeout(changePage, 100);
 
               function changePage() {
-                var el = document.querySelector('body');
+                var el = document.querySelector('html');
 
                 history.pushState(null, elTarget.title, elTarget.href);
 
@@ -98,10 +105,6 @@
 
             //window.addEventListener('popstate', changePage);
           } else {
-            console.log('Outbound link');
-
-            $('html').fadeOut(350);
-
             setTimeout(function() {
               return true;
             },750);
@@ -291,6 +294,8 @@
       }
     },
     init: function() {
+      //document.querySelector('html').style.display = 'none';
+
       if (document.getElementsByClassName('no-js').length > 0) {
         document.getElementsByClassName('no-js')[0].classList.remove('no-js');
       }
