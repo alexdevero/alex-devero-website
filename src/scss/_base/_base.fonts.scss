@@ -36,7 +36,8 @@
   font-family: "Devero";
   font-style: normal;
   font-weight: normal;
-  src: url(../fonts/devero.woff2) format("woff2"),
+  src: url(../fonts/devero.otf) format("opentype");
+  /*src: url(../fonts/devero.woff2) format("woff2"),
        url(../fonts/devero.woff) format("woff"),
-       url(../fonts/devero.otf) format("opentype");
+       url(../fonts/devero.otf) format("opentype");*/
 }
