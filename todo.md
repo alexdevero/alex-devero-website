@@ -9,3 +9,4 @@
 ### Ideas:
 - full-screen slideshow with work example on homepage
 - animated message for submitting form
+- moving 3d shape or fractal in canvas instead of matrix code
