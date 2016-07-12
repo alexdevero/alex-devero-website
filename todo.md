@@ -3,7 +3,7 @@
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer
 - ~~increase size of icons in footer~~
-- add browser icons to 'tech list'
+- ~~add browser icons to 'tech list'~~
 - add new icons for planning and design sections on 'approach' page
 
 ### Ideas:
