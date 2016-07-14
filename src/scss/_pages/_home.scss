@@ -110,7 +110,8 @@
   }
 }
 
-.index-canvas {
+.index-canvas,
+video {
   position: absolute;
   top: 0;
   left: 0;
@@ -119,6 +120,26 @@
   width: 100%;
   height: 100%;
   //opacity: .35;
+}
+
+video {
+  @media (max-aspect-ratio: 16 / 9) {
+    width:300%;
+    left: -100%
+  }
+
+  @media (min-aspect-ratio: 16 / 9) {
+    height:300%;
+    top: -100%
+  }
+
+  @supports (object-fit: cover) {
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover
+  }
 }
 
 .page--home footer {
