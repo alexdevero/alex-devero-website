@@ -5,9 +5,11 @@
 - ~~increase size of icons in footer~~
 - ~~add browser icons to 'tech list'~~
 - add new icons for planning and design sections on 'approach' page
+- replace canvas with abstract video
 
 ### Ideas:
 - full-screen slideshow with work example on homepage
 - animated message for submitting form
 - moving 3d shape or fractal in canvas instead of matrix code
 - implement et-icons on 'approach' page instead of svg images
+- arrows on homepage for 'previous' and 'next' page
