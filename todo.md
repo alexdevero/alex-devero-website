@@ -7,6 +7,7 @@
 - ~~add new icons for planning and design sections on 'approach' page~~
 - ~~replace canvas with abstract video~~
 - add background image featuring silhouette to main element
+- implement CSS @support feature
 
 ### Ideas:
 - full-screen slideshow with work example on homepage
