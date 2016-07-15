@@ -54,6 +54,7 @@
           }, 15);
         }
 
+        // Loading fonts and stylesheets
         window.onload = function() {
           // Load Font Awesome
           var stylesheetAwesome = document.createElement('link');
@@ -76,6 +77,7 @@
           stylesheetRaleway.classList.add('jsLoaded');
           document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
 
+          // Cache html element
           var el = document.querySelector('html');
           //el.style.display = 'none';
 
@@ -83,10 +85,12 @@
             //$('html').attr('id', 'loaded');
             el.setAttribute('id', 'loaded');
 
+            // Fade in cached html element
             fadeInCustom(el);
           }, 350);
         }
 
+        // Page transitions for clicks on links
         document.addEventListener('click', function(e) {
           var elTarget = e.target;
 
