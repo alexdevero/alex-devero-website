@@ -2,51 +2,88 @@
  * About page
  */
 
-.page--about .sec__about {
-  //padding-top: 8.5rem;
-  margin-bottom: remy(-69px);
-  height: 100%;
-  min-height: remy(920px);
-  background-color: #fff;
+.page--about {
+  background: url(../images/bcgs/silhouette--mobile.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  min-height: 603px;
 
-  @media screen and (min-width: 326px) {
-    min-height: remy(790px);
-  }
-
-  @media screen and (min-width: 400px) {
-    min-height: remy(660px);
+  @media screen and (min-width: 480px) {
+    background-image: url(../images/bcgs/silhouette--tablet.jpg);
   }
 
   @media screen and (min-width: 768px) {
-    min-height: remy(595px);
+    background-image: url(../images/bcgs/silhouette--desktop.jpg);
+  }
+
+  @media screen and (min-width: 992px) {
+    background-image: url(../images/bcgs/silhouette--large.jpg);
+  }
+
+  @media screen and (min-width: 1400px) {
+    background-image: url(../images/bcgs/silhouette--xlarge.jpg);
+  }
+
+  .sec__about {
+    //padding-top: 8.5rem;
+    margin-bottom: remy(-69px);
+    height: 100%;
+    min-height: remy(920px);
+    //background-color: #fff;
+
+    @media screen and (min-width: 326px) {
+      min-height: remy(790px);
+    }
+
+    @media screen and (min-width: 400px) {
+      min-height: remy(660px);
+    }
+
+    @media screen and (min-width: 768px) {
+      min-height: remy(595px);
+    }
+  }
+
+ .sec__about {
+    //@extend .vertical-align;
+  }
+
+  .sec__about .container {
+    position: relative;
+    z-index: 2;
+    color: #9e9e9e;
+
+    @extend .vertical-align;
+  }
+
+  /*.page--about .about__photo {
+    max-width: remy(150px);
+    border-radius: 50%;
+  }*/
+
+  h1,
+  h2,
+  p {
+    padding: .25rem;
+    color: #000;
+    background: rgba(255,255,255,.5);
+  }
+
+  .heading--primary {
+    text-transform: inherit;
+  }
+
+  p {
+    font-size: remy(18px);
+  }
+
+  footer a {
+    color: #fff;
   }
 }
 
-.page--about .sec__about {
-  //@extend .vertical-align;
-}
-
-.page--about .sec__about .container {
-  position: relative;
-  z-index: 2;
-
-  @extend .vertical-align;
-}
-
-.page--about .about__photo {
-  max-width: remy(150px);
-  border-radius: 50%;
-}
-
-.page--about .heading--primary {
-  text-transform: inherit;
-}
-
-.page--about p {
-  font-size: remy(18px);
-}
-
-.about-clients h3 {
+/*.about-clients h3 {
   margin-bottom: 1.5rem;
 }
 
@@ -82,4 +119,4 @@
 
 .about-clients .logo--codementor {
   margin-top: .65rem;
-}
+}*/
