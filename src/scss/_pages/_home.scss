@@ -176,12 +176,28 @@ video {
   background-size: cover;
 }
 
-.page--home .header-cover {
-  background-image: url(../images/abstract-home-poster.png);
+.page--home .header-cover,
+.video .page--home .header-cover {
+  background-image: url(../images/bcgs/abstract-home-poster--mobile.jpg);
+
+  @media screen and (min-width: 480px) {
+    background-image: url(../images/bcgs/abstract-home-poster--tablet.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/bcgs/abstract-home-poster--desktop.jpg);
+  }
+
+  @media screen and (min-width: 992px) {
+    background-image: url(../images/bcgs/abstract-home-poster--large.jpg);
+  }
+
+  @media screen and (min-width: 1400px) {
+    background-image: url(../images/bcgs/abstract-home-poster--xlarge.jpg);
+  }
 }
 
 .video .page--home .header-cover {
-  background-image: url(../images/abstract-home-poster.png);
   z-index: -2;
 }
 
