@@ -25,7 +25,7 @@ var gulp = require('gulp'),
 
 // Minify HTML files
 
-gulp.task('minHTML', function() {
+gulp.task('HTML', function() {
   return gulp.src('src/*.html')
     .pipe(changed('dist'))
     //.pipe(html5Lint())
@@ -120,7 +120,7 @@ gulp.task('sass', function() {
 
 // Minify JavaScript files
 
-gulp.task('minJS', function() {
+gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(changed('dist/js'))
     .pipe(uglify().on('error', gulpUtil.log))
