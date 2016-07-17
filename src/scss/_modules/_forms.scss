@@ -24,7 +24,14 @@
   margin-bottom: 1em;
 }
 
+.form__details .col-md-6:first-of-type {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+}
+
 .form__message textarea {
+  height: remy(160px);
   resize: vertical;
 }
 
