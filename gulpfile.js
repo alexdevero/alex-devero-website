@@ -25,7 +25,7 @@ var gulp = require('gulp'),
 
 // Minify HTML files
 
-gulp.task('HTML', function() {
+gulp.task('html', function() {
   return gulp.src('src/*.html')
     .pipe(changed('dist'))
     //.pipe(html5Lint())
@@ -131,10 +131,10 @@ gulp.task('js', function() {
 // Watch HTML, CSS and JavaScript files
 
 gulp.task('watch', function() {
-  gulp.watch('src/*.html', ['minHTML']);
+  gulp.watch('src/*.html', ['html']);
   gulp.watch('src/*.php', ['copyOther']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/js/main.js', ['minJS']);
+  gulp.watch('src/js/main.js', ['js']);
 });
 
 // Automate tasks (cmd: gulp)
