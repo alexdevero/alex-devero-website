@@ -17,3 +17,4 @@
 - implement et-icons on 'approach' page instead of svg images
 - arrows on homepage for 'previous' and 'next' page
 - add animate css for icons on approach page
+- implement [glitch effect](https://codepen.io/lbebber/pen/ypgql) to video on homepage
