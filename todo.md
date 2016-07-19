@@ -1,7 +1,7 @@
 ### Tasks:
 - ~~add transitions for page page~~
 - add caching for pages
-- add fetch or AJAX loading to load main content while keeping header and footer
+- add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - ~~increase size of icons in footer~~
 - ~~add browser icons to 'tech list'~~
 - ~~add new icons for planning and design sections on 'approach' page~~
@@ -18,3 +18,4 @@
 - arrows on homepage for 'previous' and 'next' page
 - add animate css for icons on approach page
 - implement [glitch effect](https://codepen.io/lbebber/pen/ypgql) to video on homepage
+- add spinner that will be shown while sending contact form
