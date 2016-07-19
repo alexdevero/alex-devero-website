@@ -19,3 +19,4 @@
 - add animate css for icons on approach page
 - implement [glitch effect](https://codepen.io/lbebber/pen/ypgql) to video on homepage
 - add spinner that will be shown while sending contact form
+- add contact cta on homepage
