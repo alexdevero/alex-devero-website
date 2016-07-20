@@ -22,3 +22,4 @@
 - add spinner that will be shown while sending contact form
 - add contact cta on homepage
 - add testimonial slider on homepage
+- add codepen icon and link to footer
