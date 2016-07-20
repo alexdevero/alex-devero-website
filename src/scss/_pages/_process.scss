@@ -2,18 +2,43 @@
  * Process Page
  */
 
-.page--process .sec__process {
-  padding-top: 2.5rem;
-  padding-bottom: 0;
-}
+.page--process {
+  .sec__process {
+    padding-top: 2.5rem;
+    padding-bottom: 0;
+  }
 
-.row--process {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
+  .row {
+    position: relative;
+  }
 
-.page--process .nutshell__heading {
-  margin-top: 0;
-  font-weight: bold;
-  color: #212121;
+  .row--process {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .icon-container {
+    //@include vertical-align(absolute);
+    @media screen and (max-width: 768px) {
+      margin-bottom: 4rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(25%);
+    }
+  }
+
+  .icon {
+    font-size: 8rem;
+
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .nutshell__heading {
+    margin-top: 0;
+    font-weight: bold;
+    color: #212121;
+  }
 }
