@@ -100,50 +100,54 @@
         }
 
         // Page transitions for clicks on links
-        document.addEventListener('click', function(e) {
-          var elTarget = e.target;
+        var links = document.querySelectorAll('a');
 
-          if (elTarget.href.indexOf('.html') != -1) {
-            e.preventDefault();
+        for (var i = 0, j = links.length; i<j; i++) {
+          links[i].addEventListener('click', function(e) {
+            var elTarget = e.target;
 
-            // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
-            while (elTarget && !elTarget.href) {
-              elTarget = elTarget.parentNode;
-            }
-
-            // Change current URL
-            if (elTarget) {
+            if (elTarget.href.indexOf('.html') != -1) {
               e.preventDefault();
 
-              setTimeout(changePage, 100);
-
-              function changePage() {
-                var el = document.querySelector('html');
-
-                history.pushState(null, elTarget.title, elTarget.href);
-
-                //$('html').fadeOut(350);
-                fadeOutCustom(el);
-
-                setTimeout(function() {
-                  location.replace(elTarget.href);
-                },750);
-
-                //location.replace(elTarget.href);
+              // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
+              while (elTarget && !elTarget.href) {
+                elTarget = elTarget.parentNode;
               }
 
-              //changePage();
+              // Change current URL
+              if (elTarget) {
+                e.preventDefault();
 
-              return;
+                setTimeout(changePage, 100);
+
+                function changePage() {
+                  var el = document.querySelector('html');
+
+                  history.pushState(null, elTarget.title, elTarget.href);
+
+                  //$('html').fadeOut(350);
+                  fadeOutCustom(el);
+
+                  setTimeout(function() {
+                    location.replace(elTarget.href);
+                  },750);
+
+                  //location.replace(elTarget.href);
+                }
+
+                //changePage();
+
+                return;
+              }
+
+              //window.addEventListener('popstate', changePage);
+            } else {
+              setTimeout(function() {
+                return true;
+              },750);
             }
-
-            //window.addEventListener('popstate', changePage);
-          } else {
-            setTimeout(function() {
-              return true;
-            },750);
-          }
-        });
+          });
+        }
       })();
 
       /**
