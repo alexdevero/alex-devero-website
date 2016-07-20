@@ -42,8 +42,8 @@
 
 // Mixin for vertical centering
 
-@mixin vertical-align {
-  position: relative;
+@mixin vertical-align($position: relative) {
+  position: $position;
   top: 50%;
   transform: translateY(-50%);
 }
