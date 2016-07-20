@@ -77,6 +77,15 @@
           stylesheetRaleway.classList.add('jsLoaded');
           document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
 
+          if (document.URL.indexOf('approach') > 0) {
+            // Load Animate CSS
+            var stylesheetAnimateCSS = document.createElement('link');
+            stylesheetAnimateCSS.rel = 'stylesheet';
+            stylesheetAnimateCSS.href = 'css/animate.css';
+            stylesheetAnimateCSS.classList.add('jsLoaded');
+            document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);
+          }
+
           // Cache html element
           var el = document.querySelector('html');
           //el.style.display = 'none';
