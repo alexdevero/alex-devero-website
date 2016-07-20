@@ -39,12 +39,12 @@
 
 .btn--full--red {
   color: #fff;
-  background-color: $color--red-alt;
+  background-color: $color--black;//$color--red-alt
 
   &:focus,
   &:hover {
     color: #fff;
-    background-color: darken($color--red, 18%);
+    background-color: $color--red-alt;
   }
 }
 
