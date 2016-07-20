@@ -4,35 +4,31 @@
 
 .glitch {
   position: relative;
-  margin: 0 auto;
-  width: 400px;
-  font-size: 100px;
-  color: white;
 
   &:before,
   &:after {
     position: absolute;
     top: 0;
+    right: 0;
+    left: 0;
     overflow: hidden;
+    color: inherit;
+    //background: black;
     clip: rect(0, 900px, 0, 0);
     content: attr(data-text);
   }
 }
 
 .glitch:after {
-  left: 2px;
-  color: white;
-  text-shadow: -1px 0 red;
-  background: black;
-  animation: noise-anim 2s infinite linear alternate-reverse;
+  //left: 2px;
+  text-shadow: -2px 0 red;
+  animation: noise-anim 1s infinite linear alternate-reverse;
 }
 
 .glitch:before {
-  left: -2px;
-  color: white;
-  text-shadow: 1px 0 blue;
-  background: black;
-  animation: noise-anim-2 3s infinite linear alternate-reverse;
+  ///left: -2px;
+  text-shadow: 2px 0 blue;
+  animation: noise-anim-2 2s infinite linear alternate-reverse;
 }
 
 @keyframes noise-anim {
