@@ -21,3 +21,4 @@
 - ~~implement [glitch effect](https://codepen.io/lbebber/pen/ypgql) to heading on homepage~~
 - add spinner that will be shown while sending contact form
 - add contact cta on homepage
+- add testimonial slider on homepage
