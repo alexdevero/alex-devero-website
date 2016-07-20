@@ -1,11 +1,11 @@
 // Core variables and mixins
 
-@import '_settings/_settings.colors';
-@import '_settings/_settings.variables';
+@import '_settings/_colors';
+@import '_settings/_variables';
 
-@import '_tools/_tools.mixins';
-@import '_tools/_tools.placeholders';
-@import '_tools/_tools.functions';
+@import '_tools/_mixins';
+@import '_tools/_placeholders';
+@import '_tools/_functions';
 
 /**
  * Table of contents
@@ -20,10 +20,10 @@
 
 // Base
 
-@import '_base/_base.normalize';
-@import '_base/_base.fonts';
+@import '_base/_normalize';
+@import '_base/_fonts';
 @import '_base/_base';
-@import '_base/_base.typography';
+@import '_base/_typography';
 @import '_base/_et-line';
 
 // Layout
@@ -42,11 +42,13 @@
 @import '_modules/_buttons';
 @import '_modules/_dividers';
 @import '_modules/_forms';
+@import '_modules/_glitch';
 @import '_modules/_heroes';
 @import '_modules/_icons';
 @import '_modules/_links';
 @import '_modules/_navigations';
 @import '_modules/_overlays';
+@import '_modules/_spinner';
 @import '_modules/_tooltips';
 
 // Utilities
