@@ -9,12 +9,13 @@
 - ~~add background image featuring silhouette to main element~~
 - implement CSS @support feature
 - add FAQ on about page [example](http://www.tvrdek.cz/).
+- "Spuštění" -> "Vyhodnocení" on approach-cs
 
 ### Ideas:
 - ~~full-screen slideshow with work example on homepage~~
 - animated message for submitting form
 - ~~moving 3d shape or fractal in canvas instead of matrix code~~
-- implement et-icons on 'approach' page instead of svg images
+- ~~implement et-icons on 'approach' page instead of svg images~~
 - arrows on homepage for 'previous' and 'next' page
 - add animate css for icons on approach page
 - ~~implement [glitch effect](https://codepen.io/lbebber/pen/ypgql) to heading on homepage~~
