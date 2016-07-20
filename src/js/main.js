@@ -149,7 +149,7 @@
       /**
         * Index Canvas
         */
-      if (this.settings.indexCanvas.length > 0) {
+      /*if (this.settings.indexCanvas.length > 0) {
         (function() {
           var canvas = document.getElementById('indexCanvas');
           var ctx = canvas.getContext('2d');
@@ -217,7 +217,7 @@
 
           setInterval(draw, 95);
         })();
-      }
+      }*/
 
       /**
        * Form controller
@@ -315,7 +315,7 @@
       /**
        * Portfolio click blocker
        */
-      if (this.settings.portfolioItem.length > 0) {
+      /*if (this.settings.portfolioItem.length > 0) {
         (function() {
           // Get all portfolio items and store them inside an array
           var portfolioItems = document.querySelectorAll('.work__item');
@@ -325,7 +325,7 @@
             //portfolioItems[i].setAttribute('href', '#');
           }
         })();
-      }
+      }*/
     },
     init: function() {
       //document.querySelector('html').style.display = 'none';
