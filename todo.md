@@ -23,3 +23,4 @@
 - add contact cta on homepage
 - add testimonial slider on homepage
 - add codepen icon and link to footer
+- implement effect - http://codepen.io/ariona/pen/akYXjr
