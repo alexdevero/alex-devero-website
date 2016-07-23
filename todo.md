@@ -24,4 +24,4 @@
 - add testimonial slider on homepage
 - add codepen icon and link to footer
 - implement effect - http://codepen.io/ariona/pen/akYXjr
-- implement black bcg on contact page with grey text
+- ~~implement black bcg on contact page with grey text~~
