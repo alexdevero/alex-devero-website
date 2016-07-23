@@ -84,6 +84,22 @@
   }
 }
 
+.btn--ghost--black-inverted {
+  padding: .5rem 2rem;
+  font-weight: 600;
+  letter-spacing: remy(4px);
+  text-transform: uppercase;
+  color: $color--black;
+  background: transparent;
+  border: 2px solid $color--black;
+
+  &:focus,
+  &:hover {
+    color: #fff;
+    background: $color--black;
+  }
+}
+
 .btn--ghost--gold {
   color: $color--gold;
 
