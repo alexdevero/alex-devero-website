@@ -95,10 +95,21 @@
 
 .btn--ghost--red {
   color: $color--red-alt;
+}
+
+.btn--ghost--red-inverted {
+  padding: .5rem 2rem;
+  font-weight: 600;
+  letter-spacing: remy(4px);
+  text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  border: 2px solid $color--red;
 
   &:focus,
   &:hover {
-    color: darken($color--red, 18%);
+    color: #fff;
+    background: $color--red;
   }
 }
 
