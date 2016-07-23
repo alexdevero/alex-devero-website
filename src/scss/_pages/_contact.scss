@@ -2,12 +2,44 @@
  * Contact Page
  */
 
-.page--contact .sec__main {
-  margin-bottom: -103px;
-  min-height: remy(960px);
-  height: 100%;
-}
+.page--contact {
+  background-color: #212121;
 
-.page--contact .about__contact {
-  @extend .vertical-align;
+  .sec__main {
+    margin-bottom: -103px;
+    min-height: remy(960px);
+    height: 100%;
+  }
+
+  header a,
+  .navbar-toggler {
+    color: #fff;
+
+    &:focus,
+    &:hover {
+      color: $color--red;
+    }
+  }
+
+  .about__contact {
+    @extend .vertical-align;
+  }
+
+  h1,
+  p,
+  footer a {
+    color: #fff;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  footer a {
+
+    &:focus,
+    &:hover {
+      color: $color--red;
+    }
+  }
 }
