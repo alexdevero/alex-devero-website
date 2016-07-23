@@ -11,12 +11,24 @@
   width: 100%;
   font-family: $font--quicksand;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: $radius;
+  color: #fff;
+  background: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #333;
+  border-left: 0;
+  //border-radius: $radius;
+
+  @include transition(all);
 
   &:focus {
-    outline-color: $color--red-alt;
+    outline: 0;
+    border-bottom: 2px solid #999;
   }
+}
+
+.form__subject select {
+  color: #999;
 }
 
 .form__details,
