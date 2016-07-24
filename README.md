@@ -1,8 +1,2 @@
-# alex-devero-v3
-Repo for my website on www.alexdevero.com
-
-<!--
-# ideas:
-- connect portfolio with case study on Behance.
-- use changing text color for canvas.
--->
+# Alex Devero
+Repository for my website and portfolio on www.alexdevero.com
