@@ -25,3 +25,6 @@
 - add codepen icon and link to footer
 - implement effect - http://codepen.io/ariona/pen/akYXjr
 - ~~implement black bcg on contact page with grey text~~
+- merge rows with examples on work page into single row
+- rename JS controllers to switches
+- add new JS object with functions called 'controllers'
