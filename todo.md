@@ -22,9 +22,9 @@
 - add spinner that will be shown while sending contact form
 - ~~add contact cta on homepage~~
 - add testimonial slider on homepage
-- add codepen icon and link to footer
+- ~~add codepen icon and link to footer~~
 - implement effect - http://codepen.io/ariona/pen/akYXjr
 - ~~implement black bcg on contact page with grey text~~
-- merge rows with examples on work page into single row
+- ~~merge rows with examples on work page into single row~~
 - rename JS controllers to switches
 - add new JS object with functions called 'controllers'
