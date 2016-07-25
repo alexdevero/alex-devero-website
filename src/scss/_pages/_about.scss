@@ -3,39 +3,14 @@
  */
 
 .page--about {
-  /*background: url(../images/bcgs/silhouette--mobile.jpg);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  min-height: 603px;
-
-  @media screen and (min-width: 480px) {
-    background-image: url(../images/bcgs/silhouette--tablet.jpg);
-  }
-
-  @media screen and (min-width: 768px) {
-    background-image: url(../images/bcgs/silhouette--desktop.jpg);
-  }
-
-  @media screen and (min-width: 992px) {
-    background-image: url(../images/bcgs/silhouette--large.jpg);
-  }
-
-  @media screen and (min-width: 1400px) {
-    background-image: url(../images/bcgs/silhouette--xlarge.jpg);
-  }*/
-
   main {
     position: relative;
   }
 
   .sec__about {
-    //padding-top: 8.5rem;
     margin-bottom: remy(-69px);
     height: 100%;
     min-height: remy(920px);
-    //background-color: #fff;
-    //@extend .vertical-align;
 
     @media screen and (min-width: 450px) {
       min-height: remy(815px);
@@ -62,19 +37,6 @@
     @extend .vertical-align;
   }
 
-  /*.page--about .about__photo {
-    max-width: remy(150px);
-    border-radius: 50%;
-  }*/
-
-  /*h1,
-  h2,
-  p {
-    padding: .25rem;
-    color: #000;
-    background: rgba(255,255,255,.5);
-  }*/
-
   .heading--primary {
     font-weight: 700;
     text-transform: inherit;
@@ -84,59 +46,7 @@
     font-size: remy(18px);
   }
 
-  /*.about__silhouette {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 100%;
-  }*/
-
-  /*footer a {
-    color: #fff;
-  }*/
-
   .btn {
     margin-top: 1.5rem;
   }
 }
-
-/*.about-clients h3 {
-  margin-bottom: 1.5rem;
-}
-
-.about-clients .row:first-of-type {
-  margin-bottom: 1rem;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 2rem;
-  }
-}
-
-.about-clients [class^="col-"]:not(:last-of-type) {
-  @media screen and (max-width: 768px) {
-    margin-bottom: 2rem;
-  }
-}
-
-.about-clients .logo {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100%;
-  max-height: remy(50px);
-  filter: grayscale(100%);
-
-  @include transition(all);
-
-  &:focus,
-  &:hover {
-    filter: grayscale(0);
-  }
-}
-
-.about-clients .logo--codementor {
-  margin-top: .65rem;
-}*/
