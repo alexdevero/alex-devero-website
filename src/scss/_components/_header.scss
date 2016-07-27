@@ -16,15 +16,15 @@ header a {
 
   &:focus,
   &:hover {
-    color: $color--red-alt;
+    color: $color--red;
   }
 
   &.active {
-    color: $color--red-alt;
+    color: $color--red;
 
     &:focus,
     &:hover {
-      color: $color--red-alt;
+      color: $color--red;
     }
   }
 }
