@@ -6,7 +6,7 @@
   background-color: #212121;
 
   .sec__main {
-    margin-bottom: -103px;
+    margin-bottom: remy(-61px);
     min-height: remy(960px);
     height: 100%;
   }
@@ -31,7 +31,13 @@
     color: #fff;
   }
 
+  h1 {
+    font-weight: 700;
+    text-transform: inherit;
+  }
+
   p {
+    font-size: remy(18px);
     text-align: center;
   }
 
