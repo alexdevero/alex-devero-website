@@ -67,7 +67,7 @@
           // Load Open Sans font
           var stylesheetOpenSans = document.createElement('link');
           stylesheetOpenSans.rel = 'stylesheet';
-          stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300';
+          stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
           stylesheetOpenSans.classList.add('jsLoaded');
           document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);
 
