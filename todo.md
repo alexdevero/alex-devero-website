@@ -7,10 +7,9 @@
 - ~~add new icons for planning and design sections on 'approach' page~~
 - ~~replace canvas with abstract video~~
 - ~~add background image featuring silhouette to main element~~
-- implement CSS @support feature
 - add FAQ on about page [example](http://www.tvrdek.cz/).
 - "Spuštění" -> "Vyhodnocení" on approach-cs
-- Add more personal bio
+- ~~add more personal bio~~
 
 ### Ideas:
 - ~~full-screen slideshow with work example on homepage~~
@@ -29,3 +28,5 @@
 - ~~merge rows with examples on work page into single row~~
 - rename JS controllers to switches
 - add new JS object with functions called 'controllers'
+- add floating arrows on hp to navigate through website
+- hide menu as default
