@@ -134,6 +134,7 @@ gulp.task('watch', function() {
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/*.php', ['copyOther']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/css/**/*.css', ['copyCSS']);
   gulp.watch('src/js/main.js', ['js']);
 });
 
