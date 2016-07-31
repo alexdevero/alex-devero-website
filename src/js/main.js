@@ -349,6 +349,13 @@
               offset: 'bottom-in-view'
             });
 
+            // Load discovery text
+            $('.wp-discovery-text').waypoint(function(direction) {
+              $('.wp-discovery-text').addClass('animated fadeInRight');
+            }, {
+              offset: 'bottom-in-view'
+            });
+
             // Load planning icon for mobile
             $('.wp-planning-icon-mobile').waypoint(function(direction) {
               $('.wp-planning-icon-mobile').addClass('animated fadeInRight');
@@ -363,9 +370,23 @@
               offset: 'bottom-in-view'
             });
 
+            // Load planning text
+            $('.wp-planning-text').waypoint(function(direction) {
+              $('.wp-planning-text').addClass('animated fadeInLeft');
+            }, {
+              offset: 'bottom-in-view'
+            });
+
             // Load default design icon
             $('.wp-design-icon').waypoint(function(direction) {
               $('.wp-design-icon').addClass('animated fadeInLeft');
+            }, {
+              offset: 'bottom-in-view'
+            });
+
+            // Load design text
+            $('.wp-design-text').waypoint(function(direction) {
+              $('.wp-design-text').addClass('animated fadeInRight');
             }, {
               offset: 'bottom-in-view'
             });
@@ -384,9 +405,23 @@
               offset: 'bottom-in-view'
             });
 
+            // Load building text
+            $('.wp-building-text').waypoint(function(direction) {
+              $('.wp-building-text').addClass('animated fadeInLeft');
+            }, {
+              offset: 'bottom-in-view'
+            });
+
             // Load default evaluation icon
             $('.wp-evaluation-icon').waypoint(function() {
               $('.wp-evaluation-icon').addClass('animated fadeInLeft');
+            }, {
+              offset: 'bottom-in-view'
+            });
+
+            // Load evaluation text
+            $('.wp-evaluation-text').waypoint(function() {
+              $('.wp-evaluation-text').addClass('animated fadeInRight');
             }, {
               offset: 'bottom-in-view'
             });
