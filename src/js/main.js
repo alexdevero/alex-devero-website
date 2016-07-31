@@ -342,36 +342,49 @@
           // Otherwise, icons have no width or height
           // and waypoint will fire all triggers immediatelly.
           setTimeout(function() {
+            // Load default discovery icon
             $('.wp-discovery-icon').waypoint(function(direction) {
               $('.wp-discovery-icon').addClass('animated fadeInLeft');
             }, {
               offset: 'bottom-in-view'
             });
+
+            // Load planning icon for mobile
             $('.wp-planning-icon-mobile').waypoint(function(direction) {
               $('.wp-planning-icon-mobile').addClass('animated fadeInRight');
             }, {
               offset: 'bottom-in-view'
             });
+
+            // Load planning icon for desktop
             $('.wp-planning-icon-desktop').waypoint(function(direction) {
               $('.wp-planning-icon-desktop').addClass('animated fadeInRight');
             }, {
               offset: 'bottom-in-view'
             });
+
+            // Load default design icon
             $('.wp-design-icon').waypoint(function(direction) {
               $('.wp-design-icon').addClass('animated fadeInLeft');
             }, {
               offset: 'bottom-in-view'
             });
+
+            // Load building icon for mobile
             $('.wp-building-icon-mobile').waypoint(function(direction) {
               $('.wp-building-icon-mobile').addClass('animated fadeInRight');
             }, {
               offset: 'bottom-in-view'
             });
+
+            // Load building icon for desktop
             $('.wp-building-icon-desktop').waypoint(function() {
               $('.wp-building-icon-desktop').addClass('animated fadeInRight');
             }, {
               offset: 'bottom-in-view'
             });
+
+            // Load default evaluation icon
             $('.wp-evaluation-icon').waypoint(function() {
               $('.wp-evaluation-icon').addClass('animated fadeInLeft');
             }, {
