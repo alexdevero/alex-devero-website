@@ -78,7 +78,7 @@
           stylesheetRaleway.classList.add('jsLoaded');
           document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
 
-          if (document.URL.indexOf('approach') > 0) {
+          if (document.URL.indexOf('process') > 0) {
             // Load Animate CSS
             var stylesheetAnimateCSS = document.createElement('link');
             stylesheetAnimateCSS.rel = 'stylesheet';
