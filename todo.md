@@ -23,7 +23,7 @@
 - ~~add contact cta on homepage~~
 - add testimonial slider on homepage
 - ~~add codepen icon and link to footer~~
-- implement effect - http://codepen.io/ariona/pen/akYXjr
+- ~~implement diffuse effect~~
 - ~~implement black bcg on contact page with grey text~~
 - ~~merge rows with examples on work page into single row~~
 - rename JS controllers to switches
