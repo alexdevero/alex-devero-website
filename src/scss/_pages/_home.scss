@@ -24,7 +24,8 @@
 
 .page--home header a,
 .page--home .navbar-toggler {
-  color: #fff;
+  color: #212121;
+  //color: #fff;
 
   &:focus,
   &:hover {
@@ -34,8 +35,8 @@
 
 .home__intro {
   z-index: 3;
-  //color: #212121;
-  color: #fff;
+  color: #212121;
+  //color: #fff;
   text-align: center;
 
   @extend .vertical-align;
@@ -54,7 +55,8 @@
   margin-top: 0;
   line-height: 1.1;
   font-size: 4rem;
-  color: #fff;
+  color: #212121;
+  //color: #fff;
 
   @media screen and (min-width: 331px) {
     font-size: 6rem;
@@ -67,8 +69,10 @@
 
 .home__intro h2 {
   margin-top: 0;
-  color: #fff;
   font-size: 1.25rem;
+  font-weight: 700;
+  color: #212121;
+  //color: #fff;
 
   @media screen and (min-width: 555px) {
     font-size: 1.5rem;
@@ -78,6 +82,7 @@
 .home__intro h3 {
   margin-top: 0;
   font-size: 1rem;
+  font-weight: 500;
 
   @media screen and (min-width: 555px) {
     font-size: 1.15rem;
@@ -89,7 +94,8 @@
 }
 
 .home__intro .link--violet {
-  color: #fff;
+  color: #212121;
+  //color: #fff;
 
   &:focus,
   &:hover {
@@ -99,6 +105,7 @@
 
 .home__intro h4 {
   margin-top: 0;
+  font-weight: 400;
 }
 
 .list-tech {
@@ -168,7 +175,7 @@ video {
   background-size: cover;
 }
 
-.page--home .header-cover,
+/*.page--home .header-cover,
 .video .page--home .header-cover {
   background-image: url(../images/bcgs/abstract-home-poster--mobile.jpg);
 
@@ -187,7 +194,7 @@ video {
   @media screen and (min-width: 1400px) {
     background-image: url(../images/bcgs/abstract-home-poster--xlarge.jpg);
   }
-}
+}*/
 
 .video .page--home .header-cover {
   z-index: -2;
@@ -210,7 +217,7 @@ video {
 }
 
 .page--home footer a {
-  color: #fff;
+  color: #212121;
 
   &:focus,
   &:hover {
