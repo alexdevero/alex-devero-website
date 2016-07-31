@@ -10,46 +10,95 @@
 }*/
 
 .text {
-  font-size: remy(300px);
-  color: white;
+  font-size: 5rem;
+  line-height: 1;
   text-indent: remy(-30px);
   text-align: center;
+  color: #fff;
 
   @include vertical-align;
+
+  @media screen and (min-width: 382px) {
+    font-size: 6rem;
+  }
+
+  @media screen and (min-width: 412px) {
+    font-size: 7rem;
+  }
+
+  @media screen and (min-width: 850px) {
+    font-size: 8rem;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1125px) {
+    font-size: 10rem;
+  }
 
   span {
     position: relative;
     display: inline-block;
-    animation: diffuseShadow 2s infinite ease-in;
+    animation: diffuseShadow 2.35s infinite ease-in 1s;
 
     will-change: transform;
   }
 }
 
-.text span:nth-child(1) {
+.text span:nth-of-type(1) {
   animation-delay: .0s;
 }
 
-.text span:nth-child(2) {
+.text span:nth-of-type(2) {
   animation-delay: .200s;
 }
 
-.text span:nth-child(3) {
+.text span:nth-of-type(3) {
   animation-delay: .400s;
 }
 
-.text span:nth-child(4) {
+.text span:nth-of-type(4) {
   animation-delay: .600s;
+}
+
+.text span:nth-of-type(5) {
+  animation-delay: .800s;
+}
+
+.text span:nth-of-type(6) {
+  animation-delay: 1s;
+}
+
+.text span:nth-of-type(7) {
+  animation-delay: 1.200s;
+}
+
+.text span:nth-of-type(8) {
+  animation-delay: 1.400s;
+}
+
+.text span:nth-of-type(9) {
+  animation-delay: 1.600s;
+}
+
+.text span:nth-of-type(10) {
+  animation-delay: 1.800s;
+}
+
+.text span:nth-of-type(11) {
+  animation-delay: 2s;
 }
 
 @keyframes diffuseShadow {
   0%,
   10% {
     text-shadow: 0 0 0 rgba(0,0,0,0);
-    transform: translate3d(50px,0,0);
+    transform: translate3d(15px,0,0);
   }
   50% {
-    text-shadow: 0 20px 30px rgba(0,0,0,.1);
+    text-shadow: 0 15px 15px rgba(0,0,0,.1);
   }
   70%,
   100% {
