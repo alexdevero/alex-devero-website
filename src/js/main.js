@@ -9,7 +9,7 @@
       lazyImages: document.getElementsByClassName('lazy'),
       contactForm: document.querySelectorAll('#contactForm'),
       portfolioItem: document.querySelectorAll('.work__item'),
-      waypoint: document.querySelectorAll('.waypoint')
+      waypoint: document.querySelectorAll('.wp')
     },
     controllers: function() {
 
@@ -338,46 +338,46 @@
        */
       if (this.settings.waypoint.length > 0) {
         (function() {
-          $('.wp-1').waypoint(function() {
-            $('.wp-1').addClass('animated fadeInUp');
-          }, {
-            offset: '75%'
-          });
-          $('.wp-2').waypoint(function() {
-            $('.wp-2').addClass('animated fadeInUp');
-          }, {
-            offset: '75%'
-          });
-          $('.wp-3').waypoint(function() {
-            $('.wp-3').addClass('animated fadeInUp');
-          }, {
-            offset: '75%'
-          });
-          $('.wp-4').waypoint(function() {
-            $('.wp-4').addClass('animated fadeIn');
-          }, {
-            offset: '75%'
-          });
-          $('.wp-5').waypoint(function() {
-            $('.wp-5').addClass('animated fadeInRight');
-          }, {
-            offset: '50%'
-          });
-          $('.wp-6').waypoint(function() {
-            $('.wp-6').addClass('animated fadeInLeft');
-          }, {
-            offset: '50%'
-          });
-          $('.wp-7').waypoint(function() {
-            $('.wp-7').addClass('animated fadeInUp');
-          }, {
-            offset: '60%'
-          });
-          $('.wp-8').waypoint(function() {
-            $('.wp-8').addClass('animated fadeInUp');
-          }, {
-            offset: '60%'
-          });
+          // setTimeout function is used to let the dom be loaded.
+          // Otherwise, icons have no width or height
+          // and waypoint will fire all triggers immediatelly.
+          setTimeout(function() {
+            $('.wp-1').waypoint(function(direction) {
+              $('.wp-1').addClass('animated fadeInLeft');
+            }, {
+              offset: 'bottom-in-view'
+            });
+            $('.wp-2').waypoint(function(direction) {
+              $('.wp-2').addClass('animated fadeInRight');
+            }, {
+              offset: 'bottom-in-view'
+            });
+            $('.wp-3').waypoint(function(direction) {
+              $('.wp-3').addClass('animated fadeInRight');
+            }, {
+              offset: 'bottom-in-view'
+            });
+            $('.wp-4').waypoint(function(direction) {
+              $('.wp-4').addClass('animated fadeInLeft');
+            }, {
+              offset: 'bottom-in-view'
+            });
+            $('.wp-5').waypoint(function(direction) {
+              $('.wp-5').addClass('animated fadeInRight');
+            }, {
+              offset: 'bottom-in-view'
+            });
+            $('.wp-6').waypoint(function() {
+              $('.wp-6').addClass('animated fadeInRight');
+            }, {
+              offset: 'bottom-in-view'
+            });
+            $('.wp-7').waypoint(function() {
+              $('.wp-7').addClass('animated fadeInLeft');
+            }, {
+              offset: 'bottom-in-view'
+            });
+          }, 1000);
         })()
       }
     },
