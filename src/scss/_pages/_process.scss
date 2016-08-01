@@ -49,10 +49,11 @@
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #212121;
+    //color: #212121;
+    color: $color--red;
   }
 
-  .row--black h2,
+  //.row--black h2,
   .row--black p,
   .row--black .icon {
     color: #fff;
