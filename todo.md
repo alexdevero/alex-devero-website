@@ -10,6 +10,7 @@
 - add FAQ on about page [example](http://www.tvrdek.cz/).
 - ~~"Spuštění" -> "Vyhodnocení" on approach-cs~~
 - ~~add more personal bio~~
+- 'fade in' effect for lazy images
 
 ### Ideas:
 - ~~full-screen slideshow with work example on homepage~~
@@ -30,3 +31,4 @@
 - add new JS object with functions called 'controllers'
 - add floating arrows on hp to navigate through website
 - hide menu as default
+- remove 'process' page
