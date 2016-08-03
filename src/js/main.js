@@ -12,6 +12,26 @@
       waypoint: document.querySelectorAll('.wp')
     },
     controllers: {
+      // FadeIn controller
+      fadeInCustom: function(element) {
+        var elementOpacity = 0.1;// initial opacity
+
+        element.style.display = 'block';
+
+        var timer = setInterval(function () {
+          if (elementOpacity >= 1){
+            clearInterval(timer);
+          }
+
+          element.style.opacity = elementOpacity;
+
+          element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+
+          elementOpacity += elementOpacity * 0.1;
+        }, 15);
+
+        console.log('fadeIn')
+      },
       // Waypoints controller
       waypoints: function() {
         // setTimeout function is used to let the dom be loaded.
@@ -129,7 +149,7 @@
           }, 15);
         }
 
-        function fadeInCustom(element) {
+        /*function fadeInCustom(element) {
           var elementOpacity = 0.1;// initial opacity
 
           element.style.display = 'block';
@@ -145,7 +165,7 @@
 
             elementOpacity += elementOpacity * 0.1;
           }, 15);
-        }
+        }*/
 
         // Loading fonts and stylesheets
         window.onload = function() {
@@ -188,7 +208,7 @@
             el.setAttribute('id', 'loaded');
 
             // Fade in cached html element
-            fadeInCustom(el);
+            window.controllers.fadeInCustom(el);
           }, 350);
         }
 
