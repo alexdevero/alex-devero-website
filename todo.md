@@ -3,7 +3,7 @@
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - add FAQ on about page [example](http://www.tvrdek.cz/).
-- 'fade in' effect for lazy images
+- ~~'fade in' effect for lazy images~~
 - ~~increase size of icons in footer~~
 - ~~add browser icons to 'tech list'~~
 - ~~add new icons for planning and design sections on 'approach' page~~
