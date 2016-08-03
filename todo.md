@@ -17,11 +17,11 @@
 - arrows on homepage for 'previous' and 'next' page
 - add spinner that will be shown while sending contact form
 - add testimonial slider on homepage
-- rename JS controllers to switches
-- add new JS object with functions called 'controllers'
 - add floating arrows on hp to navigate through website
 - hide menu as default
 - remove 'process' page
+- ~~rename JS controllers to switches~~
+- ~~add new JS object with functions called 'controllers'~~
 - ~~full-screen slideshow with work example on homepage~~
 - ~~moving 3d shape or fractal in canvas instead of matrix code~~
 - ~~implement et-icons on 'approach' page instead of svg images~~
