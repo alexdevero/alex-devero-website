@@ -265,143 +265,145 @@
        * Custom transitions for page loading and closing
        * info: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
        */
-      (function() {
-        // Custom fade in function
-        /*function fadeOutCustom(element) {
-          var elementOpacity = 1;// initial opacity
+      if (true) {
+        (function() {
+          // Custom fade in function
+          /*function fadeOutCustom(element) {
+            var elementOpacity = 1;// initial opacity
 
-          var timer = setInterval(function () {
-            if (elementOpacity <= 0.1){
-              clearInterval(timer);
+            var timer = setInterval(function () {
+              if (elementOpacity <= 0.1){
+                clearInterval(timer);
 
-              element.style.display = 'none';
+                element.style.display = 'none';
+              }
+
+              element.style.opacity = elementOpacity;
+
+              element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+
+              elementOpacity -= elementOpacity * 0.1;
+            }, 15);
+          }*/
+
+          /*function fadeInCustom(element) {
+            var elementOpacity = 0.1;// initial opacity
+
+            element.style.display = 'block';
+
+            var timer = setInterval(function () {
+              if (elementOpacity >= 1){
+                clearInterval(timer);
+              }
+
+              element.style.opacity = elementOpacity;
+
+              element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+
+              elementOpacity += elementOpacity * 0.1;
+            }, 15);
+          }*/
+
+          // Loading fonts and stylesheets
+          window.onload = function() {
+            window.controllers.fontAwesomeLoader();
+            // Load Font Awesome
+            /*var stylesheetAwesome = document.createElement('link');
+            stylesheetAwesome.rel = 'stylesheet';
+            stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
+            stylesheetAwesome.classList.add('jsLoaded');
+            document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);*/
+
+            // Load Open Sans font
+            window.controllers.fontOpenSansLoader();
+            /*var stylesheetOpenSans = document.createElement('link');
+            stylesheetOpenSans.rel = 'stylesheet';
+            stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
+            stylesheetOpenSans.classList.add('jsLoaded');
+            document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);*/
+
+            // Load Raleway font
+            window.controllers.fontRalewayLoader();
+            /*var stylesheetRaleway = document.createElement('link');
+            stylesheetRaleway.rel = 'stylesheet';
+            stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,700,200';
+            stylesheetRaleway.classList.add('jsLoaded');
+            document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);*/
+
+            if (document.URL.indexOf('process') > 0) {
+              // Load Animate CSS
+              window.controllers.animateStylesheetLoader();
+              /*var stylesheetAnimateCSS = document.createElement('link');
+              stylesheetAnimateCSS.rel = 'stylesheet';
+              stylesheetAnimateCSS.href = 'css/animate.css';
+              stylesheetAnimateCSS.classList.add('jsLoaded');
+              document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);*/
             }
 
-            element.style.opacity = elementOpacity;
+            // Cache html element
+            var el = document.querySelector('html');
+            //el.style.display = 'none';
 
-            element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+            setTimeout(function() {
+              //$('html').attr('id', 'loaded');
+              el.setAttribute('id', 'loaded');
 
-            elementOpacity -= elementOpacity * 0.1;
-          }, 15);
-        }*/
-
-        /*function fadeInCustom(element) {
-          var elementOpacity = 0.1;// initial opacity
-
-          element.style.display = 'block';
-
-          var timer = setInterval(function () {
-            if (elementOpacity >= 1){
-              clearInterval(timer);
-            }
-
-            element.style.opacity = elementOpacity;
-
-            element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
-
-            elementOpacity += elementOpacity * 0.1;
-          }, 15);
-        }*/
-
-        // Loading fonts and stylesheets
-        window.onload = function() {
-          window.controllers.fontAwesomeLoader();
-          // Load Font Awesome
-          /*var stylesheetAwesome = document.createElement('link');
-          stylesheetAwesome.rel = 'stylesheet';
-          stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
-          stylesheetAwesome.classList.add('jsLoaded');
-          document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);*/
-
-          // Load Open Sans font
-          window.controllers.fontOpenSansLoader();
-          /*var stylesheetOpenSans = document.createElement('link');
-          stylesheetOpenSans.rel = 'stylesheet';
-          stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
-          stylesheetOpenSans.classList.add('jsLoaded');
-          document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);*/
-
-          // Load Raleway font
-          window.controllers.fontRalewayLoader();
-          /*var stylesheetRaleway = document.createElement('link');
-          stylesheetRaleway.rel = 'stylesheet';
-          stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,700,200';
-          stylesheetRaleway.classList.add('jsLoaded');
-          document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);*/
-
-          if (document.URL.indexOf('process') > 0) {
-            // Load Animate CSS
-            window.controllers.animateStylesheetLoader();
-            /*var stylesheetAnimateCSS = document.createElement('link');
-            stylesheetAnimateCSS.rel = 'stylesheet';
-            stylesheetAnimateCSS.href = 'css/animate.css';
-            stylesheetAnimateCSS.classList.add('jsLoaded');
-            document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);*/
+              // Fade in cached html element
+              window.controllers.fadeInCustom(el);
+            }, 350);
           }
 
-          // Cache html element
-          var el = document.querySelector('html');
-          //el.style.display = 'none';
+          // Page transitions for clicks on links
+          var links = document.querySelectorAll('a');
 
-          setTimeout(function() {
-            //$('html').attr('id', 'loaded');
-            el.setAttribute('id', 'loaded');
+          for (var i = 0, j = links.length; i<j; i++) {
+            links[i].addEventListener('click', function(e) {
+              var elTarget = e.target;
 
-            // Fade in cached html element
-            window.controllers.fadeInCustom(el);
-          }, 350);
-        }
-
-        // Page transitions for clicks on links
-        var links = document.querySelectorAll('a');
-
-        for (var i = 0, j = links.length; i<j; i++) {
-          links[i].addEventListener('click', function(e) {
-            var elTarget = e.target;
-
-            if (elTarget.href.indexOf('.html') != -1) {
-              e.preventDefault();
-
-              // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
-              while (elTarget && !elTarget.href) {
-                elTarget = elTarget.parentNode;
-              }
-
-              // Change current URL
-              if (elTarget) {
+              if (elTarget.href.indexOf('.html') != -1) {
                 e.preventDefault();
 
-                setTimeout(changePage, 100);
-
-                function changePage() {
-                  var el = document.querySelector('html');
-
-                  history.pushState(null, elTarget.title, elTarget.href);
-
-                  //$('html').fadeOut(350);
-                  window.controllers.fadeOutCustom(el);
-
-                  setTimeout(function() {
-                    location.replace(elTarget.href);
-                  },750);
-
-                  //location.replace(elTarget.href);
+                // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
+                while (elTarget && !elTarget.href) {
+                  elTarget = elTarget.parentNode;
                 }
 
-                //changePage();
+                // Change current URL
+                if (elTarget) {
+                  e.preventDefault();
 
-                return;
+                  setTimeout(changePage, 100);
+
+                  function changePage() {
+                    var el = document.querySelector('html');
+
+                    history.pushState(null, elTarget.title, elTarget.href);
+
+                    //$('html').fadeOut(350);
+                    window.controllers.fadeOutCustom(el);
+
+                    setTimeout(function() {
+                      location.replace(elTarget.href);
+                    },750);
+
+                    //location.replace(elTarget.href);
+                  }
+
+                  //changePage();
+
+                  return;
+                }
+
+                //window.addEventListener('popstate', changePage);
+              } else {
+                setTimeout(function() {
+                  return true;
+                },750);
               }
-
-              //window.addEventListener('popstate', changePage);
-            } else {
-              setTimeout(function() {
-                return true;
-              },750);
-            }
-          });
-        }
-      })();
+            });
+          }
+        })();
+      }
 
       /**
         * Index Canvas
