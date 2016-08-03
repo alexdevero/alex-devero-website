@@ -109,7 +109,9 @@ gulp.task('sass', function() {
   return gulp.src('src/scss/main.scss')
     //.pipe(changed('dist/css', {extension: '.css'}))
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', function(e) {
+      console.log(e + '\r\n There\'s something wrong with the Sass file(s).')
+    }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
@@ -123,7 +125,9 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(changed('dist/js'))
-    .pipe(uglify().on('error', gulpUtil.log))
+    .pipe(uglify().on('error', function(e) {
+      console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
+    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/js'));
 });
