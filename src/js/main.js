@@ -96,6 +96,38 @@
 
         console.log('fadeOut')
       },
+      // Animate stylesheet loader controller
+      animateStylesheetLoader: function() {
+        var stylesheetAnimateCSS = document.createElement('link');
+        stylesheetAnimateCSS.rel = 'stylesheet';
+        stylesheetAnimateCSS.href = 'css/animate.css';
+        stylesheetAnimateCSS.classList.add('jsLoaded');
+        document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);
+      },
+      // Font Awesome loader controller
+      fontAwesomeLoader: function() {
+        var stylesheetAwesome = document.createElement('link');
+        stylesheetAwesome.rel = 'stylesheet';
+        stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
+        stylesheetAwesome.classList.add('jsLoaded');
+        document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);
+      },
+      // Font Open Sans loader controller
+      fontOpenSansLoader: function() {
+        var stylesheetOpenSans = document.createElement('link');
+        stylesheetOpenSans.rel = 'stylesheet';
+        stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
+        stylesheetOpenSans.classList.add('jsLoaded');
+        document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);
+      },
+      // Font Raleway loader controller
+      fontRalewayLoader: function() {
+        var stylesheetRaleway = document.createElement('link');
+        stylesheetRaleway.rel = 'stylesheet';
+        stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,700,200';
+        stylesheetRaleway.classList.add('jsLoaded');
+        document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
+      },
       // LazyImages controller
       lazyImages: function() {
         // Test if image is in the viewport
@@ -273,34 +305,38 @@
 
         // Loading fonts and stylesheets
         window.onload = function() {
+          window.controllers.fontAwesomeLoader();
           // Load Font Awesome
-          var stylesheetAwesome = document.createElement('link');
+          /*var stylesheetAwesome = document.createElement('link');
           stylesheetAwesome.rel = 'stylesheet';
           stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
           stylesheetAwesome.classList.add('jsLoaded');
-          document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);
+          document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);*/
 
           // Load Open Sans font
-          var stylesheetOpenSans = document.createElement('link');
+          window.controllers.fontOpenSansLoader();
+          /*var stylesheetOpenSans = document.createElement('link');
           stylesheetOpenSans.rel = 'stylesheet';
           stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
           stylesheetOpenSans.classList.add('jsLoaded');
-          document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);
+          document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);*/
 
           // Load Raleway font
-          var stylesheetRaleway = document.createElement('link');
+          window.controllers.fontRalewayLoader();
+          /*var stylesheetRaleway = document.createElement('link');
           stylesheetRaleway.rel = 'stylesheet';
           stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,700,200';
           stylesheetRaleway.classList.add('jsLoaded');
-          document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
+          document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);*/
 
           if (document.URL.indexOf('process') > 0) {
             // Load Animate CSS
-            var stylesheetAnimateCSS = document.createElement('link');
+            window.controllers.animateStylesheetLoader();
+            /*var stylesheetAnimateCSS = document.createElement('link');
             stylesheetAnimateCSS.rel = 'stylesheet';
             stylesheetAnimateCSS.href = 'css/animate.css';
             stylesheetAnimateCSS.classList.add('jsLoaded');
-            document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);
+            document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);*/
           }
 
           // Cache html element
