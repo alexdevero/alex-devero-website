@@ -156,6 +156,7 @@
               lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
               lazyImagesArray[i].removeAttribute('data-src');
               lazyImagesArray[i].setAttribute('data-loaded', true);
+              window.controllers.fadeInCustom(lazyImagesArray[i]);
             }
           }
 
