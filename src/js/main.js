@@ -168,6 +168,57 @@
           }
         }
       },
+      pageTransition: function() {
+        // Page transitions for clicks on links
+        var links = document.querySelectorAll('a');
+
+        for (var i = 0, j = links.length; i<j; i++) {
+          links[i].addEventListener('click', function(e) {
+            var elTarget = e.target;
+
+            if (elTarget.href.indexOf('.html') != -1) {
+              e.preventDefault();
+
+              // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
+              while (elTarget && !elTarget.href) {
+                elTarget = elTarget.parentNode;
+              }
+
+              // Change current URL
+              if (elTarget) {
+                e.preventDefault();
+
+                setTimeout(changePage, 100);
+
+                function changePage() {
+                  var el = document.querySelector('html');
+
+                  history.pushState(null, elTarget.title, elTarget.href);
+
+                  //$('html').fadeOut(350);
+                  window.controllers.fadeOutCustom(el);
+
+                  setTimeout(function() {
+                    location.replace(elTarget.href);
+                  },750);
+
+                  //location.replace(elTarget.href);
+                }
+
+                //changePage();
+
+                return;
+              }
+
+              //window.addEventListener('popstate', changePage);
+            } else {
+              setTimeout(function() {
+                return true;
+              },750);
+            }
+          });
+        }
+      },
       // Waypoints controller
       waypoints: function() {
         // setTimeout function is used to let the dom be loaded.
@@ -354,7 +405,8 @@
           }
 
           // Page transitions for clicks on links
-          var links = document.querySelectorAll('a');
+          window.controllers.pageTransition();
+          /*var links = document.querySelectorAll('a');
 
           for (var i = 0, j = links.length; i<j; i++) {
             links[i].addEventListener('click', function(e) {
@@ -401,7 +453,7 @@
                 },750);
               }
             });
-          }
+          }*/
         })();
       }
 
