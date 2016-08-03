@@ -12,7 +12,9 @@
       waypoint: document.querySelectorAll('.wp')
     },
     controllers: function() {
-
+      console.log('controllers');
+    },
+    switches: function() {
       /**
        * Custom transitions for page loading and closing
        * info: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
@@ -444,7 +446,9 @@
         }
       }
 
-      app.controllers();
+      window.controllers = app.controllers();
+
+      app.switches();
     }
   };
 
