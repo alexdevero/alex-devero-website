@@ -173,10 +173,12 @@
         var links = document.querySelectorAll('a');
 
         for (var i = 0, j = links.length; i<j; i++) {
+          links[i].setAttribute('data-href', (links[i].href.indexOf('.html') != -1));
+
           links[i].addEventListener('click', function(e) {
             var elTarget = e.target;
 
-            if (elTarget.href.indexOf('.html') != -1) {
+            if (elTarget.getAttribute('data-href') === 'true') {
               e.preventDefault();
 
               // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
