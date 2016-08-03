@@ -11,8 +11,98 @@
       portfolioItem: document.querySelectorAll('.work__item'),
       waypoint: document.querySelectorAll('.wp')
     },
-    controllers: function() {
-      console.log('controllers');
+    controllers: {
+      // Waypoints controller
+      waypoints: function() {
+        // setTimeout function is used to let the dom be loaded.
+        // Otherwise, icons have no width or height
+        // and waypoint will fire all triggers immediatelly.
+        setTimeout(function() {
+          // Load default discovery icon
+          $('.wp-discovery-icon').waypoint(function(direction) {
+            $('.wp-discovery-icon').addClass('animated fadeInLeft');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load discovery text
+          $('.wp-discovery-text').waypoint(function(direction) {
+            $('.wp-discovery-text').addClass('animated fadeInRight');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load planning icon for mobile
+          $('.wp-planning-icon-mobile').waypoint(function(direction) {
+            $('.wp-planning-icon-mobile').addClass('animated fadeInRight');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load planning icon for desktop
+          $('.wp-planning-icon-desktop').waypoint(function(direction) {
+            $('.wp-planning-icon-desktop').addClass('animated fadeInRight');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load planning text
+          $('.wp-planning-text').waypoint(function(direction) {
+            $('.wp-planning-text').addClass('animated fadeInLeft');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load default design icon
+          $('.wp-design-icon').waypoint(function(direction) {
+            $('.wp-design-icon').addClass('animated fadeInLeft');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load design text
+          $('.wp-design-text').waypoint(function(direction) {
+            $('.wp-design-text').addClass('animated fadeInRight');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load building icon for mobile
+          $('.wp-building-icon-mobile').waypoint(function(direction) {
+            $('.wp-building-icon-mobile').addClass('animated fadeInRight');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load building icon for desktop
+          $('.wp-building-icon-desktop').waypoint(function() {
+            $('.wp-building-icon-desktop').addClass('animated fadeInRight');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load building text
+          $('.wp-building-text').waypoint(function(direction) {
+            $('.wp-building-text').addClass('animated fadeInLeft');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load default evaluation icon
+          $('.wp-evaluation-icon').waypoint(function() {
+            $('.wp-evaluation-icon').addClass('animated fadeInLeft');
+          }, {
+            offset: 'bottom-in-view'
+          });
+
+          // Load evaluation text
+          $('.wp-evaluation-text').waypoint(function() {
+            $('.wp-evaluation-text').addClass('animated fadeInRight');
+          }, {
+            offset: 'bottom-in-view'
+          });
+        }, 1000);
+      }
     },
     switches: function() {
       /**
@@ -340,10 +430,11 @@
        */
       if (this.settings.waypoint.length > 0) {
         (function() {
+          window.controllers.waypoints();
           // setTimeout function is used to let the dom be loaded.
           // Otherwise, icons have no width or height
           // and waypoint will fire all triggers immediatelly.
-          setTimeout(function() {
+          /*setTimeout(function() {
             // Load default discovery icon
             $('.wp-discovery-icon').waypoint(function(direction) {
               $('.wp-discovery-icon').addClass('animated fadeInLeft');
@@ -427,7 +518,7 @@
             }, {
               offset: 'bottom-in-view'
             });
-          }, 1000);
+          }, 1000);*/
         })()
       }
     },
@@ -446,7 +537,7 @@
         }
       }
 
-      window.controllers = app.controllers();
+      window.controllers = app.controllers;
 
       app.switches();
     }
