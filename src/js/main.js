@@ -73,8 +73,6 @@
 
           elementOpacity += elementOpacity * 0.1;
         }, 15);
-
-        console.log('fadeIn')
       },
       // FadeOut controller
       fadeOutCustom: function(element) {
@@ -93,8 +91,6 @@
 
           elementOpacity -= elementOpacity * 0.1;
         }, 15);
-
-        console.log('fadeOut')
       },
       // Animate stylesheet loader controller
       animateStylesheetLoader: function() {
@@ -132,7 +128,6 @@
       lazyImages: function() {
         // Test if image is in the viewport
         function isImageInViewport(img) {
-          console.log('images')
           var rect = img.getBoundingClientRect();
           return (
             rect.top >= 0 &&
