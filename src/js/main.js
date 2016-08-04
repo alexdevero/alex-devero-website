@@ -369,21 +369,6 @@
       }
 
       /**
-       * Portfolio click blocker
-       */
-      /*if (this.settings.portfolioItem.length > 0) {
-        (function() {
-          // Get all portfolio items and store them inside an array
-          var portfolioItems = document.querySelectorAll('.work__item');
-
-          // Cycle through array of portfolio items and temporarily change 'href' attribute
-          for (var i = 0, j = portfolioItems.length; i<j; i++) {
-            //portfolioItems[i].setAttribute('href', '#');
-          }
-        })();
-      }*/
-
-      /**
        * Waypoints
        * info: http://imakewebthings.com/waypoints/
        */
