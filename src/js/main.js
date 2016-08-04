@@ -316,43 +316,6 @@
        */
       if (true) {
         (function() {
-          // Custom fade in function
-          /*function fadeOutCustom(element) {
-            var elementOpacity = 1;// initial opacity
-
-            var timer = setInterval(function () {
-              if (elementOpacity <= 0.1){
-                clearInterval(timer);
-
-                element.style.display = 'none';
-              }
-
-              element.style.opacity = elementOpacity;
-
-              element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
-
-              elementOpacity -= elementOpacity * 0.1;
-            }, 15);
-          }*/
-
-          /*function fadeInCustom(element) {
-            var elementOpacity = 0.1;// initial opacity
-
-            element.style.display = 'block';
-
-            var timer = setInterval(function () {
-              if (elementOpacity >= 1){
-                clearInterval(timer);
-              }
-
-              element.style.opacity = elementOpacity;
-
-              element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
-
-              elementOpacity += elementOpacity * 0.1;
-            }, 15);
-          }*/
-
           // Loading fonts and stylesheets
           window.onload = function() {
             // Load Font Awesome
