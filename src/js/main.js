@@ -355,38 +355,18 @@
 
           // Loading fonts and stylesheets
           window.onload = function() {
-            window.controllers.fontAwesomeLoader();
             // Load Font Awesome
-            /*var stylesheetAwesome = document.createElement('link');
-            stylesheetAwesome.rel = 'stylesheet';
-            stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
-            stylesheetAwesome.classList.add('jsLoaded');
-            document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);*/
+            window.controllers.fontAwesomeLoader();
 
             // Load Open Sans font
             window.controllers.fontOpenSansLoader();
-            /*var stylesheetOpenSans = document.createElement('link');
-            stylesheetOpenSans.rel = 'stylesheet';
-            stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
-            stylesheetOpenSans.classList.add('jsLoaded');
-            document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);*/
 
             // Load Raleway font
             window.controllers.fontRalewayLoader();
-            /*var stylesheetRaleway = document.createElement('link');
-            stylesheetRaleway.rel = 'stylesheet';
-            stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,700,200';
-            stylesheetRaleway.classList.add('jsLoaded');
-            document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);*/
 
             if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
               window.controllers.animateStylesheetLoader();
-              /*var stylesheetAnimateCSS = document.createElement('link');
-              stylesheetAnimateCSS.rel = 'stylesheet';
-              stylesheetAnimateCSS.href = 'css/animate.css';
-              stylesheetAnimateCSS.classList.add('jsLoaded');
-              document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);*/
             }
 
             // Cache html element
