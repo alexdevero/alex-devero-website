@@ -356,47 +356,6 @@
       if (this.settings.contactForm.length > 0) {
         (function() {
           window.controllers.contact();
-          /*$('#contactForm').submit(function(e) {
-            e.preventDefault();
-
-            if (document.getElementById('subject').value.length === 0) {
-              if (window.location.href.split('com/')[1] == 'contact.html') {
-                alert('Please select \'What are you looking for\'.');
-              } else {
-                alert('Prosím zvolte \'Druh projektu\'.');
-              }
-
-              $('#subject').trigger('focus');
-            } else {
-
-              var $this = $(this);
-
-              $.ajax({
-                type: 'POST',
-                url: 'contact.php',
-                data: $($this).serialize()
-              }).done(function(response) {
-                e.preventDefault();
-
-                if (window.location.href.split('com/')[1] == 'contact.html') {
-                  alert('Thank you very much for contacting. I will reply in two days.');
-                } else {
-                  alert('Děkuji Vám za kontaktování. Do dvou dnů se Vám ozvu.');
-                }
-
-                // Clear the form.
-                $($this)[0].reset();
-              }).fail(function(data) {
-                e.preventDefault();
-
-                if (window.location.href.split('com/')[1] == 'contact.html') {
-                  alert('Oops! There was a problem with your submission. Please complete the form and try again.');
-                } else {
-                  alert('Během odesílání zprávy došlo k problému. Prosím zkuste to znovu.');
-                }
-              });
-            }
-          });*/
         })();
       }
 
