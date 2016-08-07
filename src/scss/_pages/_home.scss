@@ -24,7 +24,7 @@
 
 .page--home header a,
 .page--home .navbar-toggler {
-  color: #212121;
+  color: $color--black;
 
   &:focus,
   &:hover {
@@ -34,7 +34,7 @@
 
 .home__intro {
   z-index: 3;
-  color: #212121;
+  color: $color--black;
   text-align: center;
 
   @extend .vertical-align;
@@ -69,7 +69,7 @@
   margin-top: 0;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #212121;
+  color: $color--black;
 
   @media screen and (min-width: 555px) {
     font-size: 1.75rem;
@@ -91,7 +91,7 @@
 }
 
 .home__intro .link--violet {
-  color: #212121;
+  color: $color--black;
 
   &:focus,
   &:hover {
@@ -185,7 +185,7 @@ video {
 }
 
 .page--home footer a {
-  color: #212121;
+  color: $color--black;
 
   &:focus,
   &:hover {
