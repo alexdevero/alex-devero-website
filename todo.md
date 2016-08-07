@@ -1,6 +1,12 @@
 ### Tasks:
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
+- change thumbnail for RF - use front-faced phone
+- change thumbnail for Sumava - use front-faced browser (Cedric-like)
+- fix thumbnail for Ultron - use full-height screenshot
+- fix thumbnail for Material - use full-height screenshot
+- change thumbnail for Maelstrom - use front-faced browser (Cedric-like)
+- fix thumbnail for Trinity - use full-height screenshot
 
 ### Ideas:
 - animated message for submitting form
