@@ -10,10 +10,18 @@
   .sec__about {
     margin-bottom: remy(-61px);
     height: 100%;
-    min-height: remy(920px);
+    min-height: remy(1080px);
+
+    @media screen and (max-width: 568px) {
+      padding-top: 0rem;
+    }
+
+    @media screen and (min-width: 350px) {
+      min-height: remy(1000px);
+    }
 
     @media screen and (min-width: 450px) {
-      min-height: remy(815px);
+      min-height: remy(900px);
     }
 
     @media screen and (min-width: 480px) {
@@ -21,11 +29,11 @@
     }
 
     @media screen and (min-width: 768px) {
-      min-height: remy(777px);
+      min-height: remy(840px);
     }
 
     @media screen and (min-width: 1200px) {
-      min-height: remy(710px);
+      min-height: remy(720px);
     }
   }
 
