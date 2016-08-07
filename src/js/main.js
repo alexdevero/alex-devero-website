@@ -325,7 +325,9 @@
             window.controllers.fontOpenSansLoader();
 
             // Load Raleway font
-            window.controllers.fontRalewayLoader();
+            if (false) {
+              window.controllers.fontRalewayLoader()
+            };
 
             if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
