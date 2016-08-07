@@ -319,10 +319,14 @@
           // Loading fonts and stylesheets
           window.onload = function() {
             // Load Font Awesome
-            window.controllers.fontAwesomeLoader();
+            if (true) {
+              window.controllers.fontAwesomeLoader();
+            }
 
             // Load Open Sans font
-            window.controllers.fontOpenSansLoader();
+            if (true) {
+              window.controllers.fontOpenSansLoader();
+            }
 
             // Load Raleway font
             if (false) {
