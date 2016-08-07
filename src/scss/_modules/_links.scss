@@ -38,6 +38,15 @@
   }
 }
 
+.link--red {
+  color: $color--red;
+
+  &:focus,
+  &:hover {
+    color: $color--black;
+  }
+}
+
 .link--underline {
   border-bottom: 1px solid;
 }
