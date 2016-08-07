@@ -1,5 +1,6 @@
-// Todo:
-// - add color generator for canvas to gradually change text of the matrix code.
+/**
+ * @author Alex Devero <deveroalex@gmail.com>
+ */
 
 (function() {
   'use strict';
