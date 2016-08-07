@@ -103,7 +103,7 @@
   margin-bottom: 0;
   //font-family: "StreetBrush", $font--raleway;
   font-size: 8rem;
-  color: #212121;
+  color: $color--black;
 
   @media screen and (max-width: 555px) {
     font-size: 4rem;
