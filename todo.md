@@ -1,16 +1,6 @@
 ### Tasks:
-- ~~add transitions for page page~~
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
-- ~~add FAQ on about page [example](http://www.tvrdek.cz/)~~.
-- ~~'fade in' effect for lazy images~~
-- ~~increase size of icons in footer~~
-- ~~add browser icons to 'tech list'~~
-- ~~add new icons for planning and design sections on 'approach' page~~
-- ~~replace canvas with abstract video~~
-- ~~add background image featuring silhouette to main element~~
-- ~~"Spuštění" -> "Vyhodnocení" on approach-cs~~
-- ~~add more personal bio~~
 
 ### Ideas:
 - animated message for submitting form
@@ -20,15 +10,3 @@
 - add floating arrows on hp to navigate through website
 - hide menu as default
 - remove 'process' page
-- ~~rename JS controllers to switches~~
-- ~~add new JS object with functions called 'controllers'~~
-- ~~full-screen slideshow with work example on homepage~~
-- ~~moving 3d shape or fractal in canvas instead of matrix code~~
-- ~~implement et-icons on 'approach' page instead of svg images~~
-- ~~add animate css for icons on approach page~~
-- ~~implement [glitch effect](https://codepen.io/lbebber/pen/ypgql) to heading on homepage~~
-- ~~add contact cta on homepage~~
-- ~~add codepen icon and link to footer~~
-- ~~implement diffuse effect~~
-- ~~implement black bcg on contact page with grey text~~
-- ~~merge rows with examples on work page into single row~~
