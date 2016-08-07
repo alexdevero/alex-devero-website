@@ -11,7 +11,7 @@
   width: 100%;
   font-family: $font--quicksand;
   font-size: 1rem;
-  color: #212121;
+  color: $color--black;
   background: transparent;
   border-top: 0;
   border-right: 0;
@@ -37,7 +37,7 @@ label {
 }
 
 .form__subject select {
-  color: #212121;
+  color: $color--black;
 }
 
 .form__details,
