@@ -25,7 +25,6 @@
 .page--home header a,
 .page--home .navbar-toggler {
   color: #212121;
-  //color: #fff;
 
   &:focus,
   &:hover {
@@ -36,7 +35,6 @@
 .home__intro {
   z-index: 3;
   color: #212121;
-  //color: #fff;
   text-align: center;
 
   @extend .vertical-align;
@@ -56,7 +54,6 @@
   line-height: 1.1;
   font-size: 4rem;
   color: #212121;
-  //color: #fff;
 
   @media screen and (min-width: 331px) {
     font-size: 6rem;
@@ -72,7 +69,6 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #212121;
-  //color: #fff;
 
   @media screen and (min-width: 555px) {
     font-size: 1.5rem;
@@ -95,7 +91,6 @@
 
 .home__intro .link--violet {
   color: #212121;
-  //color: #fff;
 
   &:focus,
   &:hover {
@@ -175,41 +170,13 @@ video {
   background-size: cover;
 }
 
-/*.page--home .header-cover,
-.video .page--home .header-cover {
-  background-image: url(../images/bcgs/abstract-home-poster--mobile.jpg);
-
-  @media screen and (min-width: 480px) {
-    background-image: url(../images/bcgs/abstract-home-poster--tablet.jpg);
-  }
-
-  @media screen and (min-width: 768px) {
-    background-image: url(../images/bcgs/abstract-home-poster--desktop.jpg);
-  }
-
-  @media screen and (min-width: 992px) {
-    background-image: url(../images/bcgs/abstract-home-poster--large.jpg);
-  }
-
-  @media screen and (min-width: 1400px) {
-    background-image: url(../images/bcgs/abstract-home-poster--xlarge.jpg);
-  }
-}*/
-
 .video .page--home .header-cover {
   z-index: -2;
 }
 
 .page--home footer {
-  //padding-bottom: 0;
   width: 100%;
-  //height: remy(69px);
   background-color: transparent;
-}
-
-.page--home .footer__copy {
-  //padding-top: 1.25rem;
-  //padding-bottom: 1.25rem;
 }
 
 .page--home .footer__media {
