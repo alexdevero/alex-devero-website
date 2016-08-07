@@ -14,7 +14,7 @@ header {
 header a {
   font-weight: 700;
   text-transform: uppercase;
-  color: #212121;
+  color: $color--black;
 
   &:focus,
   &:hover {
@@ -48,6 +48,6 @@ header .logo a {
 
   &:focus,
   &:hover {
-    color: #212121;
+    color: $color--black;
   }
 }
