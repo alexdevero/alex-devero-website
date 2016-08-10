@@ -16,3 +16,8 @@
 - add floating arrows on hp to navigate through website
 - hide menu as default
 - remove 'process' page
+
+## Heading on hp:
+- I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
+- I am passionate about design, technology and entrepreneurship.
+- A one man digital agency for all web design needs.
