@@ -23,3 +23,4 @@
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
 - I am passionate about design, technology and entrepreneurship.
 - A one man digital agency for all web design needs.
+- I help my clients succeed in the digital world.
