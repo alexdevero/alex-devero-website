@@ -10,7 +10,7 @@
 - add new Raleway weights - 300,400,600,700,800
 - change body font to Raleway
 
-### Ideas:
+### General ideas:
 - animated message for submitting form
 - arrows on homepage for 'previous' and 'next' page
 - add spinner that will be shown while sending contact form
@@ -19,7 +19,7 @@
 - hide menu as default
 - remove 'process' page
 
-## Heading on hp:
+### Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
 - I am passionate about design, technology and entrepreneurship.
 - A one man digital agency for all web design needs.
