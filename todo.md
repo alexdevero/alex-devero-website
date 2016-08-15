@@ -1,4 +1,4 @@
-### Tasks:
+### Todo:
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - change thumbnail for RF - use front-faced phone
