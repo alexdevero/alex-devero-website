@@ -7,6 +7,8 @@
 - fix thumbnail for Material - use full-height screenshot
 - change thumbnail for Maelstrom - use front-faced browser (Cedric-like)
 - fix thumbnail for Trinity - use full-height screenshot
+- add new Raleway weights - 300,400,600,700,800
+- change body font to Raleway
 
 ### Ideas:
 - animated message for submitting form
