@@ -18,6 +18,7 @@
 - add floating arrows on hp to navigate through website
 - hide menu as default
 - remove 'process' page
+- add preloader
 
 ### Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
