@@ -9,6 +9,7 @@
 - fix thumbnail for Trinity - use full-height screenshot
 - add new Raleway weights - 300,400,600,700,800
 - change body font to Raleway
+- add instagram icon to footer
 
 ### General ideas:
 - animated message for submitting form
@@ -19,6 +20,7 @@
 - hide menu as default
 - remove 'process' page
 - add preloader
+- merge FAQ with About page
 
 ### Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
