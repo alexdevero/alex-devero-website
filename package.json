@@ -1,11 +1,31 @@
 {
   "name": "alex-devero-portfolio",
   "version": "0.2.994",
-  "author": "Alex Devero",
+  "description": "Personal portfolio of Alex Devero",
+  "keywords": [
+    "ui"
+  ],
+  "homepage": "https://github.com/alexdevero/alex-devero-v3#readme",
+  "bugs": {
+    "url": "https://github.com/alexdevero/alex-devero-v3/issues"
+  },
+  "license": "proprietary",
+  "author": {
+    "name": "Alex Devero",
+    "url": "https://github.com/alexdevero"
+  },
   "email": "deveroalex@gmail.com",
   "url": "http://alexdevero.com/",
-  "description": "Personal portfolio of Alex Devero",
-  "private": true,
+  "contributors": [
+    {
+      "name": "contributor",
+      "url": "https://github.com/contributor"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexdevero/alex-devero-v3.git"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -22,5 +42,6 @@
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^4.2.2"
-  }
+  },
+  "private": true
 }
