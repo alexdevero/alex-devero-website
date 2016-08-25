@@ -321,22 +321,22 @@
           window.onload = function() {
             // Load Font Awesome
             if (true) {
-              window.controllers.fontAwesomeLoader();
+              window.mainController.fontAwesomeLoader();
             }
 
             // Load Open Sans font
             if (true) {
-              window.controllers.fontOpenSansLoader();
+              window.mainController.fontOpenSansLoader();
             }
 
             // Load Raleway font
             if (false) {
-              window.controllers.fontRalewayLoader()
+              window.mainController.fontRalewayLoader()
             };
 
             if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
-              window.controllers.animateStylesheetLoader();
+              window.mainController.animateStylesheetLoader();
             }
 
             // Cache html element
@@ -348,12 +348,12 @@
               el.setAttribute('id', 'loaded');
 
               // Fade in cached html element
-              window.controllers.fadeInCustom(el);
+              window.mainController.fadeInCustom(el);
             }, 350);
           }
 
           // Page transitions for clicks on links
-          window.controllers.pageTransition();
+          window.mainController.pageTransition();
         })();
       }
 
@@ -362,7 +362,7 @@
        */
       if (this.settings.contactForm.length > 0) {
         (function() {
-          window.controllers.contact();
+          window.mainController.contact();
         })();
       }
 
@@ -371,7 +371,7 @@
        */
       if (this.settings.lazyImages.length > 0) {
         (function() {
-          window.controllers.lazyImages();
+          window.mainController.lazyImages();
         })();
       }
 
@@ -381,7 +381,7 @@
        */
       if (this.settings.waypoint.length > 0) {
         (function() {
-          window.controllers.waypoints();
+          window.mainController.waypoints();
         })()
       }
     },
@@ -400,7 +400,7 @@
         }
       }
 
-      window.controllers = app.controllers;
+      window.mainController = app.controllers;
 
       app.switches();
     }
