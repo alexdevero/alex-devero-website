@@ -152,7 +152,7 @@
               lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
               lazyImagesArray[i].removeAttribute('data-src');
               lazyImagesArray[i].setAttribute('data-loaded', true);
-              window.controllers.fadeInCustom(lazyImagesArray[i]);
+              window.mainController.fadeInCustom(lazyImagesArray[i]);
             }
           }
 
@@ -195,7 +195,7 @@
                   history.pushState(null, elTarget.title, elTarget.href);
 
                   //$('html').fadeOut(350);
-                  window.controllers.fadeOutCustom(el);
+                  window.mainController.fadeOutCustom(el);
 
                   setTimeout(function() {
                     location.replace(elTarget.href);
