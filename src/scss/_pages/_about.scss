@@ -9,8 +9,8 @@
 
   .sec__about {
     margin-bottom: remy(-61px);
-    height: 100%;
-    min-height: remy(1080px);
+    /*height: 100%;*/
+    /*min-height: remy(1080px);
 
     @media screen and (max-width: 568px) {
       padding-top: 0rem;
@@ -34,7 +34,7 @@
 
     @media screen and (min-width: 1200px) {
       min-height: remy(720px);
-    }
+    }*/
   }
 
   .sec__about .container {
@@ -42,7 +42,7 @@
     z-index: 2;
     color: $color--black;
 
-    @extend .vertical-align;
+    //@extend .vertical-align;
   }
 
   .heading--primary {
@@ -56,5 +56,31 @@
 
   .btn {
     margin-top: 1.5rem;
+  }
+
+  .sec__faq {
+    .heading--primary {
+      font-weight: 700;
+      text-transform: inherit;
+    }
+
+    a {
+      &:focus,
+      &:hover {
+        color: $color--black;
+      }
+    }
+
+    h2 {
+      font-weight: 600;
+    }
+
+    p {
+      font-size: remy(18px);
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+    }
   }
 }
