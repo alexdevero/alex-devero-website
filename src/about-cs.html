@@ -361,5 +361,20 @@
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-40173486-1','auto');ga('send','pageview');
   </script>
+
+  <script>
+    document.querySelector('.sec__faq a').onclick = function (event) {
+      event.preventDefault();
+
+      var href = '#' + this.href.split('#')[1],
+          faqContent = document.querySelector(href);
+
+      if (faqContent.style.display === 'none') {
+        faqContent.style.display = 'block';
+      } else {
+        faqContent.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
