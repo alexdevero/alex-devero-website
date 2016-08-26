@@ -170,7 +170,8 @@
         var links = document.querySelectorAll('a');
 
         for (var i = 0, j = links.length; i<j; i++) {
-          links[i].setAttribute('data-href', (links[i].href.indexOf('.html') != -1));
+          // Check if the link is internal - redirects to another html file or some section via ID
+          links[i].setAttribute('data-href', (links[i].href.indexOf('.html') != -1) && links[i].href.indexOf('#') <= 0);
 
           links[i].addEventListener('click', function(e) {
             var elTarget = e.target;
