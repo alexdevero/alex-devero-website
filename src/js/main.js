@@ -121,7 +121,7 @@
       fontRalewayLoader: function() {
         var stylesheetRaleway = document.createElement('link');
         stylesheetRaleway.rel = 'stylesheet';
-        stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,700,200';
+        stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,700';
         stylesheetRaleway.classList.add('jsLoaded');
         document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
       },
