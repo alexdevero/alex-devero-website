@@ -221,9 +221,15 @@
         }
       },
       customSlideDown: function(element) {
-        element.style.maxHeight = '1000px';
+        element.style.maxHeight = '10000px';
 
         element.style.opacity = '1';
+
+        if (element.classList.contains('slideClosed')) {
+          element.classList.remove('slideClosed');
+        }
+
+        element.classList.add('slideOpened')
       },
       customSlideUp: function(element) {
         element.style.maxHeight = '0';
@@ -244,6 +250,12 @@
         slideTimer(1, function() {
           element.style.opacity = '0';
         });
+
+        if (element.classList.contains('slideOpened')) {
+          element.classList.remove('slideOpened');
+        }
+
+        element.classList.add('slideClosed')
       },
       // Waypoints controller
       waypoints: function() {
@@ -408,6 +420,21 @@
        if (this.settings.slideableContent.length > 0) {
         (function() {
           console.log('slideableContent');
+
+          var content = document.querySelectorAll('.js-slideable')[0],
+              anchor = document.querySelectorAll('.js-slideable-anchor')[0];
+
+          content.style.display = 'block';
+          content.style.maxHeight = '0';
+          content.style.opacity = '0';
+          content.style.overflow = 'hidden';
+          content.style.transition = 'max-height 0.6s cubic-bezier(0.4, 0, 1, 1)';
+
+          anchor.addEventListener('click', function() {
+            if (true) {
+              window.mainController.customSlideDown(content);
+            }
+          });
         })();
        }
 
