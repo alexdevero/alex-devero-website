@@ -10,6 +10,7 @@
       lazyImages: document.getElementsByClassName('lazy'),
       contactForm: document.querySelectorAll('#contactForm'),
       portfolioItem: document.querySelectorAll('.work__item'),
+      slideableContent: document.querySelectorAll('.js-slideable'),
       waypoint: document.querySelectorAll('.wp')
     },
     controllers: {
@@ -219,6 +220,31 @@
           });
         }
       },
+      customSlideDown: function(element) {
+        element.style.maxHeight = '1000px';
+
+        element.style.opacity = '1';
+      },
+      customSlideUp: function(element) {
+        element.style.maxHeight = '0';
+
+        function slideTimer(seconds, callback) {
+          var counter = 0,
+              time = window.setInterval(function() {
+                counter++;
+
+                if (counter >= seconds) {
+                  callback();
+
+                  window.clearImmediate(time);
+                }
+              }, 400);
+        };
+
+        slideTimer(1, function() {
+          element.style.opacity = '0';
+        });
+      },
       // Waypoints controller
       waypoints: function() {
         // setTimeout function is used to let the dom be loaded.
@@ -375,6 +401,15 @@
           window.mainController.lazyImages();
         })();
       }
+
+      /**
+       * Slideable content
+       */
+       if (this.settings.slideableContent.length > 0) {
+        (function() {
+          console.log('slideableContent');
+        })();
+       }
 
       /**
        * Waypoints
