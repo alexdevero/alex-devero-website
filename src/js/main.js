@@ -220,7 +220,74 @@
           });
         }
       },
-      customSlideDown: function(element) {
+      customSlider: function() {
+        (function() {
+          var content = document.querySelectorAll('.js-slideable')[0],
+              anchor = document.querySelectorAll('.js-slideable-anchor')[0];
+
+          content.style.display = 'block';
+
+          content.style.maxHeight = '0';
+
+          content.style.opacity = '0';
+
+          content.style.overflow = 'hidden';
+
+          content.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 1, 1)';
+
+          content.classList.add('slideClosed');
+
+          function customSlideDown(element) {
+            element.style.maxHeight = '10000px';
+
+            element.style.opacity = '1';
+
+            if (element.classList.contains('slideClosed')) {
+              element.classList.remove('slideClosed');
+            }
+
+            element.classList.add('slideOpened')
+          }
+
+          function customSlideUp(element) {
+            element.style.maxHeight = '0';
+
+            function slideTimer(seconds, callback) {
+              var counter = 0,
+                  time = window.setInterval(function() {
+                    counter++;
+
+                    if (counter >= seconds) {
+                      callback();
+
+                      window.clearInterval(time);
+                    }
+                  }, 10);
+            };
+
+            slideTimer(1, function() {
+              element.style.opacity = '0';
+            });
+
+            if (element.classList.contains('slideOpened')) {
+              element.classList.remove('slideOpened');
+            }
+
+            element.classList.add('slideClosed')
+          }
+
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (content.classList.contains('slideClosed')) {
+              customSlideDown(content);
+            } else {
+              customSlideUp(content);
+            }
+          });
+        })()
+      },
+      /*customSlideDown: function(element) {
         element.style.maxHeight = '10000px';
 
         element.style.opacity = '1';
@@ -256,7 +323,7 @@
         }
 
         element.classList.add('slideClosed')
-      },
+      },*/
       // Waypoints controller
       waypoints: function() {
         // setTimeout function is used to let the dom be loaded.
@@ -419,22 +486,7 @@
        */
        if (this.settings.slideableContent.length > 0) {
         (function() {
-          console.log('slideableContent');
-
-          var content = document.querySelectorAll('.js-slideable')[0],
-              anchor = document.querySelectorAll('.js-slideable-anchor')[0];
-
-          content.style.display = 'block';
-          content.style.maxHeight = '0';
-          content.style.opacity = '0';
-          content.style.overflow = 'hidden';
-          content.style.transition = 'max-height 0.6s cubic-bezier(0.4, 0, 1, 1)';
-
-          anchor.addEventListener('click', function() {
-            if (true) {
-              window.mainController.customSlideDown(content);
-            }
-          });
+          window.mainController.customSlider();
         })();
        }
 
