@@ -59,6 +59,8 @@
   }
 
   .sec__faq {
+    padding-bottom: 1rem;
+
     .heading--primary {
       font-weight: 700;
       text-transform: inherit;
@@ -78,9 +80,9 @@
     p {
       font-size: remy(18px);
     }
+  }
 
-    .btn {
-      margin-top: 1.5rem;
-    }
+  .btn {
+    margin-bottom: 3rem;
   }
 }
