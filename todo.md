@@ -1,15 +1,9 @@
 ### Todo:
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
-- change thumbnail for RF - use front-faced phone
-- change thumbnail for Sumava - use front-faced browser (Cedric-like)
-- fix thumbnail for Ultron - use full-height screenshot
-- fix thumbnail for Material - use full-height screenshot
-- change thumbnail for Maelstrom - use front-faced browser (Cedric-like)
-- fix thumbnail for Trinity - use full-height screenshot
 - add new Raleway weights - 300,400,600,700,800
 - change body font to Raleway
-- add instagram icon to footer
+- ~~add instagram icon to footer~~
 
 ### General ideas:
 - animated message for submitting form
