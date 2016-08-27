@@ -288,7 +288,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-            <h1 class="heading--primary">Frequently asked <a class="text--red text--underline" href="#faqContent">questions</a>.</h1>
+            <h1 class="heading--primary">Frequently asked <a class="js-slideable-anchor text--red text--underline" href="#faqContent">questions</a>.</h1>
 
             <div id="faqContent" class="js-slideable faq-content" style="display: none;">
               <h2>How the cooperation looks like?</h2>
@@ -361,21 +361,6 @@
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-40173486-1','auto');ga('send','pageview');
-  </script>
-
-  <script>
-    document.querySelector('.sec__faq a').onclick = function (event) {
-      event.preventDefault();
-
-      var href = '#' + this.href.split('#')[1],
-          faqContent = document.querySelector(href);
-
-      if (faqContent.style.display === 'none') {
-        faqContent.style.display = 'block';
-      } else {
-        faqContent.style.display = 'none';
-      }
-    }
   </script>
 </body>
 </html>
