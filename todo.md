@@ -11,10 +11,10 @@
 - add spinner that will be shown while sending contact form
 - add testimonial slider on homepage
 - add floating arrows on hp to navigate through website
-- hide menu as default
+- ~~hide menu as default~~
 - remove 'process' page
 - add preloader
-- merge FAQ with About page
+- ~~merge FAQ with About page~~
 
 ### Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
