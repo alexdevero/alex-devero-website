@@ -287,43 +287,6 @@
           });
         })()
       },
-      /*customSlideDown: function(element) {
-        element.style.maxHeight = '10000px';
-
-        element.style.opacity = '1';
-
-        if (element.classList.contains('slideClosed')) {
-          element.classList.remove('slideClosed');
-        }
-
-        element.classList.add('slideOpened')
-      },
-      customSlideUp: function(element) {
-        element.style.maxHeight = '0';
-
-        function slideTimer(seconds, callback) {
-          var counter = 0,
-              time = window.setInterval(function() {
-                counter++;
-
-                if (counter >= seconds) {
-                  callback();
-
-                  window.clearImmediate(time);
-                }
-              }, 400);
-        };
-
-        slideTimer(1, function() {
-          element.style.opacity = '0';
-        });
-
-        if (element.classList.contains('slideOpened')) {
-          element.classList.remove('slideOpened');
-        }
-
-        element.classList.add('slideClosed')
-      },*/
       // Waypoints controller
       waypoints: function() {
         // setTimeout function is used to let the dom be loaded.
