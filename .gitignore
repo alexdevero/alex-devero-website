@@ -34,3 +34,7 @@ node_modules/
 alexdevero-portfolio.sublime-project
 alexdevero-portfolio.sublime-workspace
 .sublime-gulp.cache
+
+# Deployment config #
+#####################
+ftp-credentials.json
