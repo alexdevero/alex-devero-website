@@ -1,8 +1,8 @@
 ### Todo:
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
-- add new Raleway weights - 300,400,600,700,800
 - change body font to Raleway
+- ~~add new Raleway weights - 300,400,600,700,800~~
 
 ### General ideas:
 - animated message for submitting form
