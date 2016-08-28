@@ -29,7 +29,7 @@ var gulp = require('gulp'),
 gulp.task('deploy', function() {
   var credentials = require('./ftp-credentials.json'),
       destFolder = 'www/public',
-      filesGlob = ['dist/**/*.*'];
+      filesGlob = ['./dist/**/*.*'];
 
   var conn = vinylFtp.create({
     host: '40849.w49.wedos.net',
@@ -41,8 +41,10 @@ gulp.task('deploy', function() {
     log: gulpUtil.log
   });
 
+  // base set to './dist/' will copy content of dist folder
+  // without the folder itself
   return gulp.src(filesGlob, {
-    base: '.',
+    base: './dist/',
     buffer: false
   })
     .pipe(conn.newer(destFolder))
