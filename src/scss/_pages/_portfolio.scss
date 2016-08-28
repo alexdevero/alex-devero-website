@@ -34,14 +34,15 @@ main .sec__works {
   @include transition(transform);
 }
 
-.overlay--thumbnail:focus + .works__thumbnail,
+/*.overlay--thumbnail:focus + .works__thumbnail,
 .overlay--thumbnail:hover + .works__thumbnail,
 .overlay--thumbnail:focus + .works__thumbnail + noscript > .works__thumbnail,
 .overlay--thumbnail:hover + .works__thumbnail + noscript > .works__thumbnail {
   transform: scale(1.25);
-}
+}*/
 
 .thumbnail__info {
+  display: none;
   padding-top: 1rem;
   padding-left: 1rem;
   //color: $color--red;
