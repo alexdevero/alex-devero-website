@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
     gulpUtil = require('gulp-util'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    vinylFtp = require('vinyl-ftp');
 
 // Concatenate JavaScript files
 /*gulp.task('concatJS', function() {
@@ -22,6 +23,31 @@ var gulp = require('gulp'),
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest('./dist/js/'));
 });*/
+
+// Deploy files to FTP
+
+gulp.task('deploy', function() {
+  var credentials = require('./ftp-credentials.json'),
+      destFolder = 'www/public',
+      filesGlob = ['dist/**/*.*'];
+
+  var conn = vinylFtp.create({
+    host: '40849.w49.wedos.net',
+    user: credentials.username,
+    password: credentials.password,
+    parallel: 5,
+    maxConnections: 10,
+    secure: false,
+    log: gulpUtil.log
+  });
+
+  return gulp.src(filesGlob, {
+    base: '.',
+    buffer: false
+  })
+    .pipe(conn.newer(destFolder))
+    .pipe(conn.dest(destFolder));
+});
 
 // Minify HTML files
 
