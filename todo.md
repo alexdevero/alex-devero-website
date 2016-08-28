@@ -2,6 +2,7 @@
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - change body font to Raleway
+- implement [vinyl-ftp](https://www.npmjs.com/package/vinyl-ftp) plugin for gulp
 - ~~add new Raleway weights - 300,400,600,700,800~~
 
 ### General ideas:
