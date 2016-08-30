@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
+    babel = require('gulp-babel'),
     changed = require('gulp-changed'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
@@ -153,6 +154,9 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(changed('dist/js'))
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(uglify().on('error', function(e) {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
