@@ -2,7 +2,6 @@
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - change body font to Raleway
-- ~~implement babel plugin~~
 
 ### General ideas:
 - animated message for submitting form
