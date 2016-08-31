@@ -3,6 +3,7 @@
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - change body font to Raleway
 - fix history back button
+- rewrite waypoints controller to vanilla JavaScript
 
 ### General ideas:
 - animated message for submitting form
