@@ -2,10 +2,6 @@
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - change body font to Raleway
-- ~~add logo for material~~
-- ~~add logo for nemesis~~
-- ~~add logo for trinity~~
-- ~~add logo for avengers~~
 
 ### General ideas:
 - animated message for submitting form
