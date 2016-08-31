@@ -4,6 +4,7 @@
 - change body font to Raleway
 - fix history back button
 - rewrite waypoints controller to vanilla JavaScript
+- rewrite JavaScript to ES2015
 
 ### General ideas:
 - animated message for submitting form
