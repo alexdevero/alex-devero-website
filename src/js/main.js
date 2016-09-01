@@ -310,11 +310,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-discovery-text')[0].waypoint(function(direction) {
-            $('.wp-discovery-text').addClass('animated fadeInRight');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load planning icon for mobile
           var waypointThree = new Waypoint({
@@ -324,11 +319,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-planning-icon-mobile')[0].waypoint(function(direction) {
-            $('.wp-planning-icon-mobile').addClass('animated fadeInRight');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load planning icon for desktop
           var waypointFour = new Waypoint({
@@ -338,11 +328,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-planning-icon-desktop')[0].waypoint(function(direction) {
-            $('.wp-planning-icon-desktop').addClass('animated fadeInRight');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load planning text
           var waypointFive = new Waypoint({
@@ -352,11 +337,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-planning-text')[0].waypoint(function(direction) {
-            $('.wp-planning-text').addClass('animated fadeInLeft');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load default design icon
           var waypointSix = new Waypoint({
@@ -366,11 +346,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-design-icon')[0].waypoint(function(direction) {
-            $('.wp-design-icon').addClass('animated fadeInLeft');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load design text
           var waypointSeven = new Waypoint({
@@ -380,11 +355,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-design-text')[0].waypoint(function(direction) {
-            $('.wp-design-text').addClass('animated fadeInRight');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load building icon for mobile
           var waypointEight = new Waypoint({
@@ -394,11 +364,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-building-icon-mobile')[0].waypoint(function(direction) {
-            $('.wp-building-icon-mobile').addClass('animated fadeInRight');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load building icon for desktop
           var waypointNine = new Waypoint({
@@ -408,11 +373,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-building-icon-desktop')[0].waypoint(function() {
-            $('.wp-building-icon-desktop').addClass('animated fadeInRight');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load building text
           var waypointTen = new Waypoint({
@@ -422,11 +382,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-building-text')[0].waypoint(function(direction) {
-            $('.wp-building-text').addClass('animated fadeInLeft');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load default evaluation icon
           var waypointEleven = new Waypoint({
@@ -436,11 +391,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-evaluation-icon')[0].waypoint(function() {
-            $('.wp-evaluation-icon').addClass('animated fadeInLeft');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
 
           // Load evaluation text
           var waypointTwelve = new Waypoint({
@@ -450,11 +400,6 @@
             },
             offset: 'bottom-in-view'
           });
-          /*document.querySelectorAll('.wp-evaluation-text')[0].waypoint(function() {
-            $('.wp-evaluation-text').addClass('animated fadeInRight');
-          }, {
-            offset: 'bottom-in-view'
-          });*/
         }, 1000);
       }
     },
