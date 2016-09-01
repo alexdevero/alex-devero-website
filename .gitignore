@@ -16,10 +16,6 @@ _notes/
 *.tar
 *.zip
 
-# Minified files #
-##################
-*.min.*
-
 # Photoshop and Illustrator files #
 ###################################
 *.ai
