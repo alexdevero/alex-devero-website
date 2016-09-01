@@ -294,88 +294,167 @@
         // and waypoint will fire all triggers immediatelly.
         setTimeout(function() {
           // Load default discovery icon
-          $('.wp-discovery-icon').waypoint(function(direction) {
-            $('.wp-discovery-icon').addClass('animated fadeInLeft');
-          }, {
+          var waypointOne = new Waypoint({
+            element: document.querySelectorAll('.wp-discovery-icon')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInLeft');
+            },
             offset: 'bottom-in-view'
           });
 
           // Load discovery text
-          $('.wp-discovery-text').waypoint(function(direction) {
+          var waypointTwo = new Waypoint({
+            element: document.querySelectorAll('.wp-discovery-text')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInRight');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-discovery-text')[0].waypoint(function(direction) {
             $('.wp-discovery-text').addClass('animated fadeInRight');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load planning icon for mobile
-          $('.wp-planning-icon-mobile').waypoint(function(direction) {
+          var waypointThree = new Waypoint({
+            element: document.querySelectorAll('.wp-planning-icon-mobile')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInRight');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-planning-icon-mobile')[0].waypoint(function(direction) {
             $('.wp-planning-icon-mobile').addClass('animated fadeInRight');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load planning icon for desktop
-          $('.wp-planning-icon-desktop').waypoint(function(direction) {
+          var waypointFour = new Waypoint({
+            element: document.querySelectorAll('.wp-planning-icon-desktop')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInRight');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-planning-icon-desktop')[0].waypoint(function(direction) {
             $('.wp-planning-icon-desktop').addClass('animated fadeInRight');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load planning text
-          $('.wp-planning-text').waypoint(function(direction) {
+          var waypointFive = new Waypoint({
+            element: document.querySelectorAll('.wp-planning-text')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInLeft');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-planning-text')[0].waypoint(function(direction) {
             $('.wp-planning-text').addClass('animated fadeInLeft');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load default design icon
-          $('.wp-design-icon').waypoint(function(direction) {
+          var waypointSix = new Waypoint({
+            element: document.querySelectorAll('.wp-design-icon')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInLeft');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-design-icon')[0].waypoint(function(direction) {
             $('.wp-design-icon').addClass('animated fadeInLeft');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load design text
-          $('.wp-design-text').waypoint(function(direction) {
+          var waypointSeven = new Waypoint({
+            element: document.querySelectorAll('.wp-design-text')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInRight');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-design-text')[0].waypoint(function(direction) {
             $('.wp-design-text').addClass('animated fadeInRight');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load building icon for mobile
-          $('.wp-building-icon-mobile').waypoint(function(direction) {
+          var waypointEight = new Waypoint({
+            element: document.querySelectorAll('.wp-building-icon-mobile')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInRight');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-building-icon-mobile')[0].waypoint(function(direction) {
             $('.wp-building-icon-mobile').addClass('animated fadeInRight');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load building icon for desktop
-          $('.wp-building-icon-desktop').waypoint(function() {
+          var waypointNine = new Waypoint({
+            element: document.querySelectorAll('.wp-building-icon-desktop')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInRight');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-building-icon-desktop')[0].waypoint(function() {
             $('.wp-building-icon-desktop').addClass('animated fadeInRight');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load building text
-          $('.wp-building-text').waypoint(function(direction) {
+          var waypointTen = new Waypoint({
+            element: document.querySelectorAll('.wp-building-text')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInLeft');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-building-text')[0].waypoint(function(direction) {
             $('.wp-building-text').addClass('animated fadeInLeft');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load default evaluation icon
-          $('.wp-evaluation-icon').waypoint(function() {
+          var waypointEleven = new Waypoint({
+            element: document.querySelectorAll('.wp-evaluation-icon')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInLeft');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-evaluation-icon')[0].waypoint(function() {
             $('.wp-evaluation-icon').addClass('animated fadeInLeft');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
 
           // Load evaluation text
-          $('.wp-evaluation-text').waypoint(function() {
+          var waypointTwelve = new Waypoint({
+            element: document.querySelectorAll('.wp-evaluation-text')[0],
+            handler: function(direction) {
+              this.element.classList.add('animated', 'fadeInRight');
+            },
+            offset: 'bottom-in-view'
+          });
+          /*document.querySelectorAll('.wp-evaluation-text')[0].waypoint(function() {
             $('.wp-evaluation-text').addClass('animated fadeInRight');
           }, {
             offset: 'bottom-in-view'
-          });
+          });*/
         }, 1000);
       }
     },
