@@ -7,7 +7,6 @@
 - test JavaScript
 - create CV page
 - rename repo and folder to 'alex-devero-website'
-- ~~harley davidson:  add links to behance~~
 
 ### General ideas:
 - animated message for submitting form
