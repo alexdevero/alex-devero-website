@@ -1,4 +1,4 @@
-### Todo:
+﻿### Todo:
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - change body font to Raleway
@@ -7,6 +7,7 @@
 - test JavaScript
 - create CV page
 - rename repo and folder to 'alex-devero-website'
+- implement 'srcset' attribute for img tags
 
 ### General ideas:
 - animated message for submitting form
