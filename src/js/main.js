@@ -234,6 +234,25 @@
           }
         }
       },
+      // Modal Messages
+      modalMessages: function() {
+        console.log('message');
+
+        let modalOverlay = document.querySelector('.js-modal-overlay'),
+            modalButton = modalOverlay.querySelector('.js-modal-button'),
+            messageFailure = modalOverlay.querySelector('.js-modal-message-failure'),
+            messageInfo = modalOverlay.querySelector('.js-modal-message-info'),
+            messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
+
+        // Function for loading failure message
+        function messageFailureLoader() {}
+
+        // Function for loading info message
+        function messageInfoLoader() {}
+
+        // Function for loading success message
+        function messageSuccessLoader() {}
+      },
       // Page transition controller
       pageTransition: function() {
         // Page transitions for clicks on links
@@ -467,6 +486,15 @@
       if (this.settings.lazyImages.length > 0) {
         (function() {
           window.mainController.lazyImages();
+        })();
+      }
+
+      /**
+       * Modal messages
+       */
+      if (this.settings.modalMessage.length > 0) {
+        (function() {
+          window.mainController.modalMessages();
         })();
       }
 
