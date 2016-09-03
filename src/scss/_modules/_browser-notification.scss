@@ -2,4 +2,24 @@
  * Browser notification
  */
 
-.browser-notification {}
+.browser-notification {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: rgba(17,17,17,.75);
+
+  a {
+    font-weight: 700;
+    color: $color--red;
+
+    &:focus,
+    &:hover {
+      color: $color--black;
+    }
+  }
+}
