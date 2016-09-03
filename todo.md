@@ -5,7 +5,6 @@
 - fix history back button
 - rewrite JavaScript to ES2015
 - test JavaScript
-- create CV page
 - rename repo and folder to 'alex-devero-website'
 - implement 'srcset' attribute for img tags
 
