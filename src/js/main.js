@@ -8,7 +8,8 @@
     settings: {
       contactForm: document.querySelectorAll('#contactForm'),
       indexCanvas: document.querySelectorAll('#indexCanvas'),
-      lazyImages: document.getElementsByClassName('lazy'),
+      lazyImages: document.querySelectorAll('.lazy'),
+      modalMessage: document.querySelectorAll('.js-modal-overlay'),
       portfolioItem: document.querySelectorAll('.work__item'),
       slideableContent: document.querySelectorAll('.js-slideable'),
       waypoint: document.querySelectorAll('.wp')
