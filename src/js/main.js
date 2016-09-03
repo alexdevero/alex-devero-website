@@ -6,14 +6,22 @@
   'use strict';
   var app = {
     settings: {
+      contactForm: document.querySelectorAll('#contactForm'),
       indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.getElementsByClassName('lazy'),
-      contactForm: document.querySelectorAll('#contactForm'),
       portfolioItem: document.querySelectorAll('.work__item'),
       slideableContent: document.querySelectorAll('.js-slideable'),
       waypoint: document.querySelectorAll('.wp')
     },
     controllers: {
+      // Animate stylesheet loader controller
+      animateStylesheetLoader: function() {
+        var stylesheetAnimateCSS = document.createElement('link');
+        stylesheetAnimateCSS.rel = 'stylesheet';
+        stylesheetAnimateCSS.href = 'css/animate.css';
+        stylesheetAnimateCSS.classList.add('jsLoaded');
+        document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);
+      },
       // Contact controller
       contact: function(e) {
         $('#contactForm').submit(function(e) {
@@ -58,6 +66,73 @@
           }
         });
       },
+      customSlider: function() {
+        (function() {
+          var content = document.querySelectorAll('.js-slideable')[0],
+              anchor = document.querySelectorAll('.js-slideable-anchor')[0];
+
+          content.style.display = 'block';
+
+          content.style.maxHeight = '0';
+
+          content.style.opacity = '0';
+
+          content.style.overflow = 'hidden';
+
+          content.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 1, 1)';
+
+          content.classList.add('slideClosed');
+
+          function customSlideDown(element) {
+            element.style.maxHeight = '10000px';
+
+            element.style.opacity = '1';
+
+            if (element.classList.contains('slideClosed')) {
+              element.classList.remove('slideClosed');
+            }
+
+            element.classList.add('slideOpened')
+          }
+
+          function customSlideUp(element) {
+            element.style.maxHeight = '0';
+
+            function slideTimer(seconds, callback) {
+              var counter = 0,
+                  time = window.setInterval(function() {
+                    counter++;
+
+                    if (counter >= seconds) {
+                      callback();
+
+                      window.clearInterval(time);
+                    }
+                  }, 10);
+            };
+
+            slideTimer(1, function() {
+              element.style.opacity = '0';
+            });
+
+            if (element.classList.contains('slideOpened')) {
+              element.classList.remove('slideOpened');
+            }
+
+            element.classList.add('slideClosed')
+          }
+
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (content.classList.contains('slideClosed')) {
+              customSlideDown(content);
+            } else {
+              customSlideUp(content);
+            }
+          });
+        })()
+      },
       // FadeIn controller
       fadeInCustom: function(element) {
         var elementOpacity = 0.1;// initial opacity
@@ -93,14 +168,6 @@
 
           elementOpacity -= elementOpacity * 0.1;
         }, 15);
-      },
-      // Animate stylesheet loader controller
-      animateStylesheetLoader: function() {
-        var stylesheetAnimateCSS = document.createElement('link');
-        stylesheetAnimateCSS.rel = 'stylesheet';
-        stylesheetAnimateCSS.href = 'css/animate.css';
-        stylesheetAnimateCSS.classList.add('jsLoaded');
-        document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);
       },
       // Font Awesome loader controller
       fontAwesomeLoader: function() {
@@ -219,73 +286,6 @@
             }
           });
         }
-      },
-      customSlider: function() {
-        (function() {
-          var content = document.querySelectorAll('.js-slideable')[0],
-              anchor = document.querySelectorAll('.js-slideable-anchor')[0];
-
-          content.style.display = 'block';
-
-          content.style.maxHeight = '0';
-
-          content.style.opacity = '0';
-
-          content.style.overflow = 'hidden';
-
-          content.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 1, 1)';
-
-          content.classList.add('slideClosed');
-
-          function customSlideDown(element) {
-            element.style.maxHeight = '10000px';
-
-            element.style.opacity = '1';
-
-            if (element.classList.contains('slideClosed')) {
-              element.classList.remove('slideClosed');
-            }
-
-            element.classList.add('slideOpened')
-          }
-
-          function customSlideUp(element) {
-            element.style.maxHeight = '0';
-
-            function slideTimer(seconds, callback) {
-              var counter = 0,
-                  time = window.setInterval(function() {
-                    counter++;
-
-                    if (counter >= seconds) {
-                      callback();
-
-                      window.clearInterval(time);
-                    }
-                  }, 10);
-            };
-
-            slideTimer(1, function() {
-              element.style.opacity = '0';
-            });
-
-            if (element.classList.contains('slideOpened')) {
-              element.classList.remove('slideOpened');
-            }
-
-            element.classList.add('slideClosed')
-          }
-
-          anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            if (content.classList.contains('slideClosed')) {
-              customSlideDown(content);
-            } else {
-              customSlideUp(content);
-            }
-          });
-        })()
       },
       // Waypoints controller
       waypoints: function() {
