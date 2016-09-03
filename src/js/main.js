@@ -233,6 +233,7 @@
           }
         }
       },
+      // Page transition controller
       pageTransition: function() {
         // Page transitions for clicks on links
         var links = document.querySelectorAll('a');
