@@ -11,10 +11,14 @@
   width: 100%;
   height: 100%;
   background-color: rgba(#111, .75);
+  opacity: 0;
+
+  @include transition(opacity);
 }
 
 .modal-overlay-visible {
   display: block;
+  opacity: 1;
 }
 
 .modal-message {
@@ -33,4 +37,17 @@
   box-shadow: 0 6px 9px rgba(0,0,0,.05), 0 9px 12px rgba(0,0,0,.15);
 
   @include vertical-align;
+
+  p:first-of-type {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  p:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.modal-message-visible {
+  display: block;
 }
