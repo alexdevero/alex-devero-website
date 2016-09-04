@@ -235,7 +235,7 @@
         }
       },
       // Modal Messages
-      modalMessages: function() {
+      modalMessages: function($messageType) {
         console.log('message');
 
         let modalOverlay = document.querySelector('.js-modal-overlay'),
@@ -244,14 +244,22 @@
             messageInfo = modalOverlay.querySelector('.js-modal-message-info'),
             messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
 
-        // Function for loading failure message
-        function messageFailureLoader() {}
+        if ($messageType === 'failure') {
+          // Failure message
+          function messageFailureLoader() {}
 
-        // Function for loading info message
-        function messageInfoLoader() {}
+          messageFailureLoader();
+        } else if ($messageType === 'info') {
+          // Info message
+          function messageInfoLoader() {}
 
-        // Function for loading success message
-        function messageSuccessLoader() {}
+          messageInfoLoader();
+        } else if ($messageType === 'success') {
+          // Success message
+          function messageSuccessLoader() {}
+
+          messageSuccessLoader();
+        }
       },
       // Page transition controller
       pageTransition: function() {
