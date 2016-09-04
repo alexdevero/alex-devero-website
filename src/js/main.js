@@ -47,22 +47,27 @@
             }).done(function(response) {
               e.preventDefault();
 
-              if (window.location.href.split('com/')[1] == 'contact.html') {
+              window.mainController.modalMessages('success');
+
+              /*if (window.location.href.split('com/')[1] == 'contact.html') {
+                window.mainController.modalMessages('failure');
                 alert('Thank you very much for contacting. I will reply in two days.');
               } else {
                 alert('Děkuji Vám za kontaktování. Do dvou dnů se Vám ozvu.');
-              }
+              }*/
 
               // Clear the form.
               $($this)[0].reset();
             }).fail(function(data) {
               e.preventDefault();
 
-              if (window.location.href.split('com/')[1] == 'contact.html') {
+              window.mainController.modalMessages('failure');
+
+              /*if (window.location.href.split('com/')[1] == 'contact.html') {
                 alert('Oops! There was a problem with your submission. Please complete the form and try again.');
               } else {
                 alert('Během odesílání zprávy došlo k problému. Prosím zkuste to znovu.');
-              }
+              }*/
             });
           }
         });
@@ -236,28 +241,56 @@
       },
       // Modal Messages
       modalMessages: function($messageType) {
-        console.log('message');
-
         let modalOverlay = document.querySelector('.js-modal-overlay'),
-            modalButton = modalOverlay.querySelector('.js-modal-button'),
+            modalButton = modalOverlay.querySelectorAll('.js-modal-button'),
             messageFailure = modalOverlay.querySelector('.js-modal-message-failure'),
             messageInfo = modalOverlay.querySelector('.js-modal-message-info'),
             messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
 
+        // Close modal and hide message by clicking on the button
+        for (var i = 0, j = modalButton.length; i < j; i++) {
+          modalButton[i].addEventListener('click', function() {
+            this.parentNode.classList.remove('modal-message-visible');
+
+            window.mainController.fadeOutCustom(modalOverlay);
+          });
+        }
+
         if ($messageType === 'failure') {
           // Failure message
-          function messageFailureLoader() {}
+          function messageFailureLoader() {
+            // Show modal message
+            messageFailure.classList.add('modal-message-visible');
 
+            // Show modal overlay
+            window.mainController.fadeInCustom(modalOverlay);
+          }
+
+          // Initiate message loader function
           messageFailureLoader();
         } else if ($messageType === 'info') {
           // Info message
-          function messageInfoLoader() {}
+          function messageInfoLoader() {
+            // Show modal message
+            messageInfo.classList.add('modal-message-visible');
 
+            // Show modal overlay
+            window.mainController.fadeInCustom(modalOverlay);
+          }
+
+          // Initiate message loader function
           messageInfoLoader();
         } else if ($messageType === 'success') {
           // Success message
-          function messageSuccessLoader() {}
+          function messageSuccessLoader() {
+            // Show modal message
+            messageSuccess.classList.add('modal-message-visible');
 
+            // Show modal overlay
+            window.mainController.fadeInCustom(modalOverlay);
+          }
+
+          // Initiate message loader function
           messageSuccessLoader();
         }
       },
