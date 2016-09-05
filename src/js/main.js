@@ -259,7 +259,7 @@
             messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
 
         // Close modal and hide message by clicking on the button
-        for (var i = 0, j = modalButton.length; i < j; i++) {
+        for (let i = 0, j = modalButton.length; i < j; i++) {
           modalButton[i].addEventListener('click', function() {
             this.parentNode.classList.remove('modal-message-visible');
 
