@@ -74,7 +74,7 @@
       },
       customSlider: function() {
         (function() {
-          var content = document.querySelectorAll('.js-slideable')[0],
+          let content = document.querySelectorAll('.js-slideable')[0],
               anchor = document.querySelectorAll('.js-slideable-anchor')[0];
 
           content.style.display = 'block';
@@ -105,7 +105,7 @@
             element.style.maxHeight = '0';
 
             function slideTimer(seconds, callback) {
-              var counter = 0,
+              let counter = 0,
                   time = window.setInterval(function() {
                     counter++;
 
