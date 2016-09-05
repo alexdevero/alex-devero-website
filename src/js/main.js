@@ -577,9 +577,9 @@
       }
 
       if (document.querySelectorAll('.no-js-img').length > 0) {
-        var imagesArray = document.querySelectorAll('.no-js-img');
+        let imagesArray = document.querySelectorAll('.no-js-img');
 
-        for (var i = 0; i < imagesArray.length; i++) {
+        for (let i = 0; i < imagesArray.length; i++) {
           imagesArray[i].classList.remove('no-js-img');
         }
       }
