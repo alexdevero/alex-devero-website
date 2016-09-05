@@ -334,13 +334,14 @@
                 function changePage() {
                   let el = document.querySelector('html');
 
-                  history.pushState(null, elTarget.title, elTarget.href);
+                  history.pushState({state: 'new'}, elTarget.title, elTarget.href);
 
                   //$('html').fadeOut(350);
                   window.mainController.fadeOutCustom(el);
 
                   setTimeout(function() {
-                    location.replace(elTarget.href);
+                    //location.replace(elTarget.href);
+                    window.location.href = elTarget.href;
                   },750);
 
                   //location.replace(elTarget.href);
