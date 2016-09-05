@@ -17,7 +17,7 @@
     controllers: {
       // Animate stylesheet loader controller
       animateStylesheetLoader: function() {
-        var stylesheetAnimateCSS = document.createElement('link');
+        let stylesheetAnimateCSS = document.createElement('link');
         stylesheetAnimateCSS.rel = 'stylesheet';
         stylesheetAnimateCSS.href = 'css/animate.css';
         stylesheetAnimateCSS.classList.add('jsLoaded');
