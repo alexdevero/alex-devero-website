@@ -367,7 +367,7 @@
         // and waypoint will fire all triggers immediatelly.
         setTimeout(function() {
           // Load default discovery icon
-          var waypointOne = new Waypoint({
+          let waypointOne = new Waypoint({
             element: document.querySelectorAll('.wp-discovery-icon')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInLeft');
@@ -376,7 +376,7 @@
           });
 
           // Load discovery text
-          var waypointTwo = new Waypoint({
+          let waypointTwo = new Waypoint({
             element: document.querySelectorAll('.wp-discovery-text')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInRight');
@@ -385,7 +385,7 @@
           });
 
           // Load planning icon for mobile
-          var waypointThree = new Waypoint({
+          let waypointThree = new Waypoint({
             element: document.querySelectorAll('.wp-planning-icon-mobile')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInRight');
@@ -394,7 +394,7 @@
           });
 
           // Load planning icon for desktop
-          var waypointFour = new Waypoint({
+          let waypointFour = new Waypoint({
             element: document.querySelectorAll('.wp-planning-icon-desktop')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInRight');
@@ -403,7 +403,7 @@
           });
 
           // Load planning text
-          var waypointFive = new Waypoint({
+          let waypointFive = new Waypoint({
             element: document.querySelectorAll('.wp-planning-text')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInLeft');
@@ -412,7 +412,7 @@
           });
 
           // Load default design icon
-          var waypointSix = new Waypoint({
+          let waypointSix = new Waypoint({
             element: document.querySelectorAll('.wp-design-icon')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInLeft');
@@ -421,7 +421,7 @@
           });
 
           // Load design text
-          var waypointSeven = new Waypoint({
+          let waypointSeven = new Waypoint({
             element: document.querySelectorAll('.wp-design-text')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInRight');
@@ -430,7 +430,7 @@
           });
 
           // Load building icon for mobile
-          var waypointEight = new Waypoint({
+          let waypointEight = new Waypoint({
             element: document.querySelectorAll('.wp-building-icon-mobile')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInRight');
@@ -439,7 +439,7 @@
           });
 
           // Load building icon for desktop
-          var waypointNine = new Waypoint({
+          let waypointNine = new Waypoint({
             element: document.querySelectorAll('.wp-building-icon-desktop')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInRight');
@@ -448,7 +448,7 @@
           });
 
           // Load building text
-          var waypointTen = new Waypoint({
+          let waypointTen = new Waypoint({
             element: document.querySelectorAll('.wp-building-text')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInLeft');
@@ -457,7 +457,7 @@
           });
 
           // Load default evaluation icon
-          var waypointEleven = new Waypoint({
+          let waypointEleven = new Waypoint({
             element: document.querySelectorAll('.wp-evaluation-icon')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInLeft');
@@ -466,7 +466,7 @@
           });
 
           // Load evaluation text
-          var waypointTwelve = new Waypoint({
+          let waypointTwelve = new Waypoint({
             element: document.querySelectorAll('.wp-evaluation-text')[0],
             handler: function(direction) {
               this.element.classList.add('animated', 'fadeInRight');
