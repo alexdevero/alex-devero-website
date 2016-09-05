@@ -519,6 +519,12 @@
             }, 350);
           }
 
+          // Detect history change (back or forward button)
+          // and force the page to reload (with new url) and load new page
+          window.onpopstate = function() {
+            location.reload();
+          }
+
           // Page transitions for clicks on links
           window.mainController.pageTransition();
         })();
