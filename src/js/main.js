@@ -141,11 +141,11 @@
       },
       // FadeIn controller
       fadeInCustom: function(element) {
-        var elementOpacity = 0.1;// initial opacity
+        let elementOpacity = 0.1;// initial opacity
 
         element.style.display = 'block';
 
-        var timer = setInterval(function () {
+        let timer = setInterval(function () {
           if (elementOpacity >= 1){
             clearInterval(timer);
           }
