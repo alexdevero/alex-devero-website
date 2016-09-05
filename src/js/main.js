@@ -177,7 +177,7 @@
       },
       // Font Awesome loader controller
       fontAwesomeLoader: function() {
-        var stylesheetAwesome = document.createElement('link');
+        let stylesheetAwesome = document.createElement('link');
         stylesheetAwesome.rel = 'stylesheet';
         stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
         stylesheetAwesome.classList.add('jsLoaded');
@@ -185,7 +185,7 @@
       },
       // Font Open Sans loader controller
       fontOpenSansLoader: function() {
-        var stylesheetOpenSans = document.createElement('link');
+        let stylesheetOpenSans = document.createElement('link');
         stylesheetOpenSans.rel = 'stylesheet';
         stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
         stylesheetOpenSans.classList.add('jsLoaded');
@@ -193,7 +193,7 @@
       },
       // Font Raleway loader controller
       fontRalewayLoader: function() {
-        var stylesheetRaleway = document.createElement('link');
+        let stylesheetRaleway = document.createElement('link');
         stylesheetRaleway.rel = 'stylesheet';
         stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700';
         stylesheetRaleway.classList.add('jsLoaded');
