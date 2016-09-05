@@ -506,7 +506,7 @@
             }
 
             // Cache html element
-            var el = document.querySelector('html');
+            let el = document.querySelector('html');
             //el.style.display = 'none';
 
             setTimeout(function() {
