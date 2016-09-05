@@ -159,9 +159,9 @@
       },
       // FadeOut controller
       fadeOutCustom: function(element) {
-        var elementOpacity = 1;// initial opacity
+        let elementOpacity = 1;// initial opacity
 
-        var timer = setInterval(function () {
+        let timer = setInterval(function () {
           if (elementOpacity <= 0.1){
             clearInterval(timer);
 
