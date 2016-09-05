@@ -38,7 +38,7 @@
             $('#subject').trigger('focus');
           } else {
 
-            var $this = $(this);
+            let $this = $(this);
 
             $.ajax({
               type: 'POST',
