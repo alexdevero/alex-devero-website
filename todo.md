@@ -7,6 +7,7 @@
 - test JavaScript
 - rename repo and folder to 'alex-devero-website'
 - implement 'srcset' attribute for img tags
+- do a cleanup
 
 ## General ideas:
 - animated message for submitting form
