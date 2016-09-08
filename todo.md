@@ -2,7 +2,6 @@
 - add caching for pages
 - add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
 - change body font to Raleway
-- fix history back button
 - rewrite JavaScript to ES2015
 - test JavaScript
 - rename repo and folder to 'alex-devero-website'
