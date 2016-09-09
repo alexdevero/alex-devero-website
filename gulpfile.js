@@ -185,7 +185,7 @@ gulp.task('js', function() {
 
 // Watch HTML, CSS and JavaScript files
 
-gulp.task('watch', function() {
+gulp.task('watch', ['server'], function() {
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/*.php', ['copyOther']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
