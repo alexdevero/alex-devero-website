@@ -72,7 +72,6 @@ gulp.task('deploy', function() {
 });
 
 // Minify HTML files
-
 gulp.task('html', function() {
   return gulp.src('src/*.html')
     .pipe(changed('dist'))
@@ -83,7 +82,6 @@ gulp.task('html', function() {
 });
 
 // Copy CSS files
-
 gulp.task('copyCSS', function() {
   return gulp.src('src/css/*')
     .pipe(changed('dist/css'))
@@ -91,7 +89,6 @@ gulp.task('copyCSS', function() {
 });
 
 // Copy font files
-
 gulp.task('copyFonts', function() {
   return gulp.src('src/fonts/*')
     .pipe(changed('dist/fonts'))
@@ -99,7 +96,6 @@ gulp.task('copyFonts', function() {
 });
 
 // Copy JS plugins files
-
 gulp.task('copyJSPlug', function() {
   return gulp.src(['src/js/plugins/*', '!src/js/plugins/*.rar'])
     .pipe(changed('dist/js/plugins/'))
@@ -107,7 +103,6 @@ gulp.task('copyJSPlug', function() {
 });
 
 // Copy JS vendor files
-
 gulp.task('copyJSVen', function() {
   return gulp.src(['src/js/vendor/*', '!src/js/vendor/*.rar'])
     .pipe(changed('dist/js/vendor/'))
@@ -115,7 +110,6 @@ gulp.task('copyJSVen', function() {
 });
 
 // Copy other files
-
 gulp.task('copyOther', function() {
   return gulp.src([
     'src/.htaccess',
@@ -129,18 +123,9 @@ gulp.task('copyOther', function() {
 });
 
 // Automate copying
-
 gulp.task('copyAll', ['copyCSS', 'copyFonts', 'copyJSPlug', 'copyJSVen', 'copyOther'], function() {});
 
-// Clean up dist directory
-
-gulp.task('clean', function() {
-  return gulp.src('dist', {read : false})
-    .pipe(clean());
-});
-
 // Compress images
-
 gulp.task('images', function () {
   return gulp.src(['src/images/**/*', '!src/images/**/*.rar'])
     .pipe(changed('dist/images'))
@@ -153,7 +138,6 @@ gulp.task('images', function () {
 });
 
 // Sass to CSS
-
 gulp.task('sass', function() {
   return gulp.src('src/scss/main.scss')
     //.pipe(changed('dist/css', {extension: '.css'}))
@@ -171,7 +155,6 @@ gulp.task('sass', function() {
 });
 
 // Minify JavaScript files
-
 gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(changed('dist/js'))
@@ -187,7 +170,6 @@ gulp.task('js', function() {
 });
 
 // Watch HTML, CSS and JavaScript files
-
 gulp.task('watch', ['server'], function() {
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/*.php', ['copyOther']);
@@ -197,5 +179,4 @@ gulp.task('watch', ['server'], function() {
 });
 
 // Automate tasks (cmd: gulp)
-
 gulp.task('default', ['minHTML', 'copyAll', 'images', 'sass', 'minJS'], function() {});
