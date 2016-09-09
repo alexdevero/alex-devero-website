@@ -7,8 +7,8 @@
 - rename repo and folder to 'alex-devero-website'
 - implement 'srcset' attribute for img tags
 - do a cleanup
-- implement livereload gulp plugin
-- implement connect gulp plugin
+- ~~implement livereload gulp plugin~~
+- ~~implement connect gulp plugin~~
 
 ## General ideas:
 - animated message for submitting form
