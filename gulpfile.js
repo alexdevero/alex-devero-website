@@ -153,7 +153,7 @@ gulp.task('sass', function() {
       console.log(e + '\r\n There\'s something wrong with the Sass file(s).')
     }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions']
+      browsers: ['last 3 versions']
     }))
     .pipe(rename({
       suffix: '.min'
