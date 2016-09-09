@@ -8,6 +8,7 @@
 - implement 'srcset' attribute for img tags
 - do a cleanup
 - implement livereload gulp plugin
+- implement connect gulp plugin
 
 ## General ideas:
 - animated message for submitting form
