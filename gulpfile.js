@@ -27,6 +27,16 @@ var gulp = require('gulp'),
     .pipe(gulp.dest('./dist/js/'));
 });*/
 
+// Clean dist
+gulp.task('clean', function() {
+  console.log('Clean \'dist\' folder');
+
+  return gulp.src('dist', {
+    read: false
+  })
+    .pipe(clean());
+});
+
 // Connect to localhost
 gulp.task('server', function() {
   connect.server({
