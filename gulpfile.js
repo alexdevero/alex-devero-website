@@ -76,7 +76,10 @@ gulp.task('html', function() {
   return gulp.src('src/*.html')
     .pipe(changed('dist'))
     //.pipe(html5Lint())
-    .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 });
@@ -131,7 +134,9 @@ gulp.task('images', function () {
     .pipe(changed('dist/images'))
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
+      svgoPlugins: [{
+        removeViewBox: false
+      }],
       use: [pngquant()]
     }))
     .pipe(gulp.dest('dist/images'));
@@ -142,13 +147,17 @@ gulp.task('sass', function() {
   return gulp.src('src/scss/main.scss')
     //.pipe(changed('dist/css', {extension: '.css'}))
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', function(e) {
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', function(e) {
       console.log(e + '\r\n There\'s something wrong with the Sass file(s).')
     }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'))
     .pipe(connect.reload());
@@ -164,7 +173,9 @@ gulp.task('js', function() {
     .pipe(uglify().on('error', function(e) {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('dist/js'))
     .pipe(connect.reload());
 });
