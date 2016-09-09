@@ -79,6 +79,7 @@ gulp.task('html', function() {
     //.pipe(html5Lint())
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
     .pipe(gulp.dest('dist'))
+    .pipe(connect.reload());
 });
 
 // Copy CSS files
@@ -165,7 +166,8 @@ gulp.task('sass', function() {
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist/css'))
+    .pipe(connect.reload());
 });
 
 // Minify JavaScript files
@@ -180,7 +182,8 @@ gulp.task('js', function() {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/js'))
+    .pipe(connect.reload());
 });
 
 // Watch HTML, CSS and JavaScript files
