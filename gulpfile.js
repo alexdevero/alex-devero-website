@@ -6,10 +6,12 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
+    connect = require('gulp-connect'),
     gulpCopy = require('gulp-copy'),
     html5Lint = require('gulp-html5-lint'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
+    livereload = require('gulp-livereload'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -25,8 +27,15 @@ var gulp = require('gulp'),
     .pipe(gulp.dest('./dist/js/'));
 });*/
 
-// Deploy files to FTP
+// Connect to localhost
+gulp.task('server', function() {
+  connect.server({
+    root: 'dist',
+    livereload: true
+  });
+});
 
+// Deploy files to FTP
 gulp.task('deploy', function() {
   var credentials = require('./ftp-credentials.json'),
       destFolder = 'www/public',
