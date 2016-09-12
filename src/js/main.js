@@ -17,11 +17,12 @@
     controllers: {
       // Animate stylesheet loader controller
       animateStylesheetLoader: function() {
-        let stylesheetAnimateCSS = document.createElement('link');
+        let stylesheetAnimateCSS = document.createElement('link'),
+            mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetAnimateCSS.rel = 'stylesheet';
         stylesheetAnimateCSS.href = 'css/animate.css';
         stylesheetAnimateCSS.classList.add('jsLoaded');
-        document.getElementsByTagName('head')[0].appendChild(stylesheetAnimateCSS);
+        mainStyleSheet.appendChild(stylesheetAnimateCSS);
       },
       // Contact controller
       contact: function(e) {
@@ -177,27 +178,30 @@
       },
       // Font Awesome loader controller
       fontAwesomeLoader: function() {
-        let stylesheetAwesome = document.createElement('link');
+        let stylesheetAwesome = document.createElement('link'),
+            mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetAwesome.rel = 'stylesheet';
         stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
         stylesheetAwesome.classList.add('jsLoaded');
-        document.getElementsByTagName('head')[0].appendChild(stylesheetAwesome);
+        mainStyleSheet.parentNode.appendChild(stylesheetAwesome);
       },
       // Font Open Sans loader controller
       fontOpenSansLoader: function() {
-        let stylesheetOpenSans = document.createElement('link');
+        let stylesheetOpenSans = document.createElement('link'),
+            mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetOpenSans.rel = 'stylesheet';
         stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
         stylesheetOpenSans.classList.add('jsLoaded');
-        document.getElementsByTagName('head')[0].appendChild(stylesheetOpenSans);
+        mainStyleSheet.parentNode.appendChild(stylesheetOpenSans);
       },
       // Font Raleway loader controller
       fontRalewayLoader: function() {
-        let stylesheetRaleway = document.createElement('link');
+        let stylesheetRaleway = document.createElement('link'),
+            mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetRaleway.rel = 'stylesheet';
         stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700';
         stylesheetRaleway.classList.add('jsLoaded');
-        document.getElementsByTagName('head')[0].appendChild(stylesheetRaleway);
+        mainStyleSheet.parentNode.appendChild(stylesheetRaleway);
       },
       // LazyImages controller
       lazyImages: function() {
