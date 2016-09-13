@@ -22,3 +22,5 @@
 - I help my clients succeed in the digital world.
 - You've got ideas. We've got talent. Let's talk. (Unsplash)
 - crafting delightful experiences.
+- Beautiful design + Clean code + Perfect user experience.
+- Beautiful design, clean code, perfect user experience and happy clients.
