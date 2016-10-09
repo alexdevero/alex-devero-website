@@ -7,6 +7,7 @@
 - rename repo and folder to 'alex-devero-website'
 - implement 'srcset' attribute for img tags
 - do a cleanup
+- create set of icons for the portfolio
 
 ## General ideas:
 - animated message for submitting form
@@ -15,6 +16,7 @@
 - remove 'process' page
 - add preloader
 - consider adding overlay for sliding menu
+- consider using one-page layout
 
 ## Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
