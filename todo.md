@@ -8,6 +8,7 @@
 - implement 'srcset' attribute for img tags
 - do a cleanup
 - create set of icons for the portfolio
+- change the layout of work page
 
 ## General ideas:
 - animated message for submitting form
