@@ -9,6 +9,7 @@
 - do a cleanup
 - create set of icons for the portfolio
 - change the layout of work page
+- implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
 
 ## General ideas:
 - animated message for submitting form
