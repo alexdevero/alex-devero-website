@@ -10,6 +10,7 @@
 - create set of icons for the portfolio
 - change the layout of work page
 - implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
+- implement font awesome via npm
 
 ## General ideas:
 - animated message for submitting form
