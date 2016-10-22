@@ -1,16 +1,14 @@
-﻿# Todo:
-- add caching for pages
-- add fetch or AJAX loading to load main content while keeping header and footer, maybe try fetch feature
+# Todo:
 - change body font to Raleway
 - rewrite JavaScript to ES2015
 - test JavaScript
 - rename repo and folder to 'alex-devero-website'
 - implement 'srcset' attribute for img tags
-- do a cleanup
 - create set of icons for the portfolio
 - change the layout of work page
 - implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
 - implement font awesome via npm
+- add CV page
 
 ## General ideas:
 - animated message for submitting form
