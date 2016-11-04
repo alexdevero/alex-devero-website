@@ -7,6 +7,7 @@
 - create set of icons for the portfolio
 - change the layout of work page
 - implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
+- partciles JavaScript library on [CDN](https://cdnjs.com/libraries/particles.js)
 - implement font awesome via npm
 - add CV page
 
