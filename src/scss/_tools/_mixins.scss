@@ -3,7 +3,6 @@
 //
 
 // Mixins for retina
-
 @mixin retina {
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min--moz-device-pixel-ratio: 2),
@@ -15,13 +14,11 @@
 }
 
 // Mixin for transition
-
 @mixin transition($prop) {
   transition: $prop $timing cubic-bezier(.4,0,1,1);
 }
 
 // Mixin for box-shadow
-
 @mixin BoxShadowHelper($level) {
   @if $level == 1 {
     box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
@@ -41,7 +38,6 @@
 }
 
 // Mixin for vertical centering
-
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;
@@ -52,7 +48,6 @@
 // $triangle-size - Used to set border-size. No default, set a px or em size.
 // $triangle-color - Used to set border-color which makes up triangle. No default
 // $triangle-direction - Used to determine which direction triangle points. Options: top, bottom, left, right
-
 @mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
   display: block;
   width: 0;
