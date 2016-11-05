@@ -16,8 +16,6 @@
 
 .page--home header a,
 .page--home .navbar-toggler {
-  //color: $color--black;
-
   &:focus,
   &:hover {
     color: $color--red;
@@ -159,9 +157,6 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  //background-repeat: no-repeat;
-  //background-position: center center;
-  //background-size: cover;
   background: #fff;
 }
 
