@@ -27,14 +27,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  //opacity: 0;
   opacity: .925;
 
   @include transition(all);
 
   &:focus,
   &:hover {
-    //opacity: .85;
     opacity: 0;
     transform: scale(1.25);
   }

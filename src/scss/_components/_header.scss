@@ -36,7 +36,6 @@ header .logo {
   margin: 0;
   font-family: "Devero", arial, sans-serif;
   font-size: 1.7rem;
-  //font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
   line-height: 1;
@@ -44,8 +43,6 @@ header .logo {
 }
 
 header .logo a {
-  //letter-spacing: .65rem;
-
   &:focus,
   &:hover {
     color: $color--black;
