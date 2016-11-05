@@ -1,10 +1,16 @@
-// Core variables and mixins
-
+// Color palette
 @import '_settings/_colors';
+
+// Core variables
 @import '_settings/_config';
 
+// Mixins
 @import '_tools/_mixins';
+
+// Placeholder selectors
 @import '_tools/_placeholders';
+
+// Functions
 @import '_tools/_functions';
 
 /**
@@ -19,7 +25,6 @@
  */
 
 // Base
-
 @import '_base/_normalize';
 @import '_base/_fonts';
 @import '_base/_base';
@@ -27,18 +32,15 @@
 @import '_base/_et-line';
 
 // Layout
-
 @import '_templates/_grid';
 @import '_templates/_print';
 
 // Components
-
 @import '_components/_header';
 @import '_components/_sections';
 @import '_components/_footer';
 
 // Modules
-
 @import '_modules/_buttons';
 @import '_modules/_dividers';
 @import '_modules/_diffusion-efect';
@@ -55,12 +57,10 @@
 @import '_modules/_waypoints';
 
 // Utilities
-
 @import '_utilities/_hacks';
 @import '_utilities/_utilities';
 
 // Pages
-
 @import '_pages/_home';
 @import '_pages/_portfolio';
 @import '_pages/_about';
