@@ -19,6 +19,7 @@
 - add preloader
 - consider adding overlay for sliding menu
 - consider using one-page layout
+- consider using landing page layout
 
 ## Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
