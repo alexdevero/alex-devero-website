@@ -2,7 +2,7 @@
 - change body font to Raleway
 - rewrite JavaScript to ES2015
 - test JavaScript
-- rename repo and folder to 'alex-devero-website'
+- ~~rename repo and folder to 'alex-devero-website'~~
 - implement 'srcset' attribute for img tags
 - create set of icons for the portfolio
 - change the layout of work page
@@ -10,6 +10,7 @@
 - partciles JavaScript library on [CDN](https://cdnjs.com/libraries/particles.js)
 - implement font awesome via npm
 - add CV page
+- fix csslint warnings
 
 ## General ideas:
 - animated message for submitting form
