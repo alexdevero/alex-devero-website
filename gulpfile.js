@@ -7,6 +7,8 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
+    csscomb = require('gulp-csscomb'),
+    csslint = require('gulp-csslint'),
     gulpCopy = require('gulp-copy'),
     html5Lint = require('gulp-html5-lint'),
     htmlmin = require('gulp-htmlmin'),
@@ -155,6 +157,9 @@ gulp.task('sass', function() {
     .pipe(autoprefixer({
       browsers: ['last 3 versions']
     }))
+    .pipe(csscomb())
+    .pipe(csslint())
+    .pipe(csslint.formatter())
     .pipe(rename({
       suffix: '.min'
     }))
