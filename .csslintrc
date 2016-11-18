@@ -18,6 +18,7 @@
   "important": true,
   "known-properties": false,
   "outline-none": false,
+  "order-alphabetical": false,
   "qualified-headings": false,
   "regex-selectors": false,
   "rules-count": false,
@@ -32,4 +33,4 @@
   "unqualified-attributes": false,
   "vendor-prefix": false,
   "zero-units": true
-} 
+}
