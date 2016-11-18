@@ -36,6 +36,8 @@
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
     "gulp-copy": "0.0.2",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-csslint": "^1.0.0",
     "gulp-html5-lint": "^1.1.0",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.0.3",
