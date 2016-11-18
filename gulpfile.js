@@ -173,7 +173,7 @@ gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(changed('dist/js'))
     .pipe(babel({
-      presets: ['es2015']
+      presets: ['latest']
     }))
     .pipe(uglify().on('error', function(e) {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
