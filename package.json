@@ -3,9 +3,9 @@
   "version": "0.2.999",
   "description": "Personal portfolio of Alex Devero",
   "engines": {
-		"node": "7.x",
-		"npm": "4.x"
-	},
+    "node": "7.x",
+    "npm": "4.x"
+  },
   "keywords": [
     "ui"
   ],
