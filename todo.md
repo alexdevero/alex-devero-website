@@ -11,6 +11,7 @@
 - [ ] - add CV page
 - [ ] - fix csslint warnings
 - [x] - rename repo and folder to 'alex-devero-website'
+- [ ] - add npm scripts for automation and testing
 
 ## General ideas:
 - animated message for submitting form
