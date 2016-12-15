@@ -192,6 +192,7 @@ gulp.task('watch', ['server'], function() {
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/css/**/*.css', ['copyCSS']);
   gulp.watch('src/js/main.js', ['js']);
+  gulp.watch(['src/images/**/*', '!src/images/**/*.rar'], ['images']);
 });
 
 // Automate tasks (cmd: gulp)
