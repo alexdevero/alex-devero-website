@@ -1,17 +1,22 @@
 # Todo:
+## General:
 - [ ] - change body font to Raleway
 - [ ] - rewrite JavaScript to ES2015
 - [ ] - test JavaScript
-- [ ] - implement 'srcset' attribute for img tags
 - [ ] - create set of icons for the portfolio
-- [ ] - change the layout of work page
-- [ ] - implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
-- [ ] - partciles JavaScript library on [CDN](https://cdnjs.com/libraries/particles.js)
 - [ ] - implement font awesome via npm
 - [ ] - add CV page
 - [ ] - fix csslint warnings
-- [x] - rename repo and folder to 'alex-devero-website'
 - [ ] - add npm scripts for automation and testing
+- [x] - rename repo and folder to 'alex-devero-website'
+
+## Homepage:
+- [ ] - implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
+- [ ] - partciles JavaScript library on [CDN](https://cdnjs.com/libraries/particles.js)
+
+## Work page:
+- [ ] - implement 'srcset' attribute for img tags
+- [ ] - change the layout of work page
 
 ## General ideas:
 - animated message for submitting form
