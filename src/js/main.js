@@ -181,7 +181,7 @@
         let stylesheetAwesome = document.createElement('link'),
             mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetAwesome.rel = 'stylesheet';
-        stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css';
+        stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
         stylesheetAwesome.classList.add('jsLoaded');
         mainStyleSheet.parentNode.appendChild(stylesheetAwesome);
       },
