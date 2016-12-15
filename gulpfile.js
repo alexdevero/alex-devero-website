@@ -196,4 +196,4 @@ gulp.task('watch', ['server'], function() {
 });
 
 // Automate tasks (cmd: gulp)
-gulp.task('default', ['minHTML', 'copyAll', 'images', 'sass', 'minJS'], function() {});
+gulp.task('default', ['html', 'copyAll', 'images', 'sass', 'js'], function() {});
