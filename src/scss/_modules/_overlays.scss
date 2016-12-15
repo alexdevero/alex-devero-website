@@ -22,7 +22,8 @@
 }
 
 .overlay--thumbnail {
-  z-index: 2;
+  display: none;
+  /*z-index: 2;
   background-color: rgba(0,0,0,1);
   background-repeat: no-repeat;
   background-position: center;
@@ -35,7 +36,7 @@
   &:hover {
     opacity: 0;
     transform: scale(1.25);
-  }
+  }*/
 
   img {
     max-width: 100%;
