@@ -17,7 +17,7 @@
 ## Work page:
 - [ ] - implement 'srcset' attribute for img tags
 - [ ] - change the layout of work page
-- [ ] - remove the overlays
+- [x] - remove the overlays
 
 ## General ideas:
 - animated message for submitting form
