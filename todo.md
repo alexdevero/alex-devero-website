@@ -28,6 +28,7 @@
 - consider adding overlay for sliding menu
 - consider using one-page layout
 - consider using landing page layout
+- consider using W3C html validator [gulp plugin](https://www.npmjs.com/package/gulp-html-validator) or turn on html-lint...
 
 ## Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
