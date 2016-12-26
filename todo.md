@@ -19,6 +19,9 @@
 - [ ] - change the layout of work page
 - [x] - remove the overlays
 
+## Contact page:
+- [ ] - Implement CAPTCHA for contact form
+
 ## General ideas:
 - animated message for submitting form
 - add spinner that will be shown while sending contact form
