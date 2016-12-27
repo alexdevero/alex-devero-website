@@ -30,6 +30,11 @@
     "type": "git",
     "url": "https://github.com/alexdevero/alex-devero-v3.git"
   },
+  "scripts": {
+    "build": "gulp clean && gulp build",
+    "start": "gulp server",
+    "test": "gulp clean && gulp default"
+  },
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
     "gulp": "^3.9.1",
