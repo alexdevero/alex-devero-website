@@ -8,7 +8,7 @@
 - [ ] - add CV page
 - [ ] - fix csslint warnings
 - [ ] - add npm scripts for automation and testing
-- [ ] - fix failing tests
+- [x] - fix failing tests
 - [x] - rename repo and folder to 'alex-devero-website'
 
 ## Homepage:
