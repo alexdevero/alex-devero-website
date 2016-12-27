@@ -33,4 +33,4 @@ alexdevero-portfolio.sublime-workspace
 
 # Deployment config #
 #####################
-ftp-credentials.json
+*-ftp-credentials.json
