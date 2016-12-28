@@ -8,6 +8,7 @@
 - [ ] - add CV page
 - [ ] - fix csslint warnings
 - [ ] - add npm scripts for automation and testing
+- [ ] - install cssnano and post-cssnext, remove autoprefixer
 - [x] - fix failing tests
 - [x] - rename repo and folder to 'alex-devero-website'
 
