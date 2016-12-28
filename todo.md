@@ -46,3 +46,4 @@
 - Beautiful design, clean code, perfect user experience and happy clients.
 - Top Prague design &amp; development agency working with top companies and clients.
 - Empowering your business with intelligent design and reliable code.
+- I (We) design and develop digital products for mobile and web, that people love to use.
