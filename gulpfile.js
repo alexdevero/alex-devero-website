@@ -49,7 +49,7 @@ gulp.task('server', function() {
 
 // Deploy files to FTP
 gulp.task('deploy', function() {
-  var credentials = require('./ftp-credentials.json'),
+  var credentials = require('./alexdevero-ftp-credentials.json'),
       destFolder = 'www/public',
       filesGlob = ['./dist/**/*.*'];
 
