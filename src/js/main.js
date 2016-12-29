@@ -39,7 +39,7 @@
             $('#subject').trigger('focus');
           } else {
 
-            let $this = $(this);
+            let $this = e.target;
 
             $.ajax({
               type: 'POST',
@@ -368,115 +368,115 @@
         }
       },
       // Waypoints controller
-      waypoints: function() {
+      waypoints: () => {
         // setTimeout function is used to let the dom be loaded.
         // Otherwise, icons have no width or height
         // and waypoint will fire all triggers immediatelly.
-        setTimeout(function() {
+        setTimeout(() => {
           // Load default discovery icon
-          let waypointOne = new Waypoint({
-            element: document.querySelectorAll('.wp-discovery-icon')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInLeft');
+          const waypointOne = new Waypoint({
+            element: document.querySelector('.wp-discovery-icon'),
+            handler: (direction) => {
+              document.querySelector('.wp-discovery-icon').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
           });
 
           // Load discovery text
-          let waypointTwo = new Waypoint({
-            element: document.querySelectorAll('.wp-discovery-text')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInRight');
+          const waypointTwo = new Waypoint({
+            element: document.querySelector('.wp-discovery-text'),
+            handler: (direction) => {
+              document.querySelector('.wp-discovery-text').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
           });
 
           // Load planning icon for mobile
-          let waypointThree = new Waypoint({
-            element: document.querySelectorAll('.wp-planning-icon-mobile')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInRight');
+          const waypointThree = new Waypoint({
+            element: document.querySelector('.wp-planning-icon-mobile'),
+            handler: (direction) => {
+              document.querySelector('.wp-planning-icon-mobile').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
           });
 
           // Load planning icon for desktop
-          let waypointFour = new Waypoint({
-            element: document.querySelectorAll('.wp-planning-icon-desktop')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInRight');
+          const waypointFour = new Waypoint({
+            element: document.querySelector('.wp-planning-icon-desktop'),
+            handler: (direction) => {
+              document.querySelector('.wp-planning-icon-desktop').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
           });
 
           // Load planning text
-          let waypointFive = new Waypoint({
-            element: document.querySelectorAll('.wp-planning-text')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInLeft');
+          const waypointFive = new Waypoint({
+            element: document.querySelector('.wp-planning-text'),
+            handler: (direction) => {
+              document.querySelector('.wp-planning-text').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
           });
 
           // Load default design icon
-          let waypointSix = new Waypoint({
-            element: document.querySelectorAll('.wp-design-icon')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInLeft');
+          const waypointSix = new Waypoint({
+            element: document.querySelector('.wp-design-icon'),
+            handler: (direction) => {
+              document.querySelector('.wp-design-icon').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
           });
 
           // Load design text
-          let waypointSeven = new Waypoint({
-            element: document.querySelectorAll('.wp-design-text')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInRight');
+          const waypointSeven = new Waypoint({
+            element: document.querySelector('.wp-design-text'),
+            handler: (direction) => {
+              document.querySelector('.wp-design-text').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
           });
 
           // Load building icon for mobile
-          let waypointEight = new Waypoint({
-            element: document.querySelectorAll('.wp-building-icon-mobile')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInRight');
+          const waypointEight = new Waypoint({
+            element: document.querySelector('.wp-building-icon-mobile'),
+            handler: (direction) => {
+              document.querySelector('.wp-building-icon-mobile').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
           });
 
           // Load building icon for desktop
-          let waypointNine = new Waypoint({
-            element: document.querySelectorAll('.wp-building-icon-desktop')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInRight');
+          const waypointNine = new Waypoint({
+            element: document.querySelector('.wp-building-icon-desktop'),
+            handler: (direction) => {
+              document.querySelector('.wp-building-icon-desktop').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
           });
 
           // Load building text
-          let waypointTen = new Waypoint({
-            element: document.querySelectorAll('.wp-building-text')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInLeft');
+          const waypointTen = new Waypoint({
+            element: document.querySelector('.wp-building-text'),
+            handler: (direction) => {
+              document.querySelector('.wp-building-text').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
           });
 
           // Load default evaluation icon
-          let waypointEleven = new Waypoint({
-            element: document.querySelectorAll('.wp-evaluation-icon')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInLeft');
+          const waypointEleven = new Waypoint({
+            element: document.querySelector('.wp-evaluation-icon'),
+            handler: (direction) => {
+              document.querySelector('.wp-evaluation-icon').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
           });
 
           // Load evaluation text
-          let waypointTwelve = new Waypoint({
-            element: document.querySelectorAll('.wp-evaluation-text')[0],
-            handler: function(direction) {
-              this.element.classList.add('animated', 'fadeInRight');
+          const waypointTwelve = new Waypoint({
+            element: document.querySelector('.wp-evaluation-text'),
+            handler: (direction) => {
+              document.querySelector('.wp-evaluation-text').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
           });
