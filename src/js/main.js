@@ -2,9 +2,9 @@
  * @author Alex Devero <deveroalex@gmail.com>
  */
 
-(function() {
+(() => {
   'use strict';
-  var app = {
+  const app = {
     settings: {
       contactForm: document.querySelectorAll('#contactForm'),
       indexCanvas: document.querySelectorAll('#indexCanvas'),
@@ -16,7 +16,7 @@
     },
     controllers: {
       // Animate stylesheet loader controller
-      animateStylesheetLoader: function() {
+      animateStylesheetLoader: () => {
         let stylesheetAnimateCSS = document.createElement('link'),
             mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetAnimateCSS.rel = 'stylesheet';
@@ -25,8 +25,8 @@
         mainStyleSheet.appendChild(stylesheetAnimateCSS);
       },
       // Contact controller
-      contact: function(e) {
-        $('#contactForm').submit(function(e) {
+      contact: (e) => {
+        $('#contactForm').submit((e) => {
           e.preventDefault();
 
           if (document.getElementById('subject').value.length === 0) {
@@ -45,13 +45,13 @@
               type: 'POST',
               url: 'contact.php',
               data: $($this).serialize()
-            }).done(function(response) {
+            }).done((response) => {
               e.preventDefault();
 
-              window.mainController.modalMessages('success');
+              app.controllers.modalMessages('success');
 
               /*if (window.location.href.split('com/')[1] == 'contact.html') {
-                window.mainController.modalMessages('failure');
+                app.controllers.modalMessages('failure');
                 alert('Thank you very much for contacting. I will reply in two days.');
               } else {
                 alert('Děkuji Vám za kontaktování. Do dvou dnů se Vám ozvu.');
@@ -59,10 +59,10 @@
 
               // Clear the form.
               $($this)[0].reset();
-            }).fail(function(data) {
+            }).fail((data) => {
               e.preventDefault();
 
-              window.mainController.modalMessages('failure');
+              app.controllers.modalMessages('failure');
 
               /*if (window.location.href.split('com/')[1] == 'contact.html') {
                 alert('Oops! There was a problem with your submission. Please complete the form and try again.');
@@ -73,10 +73,11 @@
           }
         });
       },
-      customSlider: function() {
-        (function() {
-          let content = document.querySelectorAll('.js-slideable')[0],
-              anchor = document.querySelectorAll('.js-slideable-anchor')[0];
+      customSlider: () => {
+        (() => {
+          let content = document.querySelectorAll('.js-slideable')[0];
+
+          let anchor = document.querySelectorAll('.js-slideable-anchor')[0];
 
           content.style.display = 'block';
 
@@ -90,7 +91,7 @@
 
           content.classList.add('slideClosed');
 
-          function customSlideDown(element) {
+          const customSlideDown = (element) => {
             element.style.maxHeight = '10000px';
 
             element.style.opacity = '1';
@@ -102,23 +103,24 @@
             element.classList.add('slideOpened')
           }
 
-          function customSlideUp(element) {
+          const customSlideUp = (element) => {
             element.style.maxHeight = '0';
 
-            function slideTimer(seconds, callback) {
-              let counter = 0,
-                  time = window.setInterval(function() {
-                    counter++;
+            const slideTimer = (seconds, callback) => {
+              let counter = 0;
 
-                    if (counter >= seconds) {
-                      callback();
+              let time = window.setInterval(function() {
+                counter++;
 
-                      window.clearInterval(time);
-                    }
-                  }, 10);
+                if (counter >= seconds) {
+                  callback();
+
+                  window.clearInterval(time);
+                }
+              }, 10);
             };
 
-            slideTimer(1, function() {
+            slideTimer(1, () => {
               element.style.opacity = '0';
             });
 
@@ -129,7 +131,7 @@
             element.classList.add('slideClosed')
           }
 
-          anchor.addEventListener('click', function(e) {
+          anchor.addEventListener('click', (e) => {
             e.preventDefault();
 
             if (content.classList.contains('slideClosed')) {
@@ -141,7 +143,7 @@
         })()
       },
       // FadeIn controller
-      fadeInCustom: function(element) {
+      fadeInCustom: (element) => {
         let elementOpacity = 0.1;// initial opacity
 
         element.style.display = 'block';
@@ -159,7 +161,7 @@
         }, 15);
       },
       // FadeOut controller
-      fadeOutCustom: function(element) {
+      fadeOutCustom: (element) => {
         let elementOpacity = 1;// initial opacity
 
         let timer = setInterval(function () {
@@ -177,7 +179,7 @@
         }, 15);
       },
       // Font Awesome loader controller
-      fontAwesomeLoader: function() {
+      fontAwesomeLoader: () => {
         let stylesheetAwesome = document.createElement('link'),
             mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetAwesome.rel = 'stylesheet';
@@ -186,7 +188,7 @@
         mainStyleSheet.parentNode.appendChild(stylesheetAwesome);
       },
       // Font Open Sans loader controller
-      fontOpenSansLoader: function() {
+      fontOpenSansLoader: () => {
         let stylesheetOpenSans = document.createElement('link'),
             mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetOpenSans.rel = 'stylesheet';
@@ -195,7 +197,7 @@
         mainStyleSheet.parentNode.appendChild(stylesheetOpenSans);
       },
       // Font Raleway loader controller
-      fontRalewayLoader: function() {
+      fontRalewayLoader: () => {
         let stylesheetRaleway = document.createElement('link'),
             mainStyleSheet = document.querySelector('.js-stylesheet-main');
         stylesheetRaleway.rel = 'stylesheet';
@@ -204,9 +206,9 @@
         mainStyleSheet.parentNode.appendChild(stylesheetRaleway);
       },
       // LazyImages controller
-      lazyImages: function() {
+      lazyImages: () => {
         // Test if image is in the viewport
-        function isImageInViewport(img) {
+        const isImageInViewport = (img) => {
           let rect = img.getBoundingClientRect();
 
           return (
@@ -217,17 +219,8 @@
           );
         }
 
-        // Add event listeners to images
-        window.addEventListener('DOMContentLoaded', lazyLoadImages);
-
-        window.addEventListener('load', lazyLoadImages);
-
-        window.addEventListener('resize', lazyLoadImages);
-
-        window.addEventListener('scroll', lazyLoadImages);
-
         // lazyLoadImages function
-        function lazyLoadImages() {
+        const lazyLoadImages = () => {
           let lazyImagesArray = document.querySelectorAll('img[data-src]');
 
           for (let i = 0; i < lazyImagesArray.length; i++) {
@@ -238,7 +231,7 @@
 
               lazyImagesArray[i].setAttribute('data-loaded', true);
 
-              window.mainController.fadeInCustom(lazyImagesArray[i]);
+              app.controllers.fadeInCustom(lazyImagesArray[i]);
             }
           }
 
@@ -253,9 +246,18 @@
             window.removeEventListener('scroll', lazyLoadImages);
           }
         }
+
+        // Add event listeners to images
+        window.addEventListener('DOMContentLoaded', lazyLoadImages);
+
+        window.addEventListener('load', lazyLoadImages);
+
+        window.addEventListener('resize', lazyLoadImages);
+
+        window.addEventListener('scroll', lazyLoadImages);
       },
       // Modal Messages
-      modalMessages: function($messageType) {
+      modalMessages: ($messageType) => {
         let modalOverlay = document.querySelector('.js-modal-overlay'),
             modalButton = modalOverlay.querySelectorAll('.js-modal-button'),
             messageFailure = modalOverlay.querySelector('.js-modal-message-failure'),
@@ -264,45 +266,45 @@
 
         // Close modal and hide message by clicking on the button
         for (let i = 0, j = modalButton.length; i < j; i++) {
-          modalButton[i].addEventListener('click', function() {
+          modalButton[i].addEventListener('click', () => {
             this.parentNode.classList.remove('modal-message-visible');
 
-            window.mainController.fadeOutCustom(modalOverlay);
+            app.controllers.fadeOutCustom(modalOverlay);
           });
         }
 
         if ($messageType === 'failure') {
           // Failure message
-          function messageFailureLoader() {
+          const messageFailureLoader = () => {
             // Show modal message
             messageFailure.classList.add('modal-message-visible');
 
             // Show modal overlay
-            window.mainController.fadeInCustom(modalOverlay);
+            app.controllers.fadeInCustom(modalOverlay);
           }
 
           // Initiate message loader function
           messageFailureLoader();
         } else if ($messageType === 'info') {
           // Info message
-          function messageInfoLoader() {
+          const messageInfoLoader = () => {
             // Show modal message
             messageInfo.classList.add('modal-message-visible');
 
             // Show modal overlay
-            window.mainController.fadeInCustom(modalOverlay);
+            app.controllers.fadeInCustom(modalOverlay);
           }
 
           // Initiate message loader function
           messageInfoLoader();
         } else if ($messageType === 'success') {
           // Success message
-          function messageSuccessLoader() {
+          const messageSuccessLoader = () => {
             // Show modal message
             messageSuccess.classList.add('modal-message-visible');
 
             // Show modal overlay
-            window.mainController.fadeInCustom(modalOverlay);
+            app.controllers.fadeInCustom(modalOverlay);
           }
 
           // Initiate message loader function
@@ -310,7 +312,7 @@
         }
       },
       // Page transition controller
-      pageTransition: function() {
+      pageTransition: () => {
         // Page transitions for clicks on links
         let links = document.querySelectorAll('a');
 
@@ -318,7 +320,7 @@
           // Check if the link is internal - redirects to another html file or some section via ID
           links[i].setAttribute('data-href', (links[i].href.indexOf('.html') != -1) && links[i].href.indexOf('#') <= 0);
 
-          links[i].addEventListener('click', function(e) {
+          links[i].addEventListener('click', (e) => {
             let elTarget = e.target;
 
             if (elTarget.getAttribute('data-href') === 'true') {
@@ -330,26 +332,26 @@
               }
 
               // Change current URL
-              if (elTarget) {
+              if (elTarget.getAttribute('data-href')) {
                 e.preventDefault();
 
-                setTimeout(changePage, 100);
-
-                function changePage() {
+                const changePage = () => {
                   let el = document.querySelector('html');
 
                   history.pushState({state: 'new'}, elTarget.title, elTarget.href);
 
                   //$('html').fadeOut(350);
-                  window.mainController.fadeOutCustom(el);
+                  app.controllers.fadeOutCustom(el);
 
-                  setTimeout(function() {
+                  setTimeout(() => {
                     //location.replace(elTarget.href);
                     window.location.href = elTarget.href;
                   },750);
 
                   //location.replace(elTarget.href);
                 }
+
+                setTimeout(changePage, 100);
 
                 //changePage();
 
@@ -358,7 +360,7 @@
 
               //window.addEventListener('popstate', changePage);
             } else {
-              setTimeout(function() {
+              setTimeout(() => {
                 return true;
               },750);
             }
@@ -481,92 +483,92 @@
         }, 1000);
       }
     },
-    switches: function() {
+    switches: () => {
       /**
        * Custom transitions for page loading and closing
        * info: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
        */
       if (true) {
-        (function() {
+        (() => {
           // Loading fonts and stylesheets
-          window.onload = function() {
+          window.onload = () => {
             // Load Font Awesome
             if (true) {
-              window.mainController.fontAwesomeLoader();
+              app.controllers.fontAwesomeLoader();
             }
 
             // Load Open Sans font
             if (true) {
-              window.mainController.fontOpenSansLoader();
+              app.controllers.fontOpenSansLoader();
             }
 
             // Load Raleway font
             if (true) {
-              window.mainController.fontRalewayLoader()
+              app.controllers.fontRalewayLoader()
             };
 
             if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
-              window.mainController.animateStylesheetLoader();
+              app.controllers.animateStylesheetLoader();
             }
 
             // Cache html element
             let el = document.querySelector('html');
             //el.style.display = 'none';
 
-            setTimeout(function() {
+            setTimeout(() => {
               //$('html').attr('id', 'loaded');
               el.setAttribute('id', 'loaded');
 
               // Fade in cached html element
-              window.mainController.fadeInCustom(el);
+              app.controllers.fadeInCustom(el);
             }, 350);
           }
 
           // Detect history change (back or forward button)
           // and force the page to reload (with new url) and load new page
-          window.onpopstate = function() {
+          window.onpopstate = () => {
             location.reload();
           }
 
           // Page transitions for clicks on links
-          window.mainController.pageTransition();
+          app.controllers.pageTransition();
         })();
       }
 
       /**
        * Form controller
        */
-      if (this.settings.contactForm.length > 0) {
-        (function() {
-          window.mainController.contact();
+      if (app.settings.contactForm.length > 0) {
+        (() => {
+          app.controllers.contact();
         })();
       }
 
       /**
        * Lazy images
        */
-      if (this.settings.lazyImages.length > 0) {
-        (function() {
-          window.mainController.lazyImages();
+      if (app.settings.lazyImages.length > 0) {
+        (() => {
+          app.controllers.lazyImages();
         })();
       }
 
       /**
        * Modal messages
        */
-      if (this.settings.modalMessage.length > 0) {
-        (function() {
-          window.mainController.modalMessages();
+      if (app.settings.modalMessage.length > 0) {
+        (() => {
+          app.controllers.modalMessages();
         })();
       }
 
       /**
        * Slideable content
        */
-       if (this.settings.slideableContent.length > 0) {
-        (function() {
-          window.mainController.customSlider();
+       if (app.settings.slideableContent.length > 0) {
+        (() => {
+          app.controllers.customSlider();
         })();
        }
 
@@ -574,17 +576,17 @@
        * Waypoints
        * info: http://imakewebthings.com/waypoints/
        */
-      if (this.settings.waypoint.length > 0) {
-        (function() {
-          window.mainController.waypoints();
+      if (app.settings.waypoint.length > 0) {
+        (() => {
+          app.controllers.waypoints();
         })()
       }
     },
-    init: function() {
+    init: () => {
       //document.querySelector('html').style.display = 'none';
 
-      if (document.getElementsByClassName('no-js').length > 0) {
-        document.getElementsByClassName('no-js')[0].classList.remove('no-js');
+      if (document.querySelectorAll('.no-js').length > 0) {
+        document.querySelector('.no-js').classList.remove('no-js');
       }
 
       if (document.querySelectorAll('.no-js-img').length > 0) {
@@ -595,7 +597,7 @@
         }
       }
 
-      window.mainController = app.controllers;
+      //app.controllers = app.controllerss;
 
       app.switches();
     }
