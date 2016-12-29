@@ -39,9 +39,28 @@
 
   .svg-icon {
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: remy(128px);
+    max-width: remy(150px);
+
+    @media screen and (min-width: 768px) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  .svg-icon-discovery {
+    margin-top: remy(-12px);
+  }
+
+  .svg-icon-planning {
+    margin-top: remy(-22px);
+  }
+
+  .svg-icon-design {
+    margin-top: remy(-18px);
+  }
+
+  .svg-icon-building {
+    margin-top: remy(-16px);
   }
 
   .nutshell__heading {
