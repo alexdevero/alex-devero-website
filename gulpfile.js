@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
     babel = require('gulp-babel'),
     changed = require('gulp-changed'),
     clean = require('gulp-clean'),
@@ -9,17 +8,21 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     csscomb = require('gulp-csscomb'),
     csslint = require('gulp-csslint'),
+    cssnano = require('cssnano'),
     gulpCopy = require('gulp-copy'),
     html5Lint = require('gulp-html5-lint'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
     livereload = require('gulp-livereload'),
+    postcss = require('gulp-postcss'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
+    sequence = require('gulp-sequence'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
     gulpUtil = require('gulp-util'),
     pngquant = require('imagemin-pngquant'),
+    cssnext = require('postcss-cssnext'),
     vinylFtp = require('vinyl-ftp');
 
 // Concatenate JavaScript files
@@ -146,6 +149,15 @@ gulp.task('images', function () {
 
 // Sass to CSS
 gulp.task('sass', function() {
+  var processors = [
+    cssnext({
+      browsers: 'last 3 versions'
+    }),
+    cssnano({
+      autoprefixer: false
+    })
+  ];
+
   return gulp.src('src/scss/main.scss')
     //.pipe(changed('dist/css', {extension: '.css'}))
     .pipe(sourcemaps.init())
@@ -154,10 +166,8 @@ gulp.task('sass', function() {
     }).on('error', function(e) {
       console.log(e + '\r\n There\'s something wrong with the Sass file(s).')
     }))
-    .pipe(autoprefixer({
-      browsers: ['last 3 versions']
-    }))
     .pipe(csscomb())
+    .pipe(postcss(processors))
     .pipe(csslint())
     .pipe(csslint.formatter())
     .pipe(rename({
@@ -196,4 +206,4 @@ gulp.task('watch', ['server'], function() {
 });
 
 // Automate tasks (cmd: gulp)
-gulp.task('default', ['html', 'copyAll', 'images', 'sass', 'js'], function() {});
+gulp.task('default', sequence(['html', 'copyAll'], ['images', 'sass', 'js']));
