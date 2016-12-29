@@ -231,7 +231,7 @@ gulp.task('watch', ['server'], () => {
 });
 
 // Setup development environment
-gulp.task('dev', sequence('default', 'server'));
+gulp.task('dev', sequence('default', 'watch'));
 
 // Automate tasks (cmd: gulp)
 gulp.task('default', sequence(['html', 'copyAll'], ['images', 'sass', 'js']));
