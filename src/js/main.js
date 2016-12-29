@@ -266,8 +266,8 @@
 
         // Close modal and hide message by clicking on the button
         for (let i = 0, j = modalButton.length; i < j; i++) {
-          modalButton[i].addEventListener('click', () => {
-            this.parentNode.classList.remove('modal-message-visible');
+          modalButton[i].addEventListener('click', (e) => {
+            e.target.parentNode.classList.remove('modal-message-visible');
 
             app.controllers.fadeOutCustom(modalOverlay);
           });
