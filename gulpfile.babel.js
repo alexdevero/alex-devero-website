@@ -230,5 +230,8 @@ gulp.task('watch', ['server'], () => {
   gulp.watch(['src/images/**/*', '!src/images/**/*.rar'], ['images']);
 });
 
+// Setup development environment
+gulp.task('dev', sequence('default', 'server'));
+
 // Automate tasks (cmd: gulp)
 gulp.task('default', sequence(['html', 'copyAll'], ['images', 'sass', 'js']));
