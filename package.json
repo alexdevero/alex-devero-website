@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "gulp clean && gulp build",
-    "start": "gulp server",
+    "start": "gulp dev",
     "test": "gulp clean && gulp default"
   },
   "devDependencies": {
