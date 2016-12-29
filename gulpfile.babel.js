@@ -1,29 +1,52 @@
 'use strict';
 
-var gulp = require('gulp'),
-    babel = require('gulp-babel'),
-    changed = require('gulp-changed'),
-    clean = require('gulp-clean'),
-    concat = require('gulp-concat'),
-    connect = require('gulp-connect'),
-    csscomb = require('gulp-csscomb'),
-    csslint = require('gulp-csslint'),
-    cssnano = require('cssnano'),
-    gulpCopy = require('gulp-copy'),
-    html5Lint = require('gulp-html5-lint'),
-    htmlmin = require('gulp-htmlmin'),
-    imagemin = require('gulp-imagemin'),
-    livereload = require('gulp-livereload'),
-    postcss = require('gulp-postcss'),
-    rename = require('gulp-rename'),
-    sass = require('gulp-sass'),
-    sequence = require('gulp-sequence'),
-    sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify'),
-    gulpUtil = require('gulp-util'),
-    pngquant = require('imagemin-pngquant'),
-    cssnext = require('postcss-cssnext'),
-    vinylFtp = require('vinyl-ftp');
+const gulp = require('gulp');
+
+const babel = require('gulp-babel');
+
+const changed = require('gulp-changed');
+
+const clean = require('gulp-clean');
+
+const concat = require('gulp-concat');
+
+const connect = require('gulp-connect');
+
+const csscomb = require('gulp-csscomb');
+
+const csslint = require('gulp-csslint');
+
+const cssnano = require('cssnano');
+
+const gulpCopy = require('gulp-copy');
+
+const html5Lint = require('gulp-html5-lint');
+
+const htmlmin = require('gulp-htmlmin');
+
+const imagemin = require('gulp-imagemin');
+
+const livereload = require('gulp-livereload');
+
+const postcss = require('gulp-postcss');
+
+const rename = require('gulp-rename');
+
+const sass = require('gulp-sass');
+
+const sequence = require('gulp-sequence');
+
+const sourcemaps = require('gulp-sourcemaps');
+
+const uglify = require('gulp-uglify');
+
+const gulpUtil = require('gulp-util');
+
+const pngquant = require('imagemin-pngquant');
+
+const cssnext = require('postcss-cssnext');
+
+const vinylFtp = require('vinyl-ftp');
 
 // Concatenate JavaScript files
 /*gulp.task('concatJS', function() {
@@ -33,7 +56,7 @@ var gulp = require('gulp'),
 });*/
 
 // Clean dist
-gulp.task('clean', function() {
+gulp.task('clean', () => {
   console.log('Clean \'dist\' folder');
 
   return gulp.src('dist', {
@@ -43,7 +66,7 @@ gulp.task('clean', function() {
 });
 
 // Connect to localhost
-gulp.task('server', function() {
+gulp.task('server', () => {
   connect.server({
     root: 'dist',
     livereload: true
@@ -51,10 +74,12 @@ gulp.task('server', function() {
 });
 
 // Deploy files to FTP
-gulp.task('deploy', function() {
-  var credentials = require('./alexdevero-ftp-credentials.json'),
-      destFolder = 'www/public',
-      filesGlob = ['./dist/**/*.*'];
+gulp.task('deploy', () => {
+  const credentials = require('./alexdevero-ftp-credentials.json');
+
+  const destFolder = 'www/public';
+
+  const filesGlob = ['./dist/**/*.*'];
 
   var conn = vinylFtp.create({
     host: '40849.w49.wedos.net',
@@ -77,7 +102,7 @@ gulp.task('deploy', function() {
 });
 
 // Minify HTML files
-gulp.task('html', function() {
+gulp.task('html', () => {
   return gulp.src('src/*.html')
     .pipe(changed('dist'))
     //.pipe(html5Lint())
@@ -90,35 +115,35 @@ gulp.task('html', function() {
 });
 
 // Copy CSS files
-gulp.task('copyCSS', function() {
+gulp.task('copyCSS', () => {
   return gulp.src('src/css/*')
     .pipe(changed('dist/css'))
     .pipe(gulp.dest('dist/css'));
 });
 
 // Copy font files
-gulp.task('copyFonts', function() {
+gulp.task('copyFonts', () => {
   return gulp.src('src/fonts/*')
     .pipe(changed('dist/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
 
 // Copy JS plugins files
-gulp.task('copyJSPlug', function() {
+gulp.task('copyJSPlug', () => {
   return gulp.src(['src/js/plugins/*', '!src/js/plugins/*.rar'])
     .pipe(changed('dist/js/plugins/'))
     .pipe(gulp.dest('dist/js/plugins/'));
 });
 
 // Copy JS vendor files
-gulp.task('copyJSVen', function() {
+gulp.task('copyJSVen', () => {
   return gulp.src(['src/js/vendor/*', '!src/js/vendor/*.rar'])
     .pipe(changed('dist/js/vendor/'))
     .pipe(gulp.dest('dist/js/vendor/'));
 });
 
 // Copy other files
-gulp.task('copyOther', function() {
+gulp.task('copyOther', () => {
   return gulp.src([
     'src/.htaccess',
     'src/crossdomain.xml',
@@ -131,10 +156,10 @@ gulp.task('copyOther', function() {
 });
 
 // Automate copying
-gulp.task('copyAll', ['copyCSS', 'copyFonts', 'copyJSPlug', 'copyJSVen', 'copyOther'], function() {});
+gulp.task('copyAll', ['copyCSS', 'copyFonts', 'copyJSPlug', 'copyJSVen', 'copyOther']);
 
 // Compress images
-gulp.task('images', function () {
+gulp.task('images', () => {
   return gulp.src(['src/images/**/*', '!src/images/**/*.rar'])
     .pipe(changed('dist/images'))
     .pipe(imagemin({
@@ -148,8 +173,8 @@ gulp.task('images', function () {
 });
 
 // Sass to CSS
-gulp.task('sass', function() {
-  var processors = [
+gulp.task('sass', () => {
+  const processors = [
     cssnext({
       browsers: 'last 3 versions'
     }),
@@ -163,7 +188,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
-    }).on('error', function(e) {
+    }).on('error', (e) => {
       console.log(e + '\r\n There\'s something wrong with the Sass file(s).')
     }))
     .pipe(csscomb())
@@ -179,13 +204,13 @@ gulp.task('sass', function() {
 });
 
 // Minify JavaScript files
-gulp.task('js', function() {
+gulp.task('js', () => {
   return gulp.src('src/js/main.js')
     .pipe(changed('dist/js'))
     .pipe(babel({
       presets: ['latest']
     }))
-    .pipe(uglify().on('error', function(e) {
+    .pipe(uglify().on('error', (e) => {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
     .pipe(rename({
@@ -196,7 +221,7 @@ gulp.task('js', function() {
 });
 
 // Watch HTML, CSS and JavaScript files
-gulp.task('watch', ['server'], function() {
+gulp.task('watch', ['server'], () => {
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/*.php', ['copyOther']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
