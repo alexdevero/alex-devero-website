@@ -130,14 +130,23 @@ gulp.task('copyFonts', () => {
 
 // Copy JS plugins files
 gulp.task('copyJSPlug', () => {
-  return gulp.src(['src/js/plugins/*', '!src/js/plugins/*.rar'])
+  return gulp.src([
+      'src/js/plugins/*',
+      '!src/js/plugins/*.rar',
+      'node_modules/waypoints/lib/noframework.waypoints.min.js'
+    ])
     .pipe(changed('dist/js/plugins/'))
     .pipe(gulp.dest('dist/js/plugins/'));
 });
 
 // Copy JS vendor files
 gulp.task('copyJSVen', () => {
-  return gulp.src(['src/js/vendor/*', '!src/js/vendor/*.rar'])
+  return gulp.src([
+      'src/js/vendor/*',
+      '!src/js/vendor/*.rar',
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/jquery/dist/jquery.min.map'
+    ])
     .pipe(changed('dist/js/vendor/'))
     .pipe(gulp.dest('dist/js/vendor/'));
 });
