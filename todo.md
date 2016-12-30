@@ -19,7 +19,7 @@
 
 ## Work page:
 - [ ] - implement 'srcset' attribute for img tags
-- [ ] - change the layout of work page
+- [ ] - change the layout of work page (viz. Forzo in moodboard folder)
 - [x] - remove the overlays
 
 ## Contact page:
