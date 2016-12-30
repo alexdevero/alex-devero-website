@@ -1,14 +1,14 @@
 # Todo:
 ## General:
 - [ ] - change body font to Raleway
-- [ ] - rewrite JavaScript to ES2015
-- [ ] - test JavaScript
-- [ ] - create set of icons for the portfolio
+- [x] - rewrite JavaScript to ES2015
+- [x] - test JavaScript
+- [x] - create set of icons for the portfolio
 - [ ] - implement font awesome via npm
 - [ ] - add CV page
 - [ ] - fix csslint warnings
 - [ ] - add npm scripts for automation and testing
-- [ ] - install cssnano and post-cssnext, remove autoprefixer
+- [x] - install cssnano and post-cssnext, remove autoprefixer
 - [x] - fix failing tests
 - [x] - rename repo and folder to 'alex-devero-website'
 
