@@ -15,7 +15,7 @@
   "font-sizes": false,
   "gradients": false,
   "ids": true,
-  "important": true,
+  "important": false,
   "known-properties": false,
   "outline-none": false,
   "order-alphabetical": false,
