@@ -1,8 +1,6 @@
 /**
- * Portfolio Page
+ * Portfolio Page - Work
  */
-
-/* Works */
 
 .page--portfolio .sec__main {
   min-height: 0;
@@ -12,6 +10,12 @@
 main .sec__works {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.sec__works .heading--primary {
+  font-weight: 700;
+  text-align: center;
+  text-transform: inherit;
 }
 
 .sec__works [class*="col-"] {
