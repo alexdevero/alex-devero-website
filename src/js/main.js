@@ -229,6 +229,10 @@
 
               lazyImagesArray[i].removeAttribute('data-src');
 
+              lazyImagesArray[i].setAttribute('srcset', lazyImagesArray[i].getAttribute('data-srcset'));
+
+              lazyImagesArray[i].removeAttribute('data-srcset');
+
               lazyImagesArray[i].setAttribute('data-loaded', true);
 
               app.controllers.fadeInCustom(lazyImagesArray[i]);

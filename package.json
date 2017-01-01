@@ -31,7 +31,7 @@
     "url": "https://github.com/alexdevero/alex-devero-website.git"
   },
   "scripts": {
-    "build": "gulp clean && gulp build",
+    "build": "gulp clean && gulp default",
     "start": "gulp dev",
     "test": "gulp clean && gulp default"
   },
