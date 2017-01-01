@@ -25,7 +25,12 @@ main .sec__works {
 .work__item {
   position: relative;
   display: block;
-  overflow: hidden;
+  //overflow: hidden;
+
+  &:focus > div + img,
+  &:hover > div + img {
+    transform: scale(1.15);
+  }
 }
 
 .overlay--thumbnail {
