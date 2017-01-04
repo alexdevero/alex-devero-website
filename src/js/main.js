@@ -531,12 +531,12 @@
 
           // Detect history change (back or forward button)
           // and force the page to reload (with new url) and load new page
-          window.onpopstate = () => {
+          /*window.onpopstate = () => {
             location.reload();
-          }
+          }*/
 
           // Page transitions for clicks on links
-          app.controllers.pageTransition();
+          //app.controllers.pageTransition();
         })();
       }
 
