@@ -24,6 +24,7 @@
 
 ## Contact page:
 - [ ] - Implement CAPTCHA for contact form
+- [ ] - Change "I need ..." to "I'm looking for ..."
 
 ## General ideas:
 - animated message for submitting form
