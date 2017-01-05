@@ -1,11 +1,11 @@
 # Todo:
 ## General:
-- [ ] - cleanup html
-- [ ] - move previous headings to markdown file
 - [ ] - change body font to Raleway
 - [ ] - add CV page
 - [ ] - fix csslint warnings
 - [ ] - add npm scripts for automation and testing
+- [x] - cleanup html
+- [x] - move previous headings to markdown file
 - [x] - rewrite JavaScript to ES2015
 - [x] - test JavaScript
 - [x] - create set of icons for the portfolio
@@ -24,7 +24,7 @@
 
 ## Contact page:
 - [ ] - Implement CAPTCHA for contact form
-- [ ] - Change "I need ..." to "I'm looking for ..."
+- [x] - Change "I need ..." to "I'm looking for ..."
 
 ## General ideas:
 - animated message for submitting form
