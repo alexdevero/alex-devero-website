@@ -18,9 +18,12 @@
 - [ ] - partciles JavaScript library on [CDN](https://cdnjs.com/libraries/particles.js)
 
 ## Work page:
-- [ ] - implement 'srcset' attribute for img tags
-- [ ] - change the layout of work page (viz. Forzo in moodboard folder)
+- [x] - change the layout of work page (viz. Forzo in moodboard folder)
+- [x] - implement 'srcset' attribute for img tags
 - [x] - remove the overlays
+
+## About page:
+- [ ] - Mention Codementor, YFS Magazine and A List Apart
 
 ## Contact page:
 - [ ] - Implement CAPTCHA for contact form
