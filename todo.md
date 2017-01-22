@@ -4,30 +4,16 @@
 - [ ] - add CV page
 - [ ] - fix csslint warnings
 - [ ] - add npm scripts for automation and testing
-- [x] - cleanup html
-- [x] - move previous headings to markdown file
-- [x] - rewrite JavaScript to ES2015
-- [x] - test JavaScript
-- [x] - create set of icons for the portfolio
-- [x] - install cssnano and post-cssnext, remove autoprefixer
-- [x] - fix failing tests
-- [x] - rename repo and folder to 'alex-devero-website'
 
 ## Homepage:
 - [ ] - implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
 - [ ] - partciles JavaScript library on [CDN](https://cdnjs.com/libraries/particles.js)
-
-## Work page:
-- [x] - change the layout of work page (viz. Forzo in moodboard folder)
-- [x] - implement 'srcset' attribute for img tags
-- [x] - remove the overlays
 
 ## About page:
 - [ ] - Mention Codementor, YFS Magazine and A List Apart
 
 ## Contact page:
 - [ ] - Implement CAPTCHA for contact form
-- [x] - Change "I need ..." to "I'm looking for ..."
 
 ## General ideas:
 - animated message for submitting form
@@ -39,7 +25,6 @@
 - consider using one-page layout
 - consider using landing page layout
 - consider using W3C html validator [gulp plugin](https://www.npmjs.com/package/gulp-html-validator) or turn on html-lint...
-- consider implement [PostCSS gulp plugin](https://github.com/postcss/gulp-postcss).
 
 ## Heading ideas (on homepage):
 - I strive to make an impact on everyone’s lives by creating a bridge between human & technology.
