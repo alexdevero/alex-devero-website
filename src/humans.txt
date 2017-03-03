@@ -2,10 +2,13 @@
 # The humans responsible & technology colophon
 
 # TEAM
+Your title: Alex Devero
+Site: www.alexdevero.com
+Twitter: @alexdevero
+Location: Prague, Czech Republic
 
-  Alex Devero -- Web Designer & Developer -- @alexdevero
-
-# TECHNOLOGY COLOPHON
-
-  HTML5, CSS3
-  jQuery, Modernizr
+# SITE
+Last update: 2017/03/03
+Standards: HTML5, CSS3, JavaScript (ES7)
+Components: Bootstrap, jQuery, Modernizr, Normalize
+Software: Atom, Gulp, Babel, Apache Server Configs
