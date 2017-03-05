@@ -4,6 +4,8 @@
 - [ ] - add CV page
 - [ ] - fix csslint warnings
 - [ ] - add npm scripts for automation and testing
+- [ ] - move FAQ ot independent page
+- [ ] - remove process page
 
 ## Homepage:
 - [ ] - implement particle [canvas bcg](https://github.com/jnicol/particleground) like on http://supernova.studio/coming-soon/
