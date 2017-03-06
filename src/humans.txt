@@ -8,7 +8,7 @@ Twitter: @alexdevero
 Location: Prague, Czech Republic
 
 # SITE
-Last update: 2017/03/03
+Last update: 2017/03/06
 Standards: HTML5, CSS3, JavaScript (ES7)
 Components: Bootstrap, jQuery, Modernizr, Normalize
 Software: Atom, Gulp, Babel, Apache Server Configs
