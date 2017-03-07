@@ -1,6 +1,6 @@
 {
   "name": "alex-devero-portfolio",
-  "version": "0.3.0",
+  "version": "2.0.0",
   "description": "Personal portfolio of Alex Devero",
   "engines": {
     "node": "7.x",
@@ -44,7 +44,6 @@
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
-    "gulp-copy": "1.0.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-csslint": "^1.0.0",
     "gulp-html5-lint": "^1.1.0",
@@ -61,6 +60,7 @@
     "imagemin-pngquant": "^5.0.0",
     "jquery": "^3.1.1",
     "postcss-cssnext": "^2.9.0",
+    "require-dir": "^0.3.1",
     "vinyl-ftp": "^0.6.0",
     "waypoints": "^4.0.1"
   },
