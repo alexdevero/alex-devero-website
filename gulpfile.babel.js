@@ -20,10 +20,10 @@ gulp.task('watch', ['server'], () => {
 });
 
 // Automate copying
-gulp.task('copyAll', ['copyCSS', 'copyFonts', 'copyJSPlug', 'copyJSVen', 'copyOther']);
+gulp.task('copy:all', ['copy:css', 'copy:fonts', 'copy:jsplugins', 'copy:jsvendor', 'copy:other']);
 
 // Setup development environment
-gulp.task('dev', sequence(['html', 'copyAll'], ['images', 'sass', 'js'], 'watch'));
+gulp.task('dev', sequence(['html', 'copy:all'], ['images', 'sass', 'js'], 'watch'));
 
 // Automate tasks (cmd: gulp)
 gulp.task('default', ['dev']);
