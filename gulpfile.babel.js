@@ -12,9 +12,9 @@ requireDir('./gulp/');
 // Watch HTML, CSS and JavaScript files
 gulp.task('watch', ['server'], () => {
   gulp.watch('src/*.html', ['html']);
-  gulp.watch('src/*.php', ['copyOther']);
+  gulp.watch(['src/*.php', 'src/*.txt'], ['copy:other']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/css/**/*.css', ['copyCSS']);
+  gulp.watch('src/css/**/*.css', ['copy:css']);
   gulp.watch('src/js/main.js', ['js']);
   gulp.watch(['src/images/**/*', '!src/images/**/*.rar'], ['images']);
 });
