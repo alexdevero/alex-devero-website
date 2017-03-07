@@ -1,9 +1,7 @@
 'use strict';
 
 import gulp from 'gulp';
-
-//const gulpCopy = require('gulp-copy');
-const changed = require('gulp-changed');
+import changed from 'gulp-changed';
 
 // Copy CSS files
 gulp.task('copy:css', () => {
