@@ -1,13 +1,25 @@
 'use strict';
 
 import gulp from 'gulp';
-
 import requireDir from 'require-dir';
-//const gulp = require('gulp');
-//const requireDir = require('require-dir');
-const sequence = require('gulp-sequence');
+import sequence from 'gulp-sequence';
 
 requireDir('./gulp/');
+
+// Automate copying
+gulp.task('copy:all', [
+  'copy:css',
+  'copy:fonts',
+  'copy:jsplugins',
+  'copy:jsvendor',
+  'copy:other'
+]);
+
+// // Builds the website
+gulp.task('build', sequence(['html', 'copy:all'], ['images', 'sass', 'js']));
+
+// Setup development environment
+gulp.task('dev', sequence('build', 'watch'));
 
 // Watch HTML, CSS and JavaScript files
 gulp.task('watch', ['server'], () => {
@@ -19,11 +31,5 @@ gulp.task('watch', ['server'], () => {
   gulp.watch(['src/images/**/*', '!src/images/**/*.rar'], ['images']);
 });
 
-// Automate copying
-gulp.task('copy:all', ['copy:css', 'copy:fonts', 'copy:jsplugins', 'copy:jsvendor', 'copy:other']);
-
-// Setup development environment
-gulp.task('dev', sequence(['html', 'copy:all'], ['images', 'sass', 'js'], 'watch'));
-
-// Automate tasks (cmd: gulp)
+// Create default task (cmd: gulp)
 gulp.task('default', ['dev']);
