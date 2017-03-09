@@ -19,3 +19,15 @@ gulp.task('html', () => {
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 });
+
+// Hint HTML files
+gulp.task('html:test', () => {
+  const htmlhint = require('gulp-htmlhint');
+  
+  return gulp.src('src/*.html')
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter())
+    .pipe(htmlhint.failReporter({
+      suppress: false
+    }));
+});
