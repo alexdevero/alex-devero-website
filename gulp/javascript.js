@@ -33,3 +33,12 @@ gulp.task('js', () => {
     .pipe(gulp.dest('dist/js'))
     .pipe(connect.reload());
 });
+
+gulp.task('js:test', () => {
+  const eslint = require('gulp-eslint');
+
+  return gulp.src('./src/js/main.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+});
