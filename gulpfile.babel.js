@@ -21,6 +21,9 @@ gulp.task('build', sequence(['html', 'copy:all'], ['images', 'sass', 'js']));
 // Setup development environment
 gulp.task('dev', sequence('build', 'watch'));
 
+// Test task for testing HTML, Sass and JavaScript
+gulp.task('test', sequence('html:test', 'sass:test', 'js:test'));
+
 // Watch HTML, CSS and JavaScript files
 gulp.task('watch', ['server'], () => {
   gulp.watch('src/*.html', ['html']);

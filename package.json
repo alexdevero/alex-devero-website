@@ -33,7 +33,7 @@
   "scripts": {
     "build": "gulp clean && gulp default",
     "start": "gulp dev",
-    "test": "gulp clean && gulp build"
+    "test": "gulp test"
   },
   "devDependencies": {
     "babel-preset-latest": "^6.22.0",
