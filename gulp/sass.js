@@ -42,3 +42,12 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('dist/css'))
     .pipe(connect.reload());
 });
+
+gulp.task('sass:test', () => {
+  const sassLint = require('gulp-sass-lint');
+  
+  return gulp.src('./src/scss/**/*.scss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+});
