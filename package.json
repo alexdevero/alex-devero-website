@@ -47,6 +47,7 @@
     "gulp-connect": "^5.0.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-csslint": "^1.0.0",
+    "gulp-eslint": "^3.0.1",
     "gulp-html5-lint": "^1.1.0",
     "gulp-htmlhint": "^0.3.1",
     "gulp-htmlmin": "^3.0.0",
