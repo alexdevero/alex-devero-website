@@ -5,13 +5,12 @@
 // Settings - Colors
 $color--black: #212121;
 $color--gold: #ba8747;
-$color--red: #d30320;//#d31310;
+$color--red: #d30320;
 $color--violet: #8d38c9;
 
 // Settings - Global
-$font-size-base: 16px;
-$radius: 2px;
 $duration: .25s;
+$radius: 2px;
 
 // Fibonacci sequence
 $fib--one: 0;
@@ -28,6 +27,8 @@ $fib--eleven: 55;
 $fib--twelve: 89;
 
 // Settings - Typography
-$font--quicksand: 'Quicksand', 'Trebuchet MS', sans-serif;
-$font--raleway: 'Raleway', arial, verdana, sans-serif;
-$font--openSans: 'Open Sans', 'Trebuchet MS', sans-serif;
+$font-size-base: 16px;
+
+$font-quicksand: 'Quicksand', 'Trebuchet MS', sans-serif;
+$font-raleway: 'Raleway', arial, verdana, sans-serif;
+$font-openSans: 'Open Sans', 'Trebuchet MS', sans-serif;
