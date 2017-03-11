@@ -12,7 +12,7 @@ gulp.task('copy:css', () => {
 
 // Copy font files
 gulp.task('copy:fonts', () => {
-  return gulp.src('src/fonts/*')
+  return gulp.src(['src/fonts/*', '!src/fonts/*.rar'])
     .pipe(changed('dist/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
