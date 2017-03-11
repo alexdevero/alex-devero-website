@@ -3,24 +3,17 @@
 //
 
 // Settings - Colors
-
 $color--black: #212121;
-$color--primary: $color--flat-pete-river;
-$color--secondary: $color--flat-alizarin;
-$color--tertiary: $color--flat-clouds;
 $color--gold: #ba8747;
 $color--red: #d30320;//#d31310;
-$color--red-alt: #ad0000;
 $color--violet: #8d38c9;
 
 // Settings - Global
-
 $base--font--size: 16px;
 $radius: 2px;
-$timing: .25s;
+$duration: .25s;
 
 // Fibonacci sequence
-
 $fib--one: 0;
 $fib--two: 1;
 $fib--three: 1;
@@ -35,7 +28,6 @@ $fib--eleven: 55;
 $fib--twelve: 89;
 
 // Settings - Typography
-
 $font--quicksand: "Quicksand", "Trebuchet MS", sans-serif;
 $font--raleway: "Raleway", arial, verdana, sans-serif;
 $font--openSans: "Open Sans", "Trebuchet MS", sans-serif;
