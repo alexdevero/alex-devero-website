@@ -2,9 +2,9 @@
  * Forms
  */
 
-.form__details input,
-.form__subject select,
-.form__message textarea {
+input:not([type=submit]):not([name=nav-check]),
+select,
+textarea {
   display: block;
   padding: 13px;
   margin: auto;
@@ -60,7 +60,7 @@ label {
 }
 
 .form__message {
-    textarea {
+  textarea {
     height: remy(160px);
     resize: vertical;
   }

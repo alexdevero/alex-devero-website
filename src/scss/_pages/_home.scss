@@ -14,11 +14,13 @@
     min-height: remy(580px);
   }
 
-  header a,
-  .navbar-toggler {
-    &:focus,
-    &:hover {
-      color: map-get($palette-custom, red);
+  header {
+    a,
+    .navbar-toggler {
+      &:focus,
+      &:hover {
+        color: map-get($palette-custom, red);
+      }
     }
   }
 
