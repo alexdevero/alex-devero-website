@@ -11,7 +11,7 @@
 // Color grabber
 
 @function palette($color, $shade: 500) {
-  $colorMap: map-get($palette, $color);
-  $result: map-get($colorMap, $shade);
+  $color-map: map-get($palette-material, $color);
+  $result: map-get($color-map, $shade);
   @return $result;
 }
