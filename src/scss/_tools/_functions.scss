@@ -8,10 +8,9 @@
   @return ($target / $font-size-base) * 1rem;
 }
 
-// Color grabber
-
-@function palette($color, $shade: 500) {
-  $color-map: map-get($palette-material, $color);
+// Color grabber for color palettes
+@function palette-grabber($palette, $color, $shade) {
+  $color-map: map-get($palette, $color);
   $result: map-get($color-map, $shade);
   @return $result;
 }
