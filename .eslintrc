@@ -11,7 +11,7 @@
     "no-console": "warn",
     "no-dupe-args": "warn",
     "no-dupe-keys": "warn",
-    "no-dupe-case": "warn",
+    "no-duplicate-case": "warn",
     "no-empty": "warn",
     "no-extra-semi": "warn",
     "no-irregular-whitespace": "warn",
