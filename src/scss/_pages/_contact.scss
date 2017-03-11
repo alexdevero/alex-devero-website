@@ -26,7 +26,7 @@
 
     &:focus,
     &:hover {
-      color: $color--red;
+      color: map-get($palette-custom, red);
     }
   }
 }

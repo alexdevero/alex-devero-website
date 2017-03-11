@@ -45,7 +45,7 @@
 
     &:focus,
     &:hover {
-      color: $color--red;
+      color: map-get($palette-custom, red);
     }
   }
 }
@@ -65,7 +65,7 @@
   margin-top: -15px;
   width: inherit;
   font-size: 1.75rem;
-  color: $color--black;
+  color: map-get($palette-custom, black);
   line-height: 1;
   background: 0 0;
   border: 1px solid transparent;
@@ -76,7 +76,7 @@
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }
 .navbar-toggler:focus,
@@ -93,7 +93,7 @@
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }
 
@@ -103,11 +103,11 @@
 
 .nav--media a {
   font-weight: 700;
-  color: $color--black;
+  color: map-get($palette-custom, black);
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }
 
@@ -136,7 +136,7 @@
   width: remy(76.52px);
   font-size: 1.15rem;
   font-weight: 700;
-  color: $color--black;
+  color: map-get($palette-custom, black);
   text-align: center;
   text-transform: uppercase;
   border: remy(3px) solid;
@@ -154,7 +154,7 @@
   width: 100%;
   max-width: 100%;
   height: 100%;
-  background: $color--black;
+  background: map-get($palette-custom, black);
   transition: transform .25s cubic-bezier(.4, 0, 1, 1);
   transform: translateX(100%);
 

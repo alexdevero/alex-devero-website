@@ -15,11 +15,11 @@
 
   a {
     font-weight: 700;
-    color: $color--red;
+    color: map-get($palette-custom, red);
 
     &:focus,
     &:hover {
-      color: $color--black;
+      color: map-get($palette-custom, black);
     }
   }
 }

@@ -14,19 +14,19 @@ header {
 header a {
   font-weight: 700;
   text-transform: uppercase;
-  color: $color--black;
+  color: map-get($palette-custom, black);
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 
   &.active {
-    color: $color--red;
+    color: map-get($palette-custom, red);
 
     &:focus,
     &:hover {
-      color: $color--red;
+      color: map-get($palette-custom, red);
     }
   }
 }
@@ -45,6 +45,6 @@ header .logo {
 header .logo a {
   &:focus,
   &:hover {
-    color: $color--black;
+    color: map-get($palette-custom, black);
   }
 }

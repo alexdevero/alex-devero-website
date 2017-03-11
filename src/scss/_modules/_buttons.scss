@@ -40,12 +40,12 @@
 
 .btn--full--red {
   color: #fff;
-  background-color: $color--black;
+  background-color: map-get($palette-custom, black);
 
   &:focus,
   &:hover {
     color: #fff;
-    background-color: $color--red;
+    background-color: map-get($palette-custom, red);
   }
 }
 
@@ -56,17 +56,17 @@
   &:focus,
   &:hover {
     color: #fff;
-    background-color: palette(grey, 600);
+    background-color: palette-grabber($palette-material, grey, 600);
   }
 }
 
 .btn--full--gold {
   color: #fff;
-  background-color: $color--gold;
+  background-color: map-get($palette-custom, gold);
 
   &:focus,
   &:hover {
-    background-color: darken($color--gold, 18%);
+    background-color: darken(map-get($palette-custom, gold), 18%);
   }
 }
 
@@ -90,28 +90,28 @@
   font-weight: 600;
   letter-spacing: remy(4px);
   text-transform: uppercase;
-  color: $color--black;
+  color: map-get($palette-custom, black);
   background: transparent;
-  border: 2px solid $color--black;
+  border: 2px solid map-get($palette-custom, black);
 
   &:focus,
   &:hover {
     color: #fff;
-    background: $color--black;
+    background: map-get($palette-custom, black);
   }
 }
 
 .btn--ghost--gold {
-  color: $color--gold;
+  color: map-get($palette-custom, gold);
 
   &:focus,
   &:hover {
-    color: darken($color--gold, 18%);
+    color: darken(map-get($palette-custom, gold), 18%);
   }
 }
 
 .btn--ghost--red {
-  color: $color--red;
+  color: map-get($palette-custom, red);
 }
 
 .btn--ghost--red-inverted {
@@ -121,12 +121,12 @@
   text-transform: uppercase;
   color: #fff;
   background: transparent;
-  border: 2px solid $color--red;
+  border: 2px solid map-get($palette-custom, red);
 
   &:focus,
   &:hover {
     color: #fff;
-    background: $color--red;
+    background: map-get($palette-custom, red);
   }
 }
 

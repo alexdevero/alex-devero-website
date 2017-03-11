@@ -13,7 +13,7 @@ footer a {
 
   &:focus,
   &:hover {
-    color: $color--gold;
+    color: map-get($palette-custom, gold);
   }
 }
 

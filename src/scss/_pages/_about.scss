@@ -14,7 +14,7 @@
   .sec__about .container {
     position: relative;
     z-index: 2;
-    color: $color--black;
+    color: map-get($palette-custom, black);
   }
 
   .heading--primary {
@@ -41,7 +41,7 @@
     a {
       &:focus,
       &:hover {
-        color: $color--black;
+        color: map-get($palette-custom, black);
       }
     }
 

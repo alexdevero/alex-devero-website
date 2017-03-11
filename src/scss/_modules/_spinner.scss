@@ -18,7 +18,7 @@
   left: 0;
   width: 15px;
   height: 15px;
-  background-color: $color--red;
+  background-color: map-get($palette-custom, red);
   animation: cubemove 1.8s infinite ease-in-out;
 }
 

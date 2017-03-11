@@ -18,13 +18,13 @@
 .page--home .navbar-toggler {
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }
 
 .home__intro {
   z-index: 3;
-  color: $color--black;
+  color: map-get($palette-custom, black);
   text-align: center;
 
   @include vertical-align;
@@ -45,7 +45,7 @@
   font-family: 'Devero', arial, sans-serif;
   font-size: 4rem;
   font-weight: 600;
-  color: $color--red;
+  color: map-get($palette-custom, red);
 
   @media screen and (min-width: 370px) {
     font-size: 6rem;
@@ -60,7 +60,7 @@
   margin-top: 0;
   font-size: 1.25rem;
   font-weight: 700;
-  color: $color--black;
+  color: map-get($palette-custom, black);
 
   @media screen and (min-width: 555px) {
     font-size: 1.75rem;
@@ -82,11 +82,11 @@
 }
 
 .home__intro .link--violet {
-  color: $color--black;
+  color: map-get($palette-custom, black);
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }
 
@@ -115,7 +115,7 @@
 
     &:focus,
     &:hover {
-      color: $color--red;
+      color: map-get($palette-custom, red);
     }
   }
 }
@@ -174,10 +174,10 @@ video {
 }
 
 .page--home footer a {
-  color: $color--black;
+  color: map-get($palette-custom, black);
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }

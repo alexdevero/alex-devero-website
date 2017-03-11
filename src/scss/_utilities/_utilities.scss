@@ -29,7 +29,7 @@
 .heading--overlay {
   margin-bottom: 0;
   font-size: 8rem;
-  color: $color--black;
+  color: map-get($palette-custom, black);
 
   @media screen and (max-width: 555px) {
     font-size: 4rem;
@@ -51,7 +51,7 @@
 }
 
 .text--red {
-  color: $color--red;
+  color: map-get($palette-custom, red);
 }
 
 /* Responsive Classes */
@@ -85,7 +85,7 @@
 }
 
 .row--black {
-  background-color: $color--black;
+  background-color: map-get($palette-custom, black);
 }
 
 .sr-only {

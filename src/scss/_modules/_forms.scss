@@ -11,7 +11,7 @@
   width: 100%;
   font-family: $font-quicksand;
   font-size: 1rem;
-  color: $color--black;
+  color: map-get($palette-custom, black);
   background: transparent;
   border-top: 0;
   border-right: 0;
@@ -39,7 +39,7 @@ label {
 }
 
 .form__subject select {
-  color: $color--black;
+  color: map-get($palette-custom, black);
 }
 
 .form__details,

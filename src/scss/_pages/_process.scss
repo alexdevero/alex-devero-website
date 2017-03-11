@@ -68,7 +68,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 
   .row--black {

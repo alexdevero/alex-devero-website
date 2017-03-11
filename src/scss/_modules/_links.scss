@@ -3,11 +3,11 @@
  */
 
 .link--default {
-  color: $color--flat-pete-river;
+  color: palette-grabber($palette-flat, blue, pete-river);
 
   &:focus,
   &:hover {
-    color: $color--flat-belize-hole;
+    color: palette-grabber($palette-flat, blue, belize-hole);
   }
 }
 
@@ -16,12 +16,12 @@
 
   &:focus,
   &:hover {
-    color: $color--gold;
+    color: map-get($palette-custom, gold);
   }
 }
 
 .link--gold {
-  color: $color--gold;
+  color: map-get($palette-custom, gold);
 
   &:focus,
   &:hover {
@@ -39,11 +39,11 @@
 }
 
 .link--red {
-  color: $color--red;
+  color: map-get($palette-custom, red);
 
   &:focus,
   &:hover {
-    color: $color--black;
+    color: map-get($palette-custom, black);
   }
 }
 
@@ -56,7 +56,7 @@
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }
 
