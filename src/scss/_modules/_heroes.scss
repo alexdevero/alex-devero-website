@@ -10,20 +10,3 @@
   height: 100%;
   min-height: 45rem;
 }
-
-.hero--small {
-  min-height: 26.75rem;
-
-  @media screen and (max-width: remy(768px)) {
-    min-height: 27rem;
-  }
-}
-
-.hero__content {
-  position: absolute;
-  padding-top: 4rem;
-  width: 100%;
-  color: #fff;
-
-  @extend .vertical-align;
-}
