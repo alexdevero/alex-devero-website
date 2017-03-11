@@ -27,7 +27,7 @@
   color: $color--black;
   text-align: center;
 
-  @extend .vertical-align;
+  @include vertical-align;
 }
 
 .home__intro h2 span,

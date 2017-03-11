@@ -10,7 +10,7 @@
   }
 
   .about__contact {
-    @extend .vertical-align;
+    @include vertical-align;
   }
 
   h1 {
