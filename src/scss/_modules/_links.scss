@@ -12,7 +12,7 @@
 }
 
 .link--black {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
@@ -25,16 +25,16 @@
 
   &:focus,
   &:hover {
-    color: $color--oil;
+    color: map-get($palette-foundation, oil);
   }
 }
 
 .link--grey {
-  color: $color--jumbo;
+  color: map-get($palette-foundation, jumbo);
 
   &:focus,
   &:hover {
-    color: $color--white;
+    color: map-get($palette-foundation, white);
   }
 }
 
@@ -52,7 +52,7 @@
 }
 
 .link--violet {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
@@ -61,20 +61,20 @@
 }
 
 .link--white {
-  color: #fff;
+  color: map-get($palette-foundation, white);
 
   &:focus,
   &:hover {
-    color: $color--aluminum;
+    color: map-get($palette-foundation, aluminum);
   }
 }
 
 .link--disabled {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
   cursor: default;
 
   &:focus,
   &:hover {
-    color: $color--jet;
+    color: map-get($palette-foundation, jet);
   }
 }

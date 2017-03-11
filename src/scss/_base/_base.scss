@@ -31,7 +31,7 @@ html {
 body {
   font-family: $font--openSans;
   font-weight: 400;
-  color: $color--oil;
+  color: map-get($palette-foundation, oil);
   line-height: 1.45;
 }
 

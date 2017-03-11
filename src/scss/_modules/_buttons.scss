@@ -30,11 +30,11 @@
 
 .btn--full--black {
   color: #fff;
-  background-color: $color--jet;
+  background-color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
-    background-color: $color--tuatara;
+    background-color: map-get($palette-foundation, tuatara);
   }
 }
 
@@ -50,7 +50,7 @@
 }
 
 .btn--full--white {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
   background-color: #fff;
 
   &:focus,
@@ -77,11 +77,11 @@
 }
 
 .btn--ghost--black {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
-    color: $color--oil;
+    color: map-get($palette-foundation, oil);
   }
 }
 
