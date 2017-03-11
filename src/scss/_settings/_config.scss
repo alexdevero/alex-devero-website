@@ -2,29 +2,25 @@
 // Settings
 //
 
-// Settings - Colors
-$color--black: #212121;
-$color--gold: #ba8747;
-$color--red: #d30320;
-$color--violet: #8d38c9;
-
-// Settings - Global
+// Global variables
 $duration: .25s;
 $radius: 2px;
 
 // Fibonacci sequence
-$fib--one: 0;
-$fib--two: 1;
-$fib--three: 1;
-$fib--four: 2;
-$fib--five: 3;
-$fib--six: 5;
-$fib--seven: 8;
-$fib--eight: 13;
-$fib--nine: 21;
-$fib--ten: 34;
-$fib--eleven: 55;
-$fib--twelve: 89;
+$fibonacci: (
+  one: 0,
+  two: 1,
+  three: 1,
+  four: 2,
+  five: 3,
+  six: 5,
+  seven: 8,
+  eight: 13,
+  nine: 21,
+  ten: 34,
+  eleven: 55,
+  twelve: 89
+);
 
 // Settings - Typography
 $font-size-base: 16px;
