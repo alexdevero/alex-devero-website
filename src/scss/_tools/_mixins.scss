@@ -14,8 +14,8 @@
 }
 
 // Mixin for transition
-@mixin transition($prop) {
-  transition: $prop $timing cubic-bezier(.4, 0, 1, 1);
+@mixin transition($prop: all, $duration: $duration, $timing: cubic-bezier(.4, 0, 1, 1)) {
+  transition: $prop $duration $timing;
 }
 
 // Mixin for box-shadow
