@@ -71,9 +71,11 @@
     color: $color--red;
   }
 
-  .row--black p,
-  .row--black .icon {
-    color: #fff;
+  .row--black {
+    p,
+    .icon {
+      color: #fff;
+    }
   }
 
   .btn {

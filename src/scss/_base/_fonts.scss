@@ -4,36 +4,36 @@
 
 // StreetBrush
 /*@font-face {
-  font-family: "StreetBrush";
+  font-family: 'StreetBrush';
   src: url(../fonts/streetbrush-webfont.eot?v=4.4.0);
-  src: url(../fonts/streetbrush-webfont.eot?#iefix&v=4.4.0) format("embedded-opentype"),
-       url(../fonts/streetbrush-webfont.woff2?v=4.4.0) format("woff2"),
-       url(../fonts/streetbrush-webfont.woff?v=4.4.0) format("woff"),
-       url(../fonts/streetbrush-webfont.ttf?v=4.4.0) format("truetype"),
-       url(../fonts/streetbrush-webfont.svg?v=4.4.0#fontawesomeregular) format("svg");
+  src: url(../fonts/streetbrush-webfont.eot?#iefix&v=4.4.0) format('embedded-opentype'),
+       url(../fonts/streetbrush-webfont.woff2?v=4.4.0) format('woff2'),
+       url(../fonts/streetbrush-webfont.woff?v=4.4.0) format('woff'),
+       url(../fonts/streetbrush-webfont.ttf?v=4.4.0) format('truetype'),
+       url(../fonts/streetbrush-webfont.svg?v=4.4.0#fontawesomeregular) format('svg');
   font-style: normal;
   font-weight: 700;
 }*/
 
 // Devero
 @font-face {
-  font-family: "Devero";
+  font-family: 'Devero';
   font-style: normal;
   font-weight: normal;
-  src: url(../fonts/devero.otf) format("opentype");
-  /*src: url(../fonts/devero.woff2) format("woff2"),
-       url(../fonts/devero.woff) format("woff"),
-       url(../fonts/devero.otf) format("opentype");*/
+  src: url(../fonts/devero.otf) format('opentype');
+  /*src: url(../fonts/devero.woff2) format('woff2'),
+       url(../fonts/devero.woff) format('woff'),
+       url(../fonts/devero.otf) format('opentype');*/
 }
 
 // ET-Line Icon Font
 @font-face {
-  font-family: "et-line";
+  font-family: 'et-line';
   src:url(../fonts/et-line.eot);
-  src:url(../fonts/et-line.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/et-line.woff) format("woff"),
-    url(../fonts/et-line.ttf) format("truetype"),
-    url(../fonts/et-line.svg#et-line) format("svg");
+  src:url(../fonts/et-line.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/et-line.woff) format('woff'),
+    url(../fonts/et-line.ttf) format('truetype'),
+    url(../fonts/et-line.svg#et-line) format('svg');
   font-weight: normal;
   font-style: normal;
 }
