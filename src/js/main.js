@@ -1,14 +1,16 @@
+'use strict';
+
 /**
  * @author Alex Devero <deveroalex@gmail.com>
  */
 
 (() => {
-  'use strict';
   const app = {
     settings: {
       contactForm: document.querySelectorAll('#contactForm'),
       indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.querySelectorAll('.lazy'),
+      mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       modalMessage: document.querySelectorAll('.js-modal-overlay'),
       portfolioItem: document.querySelectorAll('.work__item'),
       slideableContent: document.querySelectorAll('.js-slideable'),
@@ -17,66 +19,42 @@
     controllers: {
       // Animate stylesheet loader controller
       animateStylesheetLoader: () => {
-        let stylesheetAnimateCSS = document.createElement('link'),
-            mainStyleSheet = document.querySelector('.js-stylesheet-main');
+        let stylesheetAnimateCSS = document.createElement('link');
+
         stylesheetAnimateCSS.rel = 'stylesheet';
         stylesheetAnimateCSS.href = 'css/animate.css';
         stylesheetAnimateCSS.classList.add('jsLoaded');
-        mainStyleSheet.appendChild(stylesheetAnimateCSS);
+
+        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, app.settings.mainStyleSheet.nextSibling);
       },
       // Contact controller
-      contact: (e) => {
+      contact: () => {
         $('#contactForm').submit((e) => {
           e.preventDefault();
 
-          if (document.getElementById('subject').value.length === 0) {
-            if (window.location.href.split('com/')[1] == 'contact.html') {
-              alert('Please select \'What are you looking for\'.');
-            } else {
-              alert('Prosím zvolte \'Druh projektu\'.');
-            }
+          const $this = e.target;
 
-            $('#subject').trigger('focus');
-          } else {
+          $.ajax({
+            data: $($this).serialize(),
+            type: 'POST',
+            url: 'contact.php'
+          }).done(() => {
+            e.preventDefault();
 
-            let $this = e.target;
+            app.controllers.modalMessages('success');
 
-            $.ajax({
-              type: 'POST',
-              url: 'contact.php',
-              data: $($this).serialize()
-            }).done((response) => {
-              e.preventDefault();
+            // Clear the form.
+            $($this)[0].reset();
+          }).fail(() => {
+            e.preventDefault();
 
-              app.controllers.modalMessages('success');
-
-              /*if (window.location.href.split('com/')[1] == 'contact.html') {
-                app.controllers.modalMessages('failure');
-                alert('Thank you very much for contacting. I will reply in two days.');
-              } else {
-                alert('Děkuji Vám za kontaktování. Do dvou dnů se Vám ozvu.');
-              }*/
-
-              // Clear the form.
-              $($this)[0].reset();
-            }).fail((data) => {
-              e.preventDefault();
-
-              app.controllers.modalMessages('failure');
-
-              /*if (window.location.href.split('com/')[1] == 'contact.html') {
-                alert('Oops! There was a problem with your submission. Please complete the form and try again.');
-              } else {
-                alert('Během odesílání zprávy došlo k problému. Prosím zkuste to znovu.');
-              }*/
-            });
-          }
+            app.controllers.modalMessages('failure');
+          });
         });
       },
       customSlider: () => {
         (() => {
           let content = document.querySelectorAll('.js-slideable')[0];
-
           let anchor = document.querySelectorAll('.js-slideable-anchor')[0];
 
           content.style.display = 'block';
@@ -155,7 +133,7 @@
 
           element.style.opacity = elementOpacity;
 
-          element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+          element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ')';
 
           elementOpacity += elementOpacity * 0.1;
         }, 15);
@@ -173,37 +151,40 @@
 
           element.style.opacity = elementOpacity;
 
-          element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ")";
+          element.style.filter = 'alpha(opacity=' + elementOpacity * 100 + ')';
 
           elementOpacity -= elementOpacity * 0.1;
         }, 15);
       },
       // Font Awesome loader controller
       fontAwesomeLoader: () => {
-        let stylesheetAwesome = document.createElement('link'),
-            mainStyleSheet = document.querySelector('.js-stylesheet-main');
+        let stylesheetAwesome = document.createElement('link');
+
         stylesheetAwesome.rel = 'stylesheet';
         stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
         stylesheetAwesome.classList.add('jsLoaded');
-        mainStyleSheet.parentNode.appendChild(stylesheetAwesome);
+
+        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.settings.mainStyleSheet.nextSibling);
       },
       // Font Open Sans loader controller
       fontOpenSansLoader: () => {
-        let stylesheetOpenSans = document.createElement('link'),
-            mainStyleSheet = document.querySelector('.js-stylesheet-main');
+        let stylesheetOpenSans = document.createElement('link');
+
         stylesheetOpenSans.rel = 'stylesheet';
         stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
         stylesheetOpenSans.classList.add('jsLoaded');
-        mainStyleSheet.parentNode.appendChild(stylesheetOpenSans);
+
+        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetOpenSans, app.settings.mainStyleSheet.nextSibling);
       },
       // Font Raleway loader controller
       fontRalewayLoader: () => {
-        let stylesheetRaleway = document.createElement('link'),
-            mainStyleSheet = document.querySelector('.js-stylesheet-main');
+        let stylesheetRaleway = document.createElement('link');
+
         stylesheetRaleway.rel = 'stylesheet';
         stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700';
         stylesheetRaleway.classList.add('jsLoaded');
-        mainStyleSheet.parentNode.appendChild(stylesheetRaleway);
+
+        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetRaleway, app.settings.mainStyleSheet.nextSibling);
       },
       // LazyImages controller
       lazyImages: () => {
@@ -240,7 +221,7 @@
           }
 
           // Remove event listeners if all images are loaded
-          if (lazyImagesArray.length == 0) {
+          if (lazyImagesArray.length === 0) {
             window.removeEventListener('DOMContentLoaded', lazyLoadImages);
 
             window.removeEventListener('load', lazyLoadImages);
@@ -262,11 +243,11 @@
       },
       // Modal Messages
       modalMessages: ($messageType) => {
-        let modalOverlay = document.querySelector('.js-modal-overlay'),
-            modalButton = modalOverlay.querySelectorAll('.js-modal-button'),
-            messageFailure = modalOverlay.querySelector('.js-modal-message-failure'),
-            messageInfo = modalOverlay.querySelector('.js-modal-message-info'),
-            messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
+        const modalOverlay = document.querySelector('.js-modal-overlay');
+        const modalButton = modalOverlay.querySelectorAll('.js-modal-button');
+        const messageFailure = modalOverlay.querySelector('.js-modal-message-failure');
+        const messageInfo = modalOverlay.querySelector('.js-modal-message-info');
+        const messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
 
         // Close modal and hide message by clicking on the button
         for (let i = 0, j = modalButton.length; i < j; i++) {
@@ -322,7 +303,7 @@
 
         for (let i = 0, j = links.length; i<j; i++) {
           // Check if the link is internal - redirects to another html file or some section via ID
-          links[i].setAttribute('data-href', (links[i].href.indexOf('.html') != -1) && links[i].href.indexOf('#') <= 0);
+          links[i].setAttribute('data-href', (links[i].href.indexOf('.html') !== -1) && links[i].href.indexOf('#') <= 0);
 
           links[i].addEventListener('click', (e) => {
             let elTarget = e.target;
@@ -344,29 +325,27 @@
 
                   history.pushState({state: 'new'}, elTarget.title, elTarget.href);
 
-                  //$('html').fadeOut(350);
+                  // $('html').fadeOut(350);
                   app.controllers.fadeOutCustom(el);
 
                   setTimeout(() => {
-                    //location.replace(elTarget.href);
+                    // location.replace(elTarget.href);
                     window.location.href = elTarget.href;
-                  },750);
+                  }, 750);
 
-                  //location.replace(elTarget.href);
+                  // location.replace(elTarget.href);
                 }
 
                 setTimeout(changePage, 100);
 
-                //changePage();
-
-                return;
+                // changePage();
               }
 
-              //window.addEventListener('popstate', changePage);
+              // window.addEventListener('popstate', changePage);
             } else {
               setTimeout(() => {
                 return true;
-              },750);
+              }, 750);
             }
           });
         }
@@ -380,7 +359,7 @@
           // Load default discovery icon
           const waypointOne = new Waypoint({
             element: document.querySelector('.wp-discovery-icon'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-discovery-icon').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
@@ -389,7 +368,7 @@
           // Load discovery text
           const waypointTwo = new Waypoint({
             element: document.querySelector('.wp-discovery-text'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-discovery-text').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
@@ -398,7 +377,7 @@
           // Load planning icon for mobile
           const waypointThree = new Waypoint({
             element: document.querySelector('.wp-planning-icon-mobile'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-planning-icon-mobile').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
@@ -407,7 +386,7 @@
           // Load planning icon for desktop
           const waypointFour = new Waypoint({
             element: document.querySelector('.wp-planning-icon-desktop'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-planning-icon-desktop').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
@@ -416,7 +395,7 @@
           // Load planning text
           const waypointFive = new Waypoint({
             element: document.querySelector('.wp-planning-text'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-planning-text').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
@@ -425,7 +404,7 @@
           // Load default design icon
           const waypointSix = new Waypoint({
             element: document.querySelector('.wp-design-icon'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-design-icon').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
@@ -434,7 +413,7 @@
           // Load design text
           const waypointSeven = new Waypoint({
             element: document.querySelector('.wp-design-text'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-design-text').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
@@ -443,7 +422,7 @@
           // Load building icon for mobile
           const waypointEight = new Waypoint({
             element: document.querySelector('.wp-building-icon-mobile'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-building-icon-mobile').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
@@ -452,7 +431,7 @@
           // Load building icon for desktop
           const waypointNine = new Waypoint({
             element: document.querySelector('.wp-building-icon-desktop'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-building-icon-desktop').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
@@ -461,7 +440,7 @@
           // Load building text
           const waypointTen = new Waypoint({
             element: document.querySelector('.wp-building-text'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-building-text').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
@@ -470,7 +449,7 @@
           // Load default evaluation icon
           const waypointEleven = new Waypoint({
             element: document.querySelector('.wp-evaluation-icon'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-evaluation-icon').classList.add('animated', 'fadeInLeft');
             },
             offset: 'bottom-in-view'
@@ -479,7 +458,7 @@
           // Load evaluation text
           const waypointTwelve = new Waypoint({
             element: document.querySelector('.wp-evaluation-text'),
-            handler: (direction) => {
+            handler: () => {
               document.querySelector('.wp-evaluation-text').classList.add('animated', 'fadeInRight');
             },
             offset: 'bottom-in-view'
@@ -509,7 +488,7 @@
             // Load Raleway font
             if (true) {
               app.controllers.fontRalewayLoader()
-            };
+            }
 
             if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
@@ -518,10 +497,10 @@
 
             // Cache html element
             let el = document.querySelector('html');
-            //el.style.display = 'none';
+            // el.style.display = 'none';
 
             setTimeout(() => {
-              //$('html').attr('id', 'loaded');
+              // $('html').attr('id', 'loaded');
               el.setAttribute('id', 'loaded');
 
               // Fade in cached html element
@@ -531,12 +510,12 @@
 
           // Detect history change (back or forward button)
           // and force the page to reload (with new url) and load new page
-          /*window.onpopstate = () => {
+          /* window.onpopstate = () => {
             location.reload();
-          }*/
+          } */
 
           // Page transitions for clicks on links
-          //app.controllers.pageTransition();
+          // app.controllers.pageTransition();
         })();
       }
 
@@ -570,11 +549,11 @@
       /**
        * Slideable content
        */
-       if (app.settings.slideableContent.length > 0) {
+      if (app.settings.slideableContent.length > 0) {
         (() => {
           app.controllers.customSlider();
         })();
-       }
+      }
 
       /**
        * Waypoints
@@ -587,7 +566,7 @@
       }
     },
     init: () => {
-      //document.querySelector('html').style.display = 'none';
+      // document.querySelector('html').style.display = 'none';
 
       if (document.querySelectorAll('.no-js').length > 0) {
         document.querySelector('.no-js').classList.remove('no-js');
@@ -601,7 +580,7 @@
         }
       }
 
-      //app.controllers = app.controllerss;
+      // app.controllers = app.controllerss;
 
       app.switches();
     }
