@@ -2,19 +2,19 @@
  * Bootstrap 4 Grid
  */
 
- .container,
- .container-fluid,
- .row {
-   &:before,
-   &:after {
-     display: table;
-     content: ' ';
-   }
+.container,
+.container-fluid,
+.row {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
 
-   &:after {
-     clear: both;
-   }
- }
+  &:after {
+    clear: both;
+  }
+}
 
 .container,
 .container-fluid {

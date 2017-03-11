@@ -2,24 +2,34 @@
  * Portfolio Page - Work
  */
 
-.page--portfolio .sec__main {
-  min-height: 0;
-  height: 110px;
+.page--portfolio {
+  .sec__main {
+    min-height: 0;
+    height: 110px;
+  }
+
+  footer {
+    padding-top: 2rem;
+  }
 }
 
-main .sec__works {
-  padding-top: 0;
-  padding-bottom: 0;
+main {
+  .sec__works {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
-.sec__works .heading--primary {
-  font-weight: 700;
-  text-align: center;
-  text-transform: inherit;
-}
+.sec__works {
+  .heading--primary {
+    font-weight: 700;
+    text-align: center;
+    text-transform: inherit;
+  }
 
-.sec__works [class*='col-'] {
-  padding: 1rem;
+  [class*='col-'] {
+    padding: 1rem;
+  }
 }
 
 .work__item {
@@ -53,16 +63,12 @@ main .sec__works {
   text-transform: uppercase;
 
   @include vertical-align(absolute);
-}
 
-.thumbnail__info h3 {
-  font-weight: 600;
-}
+  h3 {
+    font-weight: 600;
+  }
 
-.thumbnail__info h4 {
-  font-weight: 400;
-}
-
-.page--portfolio footer {
-  padding-top: 2rem;
+  h4 {
+    font-weight: 400;
+  }
 }

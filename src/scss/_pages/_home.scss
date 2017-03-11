@@ -1,24 +1,53 @@
 /**
  * Home page
  */
+.page--home {
+  main {
+    position: relative;
+  }
 
-.page--home main {
-  position: relative;
-}
+  .sec__main {
+    margin-bottom: remy(-61px);
+  }
 
-.page--home .sec__main {
-  margin-bottom: remy(-61px);
-}
+  .hero--big {
+    min-height: remy(580px);
+  }
 
-.page--home .hero--big {
-  min-height: remy(580px);
-}
+  header a,
+  .navbar-toggler {
+    &:focus,
+    &:hover {
+      color: map-get($palette-custom, red);
+    }
+  }
 
-.page--home header a,
-.page--home .navbar-toggler {
-  &:focus,
-  &:hover {
-    color: map-get($palette-custom, red);
+  .header-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+
+  footer {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .footer__media {
+    padding-bottom: 0;
+  }
+
+  footer a {
+    color: map-get($palette-custom, black);
+
+    &:focus,
+    &:hover {
+      color: map-get($palette-custom, red);
+    }
   }
 }
 
@@ -28,156 +57,54 @@
   text-align: center;
 
   @include vertical-align;
-}
 
-.home__intro h2 span,
-.home__intro h3 span,
-.home__intro h4 span {
-  padding-top: .25rem;
-  padding-right: .95rem;
-  padding-bottom: .25rem;
-  padding-left: .95rem;
-}
-
-.home__intro h1 {
-  margin-top: 0;
-  line-height: 1.1;
-  font-family: 'Devero', arial, sans-serif;
-  font-size: 4rem;
-  font-weight: 600;
-  color: map-get($palette-custom, red);
-
-  @media screen and (min-width: 370px) {
-    font-size: 6rem;
+  h2 span,
+  h3 span {
+    padding-top: .25rem;
+    padding-right: .95rem;
+    padding-bottom: .25rem;
+    padding-left: .95rem;
   }
 
-  @media screen and (min-width: 768px) {
-    font-size: 7rem;
-  }
-}
-
-.home__intro h2 {
-  margin-top: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: map-get($palette-custom, black);
-
-  @media screen and (min-width: 555px) {
-    font-size: 1.75rem;
-  }
-}
-
-.home__intro h3 {
-  margin-top: 0;
-  font-size: 1rem;
-  font-weight: 500;
-
-  @media screen and (min-width: 555px) {
-    font-size: 1.15rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 1.35rem;
-  }
-}
-
-.home__intro .link--violet {
-  color: map-get($palette-custom, black);
-
-  &:focus,
-  &:hover {
+  h1 {
+    margin-top: 0;
+    line-height: 1.1;
+    font-family: 'Devero', arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
     color: map-get($palette-custom, red);
-  }
-}
 
-.home__intro h4 {
-  margin-top: 0;
-  font-weight: 400;
-}
+    @media screen and (min-width: 370px) {
+      font-size: 6rem;
+    }
 
-.list-tech {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-
-  li {
-    float: left;
-    font-size: 1.25rem;
-  }
-
-  li:nth-of-type(n+2) {
-    margin-left: 1rem;
-  }
-
-  i {
-    @include transition(color);
-
-    &:focus,
-    &:hover {
-      color: map-get($palette-custom, red);
+    @media screen and (min-width: 768px) {
+      font-size: 7rem;
     }
   }
-}
 
-.index-canvas,
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+  h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: map-get($palette-custom, black);
 
-video {
-  @media (max-aspect-ratio: 16 / 9) {
-    width:300%;
-    left: -100%
+    @media screen and (min-width: 555px) {
+      font-size: 1.75rem;
+    }
   }
 
-  @media (min-aspect-ratio: 16 / 9) {
-    height:300%;
-    top: -100%
-  }
+  h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 500;
 
-  @supports (object-fit: cover) {
-    width:100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover
-  }
-}
+    @media screen and (min-width: 555px) {
+      font-size: 1.15rem;
+    }
 
-.page--home .header-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-}
-
-.video .page--home .header-cover {
-  z-index: -2;
-}
-
-.page--home footer {
-  width: 100%;
-  background-color: transparent;
-}
-
-.page--home .footer__media {
-  padding-bottom: 0;
-}
-
-.page--home footer a {
-  color: map-get($palette-custom, black);
-
-  &:focus,
-  &:hover {
-    color: map-get($palette-custom, red);
+    @media screen and (min-width: 768px) {
+      font-size: 1.35rem;
+    }
   }
 }
