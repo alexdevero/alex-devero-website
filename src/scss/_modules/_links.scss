@@ -3,47 +3,47 @@
  */
 
 .link--default {
-  color: $color--flat-pete-river;
+  color: palette-grabber($palette-flat, blue, pete-river);
 
   &:focus,
   &:hover {
-    color: $color--flat-belize-hole;
+    color: palette-grabber($palette-flat, blue, belize-hole);
   }
 }
 
 .link--black {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
-    color: $color--gold;
+    color: map-get($palette-custom, gold);
   }
 }
 
 .link--gold {
-  color: $color--gold;
+  color: map-get($palette-custom, gold);
 
   &:focus,
   &:hover {
-    color: $color--oil;
+    color: map-get($palette-foundation, oil);
   }
 }
 
 .link--grey {
-  color: $color--jumbo;
+  color: map-get($palette-foundation, jumbo);
 
   &:focus,
   &:hover {
-    color: $color--white;
+    color: map-get($palette-foundation, white);
   }
 }
 
 .link--red {
-  color: $color--red;
+  color: map-get($palette-custom, red);
 
   &:focus,
   &:hover {
-    color: $color--black;
+    color: map-get($palette-custom, black);
   }
 }
 
@@ -52,29 +52,29 @@
 }
 
 .link--violet {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 }
 
 .link--white {
-  color: #fff;
+  color: map-get($palette-foundation, white);
 
   &:focus,
   &:hover {
-    color: $color--aluminum;
+    color: map-get($palette-foundation, aluminum);
   }
 }
 
 .link--disabled {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
   cursor: default;
 
   &:focus,
   &:hover {
-    color: $color--jet;
+    color: map-get($palette-foundation, jet);
   }
 }

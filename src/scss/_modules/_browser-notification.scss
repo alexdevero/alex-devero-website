@@ -11,15 +11,15 @@
   width: 100%;
   color: #fff;
   text-align: center;
-  background: rgba(17,17,17,.75);
+  background: rgba(17, 17, 17, .75);
 
   a {
     font-weight: 700;
-    color: $color--red;
+    color: map-get($palette-custom, red);
 
     &:focus,
     &:hover {
-      color: $color--black;
+      color: map-get($palette-custom, black);
     }
   }
 }

@@ -8,17 +8,18 @@
 
 .btn {
   display: inline-block;
-  font-family: $font--quicksand;
+  font-family: $font-quicksand;
   font-size: 1rem;
   border-radius: $radius;
-  box-shadow: 0 2px 4px rgba(0,0,0,.05),0 3px 6px rgba(0,0,0,.15);
   cursor: pointer;
+
+  @include box-shadow(2);
 
   @include transition(all);
 
   &:focus,
   &:hover {
-    box-shadow: 0 6px 9px rgba(0,0,0,.05), 0 9px 12px rgba(0,0,0,.15);
+    @include box-shadow(2);
   }
 }
 
@@ -29,43 +30,43 @@
 
 .btn--full--black {
   color: #fff;
-  background-color: $color--jet;
+  background-color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
-    background-color: $color--tuatara;
+    background-color: map-get($palette-foundation, tuatara);
   }
 }
 
 .btn--full--red {
   color: #fff;
-  background-color: $color--black;
+  background-color: map-get($palette-custom, black);
 
   &:focus,
   &:hover {
     color: #fff;
-    background-color: $color--red;
+    background-color: map-get($palette-custom, red);
   }
 }
 
 .btn--full--white {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
   background-color: #fff;
 
   &:focus,
   &:hover {
     color: #fff;
-    background-color: palette(grey, 600);
+    background-color: palette-grabber($palette-material, grey, 600);
   }
 }
 
 .btn--full--gold {
   color: #fff;
-  background-color: $color--gold;
+  background-color: map-get($palette-custom, gold);
 
   &:focus,
   &:hover {
-    background-color: darken($color--gold, 18%);
+    background-color: darken(map-get($palette-custom, gold), 18%);
   }
 }
 
@@ -76,11 +77,11 @@
 }
 
 .btn--ghost--black {
-  color: $color--jet;
+  color: map-get($palette-foundation, jet);
 
   &:focus,
   &:hover {
-    color: $color--oil;
+    color: map-get($palette-foundation, oil);
   }
 }
 
@@ -89,28 +90,28 @@
   font-weight: 600;
   letter-spacing: remy(4px);
   text-transform: uppercase;
-  color: $color--black;
+  color: map-get($palette-custom, black);
   background: transparent;
-  border: 2px solid $color--black;
+  border: 2px solid map-get($palette-custom, black);
 
   &:focus,
   &:hover {
     color: #fff;
-    background: $color--black;
+    background: map-get($palette-custom, black);
   }
 }
 
 .btn--ghost--gold {
-  color: $color--gold;
+  color: map-get($palette-custom, gold);
 
   &:focus,
   &:hover {
-    color: darken($color--gold, 18%);
+    color: darken(map-get($palette-custom, gold), 18%);
   }
 }
 
 .btn--ghost--red {
-  color: $color--red;
+  color: map-get($palette-custom, red);
 }
 
 .btn--ghost--red-inverted {
@@ -120,12 +121,12 @@
   text-transform: uppercase;
   color: #fff;
   background: transparent;
-  border: 2px solid $color--red;
+  border: 2px solid map-get($palette-custom, red);
 
   &:focus,
   &:hover {
     color: #fff;
-    background: $color--red;
+    background: map-get($palette-custom, red);
   }
 }
 

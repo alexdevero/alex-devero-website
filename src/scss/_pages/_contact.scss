@@ -10,7 +10,7 @@
   }
 
   .about__contact {
-    @extend .vertical-align;
+    @include vertical-align;
   }
 
   h1 {
@@ -22,11 +22,12 @@
     font-size: remy(18px);
   }
 
-  footer a {
-
-    &:focus,
-    &:hover {
-      color: $color--red;
+  footer {
+    a {
+      &:focus,
+      &:hover {
+        color: map-get($palette-custom, red);
+      }
     }
   }
 }

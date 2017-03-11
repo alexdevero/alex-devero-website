@@ -7,9 +7,6 @@
 // Mixins
 @import '_tools/_mixins';
 
-// Placeholder selectors
-@import '_tools/_placeholders';
-
 // Functions
 @import '_tools/_functions';
 
@@ -29,7 +26,6 @@
 @import '_base/_fonts';
 @import '_base/_base';
 @import '_base/_typography';
-@import '_base/_et-line';
 
 // Layout
 @import '_templates/_grid';

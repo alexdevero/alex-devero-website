@@ -68,12 +68,14 @@
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: $color--red;
+    color: map-get($palette-custom, red);
   }
 
-  .row--black p,
-  .row--black .icon {
-    color: #fff;
+  .row--black {
+    p,
+    .icon {
+      color: #fff;
+    }
   }
 
   .btn {

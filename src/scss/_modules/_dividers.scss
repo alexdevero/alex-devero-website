@@ -29,11 +29,11 @@
 }
 
 .divider--gold {
-  background-color: $color--gold;
+  background-color: map-get($palette-custom, gold);
 }
 
 .divider--violet {
-  background-color: $color--red;
+  background-color: map-get($palette-custom, red);
 }
 
 .divider--left {

@@ -10,14 +10,10 @@ body {
 
 html {
   box-sizing: border-box;
-  font-size: $base--font--size;
   font-size: 100%;
   touch-action: manipulation;
-}
 
-// Hide html for fading effect
-
-html {
+  // Hide html for fading effect
   display: none;
   opacity: 0;
 }
@@ -29,9 +25,10 @@ html {
 }
 
 body {
-  font-family: $font--openSans;
+  font-family: $font-open-sans;
+  font-size: $font-size-base;
   font-weight: 400;
-  color: $color--oil;
+  color: map-get($palette-foundation, oil);
   line-height: 1.45;
 }
 

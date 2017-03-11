@@ -23,10 +23,7 @@
 
 .modal-message {
   display: none;
-  padding-top: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
+  padding: 2rem;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -34,17 +31,20 @@
   text-align: center;
   background-color: #fff;
   border-radius: $radius;
-  box-shadow: 0 6px 9px rgba(0,0,0,.05), 0 9px 12px rgba(0,0,0,.15);
+
+  @include box-shadow(2);
 
   @include vertical-align;
 
-  p:first-of-type {
-    margin-top: .5rem;
-    margin-bottom: 1rem;
-  }
+  p {
+    &:first-of-type {
+      margin-top: .5rem;
+      margin-bottom: 1rem;
+    }
 
-  p:last-of-type {
-    margin-bottom: 1.5rem;
+    &:last-of-type {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 

@@ -13,49 +13,6 @@
 }
 
 .preloader {
-  position: relative;
-  top: 50%;
-  z-index: 1001;/* anything higher than 'z-index: 1000' of .loader-section */
-  margin-top: remy(-75px);
-  margin-left: auto;
-  margin-right: auto;
-  width: 0%;
-  height: 8rem;
-  overflow: hidden;
-  animation: width 2.25s linear 1.5s;
-
-  &:before {
-    content: '';
-    position: absolute;
-    bottom: -28px;
-    z-index: 99;
-    width: 100%;
-    height: 14px;
-    background: #ba8747;
-  }
-
-  @-webkit-keyframes width {
-    0% {
-      width: 0%;
-    }
-
-    25% {
-      width: 10.3055rem;
-    }
-
-    50% {
-      width: 20.611rem;
-    }
-
-    75% {
-      width: 30.9165rem;
-    }
-
-    100% {
-      width: 41.222rem;
-    }
-  }
-
   @keyframes width {
     0% {
       width: 0%;
@@ -77,41 +34,33 @@
       width: 41.222rem;
     }
   }
-}
-.preloader-logo {
-  .cls-1 {
-    fill: #ba8747;
-    font-family: 'Devero';
-    font-size: 140px;
-    text-anchor: middle;
-    text-transform: uppercase;
-  }
 
+  position: relative;
+  top: 50%;
+  z-index: 1001;/* anything higher than 'z-index: 1000' of .loader-section */
+  margin-top: remy(-75px);
+  margin-left: auto;
+  margin-right: auto;
+  width: 0%;
+  height: 8rem;
+  overflow: hidden;
+  animation: width 2.25s linear 1.5s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    z-index: 99;
+    width: 100%;
+    height: 14px;
+    background: #ba8747;
+  }
+}
+
+.preloader-logo {
   animation: show 6.45s linear;
 
   @include transition(opacity);
-
-  @-webkit-keyframes show {
-    0% {
-      opacity: 0;
-    }
-
-    25% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    75% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
 
   @keyframes show {
     0% {
@@ -134,6 +83,14 @@
       opacity: 1;
     }
   }
+
+  .cls-1 {
+    fill: #ba8747;
+    font-family: 'Devero';
+    font-size: 140px;
+    text-anchor: middle;
+    text-transform: uppercase;
+  }
 }
 
 .preloader__section {
@@ -143,42 +100,46 @@
   width: 50%;
   height: 100%;
   background: #010101;
-  transition: all .7s .3s cubic-bezier(.645, .045, .355, 1.000);
+  transition: all .7s .3s cubic-bezier(.645, .045, .355, 1);
   transform: translateX(0);
 }
 
 .preloader__left {
   left: 0;
 }
+
 .preloader__right {
   right: 0;
 }
 
 /* Loaded */
+.loaded {
+  .preloader-logo {
+    opacity: 0;
+  }
 
-.loaded .preloader-logo {
-  opacity: 0;
+  .preloader__left {
+    transform: translateX(-100%);
+  }
+
+  .preloader__right {
+    transform: translateX(100%);
+  }
+
+  .preloader {
+    opacity: 0;
+    transition: all .3s ease-out;
+  }
+
+  .preloader-wrapper {
+    visibility: hidden;
+    transition: all .3s 1s ease-out;
+    transform: translateY(-100%);
+  }
 }
 
-.loaded .preloader__left {
-  transform: translateX(-100%);
-}
-
-.loaded .preloader__right {
-  transform: translateX(100%);
-}
-
-.loaded .preloader {
-  opacity: 0;
-  transition: all .3s ease-out;
-}
-
-.loaded .preloader-wrapper {
-  visibility: hidden;
-  transition: all .3s 1s ease-out;
-  transform: translateY(-100%);
-}
-
-.no-js .preloader-wrapper {
-  display: none;
+.no-js {
+  .preloader-wrapper {
+    display: none;
+  }
 }

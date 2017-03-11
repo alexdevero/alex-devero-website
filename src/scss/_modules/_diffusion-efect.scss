@@ -32,70 +32,71 @@
   }
 
   span {
+    @keyframes diffuseShadow {
+      0%,
+      10% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        transform: translate3d(15px, 0, 0);
+      }
+
+      50% {
+        text-shadow: 0 15px 15px rgba(0, 0, 0, .1);
+      }
+
+      70%,
+      100% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, .1);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
     position: relative;
     display: inline-block;
     animation: diffuseShadow 2.35s infinite ease-in 1s;
-
     will-change: transform;
-  }
-}
 
-.text span:nth-of-type(1) {
-  animation-delay: .0s;
-}
+    &:nth-of-type(1) {
+      animation-delay: 0s;
+    }
 
-.text span:nth-of-type(2) {
-  animation-delay: .200s;
-}
+    &:nth-of-type(2) {
+      animation-delay: .2s;
+    }
 
-.text span:nth-of-type(3) {
-  animation-delay: .400s;
-}
+    &:nth-of-type(3) {
+      animation-delay: .4s;
+    }
 
-.text span:nth-of-type(4) {
-  animation-delay: .600s;
-}
+    &:nth-of-type(4) {
+      animation-delay: .6s;
+    }
 
-.text span:nth-of-type(5) {
-  animation-delay: .800s;
-}
+    &:nth-of-type(5) {
+      animation-delay: .8s;
+    }
 
-.text span:nth-of-type(6) {
-  animation-delay: 1s;
-}
+    &:nth-of-type(6) {
+      animation-delay: 1s;
+    }
 
-.text span:nth-of-type(7) {
-  animation-delay: 1.200s;
-}
+    &:nth-of-type(7) {
+      animation-delay: 1.2s;
+    }
 
-.text span:nth-of-type(8) {
-  animation-delay: 1.400s;
-}
+    &:nth-of-type(8) {
+      animation-delay: 1.4s;
+    }
 
-.text span:nth-of-type(9) {
-  animation-delay: 1.600s;
-}
+    &:nth-of-type(9) {
+      animation-delay: 1.6s;
+    }
 
-.text span:nth-of-type(10) {
-  animation-delay: 1.800s;
-}
+    &:nth-of-type(10) {
+      animation-delay: 1.8s;
+    }
 
-.text span:nth-of-type(11) {
-  animation-delay: 2s;
-}
-
-@keyframes diffuseShadow {
-  0%,
-  10% {
-    text-shadow: 0 0 0 rgba(0,0,0,0);
-    transform: translate3d(15px,0,0);
-  }
-  50% {
-    text-shadow: 0 15px 15px rgba(0,0,0,.1);
-  }
-  70%,
-  100% {
-    text-shadow: 0 0 0 rgba(0,0,0,.1);
-    transform: translate3d(0,0,0);
+    &:nth-of-type(11) {
+      animation-delay: 2s;
+    }
   }
 }
