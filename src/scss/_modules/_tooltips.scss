@@ -26,8 +26,12 @@
     @include transition(all);
   }
 
-  &:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+  @at-root .tooltip-container {
+    &:hover {
+      .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 }

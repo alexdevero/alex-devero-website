@@ -35,19 +35,19 @@
   footer {
     width: 100%;
     background-color: transparent;
+
+    a {
+      color: map-get($palette-custom, black);
+
+      &:focus,
+      &:hover {
+        color: map-get($palette-custom, red);
+      }
+    }
   }
 
   .footer__media {
     padding-bottom: 0;
-  }
-
-  footer a {
-    color: map-get($palette-custom, black);
-
-    &:focus,
-    &:hover {
-      color: map-get($palette-custom, red);
-    }
   }
 }
 
@@ -58,12 +58,14 @@
 
   @include vertical-align;
 
-  h2 span,
-  h3 span {
-    padding-top: .25rem;
-    padding-right: .95rem;
-    padding-bottom: .25rem;
-    padding-left: .95rem;
+  h2,
+  h3 {
+    span {
+      padding-top: .25rem;
+      padding-right: .95rem;
+      padding-bottom: .25rem;
+      padding-left: .95rem;
+    }
   }
 
   h1 {

@@ -15,8 +15,8 @@
   width: 10px;
   height: 50px;
   background: map-get($palette-foundation, jet);
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background: map-get($palette-foundation, oil);
+  &:hover {
+    background: map-get($palette-foundation, charcoal);
+  }
 }

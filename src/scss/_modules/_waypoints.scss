@@ -4,6 +4,10 @@
 
 .wp {
   visibility: hidden;
+
+  &.animated {
+    visibility: visible;
+  }
 }
 
 .wp-2 {
@@ -22,8 +26,4 @@
 
 .wp-8 {
   animation-delay: .2s;
-}
-
-.wp.animated {
-  visibility: visible;
 }

@@ -4,12 +4,12 @@
 
 .icon-home {
   cursor: pointer;
-}
 
-.icon-home i {
-  &:focus,
-  &:hover {
-    color: darken(#fff, 11%);
+  i {
+    &:focus,
+    &:hover {
+      color: darken(#fff, 11%);
+    }
   }
 }
 
@@ -24,7 +24,7 @@
   text-align: left;
   text-indent: -9999px;
   vertical-align: middle;
-  box-shadow: inset 0 0 0 32px,0 -6px,0 6px;
+  box-shadow: inset 0 0 0 32px, 0 -6px, 0 6px;
 
   direction: ltr;
 

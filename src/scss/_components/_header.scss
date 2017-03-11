@@ -9,42 +9,41 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
   width: 100%;
-}
 
-header a {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: map-get($palette-custom, black);
-
-  &:focus,
-  &:hover {
-    color: map-get($palette-custom, red);
-  }
-
-  &.active {
-    color: map-get($palette-custom, red);
+  a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: map-get($palette-custom, black);
 
     &:focus,
     &:hover {
       color: map-get($palette-custom, red);
     }
+
+    &.active {
+      color: map-get($palette-custom, red);
+
+      &:focus,
+      &:hover {
+        color: map-get($palette-custom, red);
+      }
+    }
   }
-}
 
-header .logo {
-  float: left;
-  margin: 0;
-  font-family: 'Devero', arial, sans-serif;
-  font-size: 1.7rem;
-  font-weight: 200;
-  color: #fff;
-  line-height: 1;
-  line-height: 1.35;
-}
+  .logo {
+    float: left;
+    margin: 0;
+    font-family: 'Devero', arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1.35;
 
-header .logo a {
-  &:focus,
-  &:hover {
-    color: map-get($palette-custom, black);
+    a {
+      &:focus,
+      &:hover {
+        color: map-get($palette-custom, black);
+      }
+    }
   }
 }

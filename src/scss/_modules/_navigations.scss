@@ -68,30 +68,38 @@
     }
   }
 
-  .checkbox--nav:checked + .nav__container > & {
-    opacity: 1;
-    visibility: visible;
+  .checkbox--nav {
+    &:checked + .nav__container > & {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   @media screen and (max-width: 863px) {
-    & li:nth-child(n+2) {
-      margin-top: .35rem;
+    & li {
+      &:nth-child(n+2) {
+        margin-top: .35rem;
+      }
     }
 
-    & a {
-      font-size: 1.65rem;
-      color: #fff;
+    & {
+      a {
+        font-size: 1.65rem;
+        color: #fff;
 
-      &:focus,
-      &:hover {
-        color: map-get($palette-custom, red);
+        &:focus,
+        &:hover {
+          color: map-get($palette-custom, red);
+        }
       }
     }
   }
 
   @media screen and (min-width: 864px) {
-    & li:nth-of-type(n+2) {
-      margin-left: 1rem;
+    & li {
+      &:nth-of-type(n+2) {
+        margin-left: 1rem;
+      }
     }
   }
 }
@@ -113,23 +121,21 @@
 }
 
 .nav--footer {
-  display: inline-block;/* No flexbox fallback */
   display: flex;
   flex-direction: row;
   justify-content: center;
 
   li {
     float: left;
-  }
 
-  li:nth-of-type(n+2) {
-    margin-left: 1rem;
+    &:nth-of-type(n+2) {
+      margin-left: 1rem;
+    }
   }
 }
 
 /* Experimental menu */
 .main-nav-label {
-  display: block;
   display: inline;
   float: right;
   padding: .15rem 7px;
@@ -144,6 +150,8 @@
   cursor: pointer;
 }
 
-[type=checkbox]:checked + ul {
-  transform: translateX(0);
+[type=checkbox] {
+  &:checked + ul {
+    transform: translateX(0);
+  }
 }
