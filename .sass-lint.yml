@@ -1,16 +1,23 @@
+# Docs: https://github.com/sasstools/sass-lint/
+# legend:
+# 0 turns rule off; 1 sets it to a warning (should not be committed in); 2 sets it to an error (should not be written)
+
 options:
   formatter: stylish
 files:
   include: '**/*.s+(a|c)ss'
+  ignore:
+    - '**/_normalize.s+(a|c)ss'
+    - '**/_print.s+(a|c)ss'
 
 rules:
   # Extends
   extends-before-mixins: 1
-  extends-before-declarations: 1
+  extends-before-declarations: 0
   placeholder-in-extend: 1
 
   # Mixins
-  mixins-before-declarations: 1
+  mixins-before-declarations: 0
 
   # Line Spacing
   one-declaration-per-line: 1
@@ -20,7 +27,7 @@ rules:
   # Disallows
   no-attribute-selectors: 0
   no-color-hex: 0
-  no-color-keywords: 1
+  no-color-keywords: 0
   no-color-literals: 0
   no-combinators: 0
   no-css-comments: 0
@@ -29,7 +36,7 @@ rules:
   no-duplicate-properties: 1
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 1
+  no-ids: 2
   no-important: 1
   no-invalid-hex: 1
   no-mergeable-selectors: 1
@@ -52,19 +59,29 @@ rules:
   force-pseudo-nesting: 1
 
   # Name Formats
-  class-name-format: 1
+  class-name-format:
+    - 1
+    -
+      convention: hyphenatedbem
   function-name-format: 1
   id-name-format: 0
   mixin-name-format: 1
   placeholder-name-format: 1
-  variable-name-format: 1
+  variable-name-format:
+    - 1
+    -
+      convention: hyphenatedbem
 
   # Style Guide
   attribute-quotes: 0
   bem-depth: 1
   border-zero: 1
   brace-style: 1
-  clean-import-paths: 1
+  clean-import-paths:
+    - 1
+    -
+      filename-extension: false
+      leading-underscore: true
   empty-args: 1
   hex-length: 1
   hex-notation: 1
@@ -74,10 +91,10 @@ rules:
   max-file-line-count: 0
   nesting-depth: 1
   property-sort-order: 0
-  pseudo-element: 1
+  pseudo-element: 0
   quotes: 1
   shorthand-values: 1
-  url-quotes: 1
+  url-quotes: 0
   variable-for-property: 1
   zero-unit: 1
 
