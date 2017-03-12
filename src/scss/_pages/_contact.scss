@@ -4,13 +4,27 @@
 
 .page--contact {
   .sec__main {
-    margin-bottom: remy(-61px);
-    min-height: remy(980px);
-    height: 100%;
+    position: relative;
+    min-height: remy(800px);
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: remy(-61px);
+      height: 100%;
+    }
   }
 
   .about__contact {
-    @include vertical-align;
+    @media screen and (max-width: 767px) {
+      margin-top: remy(32px);
+      margin-bottom: remy(32px);
+    }
+
+    @media screen and (min-width: 768px) and (min-height: 745px) {
+      right: 0;
+      left: 0;
+
+      @include vertical-align(absolute);
+    }
   }
 
   h1 {
