@@ -15,11 +15,14 @@
 
   .about__contact {
     @media screen and (max-width: 767px) {
-      margin-top: remy(32px);
       margin-bottom: remy(32px);
     }
 
-    @media screen and (min-width: 768px) and (min-height: 745px) {
+    @media screen and (max-height: 744px) {
+      margin-top: remy(32px);
+    }
+
+    @media screen and (min-width: 768px) and (min-height: 800px) {
       right: 0;
       left: 0;
 
@@ -37,11 +40,8 @@
   }
 
   footer {
-    a {
-      &:focus,
-      &:hover {
-        color: map-get($palette-custom, red);
-      }
+    @media screen and (max-height: 744px) {
+      margin-top: remy(32px);
     }
   }
 }
