@@ -4,13 +4,30 @@
 
 .page--contact {
   .sec__main {
-    margin-bottom: remy(-61px);
-    min-height: remy(980px);
-    height: 100%;
+    position: relative;
+    min-height: remy(800px);
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: remy(-61px);
+      height: 100%;
+    }
   }
 
   .about__contact {
-    @include vertical-align;
+    @media screen and (max-width: 767px) {
+      margin-bottom: remy(32px);
+    }
+
+    @media screen and (max-height: 744px) {
+      margin-top: remy(32px);
+    }
+
+    @media screen and (min-width: 768px) and (min-height: 800px) {
+      right: 0;
+      left: 0;
+
+      @include vertical-align(absolute);
+    }
   }
 
   h1 {
@@ -23,11 +40,8 @@
   }
 
   footer {
-    a {
-      &:focus,
-      &:hover {
-        color: map-get($palette-custom, red);
-      }
+    @media screen and (max-height: 744px) {
+      margin-top: remy(32px);
     }
   }
 }

@@ -30,28 +30,4 @@
     margin-top: 1.5rem;
     margin-bottom: 3rem;
   }
-
-  .sec__faq {
-    padding-bottom: 1rem;
-
-    .heading--primary {
-      font-weight: 700;
-      text-transform: inherit;
-    }
-
-    a {
-      &:focus,
-      &:hover {
-        color: map-get($palette-custom, black);
-      }
-    }
-
-    h2 {
-      font-weight: 600;
-    }
-
-    p {
-      font-size: remy(18px);
-    }
-  }
 }

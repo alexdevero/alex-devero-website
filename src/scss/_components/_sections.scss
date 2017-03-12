@@ -15,3 +15,7 @@ section {
 .sec__main {
   min-height: remy(100px);
 }
+
+body:not(.page--home) .sec__main + section {
+  margin-top: 32px;
+}
