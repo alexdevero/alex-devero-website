@@ -19,11 +19,26 @@ gulp.task('copy:fonts', () => {
 
 // Copy JS plugins files
 gulp.task('copy:jsplugins', () => {
-  return gulp.src([
+  const rename = require('gulp-rename');
+  const uglify = require('gulp-uglify');
+
+  gulp.src([
       'src/js/plugins/*',
       '!src/js/plugins/*.rar',
       'node_modules/waypoints/lib/noframework.waypoints.min.js'
     ])
+    .pipe(changed('dist/js/plugins/'))
+    .pipe(gulp.dest('dist/js/plugins/'));
+
+  gulp.src([
+      'node_modules/particles.js/particles.js'
+    ])
+    .pipe(uglify().on('error', (e) => {
+      console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(changed('dist/js/plugins/'))
     .pipe(gulp.dest('dist/js/plugins/'));
 });
