@@ -36,8 +36,8 @@
     "test": "gulp test"
   },
   "devDependencies": {
-    "babel-preset-latest": "^6.22.0",
-    "babel-register": "^6.23.0",
+    "babel-preset-latest": "^6.24.0",
+    "babel-register": "^6.24.0",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
