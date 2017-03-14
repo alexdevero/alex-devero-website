@@ -167,16 +167,6 @@
 
         app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.settings.mainStyleSheet.nextSibling);
       },
-      // Font Open Sans loader controller
-      fontOpenSansLoader: () => {
-        let stylesheetOpenSans = document.createElement('link');
-
-        stylesheetOpenSans.rel = 'stylesheet';
-        stylesheetOpenSans.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
-        stylesheetOpenSans.classList.add('jsLoaded');
-
-        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetOpenSans, app.settings.mainStyleSheet.nextSibling);
-      },
       // Font Raleway loader controller
       fontRalewayLoader: () => {
         let stylesheetRaleway = document.createElement('link');
