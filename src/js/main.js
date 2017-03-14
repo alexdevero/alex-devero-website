@@ -12,6 +12,7 @@
       lazyImages: document.querySelectorAll('.lazy'),
       mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       modalMessage: document.querySelectorAll('.js-modal-overlay'),
+      particles: document.querySelectorAll('.js-particles'),
       portfolioItem: document.querySelectorAll('.work__item'),
       slideableContent: document.querySelectorAll('.js-slideable'),
       waypoint: document.querySelectorAll('.wp')
@@ -350,6 +351,43 @@
           });
         }
       },
+      particles: () => {
+        // Docs:https://github.com/marcbruederlin/particles.js
+
+        Particles.init({
+          selector: '.js-particles',
+          maxParticles: 88,
+          sizeVariations: 4,
+          speed: 0.85,
+          color: '#212121',
+          opacity: .5,
+          minDistance: 120,
+          connectParticles: true,
+          responsive: [
+            {
+              breakpoint: 992,
+              options: {
+                maxParticles: 88,
+                minDistance: 100
+              }
+            },
+            {
+              breakpoint: 768,
+              options: {
+                maxParticles: 66,
+                minDistance: 90
+              }
+            },
+            {
+              breakpoint: 480,
+              options: {
+                maxParticles: 44,
+                minDistance: 80
+              }
+            }
+          ]
+        });
+      },
       // Waypoints controller
       waypoints: () => {
         // setTimeout function is used to let the dom be loaded.
@@ -547,6 +585,15 @@
       }
 
       /**
+       * Particles
+       */
+      if (app.settings.particles.length > 0) {
+        (() => {
+          app.controllers.particles();
+        })();
+      }
+
+      /**
        * Slideable content
        */
       if (app.settings.slideableContent.length > 0) {
@@ -579,8 +626,6 @@
           imagesArray[i].classList.remove('no-js-img');
         }
       }
-
-      // app.controllers = app.controllerss;
 
       app.switches();
     }
