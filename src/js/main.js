@@ -508,11 +508,6 @@
               app.controllers.fontAwesomeLoader();
             }
 
-            // Load Open Sans font
-            if (true) {
-              app.controllers.fontOpenSansLoader();
-            }
-
             // Load Raleway font
             if (true) {
               app.controllers.fontRalewayLoader()
