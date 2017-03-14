@@ -19,9 +19,10 @@ gulp.task('copy:fonts', () => {
 
 // Copy JS plugins files
 gulp.task('copy:jsplugins', () => {
-  return gulp.src([
+  gulp.src([
       'src/js/plugins/*',
       '!src/js/plugins/*.rar',
+      'node_modules/particlesjs/dist/particles.min.js',
       'node_modules/waypoints/lib/noframework.waypoints.min.js'
     ])
     .pipe(changed('dist/js/plugins/'))
