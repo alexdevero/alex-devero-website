@@ -7,41 +7,7 @@
   visibility: hidden;
 }
 
-/* Content Management Classes */
-.block--center {
-  float: none;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 /* Typography Classes */
-.heading--primary {
-  margin-top: 0;
-  font-family: $font-raleway;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-.heading--overlay {
-  margin-bottom: 0;
-  font-size: 8rem;
-  color: map-get($palette-custom, black);
-
-  @media screen and (max-width: 555px) {
-    font-size: 4rem;
-  }
-}
-
-.subheading--overlay {
-  font-family: $font-raleway;
-  font-size: 1.5rem;
-  line-height: 1.618;
-
-  @media screen and (max-width: 555px) {
-    font-size: 1.15rem;
-  }
-}
-
 .text--center {
   text-align: center;
 }
@@ -82,15 +48,4 @@
 
 .row--black {
   background-color: map-get($palette-custom, black);
-}
-
-.sr-only {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  padding: 0;
-  margin: -1px;
-  width: 1px;
-  height: 1px;
-  border: 0;
 }

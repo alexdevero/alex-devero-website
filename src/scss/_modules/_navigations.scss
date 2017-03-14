@@ -34,6 +34,11 @@
     transform: translateX(328px);
   }
 
+  a,
+  .navbar-toggler {
+    font-family: $font-raleway;
+  }
+
   a {
     font-size: 1.5rem;
     color: #fff;
