@@ -1,7 +1,8 @@
 # Todo:
 ## General:
 - [ ] - add CV page
-- [ ] - remove process page
+- [ ] - add pages for case studies
+- [ ] - consider using JavaScript modules
 
 ## About page:
 - [ ] - Mention Codementor, YFS Magazine and A List Apart
