@@ -15,4 +15,3 @@
 - add spinner that will be shown while sending contact form
 - add preloader
 - consider adding overlay for sliding menu
-- consider using W3C html validator [gulp plugin](https://www.npmjs.com/package/gulp-html-validator) or turn on html-lint...
