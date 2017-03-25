@@ -2670,9 +2670,9 @@ gulp-htmlmin@^3.0.0:
     readable-stream "^2.0.2"
     tryit "^1.0.1"
 
-gulp-imagemin@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/gulp-imagemin/-/gulp-imagemin-3.1.1.tgz#05029523228114a0dfb19e72b114c5e25c455f20"
+gulp-imagemin@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gulp-imagemin/-/gulp-imagemin-3.2.0.tgz#26887ad65d2c51bb317c4b02b5604f4a78bf74a8"
   dependencies:
     chalk "^1.0.0"
     gulp-util "^3.0.0"
