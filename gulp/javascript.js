@@ -1,6 +1,7 @@
 'use strict';
 
 import gulp from 'gulp';
+import plumber from 'gulp-plumber';
 
 // Concatenate JavaScript files
 gulp.task('js:concat', function() {
@@ -20,6 +21,7 @@ gulp.task('js', () => {
   const uglify = require('gulp-uglify');
 
   return gulp.src('src/js/main.js')
+    .pipe(plumber())
     .pipe(changed('dist/js'))
     .pipe(babel({
       presets: ['latest']
@@ -38,6 +40,7 @@ gulp.task('js:test', () => {
   const eslint = require('gulp-eslint');
 
   return gulp.src('./src/js/main.js')
+    .pipe(plumber())
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())

@@ -6,9 +6,11 @@ import gulp from 'gulp';
 gulp.task('images', () => {
   const changed = require('gulp-changed');
   const imagemin = require('gulp-imagemin');
+  const plumber = require('gulp-plumber');
   const pngquant = require('imagemin-pngquant');
 
   return gulp.src(['src/images/**/*', '!src/images/**/*.rar'])
+    .pipe(plumber())
     .pipe(changed('dist/images'))
     .pipe(imagemin({
       progressive: true,

@@ -1,6 +1,7 @@
 'use strict';
 
 import gulp from 'gulp';
+import plumber from 'gulp-plumber';
 
 // Minify HTML files
 gulp.task('html', () => {
@@ -10,6 +11,7 @@ gulp.task('html', () => {
   const htmlmin = require('gulp-htmlmin');
 
   return gulp.src('src/*.html')
+    .pipe(plumber())
     .pipe(changed('dist'))
     //.pipe(html5Lint())
     .pipe(htmlmin({
@@ -23,8 +25,9 @@ gulp.task('html', () => {
 // Hint HTML files
 gulp.task('html:test', () => {
   const htmlhint = require('gulp-htmlhint');
-  
+
   return gulp.src('src/*.html')
+    .pipe(plumber())
     .pipe(htmlhint())
     .pipe(htmlhint.reporter())
     .pipe(htmlhint.failReporter({

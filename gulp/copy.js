@@ -2,10 +2,12 @@
 
 import gulp from 'gulp';
 import changed from 'gulp-changed';
+import plumber from 'gulp-plumber';
 
 // Copy CSS files
 gulp.task('copy:css', () => {
   return gulp.src('src/css/*')
+    .pipe(plumber())
     .pipe(changed('dist/css'))
     .pipe(gulp.dest('dist/css'));
 });
@@ -13,6 +15,7 @@ gulp.task('copy:css', () => {
 // Copy font files
 gulp.task('copy:fonts', () => {
   return gulp.src(['src/fonts/*', '!src/fonts/*.rar'])
+    .pipe(plumber())
     .pipe(changed('dist/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
@@ -25,8 +28,9 @@ gulp.task('copy:jsplugins', () => {
       'node_modules/particlesjs/dist/particles.min.js',
       'node_modules/waypoints/lib/noframework.waypoints.min.js'
     ])
-    .pipe(changed('dist/js/plugins/'))
-    .pipe(gulp.dest('dist/js/plugins/'));
+      .pipe(plumber())
+      .pipe(changed('dist/js/plugins/'))
+      .pipe(gulp.dest('dist/js/plugins/'));
 });
 
 // Copy JS vendor files
@@ -37,8 +41,9 @@ gulp.task('copy:jsvendor', () => {
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/jquery/dist/jquery.min.map'
     ])
-    .pipe(changed('dist/js/vendor/'))
-    .pipe(gulp.dest('dist/js/vendor/'));
+      .pipe(plumber())
+      .pipe(changed('dist/js/vendor/'))
+      .pipe(gulp.dest('dist/js/vendor/'));
 });
 
 // Copy other files
@@ -50,6 +55,7 @@ gulp.task('copy:other', () => {
     'src/robots.txt',
     'src/contact.php'
   ])
+    .pipe(plumber())
     .pipe(changed('dist'))
     .pipe(gulp.dest('dist'));
 });

@@ -7,6 +7,7 @@ const connect = require('gulp-connect');
 const csslint = require('gulp-csslint');
 const cssnano = require('cssnano');
 const cssnext = require('postcss-cssnext');
+const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
@@ -24,6 +25,7 @@ gulp.task('sass', () => {
   ];
 
   return gulp.src('src/scss/main.scss')
+    .pipe(plumber())
     //.pipe(changed('dist/css', {extension: '.css'}))
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -45,8 +47,9 @@ gulp.task('sass', () => {
 
 gulp.task('sass:test', () => {
   const sassLint = require('gulp-sass-lint');
-  
+
   return gulp.src('./src/scss/**/*.scss')
+    .pipe(plumber())
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
