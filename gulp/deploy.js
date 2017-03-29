@@ -3,9 +3,10 @@
 import gulp from 'gulp';
 
 // Deploy files to FTP
-gulp.task('deploy', () => {
-  const credentials = require('./alexdevero-ftp-credentials.json');
+gulp.task('ftp', () => {
+  const credentials = require('../alexdevero-ftp-credentials.json');
   const destFolder = 'www/public';
+  const gulpUtil = require('gulp-util');
   const filesGlob = ['./dist/**/*.*'];
   const vinylFtp = require('vinyl-ftp');
 

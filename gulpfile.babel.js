@@ -15,8 +15,11 @@ gulp.task('copy:all', [
   'copy:other'
 ]);
 
-// // Builds the website
+// Builds the website
 gulp.task('build', sequence(['html', 'copy:all'], ['images', 'sass', 'js']));
+
+// Deploy web to ftp
+gulp.task('deploy', sequence('build', 'ftp'));
 
 // Setup development environment
 gulp.task('dev', sequence('build', 'watch'));
