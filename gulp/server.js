@@ -2,13 +2,16 @@
 
 import gulp from 'gulp';
 
-// Connect to localhost
-gulp.task('server', () => {
-  const connect = require('gulp-connect');
-  const livereload = require('gulp-livereload');
+gulp.task('browser-sync', () => {
+  const browserSync = require('browser-sync');
 
-  connect.server({
-    root: 'dist',
-    livereload: true
-  });
+  browserSync.init({
+    injectChanges: true,// Inject CSS without reloading the page
+    server: './dist/',// Directory for starting the server
+    port: '8080',// Default port for server
+    open: false,// Don't open new window after starting server
+    ui: {
+      port: '8081'// Default port for server of Browser-sync UI
+    }
+  })
 });
