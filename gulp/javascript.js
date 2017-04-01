@@ -15,8 +15,8 @@ gulp.task('js:concat', function() {
 // Minify JavaScript files
 gulp.task('js', () => {
   const babel = require('gulp-babel');
+  const browserSync = require('browser-sync');
   const changed = require('gulp-changed');
-  const connect = require('gulp-connect');
   const rename = require('gulp-rename');
   const uglify = require('gulp-uglify');
 
@@ -33,7 +33,9 @@ gulp.task('js', () => {
       suffix: '.min'
     }))
     .pipe(gulp.dest('dist/js'))
-    .pipe(connect.reload());
+    .pipe(browserSync.stream({
+      match: '**/*.js'
+    }));
 });
 
 gulp.task('js:test', () => {
