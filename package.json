@@ -1,6 +1,6 @@
 {
   "name": "alex-devero-portfolio",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Personal portfolio of Alex Devero",
   "engines": {
     "node": "7.x",
@@ -38,17 +38,16 @@
   "devDependencies": {
     "babel-preset-latest": "^6.24.0",
     "babel-register": "^6.24.0",
+    "browser-sync": "^2.18.8",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-changed": "^2.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.0.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-csslint": "^1.0.0",
     "gulp-eslint": "^3.0.1",
-    "gulp-html5-lint": "^1.1.0",
     "gulp-htmlhint": "^0.3.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.2.0",

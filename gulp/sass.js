@@ -2,8 +2,8 @@
 
 import gulp from 'gulp';
 
+const browserSync = require('browser-sync');
 const csscomb = require('gulp-csscomb');
-const connect = require('gulp-connect');
 const csslint = require('gulp-csslint');
 const cssnano = require('cssnano');
 const cssnext = require('postcss-cssnext');
@@ -26,7 +26,6 @@ gulp.task('sass', () => {
 
   return gulp.src('src/scss/main.scss')
     .pipe(plumber())
-    //.pipe(changed('dist/css', {extension: '.css'}))
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
@@ -42,7 +41,9 @@ gulp.task('sass', () => {
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'))
-    .pipe(connect.reload());
+    .pipe(browserSync.stream({
+      match: '**/*.css'
+    }));
 });
 
 gulp.task('sass:test', () => {
