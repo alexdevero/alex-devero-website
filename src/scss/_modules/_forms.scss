@@ -2,7 +2,7 @@
  * Forms
  */
 
-input:not([type=submit]):not([name=nav-check]),
+input:not([type=submit]):not([name=nav-check]), // sass-lint:disable-line force-pseudo-nesting
 select,
 textarea {
   display: block;
@@ -18,8 +18,10 @@ textarea {
   border-bottom: 1px solid #bbb;
   border-left: 0;
   border-radius: 0;
+  // sass-lint:disable no-vendor-prefixes, no-important
   -webkit-appearance: none !important;
   -webkit-border-radius: 0 !important;
+  // sass-lint:enable no-vendor-prefixes, no-important
 
   @include transition(all);
 
