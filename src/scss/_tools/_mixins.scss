@@ -3,6 +3,7 @@
 //
 
 // Mixins for retina
+// sass-lint:disable no-vendor-prefixes
 @mixin retina {
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),
@@ -12,6 +13,7 @@
       @content;
   }
 }
+// sass-lint:enable no-vendor-prefixes
 
 // Mixin for transition
 @mixin transition($prop: all, $duration: $duration, $timing: cubic-bezier(.4, 0, 1, 1)) {

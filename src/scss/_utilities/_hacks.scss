@@ -2,6 +2,7 @@
  * Scrollbar Hacks
  */
 
+// sass-lint:disable no-vendor-prefixes
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track {
   width: 10px;
@@ -20,3 +21,4 @@
     background: map-get($palette-foundation, charcoal);
   }
 }
+// sass-lint:enable no-vendor-prefixes

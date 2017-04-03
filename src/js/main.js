@@ -6,7 +6,7 @@
 
 (() => {
   const app = {
-    settings: {
+    anchors: {
       contactForm: document.querySelectorAll('#contactForm'),
       indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.querySelectorAll('.lazy'),
@@ -26,7 +26,7 @@
         stylesheetAnimateCSS.href = 'css/animate.css';
         stylesheetAnimateCSS.classList.add('jsLoaded');
 
-        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, app.settings.mainStyleSheet.nextSibling);
+        app.anchors.mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, app.anchors.mainStyleSheet.nextSibling);
       },
       // Contact controller
       contact: () => {
@@ -165,7 +165,7 @@
         stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
         stylesheetAwesome.classList.add('jsLoaded');
 
-        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.settings.mainStyleSheet.nextSibling);
+        app.anchors.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.anchors.mainStyleSheet.nextSibling);
       },
       // Font Raleway loader controller
       fontRalewayLoader: () => {
@@ -175,7 +175,7 @@
         stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700';
         stylesheetRaleway.classList.add('jsLoaded');
 
-        app.settings.mainStyleSheet.parentNode.insertBefore(stylesheetRaleway, app.settings.mainStyleSheet.nextSibling);
+        app.anchors.mainStyleSheet.parentNode.insertBefore(stylesheetRaleway, app.anchors.mainStyleSheet.nextSibling);
       },
       // LazyImages controller
       lazyImages: () => {
@@ -345,14 +345,11 @@
         // Docs:https://github.com/marcbruederlin/particles.js
 
         Particles.init({
-          selector: '.js-particles',
-          maxParticles: 88,
-          sizeVariations: 4,
-          speed: 0.85,
           color: '#212121',
-          opacity: .5,
-          minDistance: 120,
           connectParticles: true,
+          maxParticles: 88,
+          minDistance: 120,
+          opacity: .5,
           responsive: [
             {
               breakpoint: 992,
@@ -375,7 +372,10 @@
                 minDistance: 80
               }
             }
-          ]
+          ],
+          selector: '.js-particles',
+          sizeVariations: 4,
+          speed: 0.85
         });
       },
       // Waypoints controller
@@ -385,7 +385,7 @@
         // and waypoint will fire all triggers immediatelly.
         setTimeout(() => {
           // Load default discovery icon
-          const waypointOne = new Waypoint({
+          const waypointOne = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-discovery-icon'),
             handler: () => {
               document.querySelector('.wp-discovery-icon').classList.add('animated', 'fadeInLeft');
@@ -394,7 +394,7 @@
           });
 
           // Load discovery text
-          const waypointTwo = new Waypoint({
+          const waypointTwo = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-discovery-text'),
             handler: () => {
               document.querySelector('.wp-discovery-text').classList.add('animated', 'fadeInRight');
@@ -403,7 +403,7 @@
           });
 
           // Load planning icon for mobile
-          const waypointThree = new Waypoint({
+          const waypointThree = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-planning-icon-mobile'),
             handler: () => {
               document.querySelector('.wp-planning-icon-mobile').classList.add('animated', 'fadeInRight');
@@ -412,7 +412,7 @@
           });
 
           // Load planning icon for desktop
-          const waypointFour = new Waypoint({
+          const waypointFour = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-planning-icon-desktop'),
             handler: () => {
               document.querySelector('.wp-planning-icon-desktop').classList.add('animated', 'fadeInRight');
@@ -421,7 +421,7 @@
           });
 
           // Load planning text
-          const waypointFive = new Waypoint({
+          const waypointFive = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-planning-text'),
             handler: () => {
               document.querySelector('.wp-planning-text').classList.add('animated', 'fadeInLeft');
@@ -430,7 +430,7 @@
           });
 
           // Load default design icon
-          const waypointSix = new Waypoint({
+          const waypointSix = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-design-icon'),
             handler: () => {
               document.querySelector('.wp-design-icon').classList.add('animated', 'fadeInLeft');
@@ -439,7 +439,7 @@
           });
 
           // Load design text
-          const waypointSeven = new Waypoint({
+          const waypointSeven = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-design-text'),
             handler: () => {
               document.querySelector('.wp-design-text').classList.add('animated', 'fadeInRight');
@@ -448,7 +448,7 @@
           });
 
           // Load building icon for mobile
-          const waypointEight = new Waypoint({
+          const waypointEight = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-building-icon-mobile'),
             handler: () => {
               document.querySelector('.wp-building-icon-mobile').classList.add('animated', 'fadeInRight');
@@ -457,7 +457,7 @@
           });
 
           // Load building icon for desktop
-          const waypointNine = new Waypoint({
+          const waypointNine = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-building-icon-desktop'),
             handler: () => {
               document.querySelector('.wp-building-icon-desktop').classList.add('animated', 'fadeInRight');
@@ -466,7 +466,7 @@
           });
 
           // Load building text
-          const waypointTen = new Waypoint({
+          const waypointTen = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-building-text'),
             handler: () => {
               document.querySelector('.wp-building-text').classList.add('animated', 'fadeInLeft');
@@ -475,7 +475,7 @@
           });
 
           // Load default evaluation icon
-          const waypointEleven = new Waypoint({
+          const waypointEleven = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-evaluation-icon'),
             handler: () => {
               document.querySelector('.wp-evaluation-icon').classList.add('animated', 'fadeInLeft');
@@ -484,7 +484,7 @@
           });
 
           // Load evaluation text
-          const waypointTwelve = new Waypoint({
+          const waypointTwelve = new Waypoint({ // eslint-disable-line no-unused-vars
             element: document.querySelector('.wp-evaluation-text'),
             handler: () => {
               document.querySelector('.wp-evaluation-text').classList.add('animated', 'fadeInRight');
@@ -545,7 +545,7 @@
       /**
        * Form controller
        */
-      if (app.settings.contactForm.length > 0) {
+      if (app.anchors.contactForm.length > 0) {
         (() => {
           app.controllers.contact();
         })();
@@ -554,7 +554,7 @@
       /**
        * Lazy images
        */
-      if (app.settings.lazyImages.length > 0) {
+      if (app.anchors.lazyImages.length > 0) {
         (() => {
           app.controllers.lazyImages();
         })();
@@ -563,7 +563,7 @@
       /**
        * Modal messages
        */
-      if (app.settings.modalMessage.length > 0) {
+      if (app.anchors.modalMessage.length > 0) {
         (() => {
           app.controllers.modalMessages();
         })();
@@ -572,7 +572,7 @@
       /**
        * Particles
        */
-      if (app.settings.particles.length > 0) {
+      if (app.anchors.particles.length > 0) {
         (() => {
           app.controllers.particles();
         })();
@@ -581,7 +581,7 @@
       /**
        * Slideable content
        */
-      if (app.settings.slideableContent.length > 0) {
+      if (app.anchors.slideableContent.length > 0) {
         (() => {
           app.controllers.customSlider();
         })();
@@ -591,13 +591,13 @@
        * Waypoints
        * info: http://imakewebthings.com/waypoints/
        */
-      if (app.settings.waypoint.length > 0) {
+      if (app.anchors.waypoint.length > 0) {
         (() => {
           app.controllers.waypoints();
         })()
       }
     },
-    init: () => {
+    init: () => {  // eslint-disable-line sort-keys
       // document.querySelector('html').style.display = 'none';
 
       if (document.querySelectorAll('.no-js').length > 0) {
