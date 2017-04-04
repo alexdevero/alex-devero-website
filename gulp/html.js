@@ -26,6 +26,8 @@ gulp.task('html', () => {
 gulp.task('html:test', () => {
   const htmlhint = require('gulp-htmlhint');
 
+  console.log('Running HTML lint test');
+
   return gulp.src('src/*.html')
     .pipe(plumber())
     .pipe(htmlhint())
