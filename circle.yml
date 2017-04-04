@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 7.8.0
+
+dependencies:
+  cache_directories:
+    - '~/.yarn-cache'
+  override:
+    - yarn install
+
+test:
+  override:
+    - yarn test
