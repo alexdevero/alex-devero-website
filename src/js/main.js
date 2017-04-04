@@ -6,7 +6,7 @@
 
 (() => {
   const app = {
-    anchors: {
+    appAnchors: {
       contactForm: document.querySelectorAll('#contactForm'),
       indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.querySelectorAll('.lazy'),
@@ -17,7 +17,7 @@
       slideableContent: document.querySelectorAll('.js-slideable'),
       waypoint: document.querySelectorAll('.wp')
     },
-    controllers: {
+    appControllers: {
       // Animate stylesheet loader controller
       animateStylesheetLoader: () => {
         let stylesheetAnimateCSS = document.createElement('link');
@@ -26,7 +26,7 @@
         stylesheetAnimateCSS.href = 'css/animate.css';
         stylesheetAnimateCSS.classList.add('jsLoaded');
 
-        app.anchors.mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, app.anchors.mainStyleSheet.nextSibling);
+        app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, app.appAnchors.mainStyleSheet.nextSibling);
       },
       // Contact controller
       contact: () => {
@@ -42,14 +42,14 @@
           }).done(() => {
             e.preventDefault();
 
-            app.controllers.modalMessages('success');
+            app.appControllers.modalMessages('success');
 
             // Clear the form.
             $($this)[0].reset();
           }).fail(() => {
             e.preventDefault();
 
-            app.controllers.modalMessages('failure');
+            app.appControllers.modalMessages('failure');
           });
         });
       },
@@ -165,7 +165,7 @@
         stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
         stylesheetAwesome.classList.add('jsLoaded');
 
-        app.anchors.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.anchors.mainStyleSheet.nextSibling);
+        app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.appAnchors.mainStyleSheet.nextSibling);
       },
       // Font Raleway loader controller
       fontRalewayLoader: () => {
@@ -175,7 +175,7 @@
         stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700';
         stylesheetRaleway.classList.add('jsLoaded');
 
-        app.anchors.mainStyleSheet.parentNode.insertBefore(stylesheetRaleway, app.anchors.mainStyleSheet.nextSibling);
+        app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetRaleway, app.appAnchors.mainStyleSheet.nextSibling);
       },
       // LazyImages controller
       lazyImages: () => {
@@ -207,7 +207,7 @@
 
               lazyImagesArray[i].setAttribute('data-loaded', true);
 
-              app.controllers.fadeInCustom(lazyImagesArray[i]);
+              app.appControllers.fadeInCustom(lazyImagesArray[i]);
             }
           }
 
@@ -245,7 +245,7 @@
           modalButton[i].addEventListener('click', (e) => {
             e.target.parentNode.classList.remove('modal-message-visible');
 
-            app.controllers.fadeOutCustom(modalOverlay);
+            app.appControllers.fadeOutCustom(modalOverlay);
           });
         }
 
@@ -256,7 +256,7 @@
             messageFailure.classList.add('modal-message-visible');
 
             // Show modal overlay
-            app.controllers.fadeInCustom(modalOverlay);
+            app.appControllers.fadeInCustom(modalOverlay);
           }
 
           // Initiate message loader function
@@ -268,7 +268,7 @@
             messageInfo.classList.add('modal-message-visible');
 
             // Show modal overlay
-            app.controllers.fadeInCustom(modalOverlay);
+            app.appControllers.fadeInCustom(modalOverlay);
           }
 
           // Initiate message loader function
@@ -280,7 +280,7 @@
             messageSuccess.classList.add('modal-message-visible');
 
             // Show modal overlay
-            app.controllers.fadeInCustom(modalOverlay);
+            app.appControllers.fadeInCustom(modalOverlay);
           }
 
           // Initiate message loader function
@@ -317,7 +317,7 @@
                   history.pushState({state: 'new'}, elTarget.title, elTarget.href);
 
                   // $('html').fadeOut(350);
-                  app.controllers.fadeOutCustom(el);
+                  app.appControllers.fadeOutCustom(el);
 
                   setTimeout(() => {
                     // location.replace(elTarget.href);
@@ -494,7 +494,7 @@
         }, 1000);
       }
     },
-    switches: () => {
+    appSwitches: () => {
       /**
        * Custom transitions for page loading and closing
        * info: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
@@ -505,17 +505,17 @@
           window.onload = () => {
             // Load Font Awesome
             if (true) {
-              app.controllers.fontAwesomeLoader();
+              app.appControllers.fontAwesomeLoader();
             }
 
             // Load Raleway font
             if (true) {
-              app.controllers.fontRalewayLoader()
+              app.appControllers.fontRalewayLoader()
             }
 
             if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
-              app.controllers.animateStylesheetLoader();
+              app.appControllers.animateStylesheetLoader();
             }
 
             // Cache html element
@@ -527,7 +527,7 @@
               el.setAttribute('id', 'loaded');
 
               // Fade in cached html element
-              app.controllers.fadeInCustom(el);
+              app.appControllers.fadeInCustom(el);
             }, 350);
           }
 
@@ -538,52 +538,52 @@
           } */
 
           // Page transitions for clicks on links
-          // app.controllers.pageTransition();
+          // app.appControllers.pageTransition();
         })();
       }
 
       /**
        * Form controller
        */
-      if (app.anchors.contactForm.length > 0) {
+      if (app.appAnchors.contactForm.length > 0) {
         (() => {
-          app.controllers.contact();
+          app.appControllers.contact();
         })();
       }
 
       /**
        * Lazy images
        */
-      if (app.anchors.lazyImages.length > 0) {
+      if (app.appAnchors.lazyImages.length > 0) {
         (() => {
-          app.controllers.lazyImages();
+          app.appControllers.lazyImages();
         })();
       }
 
       /**
        * Modal messages
        */
-      if (app.anchors.modalMessage.length > 0) {
+      if (app.appAnchors.modalMessage.length > 0) {
         (() => {
-          app.controllers.modalMessages();
+          app.appControllers.modalMessages();
         })();
       }
 
       /**
        * Particles
        */
-      if (app.anchors.particles.length > 0) {
+      if (app.appAnchors.particles.length > 0) {
         (() => {
-          app.controllers.particles();
+          app.appControllers.particles();
         })();
       }
 
       /**
        * Slideable content
        */
-      if (app.anchors.slideableContent.length > 0) {
+      if (app.appAnchors.slideableContent.length > 0) {
         (() => {
-          app.controllers.customSlider();
+          app.appControllers.customSlider();
         })();
       }
 
@@ -591,13 +591,13 @@
        * Waypoints
        * info: http://imakewebthings.com/waypoints/
        */
-      if (app.anchors.waypoint.length > 0) {
+      if (app.appAnchors.waypoint.length > 0) {
         (() => {
-          app.controllers.waypoints();
+          app.appControllers.waypoints();
         })()
       }
     },
-    init: () => {  // eslint-disable-line sort-keys
+    init: () => {
       // document.querySelector('html').style.display = 'none';
 
       if (document.querySelectorAll('.no-js').length > 0) {
@@ -612,7 +612,7 @@
         }
       }
 
-      app.switches();
+      app.appSwitches();
     }
   };
 
