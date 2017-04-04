@@ -3,6 +3,7 @@
 //
 
 // Custom colors
+// usage: css-prop: map-get($palette-custom, black);
 $palette-custom: (
   black: #212121,
   gold: #ba8747,
@@ -121,6 +122,7 @@ $palette-foundation: (
 // google-material-color v1.1.0
 // source: https://github.com/danlevan/google-material-color
 // source: http://danlevan.github.io/google-material-color/test/
+// usage: palette-grabber($palette-material, red, 500)
 $palette-material: (
   red: (
     50: #ffebee,
