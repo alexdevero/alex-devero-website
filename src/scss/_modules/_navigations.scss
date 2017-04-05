@@ -34,10 +34,12 @@
     transform: translateX(328px);
   }
 
-  li:first-of-type {
-    @media screen and (min-height: 420px) {
-      position: absolute;
-      top: remy(29px);
+  li {
+    &:first-of-type {
+      @media screen and (min-height: 420px) {
+        position: absolute;
+        top: remy(29px);
+      }
     }
   }
 
