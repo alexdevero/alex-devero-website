@@ -4,23 +4,23 @@
 
 .divider {
   max-width: remy(32px);
-  height: 2px;
+  height: remy(2px);
   background-color: #1b1b1b;
   border: 0;
 }
 
 .divider--primary {
-  margin-bottom: 3rem;
+  margin-bottom: remy(48px);
 }
 
 .divider--secondary {
-  margin-bottom: 1rem;
+  margin-bottom: remy(16px);
 }
 
 .divider--svg {
   display: block;
   margin-right: auto;
-  margin-bottom: 3rem;
+  margin-bottom: remy(48px);
   margin-left: auto;
 }
 

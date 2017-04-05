@@ -6,11 +6,11 @@ input:not([type=submit]):not([name=nav-check]), // sass-lint:disable-line force-
 select,
 textarea {
   display: block;
-  padding: 13px;
+  padding: remy(13px);
   margin: auto;
   width: 100%;
   font-family: $font-quicksand;
-  font-size: 1rem;
+  font-size: remy(16px);
   color: map-get($palette-custom, black);
   background: transparent;
   border-top: 0;
@@ -35,7 +35,7 @@ label {
   display: inline-block;
   width: 100%;
   font-family: $font-monospace;
-  font-size: .75rem;
+  font-size: remy(14px);
   font-weight: 700;
   color: rgba(33, 33, 33, .85);
   text-transform: uppercase;
@@ -49,14 +49,14 @@ label {
 
 .form__details,
 .form__message {
-  margin-bottom: 1em;
+  margin-bottom: remy(16px);
 }
 
 .form__details {
   .col-md-6 {
     &:first-of-type {
       @media screen and (max-width: 768px) {
-        margin-bottom: 2rem;
+        margin-bottom: remy(32px);
       }
     }
   }

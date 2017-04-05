@@ -7,9 +7,10 @@
 }
 
 .btn {
+  padding: remy(8px) remy(32px);
   display: inline-block;
   font-family: $font-quicksand;
-  font-size: 1rem;
+  font-size: remy(16px);
   border-radius: $radius;
   cursor: pointer;
 
@@ -24,12 +25,17 @@
 }
 
 .btn--full {
-  padding: .5rem 1rem;
+  color: #fff;
   border: 0;
+
+  &:focus,
+  &:hover {
+    color: #fff;
+    background-color: palette-grabber($palette-material, grey, 600);
+  }
 }
 
 .btn--full--black {
-  color: #fff;
   background-color: map-get($palette-foundation, jet);
 
   &:focus,
@@ -39,12 +45,10 @@
 }
 
 .btn--full--red {
-  color: #fff;
   background-color: map-get($palette-custom, black);
 
   &:focus,
   &:hover {
-    color: #fff;
     background-color: map-get($palette-custom, red);
   }
 }
@@ -55,13 +59,11 @@
 
   &:focus,
   &:hover {
-    color: #fff;
     background-color: palette-grabber($palette-material, grey, 600);
   }
 }
 
 .btn--full--gold {
-  color: #fff;
   background-color: map-get($palette-custom, gold);
 
   &:focus,
@@ -71,7 +73,6 @@
 }
 
 .btn--ghost {
-  padding: .5rem 2rem;
   background: transparent;
   border: 1px solid;
 }
@@ -86,13 +87,12 @@
 }
 
 .btn--ghost--black-inverted {
-  padding: .5rem 2rem;
   font-weight: 600;
   letter-spacing: remy(4px);
   text-transform: uppercase;
   color: map-get($palette-custom, black);
   background: transparent;
-  border: 2px solid map-get($palette-custom, black);
+  border: remy(2px) solid map-get($palette-custom, black);
 
   &:focus,
   &:hover {
@@ -115,13 +115,12 @@
 }
 
 .btn--ghost--red-inverted {
-  padding: .5rem 2rem;
   font-weight: 600;
   letter-spacing: remy(4px);
   text-transform: uppercase;
   color: #fff;
   background: transparent;
-  border: 2px solid map-get($palette-custom, red);
+  border: remy(2px) solid map-get($palette-custom, red);
 
   &:focus,
   &:hover {

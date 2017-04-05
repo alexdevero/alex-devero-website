@@ -47,25 +47,25 @@
   }
 
   a {
-    font-size: 1.5rem;
+    font-size: remy(24px);
     color: #fff;
   }
 
   .navbar-toggler {
     display: inline-block;
-    padding-top: .25rem;
+    padding-top: remy(4px);
     padding-right: 0;
-    padding-bottom: .25rem;
+    padding-bottom: remy(4px);
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 2.5rem;
+    font-size: remy(40px);
     color: #fff;
     width: inherit;
     line-height: 1;
     background: 0 0;
     border: 1px solid transparent;
-    border-radius: .25rem;
+    border-radius: remy(4px);
     cursor: pointer;
 
     @include transition(color);
@@ -87,13 +87,13 @@
   @media screen and (max-width: 863px) {
     & li {
       &:nth-child(n+2) {
-        margin-top: .35rem;
+        margin-top: remy(5px);
       }
     }
 
     & {
       a {
-        font-size: 1.65rem;
+        font-size: remy(26px);
         color: #fff;
 
         &:focus,
@@ -107,7 +107,7 @@
 
 .nav--media {
   i {
-    font-size: 1.7rem;
+    font-size: remy(27px);
   }
 
   a {
@@ -130,7 +130,7 @@
     float: left;
 
     &:nth-of-type(n+2) {
-      margin-left: 1rem;
+      margin-left: remy(16px);
     }
   }
 }
@@ -139,10 +139,10 @@
 .main-nav-label {
   display: inline;
   float: right;
-  padding: .15rem 7px;
+  padding: remy(3px) remy(7px);
   margin-right: 1rem;
   width: remy(76.52px);
-  font-size: 1.15rem;
+  font-size: remy(19px);
   font-weight: 700;
   color: map-get($palette-custom, black);
   text-align: center;

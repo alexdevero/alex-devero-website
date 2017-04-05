@@ -3,8 +3,8 @@
  */
 
 header {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: remy(32px);
+  padding-bottom: remy(32px);
   width: 100%;
 
   a {
@@ -31,7 +31,7 @@ header {
     float: left;
     margin: 0;
     font-family: 'Devero', arial, sans-serif;
-    font-size: 1.7rem;
+    font-size: remy(28px);
     font-weight: 200;
     color: #fff;
     line-height: 1.35;

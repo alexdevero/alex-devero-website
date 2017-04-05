@@ -16,16 +16,15 @@
 .icon--burger {
   position: relative;
   display: inline-block;
-  margin: 16px 7px;
-  width: 20px;
-  height: 2px;
+  margin: remy(16px) remy(7px);
+  width: remy(20px);
+  height: remy(2px);
   font-style: normal;
   color: #ddd;
   text-align: left;
   text-indent: -9999px;
   vertical-align: middle;
   box-shadow: inset 0 0 0 32px, 0 -6px, 0 6px;
-
   direction: ltr;
 
   &:before,
