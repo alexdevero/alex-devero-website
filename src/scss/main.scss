@@ -22,7 +22,7 @@
  */
 
 // Base
-@import './node_modules/normalize.css/normalize';
+@import './node_modules/normalize.css/normalize'; // sass-lint:disable-line clean-import-paths
 @import '_base/_fonts';
 @import '_base/_base';
 @import '_base/_typography';
