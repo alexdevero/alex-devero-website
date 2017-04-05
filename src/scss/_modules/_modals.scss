@@ -23,7 +23,7 @@
 
 .modal-message {
   display: none;
-  padding: 2rem;
+  padding: remy(32px);
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -38,12 +38,12 @@
 
   p {
     &:first-of-type {
-      margin-top: .5rem;
-      margin-bottom: 1rem;
+      margin-top: remy(8px);
+      margin-bottom: remy(16px);
     }
 
     &:last-of-type {
-      margin-bottom: 1.5rem;
+      margin-bottom: remy(24px);
     }
   }
 }

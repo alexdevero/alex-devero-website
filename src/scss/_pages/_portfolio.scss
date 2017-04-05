@@ -5,11 +5,11 @@
 .page--portfolio {
   .sec__main {
     min-height: 0;
-    height: 110px;
+    height: remy(110px);
   }
 
   footer {
-    padding-top: 2rem;
+    padding-top: remy(32px);
   }
 }
 
@@ -28,7 +28,7 @@ main {
   }
 
   [class*='col-'] {
-    padding: 1rem;
+    padding: remy(16px);
   }
 }
 
@@ -55,8 +55,8 @@ main {
 
 .thumbnail__info {
   display: none;
-  padding-top: 1rem;
-  padding-left: 1rem;
+  padding-top: remy(16px);
+  padding-left: remy(16px);
   color: #fff;
   width: 100%;
   text-align: center;

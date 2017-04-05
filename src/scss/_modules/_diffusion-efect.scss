@@ -3,7 +3,7 @@
  */
 
 .text {
-  font-size: 5rem;
+  font-size: remy(80px);
   line-height: 1;
   text-indent: remy(-30px);
   text-align: center;
@@ -12,15 +12,15 @@
   @include vertical-align;
 
   @media screen and (min-width: 382px) {
-    font-size: 6rem;
+    font-size: remy(96px);
   }
 
   @media screen and (min-width: 412px) {
-    font-size: 7rem;
+    font-size: remy(112px);
   }
 
   @media screen and (min-width: 850px) {
-    font-size: 8rem;
+    font-size: remy(128px);
 
     br {
       display: none;
@@ -28,7 +28,7 @@
   }
 
   @media screen and (min-width: 1125px) {
-    font-size: 10rem;
+    font-size: remy(160px);
   }
 
   span {

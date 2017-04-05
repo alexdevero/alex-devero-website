@@ -68,10 +68,10 @@
   h2,
   h3 {
     span {
-      padding-top: .25rem;
-      padding-right: .95rem;
-      padding-bottom: .25rem;
-      padding-left: .95rem;
+      padding-top: remy(4px);
+      padding-right: remy(15px);
+      padding-bottom: remy(4px);
+      padding-left: remy(15px);
     }
   }
 
@@ -79,27 +79,27 @@
     margin-bottom: 0;
     line-height: 1.1;
     font-family: 'Devero', arial, sans-serif;
-    font-size: 4rem;
+    font-size: remy(64px);
     font-weight: 600;
     color: map-get($palette-custom, red);
 
     @media screen and (min-width: 370px) {
-      font-size: 6rem;
+      font-size: remy(96px);
     }
 
     @media screen and (min-width: 768px) {
-      font-size: 7rem;
+      font-size: remy(112px);
     }
   }
 
   h2 {
     margin-top: 0;
-    font-size: 1.25rem;
+    font-size: remy(20px);
     font-weight: 700;
     color: map-get($palette-custom, black);
 
     @media screen and (min-width: 555px) {
-      font-size: 1.75rem;
+      font-size: remy(28px);
     }
   }
 
@@ -111,11 +111,11 @@
     font-weight: 500;
 
     @media screen and (min-width: 555px) {
-      font-size: 1.15rem;
+      font-size: remy(18px);
     }
 
     @media screen and (min-width: 768px) {
-      font-size: 1.35rem;
+      font-size: remy(21px);
     }
   }
 }

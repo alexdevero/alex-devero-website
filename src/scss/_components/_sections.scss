@@ -8,7 +8,7 @@ main {
 
 section {
   &:nth-of-type(n+2) {
-    padding-bottom: 6rem;
+    padding-bottom: remy(96px);
   }
 }
 
@@ -19,7 +19,7 @@ section {
 body {
   &:not(.page--home) {
     .sec__main + section {
-      margin-top: 32px;
+      margin-top: remy(32px);
     }
   }
 }
