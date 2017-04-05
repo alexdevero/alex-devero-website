@@ -22,7 +22,7 @@
  */
 
 // Base
-//@import '_base/_normalize';
+@import './node_modules/normalize.css/normalize';
 @import '_base/_fonts';
 @import '_base/_base';
 @import '_base/_typography';
