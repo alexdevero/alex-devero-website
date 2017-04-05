@@ -4,11 +4,11 @@
 // Core variables
 @import '_settings/_config';
 
-// Mixins
-@import '_tools/_mixins';
-
 // Functions
 @import '_tools/_functions';
+
+// Mixins
+@import '_tools/_mixins';
 
 /**
  * Table of contents
@@ -22,7 +22,7 @@
  */
 
 // Base
-@import '_base/_normalize';
+//@import '_base/_normalize';
 @import '_base/_fonts';
 @import '_base/_base';
 @import '_base/_typography';
