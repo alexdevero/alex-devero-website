@@ -23,9 +23,7 @@ gulp.task('js', () => {
   return gulp.src('src/js/main.js')
     .pipe(plumber())
     .pipe(changed('dist/js'))
-    .pipe(babel({
-      presets: ['latest']
-    }))
+    .pipe(babel())
     .pipe(uglify().on('error', (e) => {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
