@@ -123,8 +123,13 @@
     }
   }
 
-  .btn {
-    @media screen and (max-width: 450px) {
+  @media screen and (max-width: 450px) {
+    .intro__btn-container,
+    .btn {
+      transform: rotate(180deg);
+    }
+
+    .btn {
       margin-right: auto;
       margin-left: auto;
       display: block;
