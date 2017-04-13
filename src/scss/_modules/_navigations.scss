@@ -2,43 +2,88 @@
  * Navigations
  */
 
-.nav {
-  display: none;
-
-  @media only screen and (min-width: 864px) {
+.nav__container {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
 }
 
+.main-nav-label {
+  @media screen and (max-width: 767px) {
+    display: inline;
+    float: right;
+    padding: remy(3px) remy(7px);
+    margin-right: 1rem;
+    width: remy(76.52px);
+    font-size: remy(19px);
+    font-weight: 700;
+    color: map-get($palette-custom, black);
+    text-align: center;
+    text-transform: uppercase;
+    border: remy(3px) solid;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+[type=checkbox] {
+  &:checked + ul {
+    transform: translateX(0);
+  }
+}
+
 .nav--main {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 99;
-  overflow-y: auto;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
-  max-width: 100%;
-  height: 100%;
-  text-align: center;
-  background: map-get($palette-custom, black);
-  transition: transform .25s cubic-bezier(.4, 0, 1, 1);
-  transform: translateX(100%);
 
-  @media screen and (min-width: 556px) {
-    max-width: remy(320px);
-    box-shadow: -6px 0 6px rgba(20, 20, 20, .35);
-    transform: translateX(328px);
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+    background: map-get($palette-custom, black);
+    transition: transform .25s cubic-bezier(.4, 0, 1, 1);
+    transform: translateX(100%);
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: calc(100% - 115px);
+    justify-content: flex-end;
   }
 
   li {
-    &:first-of-type {
-      @media screen and (min-height: 420px) {
+    @media screen and (max-width: 767px) {
+      &:first-of-type {
         position: absolute;
-        top: remy(29px);
+        top: remy(24px);
+        right: remy(24px);
+        font-size: remy(48px);
+      }
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      &:first-of-type {
+        right: remy(50px);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      &:first-of-type {
+        display: none;
+      }
+
+      &:nth-child(n+2) {
+        margin-left: remy(18px);
       }
     }
   }
@@ -49,32 +94,31 @@
   }
 
   a {
-    font-size: remy(24px);
-    color: #fff;
+    @media screen and (max-width: 767px) {
+      font-size: remy(24px);
+      color: #fff;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: map-get($palette-custom, black);
+    }
   }
 
   .navbar-toggler {
-    display: inline-block;
-    padding-top: remy(4px);
-    padding-right: 0;
-    padding-bottom: remy(4px);
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    display: block;
     font-size: remy(40px);
     color: #fff;
     width: inherit;
     line-height: 1;
-    background: 0 0;
-    border: 1px solid transparent;
-    border-radius: remy(4px);
     cursor: pointer;
 
     @include transition(color);
 
     &:focus,
     &:hover {
-      text-decoration: none;
       color: map-get($palette-custom, red);
     }
   }
@@ -83,26 +127,6 @@
     &:checked + .nav__container > & {
       opacity: 1;
       visibility: visible;
-    }
-  }
-
-  @media screen and (max-width: 863px) {
-    & li {
-      &:nth-child(n+2) {
-        margin-top: remy(5px);
-      }
-    }
-
-    & {
-      a {
-        font-size: remy(26px);
-        color: #fff;
-
-        &:focus,
-        &:hover {
-          color: map-get($palette-custom, red);
-        }
-      }
     }
   }
 }
@@ -134,27 +158,5 @@
     &:nth-of-type(n+2) {
       margin-left: remy(16px);
     }
-  }
-}
-
-/* Experimental menu */
-.main-nav-label {
-  display: inline;
-  float: right;
-  padding: remy(3px) remy(7px);
-  margin-right: 1rem;
-  width: remy(76.52px);
-  font-size: remy(19px);
-  font-weight: 700;
-  color: map-get($palette-custom, black);
-  text-align: center;
-  text-transform: uppercase;
-  border: remy(3px) solid;
-  cursor: pointer;
-}
-
-[type=checkbox] {
-  &:checked + ul {
-    transform: translateX(0);
   }
 }
