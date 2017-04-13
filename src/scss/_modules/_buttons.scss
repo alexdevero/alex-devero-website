@@ -86,21 +86,6 @@
   }
 }
 
-.btn--ghost--black-inverted {
-  font-weight: 600;
-  letter-spacing: remy(4px);
-  text-transform: uppercase;
-  color: map-get($palette-custom, black);
-  background: transparent;
-  border: remy(2px) solid map-get($palette-custom, black);
-
-  &:focus,
-  &:hover {
-    color: #fff;
-    background: map-get($palette-custom, black);
-  }
-}
-
 .btn--ghost--gold {
   color: map-get($palette-custom, gold);
 
@@ -114,21 +99,6 @@
   color: map-get($palette-custom, red);
 }
 
-.btn--ghost--red-inverted {
-  font-weight: 600;
-  letter-spacing: remy(4px);
-  text-transform: uppercase;
-  color: #fff;
-  background: transparent;
-  border: remy(2px) solid map-get($palette-custom, red);
-
-  &:focus,
-  &:hover {
-    color: #fff;
-    background: map-get($palette-custom, red);
-  }
-}
-
 .btn--ghost--white {
   color: #fff;
 
@@ -137,5 +107,38 @@
     color: #000;
     background-color: #fff;
     border-color: transparent;
+  }
+}
+
+.btn--ghost--black-inverted,
+.btn--ghost--red-inverted {
+  font-weight: 600;
+  letter-spacing: remy(2px);
+  text-transform: uppercase;
+  background: transparent;
+
+  &:focus,
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn--ghost--black-inverted {
+  color: map-get($palette-custom, black);
+  border: remy(2px) solid map-get($palette-custom, black);
+
+  &:focus,
+  &:hover {
+    background: map-get($palette-custom, black);
+  }
+}
+
+.btn--ghost--red-inverted {
+  color: #fff;
+  border: remy(2px) solid map-get($palette-custom, red);
+
+  &:focus,
+  &:hover {
+    background: map-get($palette-custom, red);
   }
 }
