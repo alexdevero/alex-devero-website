@@ -12,7 +12,11 @@
   }
 
   .hero--big {
-    min-height: remy(580px);
+    min-height: remy(606px);
+
+    @media screen and (min-width: 460px) {
+      min-height: remy(480px);
+    }
   }
 
   header {
@@ -116,6 +120,19 @@
 
     @media screen and (min-width: 768px) {
       font-size: remy(21px);
+    }
+  }
+
+  .btn {
+    @media screen and (max-width: 450px) {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      max-width: remy(320px);
+
+      &:last-of-type {
+        margin-top: remy(16px);
+      }
     }
   }
 }
