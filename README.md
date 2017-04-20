@@ -1,4 +1,4 @@
-[![Build Status](https://circleci.com/gh/alexdevero/alex-devero-website/tree/:master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/alexdevero/alex-devero-website/)
+[![Build Status](https://circleci.com/gh/alexdevero/alex-devero-website.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/alexdevero/alex-devero-website/)
 [![Dependency Status](https://david-dm.org/alexdevero/alex-devero-website.svg?style=flat)](https://david-dm.org/alexdevero/alex-devero-website)
 [![devDependency Status](https://david-dm.org/alexdevero/alex-devero-website/dev-status.svg?style=flat)](https://david-dm.org/alexdevero/alex-devero-website?type=dev)
 
