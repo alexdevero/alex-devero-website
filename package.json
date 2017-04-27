@@ -1,6 +1,6 @@
 {
   "name": "alex-devero-portfolio",
-  "version": "2.4.2",
+  "version": "2.5.0",
   "description": "Personal portfolio of Alex Devero",
   "engines": {
     "node": "7.x",
@@ -32,6 +32,7 @@
   },
   "scripts": {
     "build": "npm run test && gulp clean && gulp build",
+    "deploy": "gulp clean && deploy",
     "start": "gulp dev",
     "test": "gulp test"
   },
