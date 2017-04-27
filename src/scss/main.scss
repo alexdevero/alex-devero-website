@@ -27,36 +27,32 @@
 @import '_base/_base';
 @import '_base/_typography';
 
-// Layout
-@import '_templates/_grid';
-@import '_templates/_print';
+// Atoms
+@import '_atoms/_buttons';
+@import '_atoms/_dividers';
+@import '_atoms/_diffusion-efect';
+@import '_atoms/_forms';
+@import '_atoms/_glitch';
+@import '_atoms/_heroes';
+@import '_atoms/_icons';
+@import '_atoms/_links';
+@import '_atoms/_modals';
+@import '_atoms/_navigations';
+@import '_atoms/_overlays';
+@import '_atoms/_particles';
+@import '_atoms/_spinner';
+@import '_atoms/_tooltips';
+@import '_atoms/_typedjs';
+@import '_atoms/_waypoints';
 
 // Components
 @import '_components/_header';
 @import '_components/_sections';
 @import '_components/_footer';
 
-// Modules
-@import '_modules/_buttons';
-@import '_modules/_dividers';
-@import '_modules/_diffusion-efect';
-@import '_modules/_forms';
-@import '_modules/_glitch';
-@import '_modules/_heroes';
-@import '_modules/_icons';
-@import '_modules/_links';
-@import '_modules/_modals';
-@import '_modules/_navigations';
-@import '_modules/_overlays';
-@import '_modules/_particles';
-@import '_modules/_spinner';
-@import '_modules/_tooltips';
-@import '_modules/_typedjs';
-@import '_modules/_waypoints';
-
-// Utilities
-@import '_utilities/_hacks';
-@import '_utilities/_utilities';
+// Templates
+@import '_templates/_grid';
+@import '_templates/_print';
 
 // Pages
 @import '_pages/_home';
@@ -65,3 +61,7 @@
 @import '_pages/_faq';
 @import '_pages/_process';
 @import '_pages/_contact';
+
+// Utilities
+@import '_utilities/_hacks';
+@import '_utilities/_utilities';
