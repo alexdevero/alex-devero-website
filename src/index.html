@@ -162,12 +162,18 @@
         </div>
       </header>
 
-      <div class="home__intro">
-        <h1 data-text="Alex Devero">Alex Devero</h1><!-- glitch -->
+      <div class="js-typed-en home__intro">
+        <h1 class="js-typed js-typed-h1" data-text="Alex Devero"></h1><!-- glitch effect -->
 
-        <h2><span>Czech Designer &plus; Developer &plus; Entrepreneur</span></h2>
+        <h2 class="js-typed js-typed-h2"></h2>
 
-        <h3>UI/UX/Web Design &amp; Web Development</h3>
+        <h3 class="js-typed js-typed-h3"></h3>
+
+        <h1 class="js-typed-fallback">Alex Devero</h1><!-- glitch -->
+
+        <h2 class="js-typed-fallback"><span>Czech Designer &plus; Developer &plus; Entrepreneur</span></h2>
+
+        <h3 class="js-typed-fallback">UI/UX/Web Design &amp; Web Development</h3>
 
         <div class="intro__btn-container">
           <a class="btn btn--ghost--black-inverted" href="about.html">&lt; About Me</a>
@@ -241,8 +247,15 @@
   </main>
 
   <!-- Scripts -->
+  <!-- Particles.js -->
   <script src="js/plugins/particles.min.js" async charset="utf-8"></script>
 
+  <!-- Typed.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+  <script>window.Typed || document.write('<script src="js/plugins/typed.min.js"><\/script>')</script>
+  <!-- <script src="js/plugins/typed.min.js"></script> -->
+
+  <!-- Main Scripts -->
   <script src="js/main.min.js" async charset="utf-8"></script>
 
   <!-- Google Analytics -->

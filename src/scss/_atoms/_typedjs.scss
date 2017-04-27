@@ -1,0 +1,19 @@
+/**
+ * Typed
+ */
+
+.no-js {
+  .js-typed {
+    display: none;
+  }
+
+  .js-typed-fallback {
+    display: block;
+  }
+}
+
+.js {
+  .js-typed-fallback {
+    display: none;
+  }
+}

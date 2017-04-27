@@ -26,7 +26,8 @@ gulp.task('copy:jsplugins', () => {
       'src/js/plugins/*',
       '!src/js/plugins/*.rar',
       'node_modules/particlesjs/dist/particles.min.js',
-      'node_modules/waypoints/lib/noframework.waypoints.min.js'
+      'node_modules/waypoints/lib/noframework.waypoints.min.js',
+      'node_modules/typed.js/dist/typed.min.js'
     ])
       .pipe(plumber())
       .pipe(changed('dist/js/plugins/'))

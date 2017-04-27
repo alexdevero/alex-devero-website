@@ -15,6 +15,7 @@
       particles: document.querySelectorAll('.js-particles'),
       portfolioItem: document.querySelectorAll('.work__item'),
       slideableContent: document.querySelectorAll('.js-slideable'),
+      typedJS: document.querySelectorAll('.js-typed'),
       waypoint: document.querySelectorAll('.wp')
     },
     appControllers: {
@@ -347,28 +348,28 @@
         Particles.init({
           color: '#212121',
           connectParticles: true,
-          maxParticles: 88,
+          maxParticles: 72,
           minDistance: 120,
           opacity: .5,
           responsive: [
             {
               breakpoint: 992,
               options: {
-                maxParticles: 88,
+                maxParticles: 72,
                 minDistance: 100
               }
             },
             {
               breakpoint: 768,
               options: {
-                maxParticles: 66,
+                maxParticles: 52,
                 minDistance: 90
               }
             },
             {
               breakpoint: 480,
               options: {
-                maxParticles: 44,
+                maxParticles: 32,
                 minDistance: 80
               }
             }
@@ -377,6 +378,84 @@
           sizeVariations: 4,
           speed: 0.85
         });
+      },
+      typedJSController: () => {
+        (() => {
+          // Controller for Typed.js
+          // docs: https://github.com/mattboldt/typed.js
+
+          if (document.querySelectorAll('.js-typed-en').length !== 0) {
+            setTimeout(() => {
+              Typed.new('.js-typed-h1', {
+                contentType: 'text',
+                loop: false, // loop on or off (true or false)
+                loopCount: false, // number of loops, false = infinite
+                showCursor: false, // disable typing cursor
+                strings: ['Alex Devero'],
+                typeSpeed: 105, // typing speed
+                callback: () => { // call when done callback function
+                  setTimeout(() => {
+                    Typed.new('.js-typed-h2', {
+                      contentType: 'html',
+                      loop: false, // loop on or off (true or false)
+                      loopCount: false, // number of loops, false = infinite
+                      showCursor: false, // disable typing cursor
+                      strings: ['<span>Czech Designer &plus; Developer &plus; Entrepreneur</span>'],
+                      typeSpeed: 65, // typing speed
+                      callback: () => { // call when done callback function
+                        setTimeout(() => {
+                          Typed.new('.js-typed-h3', {
+                            contentType: 'html',
+                            loop: false, // loop on or off (true or false)
+                            loopCount: false, // number of loops, false = infinite
+                            showCursor: false, // disable typing cursor
+                            strings: ['UI/UX/Web Design &amp; Web Development'],
+                            typeSpeed: 65 // typing speed
+                          });
+                        }, 250);
+                      }
+                    });
+                  }, 250);
+                }
+              });
+            }, 1050);
+          } else {
+            setTimeout(() => {
+              Typed.new('.js-typed-h1', {
+                contentType: 'text',
+                loop: false, // loop on or off (true or false)
+                loopCount: false, // number of loops, false = infinite
+                showCursor: false, // disable typing cursor
+                strings: ['Alex Devero'],
+                typeSpeed: 105, // typing speed
+                callback: () => { // call when done callback function
+                  setTimeout(() => {
+                    Typed.new('.js-typed-h2', {
+                      contentType: 'html',
+                      loop: false, // loop on or off (true or false)
+                      loopCount: false, // number of loops, false = infinite
+                      showCursor: false, // disable typing cursor
+                      strings: ['<span>Český Designér &plus; Developer &plus; Podnikatel.</span>'],
+                      typeSpeed: 65, // typing speed
+                      callback: () => { // call when done callback function
+                        setTimeout(() => {
+                          Typed.new('.js-typed-h3', {
+                            contentType: 'html',
+                            loop: false, // loop on or off (true or false)
+                            loopCount: false, // number of loops, false = infinite
+                            showCursor: false, // disable typing cursor
+                            strings: ['UI/UX/Web Design &amp; Web Development'],
+                            typeSpeed: 65 // typing speed
+                          });
+                        }, 250);
+                      }
+                    });
+                  }, 250);
+                }
+              });
+            }, 1050);
+          }
+        })();
       },
       // Waypoints controller
       waypoints: () => {
@@ -529,6 +608,15 @@
               // Fade in cached html element
               app.appControllers.fadeInCustom(el);
             }, 350);
+
+            //
+            // TypedJS
+            //
+            if (app.appAnchors.typedJS.length > 0) {
+              (() => {
+                app.appControllers.typedJSController();
+              })();
+            }
           }
 
           // Detect history change (back or forward button)
