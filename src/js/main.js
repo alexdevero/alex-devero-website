@@ -387,29 +387,29 @@
           if (document.querySelectorAll('.js-typed-en').length !== 0) {
             setTimeout(() => {
               Typed.new('.js-typed-h1', {
-                strings: ['Alex Devero'],
                 contentType: 'text',
                 loop: false, // loop on or off (true or false)
                 loopCount: false, // number of loops, false = infinite
                 showCursor: false, // disable typing cursor
+                strings: ['Alex Devero'],
                 typeSpeed: 105, // typing speed
                 callback: () => { // call when done callback function
                   setTimeout(() => {
                     Typed.new('.js-typed-h2', {
-                      strings: ['<span>Czech Designer &plus; Developer &plus; Entrepreneur</span>'],
                       contentType: 'html',
                       loop: false, // loop on or off (true or false)
                       loopCount: false, // number of loops, false = infinite
                       showCursor: false, // disable typing cursor
+                      strings: ['<span>Czech Designer &plus; Developer &plus; Entrepreneur</span>'],
                       typeSpeed: 65, // typing speed
                       callback: () => { // call when done callback function
                         setTimeout(() => {
                           Typed.new('.js-typed-h3', {
-                            strings: ['UI/UX/Web Design &amp; Web Development'],
                             contentType: 'html',
                             loop: false, // loop on or off (true or false)
                             loopCount: false, // number of loops, false = infinite
                             showCursor: false, // disable typing cursor
+                            strings: ['UI/UX/Web Design &amp; Web Development'],
                             typeSpeed: 65 // typing speed
                           });
                         }, 250);
@@ -422,29 +422,29 @@
           } else {
             setTimeout(() => {
               Typed.new('.js-typed-h1', {
-                strings: ['Alex Devero'],
                 contentType: 'text',
                 loop: false, // loop on or off (true or false)
                 loopCount: false, // number of loops, false = infinite
                 showCursor: false, // disable typing cursor
+                strings: ['Alex Devero'],
                 typeSpeed: 105, // typing speed
                 callback: () => { // call when done callback function
                   setTimeout(() => {
                     Typed.new('.js-typed-h2', {
-                      strings: ['<span>Český Designér &plus; Developer &plus; Podnikatel.</span>'],
                       contentType: 'html',
                       loop: false, // loop on or off (true or false)
                       loopCount: false, // number of loops, false = infinite
                       showCursor: false, // disable typing cursor
+                      strings: ['<span>Český Designér &plus; Developer &plus; Podnikatel.</span>'],
                       typeSpeed: 65, // typing speed
                       callback: () => { // call when done callback function
                         setTimeout(() => {
                           Typed.new('.js-typed-h3', {
-                            strings: ['UI/UX/Web Design &amp; Web Development'],
                             contentType: 'html',
                             loop: false, // loop on or off (true or false)
                             loopCount: false, // number of loops, false = infinite
                             showCursor: false, // disable typing cursor
+                            strings: ['UI/UX/Web Design &amp; Web Development'],
                             typeSpeed: 65 // typing speed
                           });
                         }, 250);
@@ -609,9 +609,9 @@
               app.appControllers.fadeInCustom(el);
             }, 350);
 
-            ///
+            //
             // TypedJS
-            ///
+            //
             if (app.appAnchors.typedJS.length > 0) {
               (() => {
                 app.appControllers.typedJSController();
