@@ -1,5 +1,8 @@
 'use strict';
 
+// Example import
+import { foo } from './components/example.js';
+
 /**
  * @author Alex Devero <deveroalex@gmail.com>
  */
@@ -701,6 +704,8 @@
       }
 
       app.appSwitches();
+
+      console.log(foo);
     }
   };
 
