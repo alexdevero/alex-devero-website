@@ -37,6 +37,8 @@
     "test": "gulp test"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "babel-register": "^6.24.1",
     "browser-sync": "^2.18.8",
@@ -70,7 +72,9 @@
     "require-dir": "^0.3.1",
     "typed.js": "^1.1.1",
     "vinyl-ftp": "^0.6.0",
-    "waypoints": "^4.0.1"
+    "waypoints": "^4.0.1",
+    "webpack": "^2.4.1",
+    "webpack-stream": "^3.2.0"
   },
   "private": true
 }
