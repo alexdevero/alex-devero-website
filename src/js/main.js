@@ -430,7 +430,7 @@ import { foo } from './components/example.js';
                 loopCount: false, // number of loops, false = infinite
                 showCursor: false, // disable typing cursor
                 strings: ['Alex Devero'],
-                typeSpeed: 105, // typing speed
+                typeSpeed: 95, // typing speed
                 callback: () => { // call when done callback function
                   setTimeout(() => {
                     Typed.new('.js-typed-h2', {
@@ -439,7 +439,7 @@ import { foo } from './components/example.js';
                       loopCount: false, // number of loops, false = infinite
                       showCursor: false, // disable typing cursor
                       strings: ['<span>Český Designér &plus; Developer &plus; Podnikatel.</span>'],
-                      typeSpeed: 65, // typing speed
+                      typeSpeed: 35, // typing speed
                       callback: () => { // call when done callback function
                         setTimeout(() => {
                           Typed.new('.js-typed-h3', {
@@ -448,7 +448,13 @@ import { foo } from './components/example.js';
                             loopCount: false, // number of loops, false = infinite
                             showCursor: false, // disable typing cursor
                             strings: ['UI/UX/Web Design &amp; Web Development'],
-                            typeSpeed: 65 // typing speed
+                            typeSpeed: 35, // typing speed
+                            callback: () => {
+                              setTimeout(() => {
+                                console.log('callback');
+                                app.appControllers.fadeInCustom(document.querySelector('.intro__btn-container'));
+                              }, 250);
+                            }
                           });
                         }, 250);
                       }
