@@ -36,7 +36,7 @@ gulp.task('server', ['browser-sync'], () => {
   gulp.watch(['src/*.php', 'src/*.txt'], ['copy:other'], reload);
   gulp.watch('src/scss/**/*.scss', ['sass'], reload);
   gulp.watch('src/css/**/*.css', ['copy:css'], reload);
-  gulp.watch('src/js/main.js', ['js'], reload);
+  gulp.watch('src/js/**/*.js', ['js'], reload);
   gulp.watch(['src/images/**/*', '!src/images/**-/*.rar'], ['images'], reload);
 });
 
