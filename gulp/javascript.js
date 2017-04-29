@@ -45,6 +45,7 @@ gulp.task('js', () => {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
     .pipe(rename({
+      basename: 'main',
       suffix: '.min'
     }))
     .pipe(gulp.dest('dist/js'))
