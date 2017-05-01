@@ -23,7 +23,7 @@ import { foo } from './components/example.js';
     },
     appControllers: {
       // Animate stylesheet loader controller
-      animateStylesheetLoader: () => {
+      animateStylesheetLoaderController: () => {
         let stylesheetAnimateCSS = document.createElement('link');
 
         stylesheetAnimateCSS.rel = 'stylesheet';
@@ -33,7 +33,7 @@ import { foo } from './components/example.js';
         app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, app.appAnchors.mainStyleSheet.nextSibling);
       },
       // Contact controller
-      contact: () => {
+      contactController: () => {
         $('#contactForm').submit((e) => {
           e.preventDefault();
 
@@ -46,18 +46,18 @@ import { foo } from './components/example.js';
           }).done(() => {
             e.preventDefault();
 
-            app.appControllers.modalMessages('success');
+            app.appControllers.modalMessagesController('success');
 
             // Clear the form.
             $($this)[0].reset();
           }).fail(() => {
             e.preventDefault();
 
-            app.appControllers.modalMessages('failure');
+            app.appControllers.modalMessagesController('failure');
           });
         });
       },
-      customSlider: () => {
+      customSliderController: () => {
         (() => {
           let content = document.querySelectorAll('.js-slideable')[0];
           let anchor = document.querySelectorAll('.js-slideable-anchor')[0];
@@ -126,7 +126,7 @@ import { foo } from './components/example.js';
         })()
       },
       // FadeIn controller
-      fadeInCustom: (element) => {
+      fadeInCustomController: (element) => {
         let elementOpacity = 0.1;// initial opacity
 
         element.style.display = 'block';
@@ -144,7 +144,7 @@ import { foo } from './components/example.js';
         }, 15);
       },
       // FadeOut controller
-      fadeOutCustom: (element) => {
+      fadeOutCustomController: (element) => {
         let elementOpacity = 1;// initial opacity
 
         let timer = setInterval(function () {
@@ -162,7 +162,7 @@ import { foo } from './components/example.js';
         }, 15);
       },
       // Font Awesome loader controller
-      fontAwesomeLoader: () => {
+      fontAwesomeLoaderController: () => {
         let stylesheetAwesome = document.createElement('link');
 
         stylesheetAwesome.rel = 'stylesheet';
@@ -172,7 +172,7 @@ import { foo } from './components/example.js';
         app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.appAnchors.mainStyleSheet.nextSibling);
       },
       // Font Raleway loader controller
-      fontRalewayLoader: () => {
+      fontRalewayLoaderController: () => {
         let stylesheetRaleway = document.createElement('link');
 
         stylesheetRaleway.rel = 'stylesheet';
@@ -182,7 +182,7 @@ import { foo } from './components/example.js';
         app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetRaleway, app.appAnchors.mainStyleSheet.nextSibling);
       },
       // LazyImages controller
-      lazyImages: () => {
+      lazyImagesController: () => {
         // Test if image is in the viewport
         const isImageInViewport = (img) => {
           let rect = img.getBoundingClientRect();
@@ -211,7 +211,7 @@ import { foo } from './components/example.js';
 
               lazyImagesArray[i].setAttribute('data-loaded', true);
 
-              app.appControllers.fadeInCustom(lazyImagesArray[i]);
+              app.appControllers.fadeInCustomController(lazyImagesArray[i]);
             }
           }
 
@@ -237,7 +237,7 @@ import { foo } from './components/example.js';
         window.addEventListener('scroll', lazyLoadImages);
       },
       // Modal Messages
-      modalMessages: ($messageType) => {
+      modalMessagesController: ($messageType) => {
         const modalOverlay = document.querySelector('.js-modal-overlay');
         const modalButton = modalOverlay.querySelectorAll('.js-modal-button');
         const messageFailure = modalOverlay.querySelector('.js-modal-message-failure');
@@ -249,7 +249,7 @@ import { foo } from './components/example.js';
           modalButton[i].addEventListener('click', (e) => {
             e.target.parentNode.classList.remove('modal-message-visible');
 
-            app.appControllers.fadeOutCustom(modalOverlay);
+            app.appControllers.fadeOutCustomController(modalOverlay);
           });
         }
 
@@ -260,7 +260,7 @@ import { foo } from './components/example.js';
             messageFailure.classList.add('modal-message-visible');
 
             // Show modal overlay
-            app.appControllers.fadeInCustom(modalOverlay);
+            app.appControllers.fadeInCustomController(modalOverlay);
           }
 
           // Initiate message loader function
@@ -272,7 +272,7 @@ import { foo } from './components/example.js';
             messageInfo.classList.add('modal-message-visible');
 
             // Show modal overlay
-            app.appControllers.fadeInCustom(modalOverlay);
+            app.appControllers.fadeInCustomController(modalOverlay);
           }
 
           // Initiate message loader function
@@ -284,7 +284,7 @@ import { foo } from './components/example.js';
             messageSuccess.classList.add('modal-message-visible');
 
             // Show modal overlay
-            app.appControllers.fadeInCustom(modalOverlay);
+            app.appControllers.fadeInCustomController(modalOverlay);
           }
 
           // Initiate message loader function
@@ -292,7 +292,7 @@ import { foo } from './components/example.js';
         }
       },
       // Page transition controller
-      pageTransition: () => {
+      pageTransitionController: () => {
         // Page transitions for clicks on links
         let links = document.querySelectorAll('a');
 
@@ -321,7 +321,7 @@ import { foo } from './components/example.js';
                   history.pushState({state: 'new'}, elTarget.title, elTarget.href);
 
                   // $('html').fadeOut(350);
-                  app.appControllers.fadeOutCustom(el);
+                  app.appControllers.fadeOutCustomController(el);
 
                   setTimeout(() => {
                     // location.replace(elTarget.href);
@@ -345,7 +345,7 @@ import { foo } from './components/example.js';
           });
         }
       },
-      particles: () => {
+      particlesController: () => {
         // Docs:https://github.com/marcbruederlin/particles.js
 
         Particles.init({
@@ -395,7 +395,7 @@ import { foo } from './components/example.js';
                 loopCount: false, // number of loops, false = infinite
                 showCursor: false, // disable typing cursor
                 strings: ['Alex Devero'],
-                typeSpeed: 105, // typing speed
+                typeSpeed: 90, // typing speed
                 callback: () => { // call when done callback function
                   setTimeout(() => {
                     Typed.new('.js-typed-h2', {
@@ -404,7 +404,7 @@ import { foo } from './components/example.js';
                       loopCount: false, // number of loops, false = infinite
                       showCursor: false, // disable typing cursor
                       strings: ['<span>Czech Designer &plus; Developer &plus; Entrepreneur</span>'],
-                      typeSpeed: 65, // typing speed
+                      typeSpeed: 35, // typing speed
                       callback: () => { // call when done callback function
                         setTimeout(() => {
                           Typed.new('.js-typed-h3', {
@@ -413,15 +413,20 @@ import { foo } from './components/example.js';
                             loopCount: false, // number of loops, false = infinite
                             showCursor: false, // disable typing cursor
                             strings: ['UI/UX/Web Design &amp; Web Development'],
-                            typeSpeed: 65 // typing speed
+                            typeSpeed: 35, // typing speed
+                            callback: () => {
+                              setTimeout(() => {
+                                app.appControllers.fadeInCustomController(document.querySelector('.intro__btn-container'));
+                              }, 100);
+                            }
                           });
-                        }, 250);
+                        }, 100);
                       }
                     });
-                  }, 250);
+                  }, 100);
                 }
               });
-            }, 1050);
+            }, 900);
           } else {
             setTimeout(() => {
               Typed.new('.js-typed-h1', {
@@ -430,7 +435,7 @@ import { foo } from './components/example.js';
                 loopCount: false, // number of loops, false = infinite
                 showCursor: false, // disable typing cursor
                 strings: ['Alex Devero'],
-                typeSpeed: 95, // typing speed
+                typeSpeed: 90, // typing speed
                 callback: () => { // call when done callback function
                   setTimeout(() => {
                     Typed.new('.js-typed-h2', {
@@ -451,23 +456,22 @@ import { foo } from './components/example.js';
                             typeSpeed: 35, // typing speed
                             callback: () => {
                               setTimeout(() => {
-                                console.log('callback');
-                                app.appControllers.fadeInCustom(document.querySelector('.intro__btn-container'));
-                              }, 250);
+                                app.appControllers.fadeInCustomController(document.querySelector('.intro__btn-container'));
+                              }, 100);
                             }
                           });
-                        }, 250);
+                        }, 100);
                       }
                     });
-                  }, 250);
+                  }, 100);
                 }
               });
-            }, 1050);
+            }, 900);
           }
         })();
       },
       // Waypoints controller
-      waypoints: () => {
+      waypointsController: () => {
         // setTimeout function is used to let the dom be loaded.
         // Otherwise, icons have no width or height
         // and waypoint will fire all triggers immediatelly.
@@ -593,17 +597,17 @@ import { foo } from './components/example.js';
           window.onload = () => {
             // Load Font Awesome
             if (true) {
-              app.appControllers.fontAwesomeLoader();
+              app.appControllers.fontAwesomeLoaderController();
             }
 
             // Load Raleway font
             if (true) {
-              app.appControllers.fontRalewayLoader()
+              app.appControllers.fontRalewayLoaderController()
             }
 
             if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
-              app.appControllers.animateStylesheetLoader();
+              app.appControllers.animateStylesheetLoaderController();
             }
 
             // Cache html element
@@ -615,8 +619,8 @@ import { foo } from './components/example.js';
               el.setAttribute('id', 'loaded');
 
               // Fade in cached html element
-              app.appControllers.fadeInCustom(el);
-            }, 350);
+              app.appControllers.fadeInCustomController(el);
+            }, 250);
 
             //
             // TypedJS
@@ -635,7 +639,7 @@ import { foo } from './components/example.js';
           } */
 
           // Page transitions for clicks on links
-          // app.appControllers.pageTransition();
+          // app.appControllers.pageTransitionController();
         })();
       }
 
@@ -644,7 +648,7 @@ import { foo } from './components/example.js';
        */
       if (app.appAnchors.contactForm.length > 0) {
         (() => {
-          app.appControllers.contact();
+          app.appControllers.contactController();
         })();
       }
 
@@ -653,7 +657,7 @@ import { foo } from './components/example.js';
        */
       if (app.appAnchors.lazyImages.length > 0) {
         (() => {
-          app.appControllers.lazyImages();
+          app.appControllers.lazyImagesController();
         })();
       }
 
@@ -662,7 +666,7 @@ import { foo } from './components/example.js';
        */
       if (app.appAnchors.modalMessage.length > 0) {
         (() => {
-          app.appControllers.modalMessages();
+          app.appControllers.modalMessagesController();
         })();
       }
 
@@ -671,7 +675,7 @@ import { foo } from './components/example.js';
        */
       if (app.appAnchors.particles.length > 0) {
         (() => {
-          app.appControllers.particles();
+          app.appControllers.particlesController();
         })();
       }
 
@@ -680,7 +684,7 @@ import { foo } from './components/example.js';
        */
       if (app.appAnchors.slideableContent.length > 0) {
         (() => {
-          app.appControllers.customSlider();
+          app.appControllers.customSliderController();
         })();
       }
 
@@ -690,12 +694,12 @@ import { foo } from './components/example.js';
        */
       if (app.appAnchors.waypoint.length > 0) {
         (() => {
-          app.appControllers.waypoints();
+          app.appControllers.waypointsController();
         })()
       }
     },
     init: () => {
-      // document.querySelector('html').style.display = 'none';
+      document.querySelector('html').style.display = 'none';
 
       if (document.querySelectorAll('.no-js').length > 0) {
         document.querySelector('.no-js').classList.remove('no-js');
@@ -710,8 +714,6 @@ import { foo } from './components/example.js';
       }
 
       app.appSwitches();
-
-      console.log(foo);
     }
   };
 
