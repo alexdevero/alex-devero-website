@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // eslint-disable-line strict
 
 // Example import
 import { foo } from './components/example.js';
