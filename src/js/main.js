@@ -386,6 +386,7 @@ import { foo } from './components/example.js';
         (() => {
           // Controller for Typed.js
           // docs: https://github.com/mattboldt/typed.js
+          document.querySelector('html').style.overflow = 'hidden';
 
           if (document.querySelectorAll('.js-typed-en').length !== 0) {
             setTimeout(() => {
@@ -415,8 +416,14 @@ import { foo } from './components/example.js';
                             strings: ['UI/UX/Web Design &amp; Web Development'],
                             typeSpeed: 35, // typing speed
                             callback: () => {
+                              document.querySelector('html').style.overflow = 'initial';
+
                               setTimeout(() => {
                                 app.appControllers.fadeInCustomController(document.querySelector('.intro__btn-container'));
+
+                                setTimeout(() => {
+                                  document.querySelector('.js-typed-h1').classList.add('glitch');
+                                }, 750);
                               }, 100);
                             }
                           });
@@ -457,6 +464,10 @@ import { foo } from './components/example.js';
                             callback: () => {
                               setTimeout(() => {
                                 app.appControllers.fadeInCustomController(document.querySelector('.intro__btn-container'));
+
+                                setTimeout(() => {
+                                  document.querySelector('.js-typed-h1').classList.add('glitch');
+                                }, 750);
                               }, 100);
                             }
                           });
@@ -675,7 +686,7 @@ import { foo } from './components/example.js';
        */
       if (app.appAnchors.particles.length > 0) {
         (() => {
-          app.appControllers.particlesController();
+          //app.appControllers.particlesController();
         })();
       }
 

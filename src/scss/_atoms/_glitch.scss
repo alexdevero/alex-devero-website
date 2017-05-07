@@ -191,11 +191,11 @@
 
   &:before {
     text-shadow: 2px 0 blue;
-    animation: noise-anim-2 2s infinite linear alternate-reverse;
+    animation: noise-anim-2 4s infinite linear alternate-reverse;
   }
 
   &:after {
     text-shadow: -2px 0 red;
-    animation: noise-anim 1s infinite linear alternate-reverse;
+    animation: noise-anim 6s infinite linear alternate-reverse;
   }
 }
