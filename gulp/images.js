@@ -9,7 +9,7 @@ gulp.task('images', () => {
   const plumber = require('gulp-plumber');
   const pngquant = require('imagemin-pngquant');
 
-  return gulp.src(['src/images/**/*', '!src/images/**/*.rar', '!src/images/**/*.7z', '!src/images/**/*.zip'])
+  return gulp.src(['src/images/**/*', '!src/images/**/*.rar', '!src/images/**/*.7z', '!src/images/**/*.zip', '!src/images/case-studies/**/*'])
     .pipe(plumber())
     .pipe(changed('dist/images'))
     .pipe(imagemin({
