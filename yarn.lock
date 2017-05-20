@@ -3256,6 +3256,10 @@ html-minifier@^3.0.3:
     relateurl "0.2.x"
     uglify-js "2.8.x"
 
+html5shiv@^3.7.3:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/html5shiv/-/html5shiv-3.7.3.tgz#d78a84a367bcb9a710100d57802c387b084631d2"
+
 htmlhint@^0.9.5:
   version "0.9.13"
   resolved "https://registry.yarnpkg.com/htmlhint/-/htmlhint-0.9.13.tgz#08163cb1e6aa505048ebb0b41063a7ca07dc6c88"

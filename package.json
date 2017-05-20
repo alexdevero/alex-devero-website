@@ -64,6 +64,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
+    "html5shiv": "^3.7.3",
     "imagemin-pngquant": "^5.0.0",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
