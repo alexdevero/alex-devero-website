@@ -17,7 +17,7 @@ const sourcemaps = require('gulp-sourcemaps');
 gulp.task('sass', () => {
   const processors = [
     cssnext({
-      browsers: 'last 3 versions'
+      browsers: ['last 5 versions', 'ie >= 8']
     }),
     cssnano({
       autoprefixer: false
