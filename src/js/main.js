@@ -713,6 +713,10 @@ import { foo } from './components/example.js';
       document.querySelector('html').style.display = 'none';
 
       if (document.querySelectorAll('.no-js').length > 0) {
+        if (!document.querySelector('.no-js').classList.contains('js')) {
+          document.querySelector('.no-js').classList.add('js');
+        }
+
         document.querySelector('.no-js').classList.remove('no-js');
       }
 
