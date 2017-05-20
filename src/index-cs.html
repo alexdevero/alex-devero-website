@@ -93,6 +93,17 @@
     mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");
   </script> -->
   <!-- end Mixpanel -->
+
+  <!-- Polyfill for HTML5 elements for IE 8 and lower -->
+  <!--[if lt IE 8]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script>window.html5 || document.write('<script src="js/plugins/html5shiv.min.js"><\/script>')</script>
+  <![endif]-->
+
+  <!-- Polyfill for classList object for IE 9 and lower -->
+  <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+  <![endif]-->
 </head>
 <body class="page--home">
   <!--[if lt IE 9]>
@@ -169,7 +180,7 @@
 
         <h1 class="js-typed-fallback glitch" data-text="Alex Devero">Alex Devero</h1><!-- glitch effect -->
 
-        <h2 class="js-typed-fallback"><span>Český Designér &plus; Developer &plus; Podnikatel.</span></h2>
+        <h2 class="js-typed-fallback"><span>Český Designér &#43; Developer &#43; Podnikatel.</span></h2>
 
         <h3 class="js-typed-fallback">UI/UX/Web Design &amp; Web Development</h3>
 

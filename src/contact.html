@@ -93,6 +93,17 @@
     mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");
   </script> -->
   <!-- end Mixpanel -->
+
+  <!-- Polyfill for HTML5 elements for IE 8 and lower -->
+  <!--[if lt IE 8]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script>window.html5 || document.write('<script src="js/plugins/html5shiv.min.js"><\/script>')</script>
+  <![endif]-->
+
+  <!-- Polyfill for classList object for IE 9 and lower -->
+  <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+  <![endif]-->
 </head>
 <body class="page--contact">
   <!--[if lt IE 9]>
