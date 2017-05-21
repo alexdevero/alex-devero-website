@@ -1,4 +1,4 @@
 // Example component
-const foo = 'bar';
+const example = 'bar';
 
-export { foo };
+export { example };
