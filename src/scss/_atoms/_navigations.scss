@@ -187,5 +187,13 @@
       display: inline-block;
       float: none;
     }
+
+    .list-divider {
+      display: none;
+
+      @media screen and (max-width: 460px) {
+        display: block;
+      }
+    }
   }
 }
