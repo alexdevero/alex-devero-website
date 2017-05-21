@@ -97,9 +97,14 @@
   <!-- end Mixpanel -->
 
   <!-- Polyfill for HTML5 elements for IE 8 and lower -->
-  <!--[if lt IE 8]>
+  <!--[if lte IE 8]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script>window.html5 || document.write('<script src="js/plugins/html5shiv.min.js"><\/script>')</script>
+  <![endif]-->
+
+  <!-- Polyfill for addEventListener, dispatchEvent, DOM3, document.createEvent, DOMContentLoaded for IE 8 -->
+  <!--[if lte IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.7.0/ie8.js"></script>
   <![endif]-->
 
   <!-- Polyfill for classList object for IE 9 and lower -->
