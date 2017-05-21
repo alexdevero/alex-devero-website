@@ -3,6 +3,7 @@
 // Example import
 // import { example } from './components/example.js';
 // import { animateStylesheetLoader } from './components/animate-css-loader.js';
+import { browserDetector } from './components/browser-detector.js';
 import { contactForm } from './components/contact-form.js';
 // import { customSlider } from './components/custom-slider.js';
 import { fadeInCustom } from './components/fade-in-custom.js';
@@ -179,6 +180,8 @@ import { typedjs } from './components/typedjs.js';
 
         document.querySelector('.no-js').classList.remove('no-js');
       }
+
+      browserDetector();
 
       if (document.querySelectorAll('.no-js-img').length > 0) {
         let imagesArray = document.querySelectorAll('.no-js-img');
