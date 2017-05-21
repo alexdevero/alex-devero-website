@@ -2,7 +2,17 @@
 
 // Example import
 import { foo } from './components/example.js';
-import { customSlider } from './components/custom-slider.js';
+//import { animateStylesheetLoader } from './components/animate-css-loader.js';
+import { contactForm } from './components/contact-form.js';
+// import { customSlider } from './components/custom-slider.js';
+import { fadeInCustom } from './components/fade-in-custom.js';
+import { fadeOutCustom } from './components/fade-out-custom.js';
+import { fontAwesomeLoader } from './components/font-awesome-loader.js';
+import { fontRalewayLoader } from './components/font-raleway-loader.js';
+import { lazyImages } from './components/lazy-images.js';
+// import { particles } from './components/particles.js';typedjs
+import { typedjs } from './components/typedjs.js';
+// import { waypoints } from './components/waypoints.js';
 
 /**
  * @author Alex Devero <deveroalex@gmail.com>
@@ -12,30 +22,25 @@ import { customSlider } from './components/custom-slider.js';
   const app = {
     appAnchors: {
       contactForm: document.querySelectorAll('#contactForm'),
-      indexCanvas: document.querySelectorAll('#indexCanvas'),
+      //indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.querySelectorAll('.lazy'),
-      mainStyleSheet: document.querySelector('.js-stylesheet-main'),
+      //mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       modalMessage: document.querySelectorAll('.js-modal-overlay'),
-      particles: document.querySelectorAll('.js-particles'),
+      //particles: document.querySelectorAll('.js-particles'),
       portfolioItem: document.querySelectorAll('.work__item'),
-      slideableContent: document.querySelectorAll('.js-slideable'),
+      //slideableContent: document.querySelectorAll('.js-slideable'),
       typedJS: document.querySelectorAll('.js-typed'),
       waypoint: document.querySelectorAll('.wp')
     },
     appControllers: {
       // Animate stylesheet loader controller
       animateStylesheetLoaderController: () => {
-        let stylesheetAnimateCSS = document.createElement('link');
-
-        stylesheetAnimateCSS.rel = 'stylesheet';
-        stylesheetAnimateCSS.href = 'css/animate.css';
-        stylesheetAnimateCSS.classList.add('jsLoaded');
-
-        app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, app.appAnchors.mainStyleSheet.nextSibling);
+        animateStylesheetLoader();
       },
       // Contact controller
       contactController: () => {
-        $('#contactForm').submit((e) => {
+        contactForm();
+        /*$('#contactForm').submit((e) => {
           e.preventDefault();
 
           const $this = e.target;
@@ -56,13 +61,13 @@ import { customSlider } from './components/custom-slider.js';
 
             app.appControllers.modalMessagesController('failure');
           });
-        });
+        });*/
       },
       customSliderController: () => {
         customSlider('.js-slideable', '.js-slideable-anchor');
       },
       // FadeIn controller
-      fadeInCustomController: (element) => {
+      /*fadeInCustomController: (element) => {
         let elementOpacity = 0.1;// initial opacity
 
         element.style.display = 'block';
@@ -78,9 +83,9 @@ import { customSlider } from './components/custom-slider.js';
 
           elementOpacity += elementOpacity * 0.1;
         }, 15);
-      },
+      },*/
       // FadeOut controller
-      fadeOutCustomController: (element) => {
+      /*fadeOutCustomController: (element) => {
         let elementOpacity = 1;// initial opacity
 
         let timer = setInterval(function () {
@@ -96,136 +101,18 @@ import { customSlider } from './components/custom-slider.js';
 
           elementOpacity -= elementOpacity * 0.1;
         }, 15);
-      },
+      },*/
       // Font Awesome loader controller
       fontAwesomeLoaderController: () => {
-        let stylesheetAwesome = document.createElement('link');
-
-        stylesheetAwesome.rel = 'stylesheet';
-        stylesheetAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-        stylesheetAwesome.classList.add('jsLoaded');
-
-        app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetAwesome, app.appAnchors.mainStyleSheet.nextSibling);
+        fontAwesomeLoader();
       },
       // Font Raleway loader controller
       fontRalewayLoaderController: () => {
-        let stylesheetRaleway = document.createElement('link');
-
-        stylesheetRaleway.rel = 'stylesheet';
-        stylesheetRaleway.href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700';
-        stylesheetRaleway.classList.add('jsLoaded');
-
-        app.appAnchors.mainStyleSheet.parentNode.insertBefore(stylesheetRaleway, app.appAnchors.mainStyleSheet.nextSibling);
+        fontRalewayLoader();
       },
       // LazyImages controller
       lazyImagesController: () => {
-        // Test if image is in the viewport
-        const isImageInViewport = (img) => {
-          let rect = img.getBoundingClientRect();
-
-          return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-          );
-        }
-
-        // lazyLoadImages function
-        const lazyLoadImages = () => {
-          let lazyImagesArray = document.querySelectorAll('img[data-src]');
-
-          for (let i = 0; i < lazyImagesArray.length; i++) {
-            if (isImageInViewport(lazyImagesArray[i])) {
-              lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
-
-              lazyImagesArray[i].removeAttribute('data-src');
-
-              lazyImagesArray[i].setAttribute('srcset', lazyImagesArray[i].getAttribute('data-srcset'));
-
-              lazyImagesArray[i].removeAttribute('data-srcset');
-
-              lazyImagesArray[i].setAttribute('data-loaded', true);
-
-              app.appControllers.fadeInCustomController(lazyImagesArray[i]);
-            }
-          }
-
-          // Remove event listeners if all images are loaded
-          if (lazyImagesArray.length === 0) {
-            window.removeEventListener('DOMContentLoaded', lazyLoadImages);
-
-            window.removeEventListener('load', lazyLoadImages);
-
-            window.removeEventListener('resize', lazyLoadImages);
-
-            window.removeEventListener('scroll', lazyLoadImages);
-          }
-        }
-
-        // Add event listeners to images
-        window.addEventListener('DOMContentLoaded', lazyLoadImages);
-
-        window.addEventListener('load', lazyLoadImages);
-
-        window.addEventListener('resize', lazyLoadImages);
-
-        window.addEventListener('scroll', lazyLoadImages);
-      },
-      // Modal Messages
-      modalMessagesController: ($messageType) => {
-        const modalOverlay = document.querySelector('.js-modal-overlay');
-        const modalButton = modalOverlay.querySelectorAll('.js-modal-button');
-        const messageFailure = modalOverlay.querySelector('.js-modal-message-failure');
-        const messageInfo = modalOverlay.querySelector('.js-modal-message-info');
-        const messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
-
-        // Close modal and hide message by clicking on the button
-        for (let i = 0, j = modalButton.length; i < j; i++) {
-          modalButton[i].addEventListener('click', (e) => {
-            e.target.parentNode.classList.remove('modal-message-visible');
-
-            app.appControllers.fadeOutCustomController(modalOverlay);
-          });
-        }
-
-        if ($messageType === 'failure') {
-          // Failure message
-          const messageFailureLoader = () => {
-            // Show modal message
-            messageFailure.classList.add('modal-message-visible');
-
-            // Show modal overlay
-            app.appControllers.fadeInCustomController(modalOverlay);
-          }
-
-          // Initiate message loader function
-          messageFailureLoader();
-        } else if ($messageType === 'info') {
-          // Info message
-          const messageInfoLoader = () => {
-            // Show modal message
-            messageInfo.classList.add('modal-message-visible');
-
-            // Show modal overlay
-            app.appControllers.fadeInCustomController(modalOverlay);
-          }
-
-          // Initiate message loader function
-          messageInfoLoader();
-        } else if ($messageType === 'success') {
-          // Success message
-          const messageSuccessLoader = () => {
-            // Show modal message
-            messageSuccess.classList.add('modal-message-visible');
-
-            // Show modal overlay
-            app.appControllers.fadeInCustomController(modalOverlay);
-          }
-
-          // Initiate message loader function
-          messageSuccessLoader();
-        }
+        lazyImages();
       },
       // Page transition controller
       pageTransitionController: () => {
@@ -282,255 +169,14 @@ import { customSlider } from './components/custom-slider.js';
         }
       },
       particlesController: () => {
-        // Docs:https://github.com/marcbruederlin/particles.js
-
-        Particles.init({
-          color: '#212121',
-          connectParticles: true,
-          maxParticles: 72,
-          minDistance: 120,
-          opacity: .5,
-          responsive: [
-            {
-              breakpoint: 992,
-              options: {
-                maxParticles: 72,
-                minDistance: 100
-              }
-            },
-            {
-              breakpoint: 768,
-              options: {
-                maxParticles: 52,
-                minDistance: 90
-              }
-            },
-            {
-              breakpoint: 480,
-              options: {
-                maxParticles: 32,
-                minDistance: 80
-              }
-            }
-          ],
-          selector: '.js-particles',
-          sizeVariations: 4,
-          speed: 0.85
-        });
+        particles();
       },
       typedJSController: () => {
-        (() => {
-          // Controller for Typed.js
-          // docs: https://github.com/mattboldt/typed.js
-          document.querySelector('html').style.overflow = 'hidden';
-
-          if (document.querySelectorAll('.js-typed-en').length !== 0) {
-            setTimeout(() => {
-              Typed.new('.js-typed-h1', {
-                contentType: 'text',
-                loop: false, // loop on or off (true or false)
-                loopCount: false, // number of loops, false = infinite
-                showCursor: false, // disable typing cursor
-                strings: ['Alex Devero'],
-                typeSpeed: 90, // typing speed
-                callback: () => { // call when done callback function
-                  setTimeout(() => {
-                    Typed.new('.js-typed-h2', {
-                      contentType: 'html',
-                      loop: false, // loop on or off (true or false)
-                      loopCount: false, // number of loops, false = infinite
-                      showCursor: false, // disable typing cursor
-                      strings: ['<span>Czech Designer &plus; Developer &plus; Entrepreneur</span>'],
-                      typeSpeed: 35, // typing speed
-                      callback: () => { // call when done callback function
-                        setTimeout(() => {
-                          Typed.new('.js-typed-h3', {
-                            contentType: 'html',
-                            loop: false, // loop on or off (true or false)
-                            loopCount: false, // number of loops, false = infinite
-                            showCursor: false, // disable typing cursor
-                            strings: ['UI/UX/Web Design &amp; Web Development'],
-                            typeSpeed: 35, // typing speed
-                            callback: () => {
-                              document.querySelector('html').style.overflow = 'initial';
-
-                              setTimeout(() => {
-                                app.appControllers.fadeInCustomController(document.querySelector('.intro__btn-container'));
-
-                                setTimeout(() => {
-                                  document.querySelector('.js-typed-h1').classList.add('glitch');
-                                }, 750);
-                              }, 100);
-                            }
-                          });
-                        }, 100);
-                      }
-                    });
-                  }, 100);
-                }
-              });
-            }, 900);
-          } else {
-            setTimeout(() => {
-              Typed.new('.js-typed-h1', {
-                contentType: 'text',
-                loop: false, // loop on or off (true or false)
-                loopCount: false, // number of loops, false = infinite
-                showCursor: false, // disable typing cursor
-                strings: ['Alex Devero'],
-                typeSpeed: 90, // typing speed
-                callback: () => { // call when done callback function
-                  setTimeout(() => {
-                    Typed.new('.js-typed-h2', {
-                      contentType: 'html',
-                      loop: false, // loop on or off (true or false)
-                      loopCount: false, // number of loops, false = infinite
-                      showCursor: false, // disable typing cursor
-                      strings: ['<span>Český Designér &plus; Developer &plus; Podnikatel.</span>'],
-                      typeSpeed: 35, // typing speed
-                      callback: () => { // call when done callback function
-                        setTimeout(() => {
-                          Typed.new('.js-typed-h3', {
-                            contentType: 'html',
-                            loop: false, // loop on or off (true or false)
-                            loopCount: false, // number of loops, false = infinite
-                            showCursor: false, // disable typing cursor
-                            strings: ['UI/UX/Web Design &amp; Web Development'],
-                            typeSpeed: 35, // typing speed
-                            callback: () => {
-                              setTimeout(() => {
-                                app.appControllers.fadeInCustomController(document.querySelector('.intro__btn-container'));
-
-                                setTimeout(() => {
-                                  document.querySelector('.js-typed-h1').classList.add('glitch');
-                                }, 750);
-                              }, 100);
-                            }
-                          });
-                        }, 100);
-                      }
-                    });
-                  }, 100);
-                }
-              });
-            }, 900);
-          }
-        })();
+        typedjs();
       },
       // Waypoints controller
       waypointsController: () => {
-        // setTimeout function is used to let the dom be loaded.
-        // Otherwise, icons have no width or height
-        // and waypoint will fire all triggers immediatelly.
-        setTimeout(() => {
-          // Load default discovery icon
-          const waypointOne = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-discovery-icon'),
-            handler: () => {
-              document.querySelector('.wp-discovery-icon').classList.add('animated', 'fadeInLeft');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load discovery text
-          const waypointTwo = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-discovery-text'),
-            handler: () => {
-              document.querySelector('.wp-discovery-text').classList.add('animated', 'fadeInRight');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load planning icon for mobile
-          const waypointThree = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-planning-icon-mobile'),
-            handler: () => {
-              document.querySelector('.wp-planning-icon-mobile').classList.add('animated', 'fadeInRight');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load planning icon for desktop
-          const waypointFour = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-planning-icon-desktop'),
-            handler: () => {
-              document.querySelector('.wp-planning-icon-desktop').classList.add('animated', 'fadeInRight');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load planning text
-          const waypointFive = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-planning-text'),
-            handler: () => {
-              document.querySelector('.wp-planning-text').classList.add('animated', 'fadeInLeft');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load default design icon
-          const waypointSix = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-design-icon'),
-            handler: () => {
-              document.querySelector('.wp-design-icon').classList.add('animated', 'fadeInLeft');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load design text
-          const waypointSeven = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-design-text'),
-            handler: () => {
-              document.querySelector('.wp-design-text').classList.add('animated', 'fadeInRight');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load building icon for mobile
-          const waypointEight = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-building-icon-mobile'),
-            handler: () => {
-              document.querySelector('.wp-building-icon-mobile').classList.add('animated', 'fadeInRight');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load building icon for desktop
-          const waypointNine = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-building-icon-desktop'),
-            handler: () => {
-              document.querySelector('.wp-building-icon-desktop').classList.add('animated', 'fadeInRight');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load building text
-          const waypointTen = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-building-text'),
-            handler: () => {
-              document.querySelector('.wp-building-text').classList.add('animated', 'fadeInLeft');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load default evaluation icon
-          const waypointEleven = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-evaluation-icon'),
-            handler: () => {
-              document.querySelector('.wp-evaluation-icon').classList.add('animated', 'fadeInLeft');
-            },
-            offset: 'bottom-in-view'
-          });
-
-          // Load evaluation text
-          const waypointTwelve = new Waypoint({ // eslint-disable-line no-unused-vars
-            element: document.querySelector('.wp-evaluation-text'),
-            handler: () => {
-              document.querySelector('.wp-evaluation-text').classList.add('animated', 'fadeInRight');
-            },
-            offset: 'bottom-in-view'
-          });
-        }, 1000);
+        waypoints();
       }
     },
     appSwitches: () => {
@@ -552,10 +198,10 @@ import { customSlider } from './components/custom-slider.js';
               app.appControllers.fontRalewayLoaderController()
             }
 
-            if (document.URL.indexOf('process') > 0) {
+            /*if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
               app.appControllers.animateStylesheetLoaderController();
-            }
+            }*/
 
             // Cache html element
             let el = document.querySelector('html');
@@ -566,7 +212,7 @@ import { customSlider } from './components/custom-slider.js';
               el.setAttribute('id', 'loaded');
 
               // Fade in cached html element
-              app.appControllers.fadeInCustomController(el);
+              fadeInCustom(el);
             }, 250);
 
             //
@@ -611,39 +257,39 @@ import { customSlider } from './components/custom-slider.js';
       /**
        * Modal messages
        */
-      if (app.appAnchors.modalMessage.length > 0) {
+      /*if (app.appAnchors.modalMessage.length > 0) {
         (() => {
           app.appControllers.modalMessagesController();
         })();
-      }
+      }*/
 
       /**
        * Particles
        */
-      if (app.appAnchors.particles.length > 0) {
+      /*if (app.appAnchors.particles.length > 0) {
         (() => {
-          //app.appControllers.particlesController();
+          app.appControllers.particlesController();
         })();
-      }
+      }*/
 
       /**
        * Slideable content
        */
-      if (app.appAnchors.slideableContent.length > 0) {
+      /*if (app.appAnchors.slideableContent.length > 0) {
         (() => {
           app.appControllers.customSliderController();
         })();
-      }
+      }*/
 
       /**
        * Waypoints
        * info: http://imakewebthings.com/waypoints/
        */
-      if (app.appAnchors.waypoint.length > 0) {
+      /*if (app.appAnchors.waypoint.length > 0) {
         (() => {
           app.appControllers.waypointsController();
         })()
-      }
+      }*/
     },
     init: () => {
       document.querySelector('html').style.display = 'none';
