@@ -27,11 +27,11 @@ import { pageTransition } from './components/page-transition.js';
       // indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.querySelectorAll('.lazy'),
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
-      modalMessage: document.querySelectorAll('.js-modal-overlay'),
+      // modalMessage: document.querySelectorAll('.js-modal-overlay'),
       // particles: document.querySelectorAll('.js-particles'),
-      portfolioItem: document.querySelectorAll('.work__item'),
+      portfolioItem: document.querySelectorAll('.work__item')
       // slideableContent: document.querySelectorAll('.js-slideable'),
-      typedJS: document.querySelectorAll('.js-typed')
+      // typedJS: document.querySelectorAll('.js-typed')
       // waypoint: document.querySelectorAll('.wp')
     },
     appControllers: {
