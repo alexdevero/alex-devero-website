@@ -28,7 +28,7 @@ const modalMessages = ($messageType) => {
       messageFailure.classList.add('modal-message-visible');
 
       // Show modal overlay
-      app.appControllers.fadeInCustomController(modalOverlay);
+      fadeInCustom(modalOverlay);
     }
 
     // Initiate message loader function
@@ -40,7 +40,7 @@ const modalMessages = ($messageType) => {
       messageInfo.classList.add('modal-message-visible');
 
       // Show modal overlay
-      app.appControllers.fadeInCustomController(modalOverlay);
+      fadeInCustom(modalOverlay);
     }
 
     // Initiate message loader function
@@ -52,7 +52,7 @@ const modalMessages = ($messageType) => {
       messageSuccess.classList.add('modal-message-visible');
 
       // Show modal overlay
-      app.appControllers.fadeInCustomController(modalOverlay);
+      fadeInCustom(modalOverlay);
     }
 
     // Initiate message loader function
