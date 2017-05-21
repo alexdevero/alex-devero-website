@@ -6,7 +6,7 @@
 import { contactForm } from './components/contact-form.js';
 // import { customSlider } from './components/custom-slider.js';
 import { fadeInCustom } from './components/fade-in-custom.js';
-//import { fadeOutCustom } from './components/fade-out-custom.js';
+// import { fadeOutCustom } from './components/fade-out-custom.js';
 import { fontAwesomeLoader } from './components/font-awesome-loader.js';
 import { fontRalewayLoader } from './components/font-raleway-loader.js';
 import { lazyImages } from './components/lazy-images.js';
