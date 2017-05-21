@@ -6,11 +6,12 @@
 import { contactForm } from './components/contact-form.js';
 // import { customSlider } from './components/custom-slider.js';
 import { fadeInCustom } from './components/fade-in-custom.js';
-import { fadeOutCustom } from './components/fade-out-custom.js';
+//import { fadeOutCustom } from './components/fade-out-custom.js';
 import { fontAwesomeLoader } from './components/font-awesome-loader.js';
 import { fontRalewayLoader } from './components/font-raleway-loader.js';
 import { lazyImages } from './components/lazy-images.js';
-// import { particles } from './components/particles.js';typedjs
+// import { particles } from './components/particles.js';
+import { pageTransition } from './components/page-transition.js';
 import { typedjs } from './components/typedjs.js';
 // import { waypoints } from './components/waypoints.js';
 
@@ -29,8 +30,8 @@ import { typedjs } from './components/typedjs.js';
       // particles: document.querySelectorAll('.js-particles'),
       portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
-      typedJS: document.querySelectorAll('.js-typed'),
-      waypoint: document.querySelectorAll('.wp')
+      typedJS: document.querySelectorAll('.js-typed')
+      // waypoint: document.querySelectorAll('.wp')
     },
     appControllers: {
       // Animate stylesheet loader controller
@@ -40,28 +41,6 @@ import { typedjs } from './components/typedjs.js';
       // Contact controller
       contactController: () => {
         contactForm();
-        /* $('#contactForm').submit((e) => {
-          e.preventDefault();
-
-          const $this = e.target;
-
-          $.ajax({
-            data: $($this).serialize(),
-            type: 'POST',
-            url: 'contact.php'
-          }).done(() => {
-            e.preventDefault();
-
-            app.appControllers.modalMessagesController('success');
-
-            // Clear the form.
-            $($this)[0].reset();
-          }).fail(() => {
-            e.preventDefault();
-
-            app.appControllers.modalMessagesController('failure');
-          });
-        }); */
       },
       customSliderController: () => {
         customSlider('.js-slideable', '.js-slideable-anchor');
@@ -80,57 +59,7 @@ import { typedjs } from './components/typedjs.js';
       },
       // Page transition controller
       pageTransitionController: () => {
-        // Page transitions for clicks on links
-        let links = document.querySelectorAll('a');
-
-        for (let i = 0, j = links.length; i<j; i++) {
-          // Check if the link is internal - redirects to another html file or some section via ID
-          links[i].setAttribute('data-href', (links[i].href.indexOf('.html') !== -1) && links[i].href.indexOf('#') <= 0);
-
-          links[i].addEventListener('click', (e) => {
-            let elTarget = e.target;
-
-            if (elTarget.getAttribute('data-href') === 'true') {
-              e.preventDefault();
-
-              // Go up in the nodelist until we find a node with .href (HTMLAnchorElement)
-              while (elTarget && !elTarget.href) {
-                elTarget = elTarget.parentNode;
-              }
-
-              // Change current URL
-              if (elTarget.getAttribute('data-href')) {
-                e.preventDefault();
-
-                const changePage = () => {
-                  let el = document.querySelector('html');
-
-                  history.pushState({state: 'new'}, elTarget.title, elTarget.href);
-
-                  // $('html').fadeOut(350);
-                  fadeOutCustom(el);
-
-                  setTimeout(() => {
-                    // location.replace(elTarget.href);
-                    window.location.href = elTarget.href;
-                  }, 750);
-
-                  // location.replace(elTarget.href);
-                }
-
-                setTimeout(changePage, 100);
-
-                // changePage();
-              }
-
-              // window.addEventListener('popstate', changePage);
-            } else {
-              setTimeout(() => {
-                return true;
-              }, 750);
-            }
-          });
-        }
+        pageTransition();
       },
       // ParticlesJS controller
       particlesController: () => {
