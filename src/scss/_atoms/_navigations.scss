@@ -180,3 +180,12 @@
     }
   }
 }
+
+.ie-9 {
+  .nav--footer {
+    li {
+      display: inline-block;
+      float: none;
+    }
+  }
+}
