@@ -129,6 +129,26 @@
       visibility: visible;
     }
   }
+
+  @at-root {
+    .ie-8 &,
+    .ie-9 & {
+      padding-top: remy(7px);
+      display: block;
+
+      @media screen and (min-width: 768px) {
+        text-align: right;
+
+        li {
+          display: inline-block;
+
+          &:first-of-type {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 .nav--media {
