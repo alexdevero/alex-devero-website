@@ -25,7 +25,7 @@ const typedjs = () => {
               loop: false, // loop on or off (true or false)
               loopCount: false, // number of loops, false = infinite
               showCursor: false, // disable typing cursor
-              strings: ['<span>Czech Designer &plus; Developer &plus; Entrepreneur</span>'],
+              strings: ['<span>Czech Designer &#43; Developer &#43; Entrepreneur</span>'],
               typeSpeed: 35, // typing speed
               callback: () => { // call when done callback function
                 setTimeout(() => {
