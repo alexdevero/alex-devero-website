@@ -11,7 +11,8 @@
   display: inline-block;
   font-family: $font-quicksand;
   font-size: remy(16px);
-  border-radius: $radius;
+  // border-radius: $radius;
+  border-radius: 0;
   cursor: pointer;
 
   @include box-shadow(2);
@@ -114,7 +115,7 @@
 .btn--ghost--red-inverted {
   font-weight: 600;
   letter-spacing: remy(2px);
-  text-transform: uppercase;
+  // text-transform: uppercase;
   background: transparent;
 
   &:focus,
