@@ -13,7 +13,7 @@ import { fontRalewayLoader } from './components/font-raleway-loader.js';
 import { lazyImages } from './components/lazy-images.js';
 // import { particles } from './components/particles.js';
 import { pageTransition } from './components/page-transition.js';
-import { typedjs } from './components/typedjs.js';
+// import { typedjs } from './components/typedjs.js';
 // import { waypoints } from './components/waypoints.js';
 
 /**
@@ -110,11 +110,11 @@ import { typedjs } from './components/typedjs.js';
             }, 250);
 
             // TypedJS
-            if (app.appAnchors.typedJS.length > 0) {
+            /* if (app.appAnchors.typedJS.length > 0) {
               (() => {
                 app.appControllers.typedJSController();
               })();
-            }
+            } */
           }
 
           // Detect history change (back or forward button)
