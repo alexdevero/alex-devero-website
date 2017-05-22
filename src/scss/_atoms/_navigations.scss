@@ -207,6 +207,10 @@
 .ie-8,
 .ie-9 {
   .nav {
+    @media (max-width: 767px) {
+      padding-top: remy(60px);
+    }
+
     .navbar-toggler {
       display: none;
     }
