@@ -197,3 +197,22 @@
     }
   }
 }
+
+.nav {
+  .navbar-toggler-ie {
+    display: none;
+  }
+}
+
+.ie-8,
+.ie-9 {
+  .nav {
+    .navbar-toggler {
+      display: none;
+    }
+
+    .navbar-toggler-ie {
+      display: block;
+    }
+  }
+}
