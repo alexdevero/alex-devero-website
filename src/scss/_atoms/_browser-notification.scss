@@ -6,8 +6,7 @@
   position: fixed;
   top: 0;
   z-index: 999;
-  padding-top: remy(16px);
-  padding-bottom: remy(16px);
+  padding: remy(16px) remy(8px);
   width: 100%;
   color: #fff;
   text-align: center;
@@ -19,7 +18,7 @@
 
     &:focus,
     &:hover {
-      color: map-get($palette-custom, black);
+      color: #fff;
     }
   }
 }
