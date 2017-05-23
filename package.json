@@ -39,7 +39,7 @@
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.5.0",
+    "babel-preset-env": "^1.5.1",
     "babel-register": "^6.24.1",
     "browser-sync": "^2.18.12",
     "cssnano": "^3.10.0",
@@ -74,7 +74,7 @@
     "typed.js": "^1.1.1",
     "vinyl-ftp": "^0.6.0",
     "waypoints": "^4.0.1",
-    "webpack": "^2.5.1",
+    "webpack": "^2.6.0",
     "webpack-stream": "^3.2.0"
   },
   "private": true
