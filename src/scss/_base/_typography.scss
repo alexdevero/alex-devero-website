@@ -110,23 +110,28 @@ h5 + .h6,
 
 /* end. Guttenberg */
 
-p {
+p,
+.text--regular {
   margin-top: 0;
+  font-size: remy(18px);
 
   & + & {
     margin-top: remy(20px);
   }
 }
 
-em {
+em,
+.em {
   font-style: italic;
 }
 
-small {
-  font-size: remy(17px);
+small,
+.small {
+  font-size: remy(14px);
 }
 
-strong {
+strong,
+.strong {
   font-weight: bold;
 }
 
