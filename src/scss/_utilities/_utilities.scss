@@ -12,8 +12,21 @@
   text-align: center;
 }
 
+.text--black {
+  color: map-get($palette-custom, black);
+}
+
 .text--red {
   color: map-get($palette-custom, red);
+}
+
+.text--underline {
+  text-decoration: underline;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* Responsive Classes */
