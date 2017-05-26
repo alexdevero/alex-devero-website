@@ -8,23 +8,21 @@ footer {
   padding-bottom: remy(32px);
 
   a {
-    color: #818181;
+    color: map-get($palette-custom, black);
 
     &:focus,
     &:hover {
-      color: map-get($palette-custom, gold);
+      color: map-get($palette-custom, red);
     }
+  }
+
+  .fa {
+    font-size: remy(27px);
   }
 }
 
 .footer__media {
   text-align: center;/* No flexbox fallback to center social media list*/
-
-  .footer__links {
-    @media screen and (max-width: 460px) {
-      flex-wrap: wrap;
-    }
-  }
 
   .list-divider {
     display: none;
@@ -35,5 +33,11 @@ footer {
       width: 100%;
       height: 1px;
     }
+  }
+}
+
+.footer__links {
+  @media screen and (max-width: 460px) {
+    flex-wrap: wrap;
   }
 }
