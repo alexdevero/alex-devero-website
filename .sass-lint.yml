@@ -9,6 +9,7 @@ files:
   ignore:
     - '**/_normalize.s+(a|c)ss'
     - '**/_print.s+(a|c)ss'
+    - '**/_typography.s+(a|c)ss'
 
 rules:
   # Extends
