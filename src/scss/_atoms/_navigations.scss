@@ -61,7 +61,7 @@
     justify-content: flex-end;
   }
 
-  li {
+  .nav-item {
     @media screen and (max-width: 767px) {
       &:first-of-type {
         position: absolute;
@@ -88,12 +88,12 @@
     }
   }
 
-  a,
+  .nav-link,
   .navbar-toggler {
     font-family: $font-raleway;
   }
 
-  a {
+  .nav-link {
     position: relative;
     display: block;
 
@@ -112,6 +112,8 @@
 
     &:focus,
     &:hover {
+      color: map-get($palette-custom, red);
+
       &:before {
         width: calc(100% + 4px);
       }
@@ -139,7 +141,7 @@
       @media screen and (min-width: 768px) {
         text-align: right;
 
-        li {
+        .nav-item {
           display: inline-block;
 
           &:first-of-type {
@@ -175,7 +177,9 @@
 }
 
 .nav {
-  .active {
+  .nav-link--active {
+    color: map-get($palette-custom, red);
+
     &:before {
       width: calc(100% + 4px);
     }
@@ -207,7 +211,7 @@
   flex-direction: row;
   justify-content: center;
 
-  li {
+  .nav-item {
     float: left;
 
     &:nth-of-type(n+2) {
@@ -218,7 +222,7 @@
 
 .ie-9 {
   .nav--footer {
-    li {
+    .nav-item {
       display: inline-block;
       float: none;
     }
