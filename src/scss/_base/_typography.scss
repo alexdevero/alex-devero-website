@@ -41,7 +41,7 @@ h5,
 h6,
 .h6 {
   margin-bottom: remy(13px);
-  font-weight: 200;
+  font-weight: 600;
 }
 
 h1,
@@ -110,10 +110,15 @@ h5 + .h6,
 
 /* end. Guttenberg */
 
+li,
+p,
+.text--regular {
+  font-size: remy(18px);
+}
+
 p,
 .text--regular {
   margin-top: 0;
-  font-size: remy(18px);
 
   & + & {
     margin-top: remy(20px);
