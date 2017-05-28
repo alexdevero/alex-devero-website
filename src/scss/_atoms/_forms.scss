@@ -71,6 +71,12 @@ label {
 
 .input--checkbox {
   display: none;
+
+  &:checked + .checkbox--custom {
+    &:before {
+      transform: scale(.85);
+    }
+  }
 }
 
 .checkbox--custom {
@@ -99,7 +105,7 @@ label {
 }
 
 // Browser hack for Firefox
-@media screen and (min--moz-device-pixel-ratio:0) {
+@media screen and (min--moz-device-pixel-ratio: 0) { // sass-lint:disable-line no-vendor-prefixes
   .checkbox--custom {
     &:before {
       line-height: .45;
@@ -136,10 +142,6 @@ label {
       line-height: .5;
     }
   }
-}
-
-.input--checkbox:checked + .checkbox--custom:before {
-  transform: scale(.85);
 }
 
 .checkbox__label {
