@@ -10,6 +10,10 @@ section {
   &:nth-of-type(n+2) {
     padding-bottom: remy(96px);
   }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 }
 
 .sec__main {
