@@ -41,7 +41,7 @@ gulp.task('js', () => {
     .pipe(changed('dist/js'))
     //.pipe(babel())
     .pipe(webpackStream(moduleConfig, webpack))
-    .pipe(uglify().on('error', (e) => {
+    .pipe(uglify({ compress: { drop_console: true } }).on('error', (e) => {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
     .pipe(rename({

@@ -8,24 +8,34 @@ const contactForm = (e) => {
   $('#contactForm').submit((e) => {
     e.preventDefault();
 
-    const $this = e.target;
+    const checkbox = document.querySelector('#checker');
 
-    $.ajax({
-      data: $($this).serialize(),
-      type: 'POST',
-      url: 'contact.php'
-    }).done(() => {
-      e.preventDefault();
+    if (checkbox.checked) {
+      const $this = e.target;
 
-      modalMessages('success');
+      $.ajax({
+        data: $($this).serialize(),
+        type: 'POST',
+        url: 'contact.php'
+      }).done(() => {
+        e.preventDefault();
 
-      // Clear the form.
-      $($this)[0].reset();
-    }).fail(() => {
-      e.preventDefault();
+        modalMessages('success');
 
-      modalMessages('failure');
-    });
+        // Clear the form.
+        $($this)[0].reset();
+      }).fail(() => {
+        e.preventDefault();
+
+        modalMessages('failure');
+      });
+    } else {
+      // Show modal dialog
+      modalMessages('check');
+
+      // Prevent form from sending
+      return false;
+    }
   });
 }
 

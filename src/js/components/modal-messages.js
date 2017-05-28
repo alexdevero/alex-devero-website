@@ -8,6 +8,7 @@ const modalMessages = ($messageType) => {
 
   const modalOverlay = document.querySelector('.js-modal-overlay');
   const modalButton = modalOverlay.querySelectorAll('.js-modal-button');
+  const messageCheck = modalOverlay.querySelector('.js-modal-message-check');
   const messageFailure = modalOverlay.querySelector('.js-modal-message-failure');
   const messageInfo = modalOverlay.querySelector('.js-modal-message-info');
   const messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
@@ -21,7 +22,18 @@ const modalMessages = ($messageType) => {
     });
   }
 
-  if ($messageType === 'failure') {
+  if ($messageType === 'check') {
+    const messageCheckLoader = () => {
+      // Show modal message
+      messageCheck.classList.add('modal-message-visible');
+
+      // Show modal overlay
+      fadeInCustom(modalOverlay);
+    }
+
+    // Initiate message loader function
+    messageCheckLoader();
+  } else if ($messageType === 'failure') {
     // Failure message
     const messageFailureLoader = () => {
       // Show modal message
