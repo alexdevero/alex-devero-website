@@ -3430,9 +3430,9 @@ imagemin-optipng@^5.1.0:
     is-png "^1.0.0"
     optipng-bin "^3.0.0"
 
-imagemin-pngquant@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/imagemin-pngquant/-/imagemin-pngquant-5.0.0.tgz#7d72405778caba9c510eb3cb4590c8413383560e"
+imagemin-pngquant@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/imagemin-pngquant/-/imagemin-pngquant-5.0.1.tgz#d8a329da553afa226b11ce62debe0b7e37b439e6"
   dependencies:
     exec-buffer "^3.0.0"
     is-png "^1.0.0"
