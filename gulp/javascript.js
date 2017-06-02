@@ -5,15 +5,6 @@ import plumber from 'gulp-plumber';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 
-// Concatenate JavaScript files
-gulp.task('js:concat', function() {
-  const concat = require('gulp-concat');
-
-  return gulp.src('./src/js/main.js')
-    .pipe(concat('main.min.js'))
-    .pipe(gulp.dest('./dist/js/'));
-});
-
 // Minify JavaScript files
 gulp.task('js', () => {
   const babel = require('gulp-babel');
