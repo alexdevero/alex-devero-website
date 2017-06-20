@@ -1,0 +1,56 @@
+// Logos
+
+.flexbox {
+  .row--logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.row--logos {
+  & + & {
+    margin-top: remy(48px);
+  }
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  max-width: remy(125px);
+}
+
+// .logo--startmonday {
+//   max-width: remy(px);
+// }
+
+// .logo--manapgroup {
+//   max-width: remy(px);
+// }
+
+// .logo--uol {
+//   max-width: remy(px);
+// }
+
+.logo--spacebar {
+  max-width: remy(70px);
+}
+
+// .logo--ritetag {
+//   max-width: remy(px);
+// }
+
+.logo--net {
+  max-width: remy(50px);
+}
+
+.logo--alistapart,
+.logo--codementor {
+  max-width: remy(170px);
+}
+
+// .logo--codementor {
+//   max-width: remy(px);
+// }
