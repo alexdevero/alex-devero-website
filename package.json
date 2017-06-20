@@ -31,10 +31,10 @@
     "url": "https://github.com/alexdevero/alex-devero-website.git"
   },
   "scripts": {
-    "build": "npm run test && gulp clean && gulp build",
+    "build": "set NODE_ENV=build && npm run test && gulp clean && gulp build",
     "deploy": "gulp clean && deploy",
-    "start": "gulp dev",
-    "test": "gulp test"
+    "start": "set NODE_ENV=development && gulp dev",
+    "test": "set NODE_ENV=test && gulp test"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
