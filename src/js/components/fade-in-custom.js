@@ -3,7 +3,7 @@
 const fadeInCustom = (element) => {
   console.log('Fade in custom initiated');
 
-  let elementOpacity = 0.1;// initial opacity
+  let elementOpacity = 0.1; // initial opacity
 
   element.style.display = 'block';
 

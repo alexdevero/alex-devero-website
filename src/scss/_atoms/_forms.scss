@@ -122,7 +122,7 @@ label {
   }
 }
 
-.js.no-svg,
+.js.no-svg, // sass-lint:disable-line force-element-nesting
 .ie-8 {
   .input--checkbox {
     display: block;

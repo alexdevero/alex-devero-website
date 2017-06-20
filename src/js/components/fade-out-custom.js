@@ -3,7 +3,7 @@
 const fadeOutCustom = (element) => {
   console.log('Fade out custom initiated');
 
-  let elementOpacity = 1;// initial opacity
+  let elementOpacity = 1; // initial opacity
 
   let timer = setInterval(function () {
     if (elementOpacity <= 0.1){

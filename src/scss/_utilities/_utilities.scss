@@ -3,12 +3,12 @@
  */
 
 [hidden] {
-  display: none !important;// sass-lint:disable-line no-important
+  display: none !important; // sass-lint:disable-line no-important
   visibility: hidden;
 }
 
 .no-margin {
-  margin: 0 !important;
+  margin: 0 !important; // sass-lint:disable-line no-important
 }
 
 .pt-3 {
