@@ -9,8 +9,27 @@ import htmlmin from 'gulp-htmlmin';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
 
-// Compile handlebars to HTML, remove code used for development
-gulp.task('handlebars', () => {
+// Compile handlebars to HTML
+gulp.task('handlebars:development', () => {
+  return gulp.src('./src/templates/*.hbs')
+    .pipe(plumber())
+    .pipe(changed('dist'))
+    .pipe(handlebars({
+      data: './src/templates/data/**/*.json',
+      helpers: './src/templates/helpers/**/*.js',
+      partials: './src/templates/partials/**/*.hbs'
+    }))
+    .pipe(rename({
+      extname: '.html'
+    }))
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.stream({
+      match: '**/*.html'
+    }));
+});
+
+// Compile handlebars to HTML, minify HTML
+gulp.task('handlebars:production', () => {
   return gulp.src('./src/templates/*.hbs')
     .pipe(plumber())
     .pipe(changed('dist'))

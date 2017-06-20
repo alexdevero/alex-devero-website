@@ -21,13 +21,15 @@ gulp.task('copy:all', [
 ]);
 
 // Builds the website
-gulp.task('build', sequence(['handlebars', /*'html',*/ 'copy:all'], ['images', 'sass', 'js']));
+gulp.task('build:development', sequence(['handlebars:development', /*'html',*/ 'copy:all'], ['images', 'sass', 'js']));
+
+gulp.task('build:production', sequence(['handlebars:production', /*'html',*/ 'copy:all'], ['images', 'sass', 'js']));
 
 // Deploy web to ftp
-gulp.task('deploy', sequence('build', 'ftp'));
+gulp.task('deploy', sequence('build:production', 'ftp'));
 
 // Setup development environment
-gulp.task('dev', sequence('build', 'server'));
+gulp.task('dev', sequence('build:development', 'server'));
 
 // Test task for testing HTML, Sass and JavaScript
 gulp.task('test', sequence('html:test', 'sass:test', 'js:test'));
@@ -38,7 +40,7 @@ gulp.task('server', ['browser-sync'], () => {
   const reload = browserSync.reload;
 
   gulp.watch('src/*.html', ['html'], reload);
-  gulp.watch(['src/**/*.handlebars', 'src/**/*.hbs'], ['handlebars'], reload);
+  gulp.watch('src/templates/**/*.*', ['handlebars:development'], reload);
   gulp.watch(['src/*.php', 'src/*.txt'], ['copy:other'], reload);
   gulp.watch('src/scss/**/*.scss', ['sass'], reload);
   gulp.watch('src/css/**/*.css', ['copy:css'], reload);

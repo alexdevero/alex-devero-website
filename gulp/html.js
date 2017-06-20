@@ -25,7 +25,7 @@ gulp.task('html', () => {
 });
 
 // Hint HTML files
-gulp.task('html:test', ['handlebars'], () => {
+gulp.task('html:test', ['handlebars:production'], () => {
   const htmlhint = require('gulp-htmlhint');
 
   console.log('Running HTML lint test');
