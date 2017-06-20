@@ -4,7 +4,6 @@ import gulp from 'gulp';
 
 const browserSync = require('browser-sync');
 const csscomb = require('gulp-csscomb');
-const csslint = require('gulp-csslint');
 const cssnano = require('cssnano');
 const cssnext = require('postcss-cssnext');
 const plumber = require('gulp-plumber');
