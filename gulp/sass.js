@@ -34,8 +34,6 @@ gulp.task('sass', () => {
     }))
     .pipe(csscomb())
     .pipe(postcss(processors))
-    .pipe(csslint())
-    .pipe(csslint.formatter())
     .pipe(rename({
       suffix: '.min'
     }))
