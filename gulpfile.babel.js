@@ -6,6 +6,11 @@ import sequence from 'gulp-sequence';
 
 requireDir('./gulp/');
 
+const environment = process.env.NODE_ENV;
+if (environment !== undefined) {
+  console.log(`Environment: ${environment}`);
+}
+
 // Automate copying
 gulp.task('copy:all', [
   'copy:css',
@@ -16,7 +21,7 @@ gulp.task('copy:all', [
 ]);
 
 // Builds the website
-gulp.task('build', sequence(['html', 'copy:all'], ['images', 'sass', 'js']));
+gulp.task('build', sequence(['handlebars', /*'html',*/ 'copy:all'], ['images', 'sass', 'js']));
 
 // Deploy web to ftp
 gulp.task('deploy', sequence('build', 'ftp'));
@@ -33,6 +38,7 @@ gulp.task('server', ['browser-sync'], () => {
   const reload = browserSync.reload;
 
   gulp.watch('src/*.html', ['html'], reload);
+  gulp.watch(['src/**/*.handlebars', 'src/**/*.hbs'], ['handlebars'], reload);
   gulp.watch(['src/*.php', 'src/*.txt'], ['copy:other'], reload);
   gulp.watch('src/scss/**/*.scss', ['sass'], reload);
   gulp.watch('src/css/**/*.css', ['copy:css'], reload);

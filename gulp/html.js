@@ -14,6 +14,8 @@ gulp.task('html', () => {
     .pipe(changed('dist'))
     .pipe(htmlmin({
       collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
       removeComments: true
     }))
     .pipe(gulp.dest('dist'))
@@ -23,7 +25,7 @@ gulp.task('html', () => {
 });
 
 // Hint HTML files
-gulp.task('html:test', () => {
+gulp.task('html:test', ['handlebars'], () => {
   const htmlhint = require('gulp-htmlhint');
 
   console.log('Running HTML lint test');
