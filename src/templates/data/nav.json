@@ -1,0 +1,40 @@
+{
+  "links": {
+    "about": "about.html",
+    "about-cs": "about-cs.html",
+    "blog": "http://blog.alexdevero.com/",
+    "clients": "clients.html",
+    "clients-cs": "clients-cs.html",
+    "contact": "contact.html",
+    "contact-cs": "contact-cs.html",
+    "faq": "faq.html",
+    "faq-cs": "faq-cs.html",
+    "home": "index.html",
+    "home-cs": "index-cs.html",
+    "process": "process.html",
+    "process-cs": "process-cs.html",
+    "store": "https://creativemarket.com/alexdevero",
+    "work": "work.html",
+    "work-cs": "work-cs.html"
+  },
+  "titles": {
+    "about": "Information about me",
+    "about-cs": "Informace o mě",
+    "blog": "My blog about design, web development and business",
+    "blog-cs": "Můj blog o designu, web developmentu a podnikání",
+    "clients": "Clients' testimonials",
+    "clients-cs": "Recenze klientů",
+    "contact": "Contact form",
+    "contact-cs": "Kontaktní formulář",
+    "faq": "Frequently asked questions",
+    "faq-cs": "Často kladené dotazy",
+    "process": "Information about my design & development process",
+    "process-cs": "Informace o mém designovém a vývojovém procesu",
+    "store": "Store with digital products I created",
+    "store-cs": "Obchod s digitálními produkty které jsem vytvořil.",
+    "translation": "Czech version of the page",
+    "translation-cs": "Anglická verze stránky",
+    "work": "Showcase of my work",
+    "work-cs": "Ukázky mé práce"
+  }
+}

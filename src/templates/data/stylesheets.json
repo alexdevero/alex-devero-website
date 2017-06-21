@@ -1,0 +1,5 @@
+{
+  "stylesheet-font-awesome": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+  "stylesheet-main": "./css/main.min.css",
+  "stylesheet-font-raleway": "https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700"
+}

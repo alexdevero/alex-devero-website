@@ -1,0 +1,67 @@
+{
+  "basic": {
+    "author": "https://plus.google.com/+AlexDevero",
+    "classification": "business",
+    "coverage": "Worldwide",
+    "description": "Alex Devero - Czech designer, web developer and entrepreneur living in Prague. I design and build high quality websites brought to perfection.",
+    "description-cs": "Alex Devero - Český designér, web developer a podnikatel žijící v Praze. Navrhuji a stavím vysoce kvalitní weby dovedené k dokonalosti.",
+    "distribution": "Global",
+    "googlebot": "index,follow",
+    "handheldFriendly": "true",
+    "identifier-URL": "http://alexdevero.com/",
+    "language": "English",
+    "language-cs": "Czech",
+    "rating": "General",
+    "robots": "index,follow",
+    "subject": "Alex Devero - Czech designer, web developer and entrepreneur.",
+    "subject-cs": "Alex Devero - Český designér, web developer a podnikatel.",
+    "url": "http://alexdevero.com/",
+    "viewport": "width=device-width, initial-scale=1"
+  },
+  "favicon": {
+    "apple-touch-icon": "./images/favicon/apple-touch-icon.png?v=aljm6MJg7L",
+    "icon-32": "./images/favicon/favicon-32x32.png?v=aljm6MJg7L",
+    "icon-16": "./images/favicon/favicon-16x16.png?v=aljm6MJg7L",
+    "manifest": "./images/favicon/manifest.json?v=aljm6MJg7L",
+    "mask-icon": "./images/favicon/safari-pinned-tab.svg?v=aljm6MJg7L",
+    "msapplication-config": "./images/favicon/browserconfig.xml?v=aljm6MJg7L",
+    "shortcut-icon": "./images/favicon/favicon.ico?v=aljm6MJg7L",
+    "theme-color": "#ffffff"
+  },
+  "cards-facebook": {
+    "article-author": "Alex Devero",
+    "image": "",
+    "locale": "en_US",
+    "locale-cs": "cs_CZ",
+    "type": "website",
+    "url": "http://www.alexdevero.com"
+  },
+  "cards-google": {
+    "image": "http://alexdevero.com/images/Alex-Devero-photo-salomon-filter.jpg"
+  },
+  "page-titles": {
+    "about": "Bio | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "about-cs": "Bio | Alex Devero - Český designér, web developer a podnikatel.",
+    "case-study": "Case study X | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "clients": "Clients | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "clients-cs": "Klienti | Alex Devero - Český designér, web developer a podnikatel.",
+    "contact": "Contact | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "contact-cs": "Kontakt | Alex Devero - Český designér, web developer a podnikatel.",
+    "error": "Page not Found | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "faq": "FAQ | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "faq-cs": "FAQ | Alex Devero - Český designér, web developer a podnikatel.",
+    "home": "Alex Devero - Czech designer, web developer & entrepreneur.",
+    "home-cs": "Alex Devero - Český designér, web developer a podnikatel.",
+    "process": "Process | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "process-cs": "Proces | Alex Devero - Český designér, web developer a podnikatel.",
+    "work": "My Work | Alex Devero - Czech designer, web developer & entrepreneur.",
+    "work-cs": "Moje Práce | Alex Devero - Český designér, web developer a podnikatel."
+  },
+  "cards-twitter": {
+    "card": "summary",
+    "creator": "@AlexDevero",
+    "image": "http://alexdevero.com/images/Alex-Devero-photo-salomon-filter.jpg",
+    "site": "@AlexDevero",
+    "url": "http://www.alexdevero.com"
+  }
+}
