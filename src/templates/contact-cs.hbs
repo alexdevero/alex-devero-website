@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="cs" class="no-js" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {{> page-title active_contact_cs=true }}
+
+  {{> head active_contact=true lang_cs=true }}
+</head>
+<body class="page--contact">
+  {{> browser-notification }}
+
+  {{> manifest }}
+
+  <main>
+    <section id="sec__main" class="sec__main">
+      {{> header active_contact=true lang_cs=true }}
+
+      <div id="about__contact" class="about__contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+              <h1 class="h1">Pojďme <span class="text--red">navázat kontakt</span>.</h1>
+
+              <p>Máte zajímavý projekt který chcete zrealizovat? Použijte prosím kontaktní formulář níže. Ozvu se Vám hned jak budu moci.</p>
+
+              <form id="contactForm" action="contact.php" method="post">
+                <fieldset class="form__details">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="name">Vaše jméno</label>
+
+                      <input name="name" id="name" type="text" required>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="email">Vaše E-mailová adresa</label>
+
+                      <input name="email" id="email" type="email" required>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- <fieldset class="form__subject">
+                  <label for="subject">Jak Vám Mohu Pomoci?</label>
+
+                  <select name="subject" id="subject" size="1" required>
+                    <option value="" disabled selected>Zvolte jednu možnost</option>
+
+                    <option value="Navrh_stranek">Hledám designéra</option>
+
+                    <option value="Navrh_Nakodovani">Hledám developera</option>
+
+                    <option value="Jen_Kodovani">Hledám obojí, designéra i developera</option>
+
+                    <option value="Konzultace">Mám zájem o konzultaci</option>
+
+                    <option value="Ostatni">Něco jiného</option>
+                  </select>
+                </fieldset> -->
+
+                <fieldset class="form__message">
+                  <label for="message">Vaše zpráva</label>
+
+                  <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                  <label for="checker">
+                    <input class="input--checkbox" id="checker" type="checkbox" name="checker" value="checker">
+
+                    <span class="checkbox--custom"></span>
+
+                    <span class="checkbox__label">Jsem člověk</span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="form__button">
+                  <input id="formButton" type="submit" class="btn btn--ghost--black-inverted" value="Poslat Zprávu">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer__media">
+          <ul class="nav--media nav--footer footer__links">
+            <li class="nav-item">
+              <a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://cz.linkedin.com/in/alexdevero" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://www.facebook.com/deveroalex" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://dribbble.com/alexdevero" target="_blank"><i class="fa fa-dribbble"></i></a>
+            </li>
+
+            <li class="list-divider"></li>
+
+            <li class="nav-item">
+              <a href="https://www.behance.net/alexdevero" target="_blank"><i class="fa fa-behance"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a href="http://codepen.io/alexdevero/" target="_blank"><i class="fa fa-codepen"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://instagram.com/alexdevero" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a href="mailto:deveroalex@gmail.com"><i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal messages -->
+    <div class="js-modal-overlay modal-overlay">
+      <div class="js-modal-message-check modal-message modal-message-check">
+        <i class="fa fa-info-circle fa-2x"></i>
+
+        <br>
+
+        <p>Prosím zaškrtněte "Jsem člověk".</p>
+
+        <a class="js-modal-button btn btn--ghost--black-inverted" role="button" data-dismiss="js-modal-overlay" data-target="js-modal-overlay">Close</a>
+      </div>
+
+      <div class="js-modal-message-failure modal-message modal-message-failure">
+        <i class="fa fa-exclamation-triangle fa-2x"></i>
+
+        <br>
+
+        <p>Během odesílání Vaší zprávy došlo k problému.</p>
+
+        <p>Zkuste to prosím znovu.</p>
+
+        <a class="js-modal-button btn btn--ghost--black-inverted" role="button" data-dismiss="js-modal-overlay" data-target="js-modal-overlay">Close</a>
+      </div>
+
+      <div class="js-modal-message-info modal-message modal-message-info">
+        <p>Vaše zpráva se právě odesílá.</p>
+
+        <p>Prosím vydržte.</p>
+      </div>
+
+      <div class="js-modal-message-success modal-message modal-message-success">
+        <i class="fa fa-check fa-2x"></i>
+
+        <br>
+
+        <p>Vaše zpráva byla odeslána.</p>
+
+        <p>Do dvou dnů se Vám ozvu.</p>
+
+        <a class="js-modal-button btn btn--ghost--black-inverted" role="button" data-dismiss="js-modal-overlay" data-target="js-modal-overlay">Close</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <!-- jQuery library hosted on CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    var newEl = document.createElement('script');
+    newEl.async = true;
+    newEl.src = './js/vendor/jquery.min.js';
+    var bodyEl = document.querySelector('body');
+    bodyEl.appendChild(newEl);
+  </script>
+
+  <!-- Main Scripts -->
+  <script src="js/main.min.js" async charset="utf-8"></script>
+
+  <!-- Google Analytics -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-40173486-1','auto');ga('send','pageview');
+    // mixpanel.track_forms("#contact-form", "Mail sent");
+  </script>
+</body>
+</html>
