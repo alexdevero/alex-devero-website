@@ -14,69 +14,9 @@
   {{> manifest }}
 
   <main>
+    {{> header active_process=true lang_cs=false }}
+
     <section id="sec__main" class="sec__main hero hero--main hero--big">
-      <header>
-        <div class="container-fluid">
-          <nav>
-            <input id="js-checkbox--nav" class="checkbox--nav" name="checkbox--nav" type="checkbox" hidden>
-
-            <div class="nav__container">
-              <h1 class="logo"><a href="index.html">DEVERO</a></h1>
-
-              <!-- Experimental menu -->
-              <label class="nav-main__label" for="nav-check">MENU</label>
-
-              <input type="checkbox" name="nav-check" id="nav-check" hidden>
-              <!-- Experimental menu -->
-
-              <ul class="nav nav--main">
-                <li class="nav-item nav-item--togglers">
-                  <label for="nav-check" class="navbar-toggler">&Cross;</label>
-
-                  <label for="nav-check" class="navbar-toggler navbar-toggler-ie">&times;</label>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="work.html" title="Showcase of my work">Work</a>
-                </li>
-
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="process.html" title="Information about my design process">Process</a>
-                </li> -->
-
-                <li class="nav-item">
-                  <a class="nav-link" href="clients.html" title="Clients' testimonials">Clients</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html" title="Information about me">About</a>
-                </li>
-
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="faq.html" title="Frequently asked questions">FAQ</a>
-                </li> -->
-
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html" title="Contact information">Contact</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="http://blog.alexdevero.com/" title="My blog about design, web development and business" target="_blank">Blog</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="https://creativemarket.com/alexdevero" title="Store with digital products I created" target="_blank">Store</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="index-cs.html" title="Czech version of the page">CZ</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
-
       <div class="js-typed-en home__intro">
         <!-- <h1 class="js-typed js-typed-h1" data-text="Alex Devero"></h1><!-- glitch effect - ->
 
@@ -132,51 +72,7 @@
       </div> -->
     </section>
 
-    <footer>
-      <div class="container">
-        <div class="footer__media">
-          <ul class="nav--media nav--footer footer__links">
-            <li class="nav-item">
-              <a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="https://cz.linkedin.com/in/alexdevero" target="_blank"><i class="fa fa-linkedin"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="https://www.facebook.com/deveroalex" target="_blank"><i class="fa fa-facebook"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="https://dribbble.com/alexdevero" target="_blank"><i class="fa fa-dribbble"></i></a>
-            </li>
-
-            <li class="list-divider"></li>
-
-            <li class="nav-item">
-              <a href="https://www.behance.net/alexdevero" target="_blank"><i class="fa fa-behance"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="http://codepen.io/alexdevero/" target="_blank"><i class="fa fa-codepen"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="https://instagram.com/alexdevero" target="_blank"><i class="fa fa-instagram"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="mailto:deveroalex@gmail.com"><i class="fa fa-envelope"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    {{> footer }}
   </main>
 
   <!-- Scripts -->
@@ -190,14 +86,6 @@
   <!-- Main Scripts -->
   <script src="js/main.min.js" async charset="utf-8"></script>
 
-  <!-- Google Analytics -->
-  <script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-40173486-1','auto');ga('send','pageview');
-  </script>
+  {{> google-analytics }}
 </body>
 </html>
