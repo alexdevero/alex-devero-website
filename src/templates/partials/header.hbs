@@ -1,0 +1,61 @@
+<header>
+  <div class="container-fluid">
+    <nav>
+      <input id="js-checkbox--nav" class="checkbox--nav" name="checkbox--nav" type="checkbox" hidden>
+
+      <div class="nav__container">
+        <h1 class="logo"><a href="{{#if lang_cs}}{{{ nav.links.home-cs }}}{{else}}{{{ nav.links.home }}}{{/if}}">DEVERO</a></h1>
+
+        <!-- Experimental menu -->
+        <label class="nav-main__label" for="nav-check">MENU</label>
+
+        <input type="checkbox" name="nav-check" id="nav-check" hidden>
+        <!-- Experimental menu -->
+
+        <ul class="nav nav--main">
+          <li class="nav-item nav-item--togglers">
+            <label for="nav-check" class="navbar-toggler">&Cross;</label>
+
+            <label for="nav-check" class="navbar-toggler navbar-toggler-ie">&times;</label>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link{{#if active_work}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.work-cs }}}{{else}}{{{ nav.links.work }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.work-cs }}}{{else}}{{{ nav.titles.work }}}{{/if}}">{{#if lang_cs}}Má práce{{else}}Work{{/if}}</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link{{#if active_process}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.process-cs }}}{{else}}{{{ nav.links.process }}}{{/if}}" title="Information about my design process">{{#if lang_cs}}Process{{else}}Proces{{/if}}</a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link{{#if active_clients}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.clients-cs }}}{{else}}{{{ nav.links.clients }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.clients-cs }}}{{else}}{{{ nav.titles.clients }}}{{/if}}">{{#if lang_cs}}Klienti{{else}}Clients{{/if}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link{{#if active_about}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.about-cs }}}{{else}}{{{ nav.links.about }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.about-cs }}}{{else}}{{{ nav.titles.about }}}{{/if}}">{{#if lang_cs}}O Mě{{else}}About{{/if}}</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link {{#if active_faq}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.faq-cs }}}{{else}}{{{ nav.links.faq }}}{{/if}}" title="Frequently asked questions">FAQ</a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link{{#if active_contact}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.contact-cs }}}{{else}}{{{ nav.links.contact }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.contact-cs }}}{{else}}{{{ nav.titles.contact }}}{{/if}}">{{#if lang_cs}}Kontakt{{else}}Contact{{/if}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{{ nav.links.blog }}}" title="{{#if lang_cs}}{{{ nav.titles.blog-cs }}}{{else}}{{{ nav.titles.blog }}}{{/if}}" target="_blank">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{{ nav.links.store }}}" title="{{#if lang_cs}}{{{ nav.titles.store-cs }}}{{else}}{{{ nav.titles.store }}}{{/if}}" target="_blank">{{#if lang_cs}}Obchod{{else}}Store{{/if}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{#if lang_cs}}{{{ nav.links.home }}}{{else}}{{{ nav.links.home-cs }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.translation-cs }}}{{else}}{{{ nav.titles.translation }}}{{/if}}">{{#if lang_cs}}EN{{else}}CZ{{/if}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

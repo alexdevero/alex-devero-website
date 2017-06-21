@@ -1,0 +1,113 @@
+<meta name="viewport" content="{{{ meta.basic.viewport }}}">
+<meta name="handheldFriendly" content="{{{ meta.basic.handheldFriendly }}}">
+<meta name="description" content="{{#if lang_cs}}{{{ meta.basic.description-cs }}}{{else}}{{{ meta.basic.description }}}{{/if}}"><!-- Maximum length 155 characters -->
+<meta name="subject" content="{{#if lang_cs}}{{{ meta.basic.subject-cs }}}{{else}}{{{ meta.basic.subject }}}{{/if}}">
+<meta name="language" content="{{#if lang_cs}}{{{ meta.basic.language-cs }}}{{else}}{{{ meta.basic.language }}}{{/if}}">
+<meta name="robots" content="{{{ meta.basic.robots }}}">
+<meta name="googlebot" content="{{{ meta.basic.googlebot }}}">
+<meta name="classification" content="{{{ meta.basic.classification }}}">
+<meta name="url" content="{{{ meta.basic.url }}}">
+<meta name="identifier-URL" content="{{{ meta.basic.identifier-URL }}}">
+<meta name="coverage" content="{{{ meta.basic.coverage }}}">
+<meta name="distribution" content="{{{ meta.basic.distribution }}}">
+<meta name="rating" content="{{{ meta.basic.rating }}}">
+<link rel="author" href="{{{ meta.basic.author }}}">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{{ meta.favicon.apple-touch-icon }}}">
+<link rel="icon" type="image/png" href="{{{ meta.favicon.icon-32 }}}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{{ meta.favicon.icon-16 }}}" sizes="16x16">
+<link rel="manifest" href="{{{ meta.favicon.manifest }}}">
+<link rel="mask-icon" href="{{{ meta.favicon.mask-icon }}}" color="#d30320">
+<link rel="shortcut icon" href="{{{ meta.favicon.shortcut-icon }}}">
+<meta name="msapplication-config" content="{{{ meta.favicon.msapplication-config }}}">
+<meta name="theme-color" content="{{{ meta.favicon.theme-color }}}">
+
+<!-- Facebook OpenGraph tags -->
+<meta property="og:title" content="{{#if lang_cs}}{{{ meta.basic.subject-cs }}}{{else}}{{{ meta.basic.subject }}}{{/if}}">
+<meta property="og:type" content="{{{ meta.cards-facebook.type }}}">
+<meta property="og:description" content="{{#if lang_cs}}{{{ meta.basic.description-cs }}}{{else}}{{{ meta.basic.description }}}{{/if}}">
+<meta property="og:image" content="{{ meta.cards-facebook.image }}"><!-- my photo -->
+<meta property="og:url" content="{{{ meta.cards-facebook.url }}}">
+<meta property="og:locale" content="{{#if lang_cs}}{{{ meta.cards-facebook.locale-cs }}}{{else}}{{{ meta.cards-facebook.locale }}}{{/if}}">
+<meta property="article:author" content="{{{ meta.cards-facebook.article-author }}}">
+
+<!-- Twitter cards tags -->
+<meta name="twitter:card" content="{{{ meta.cards-twitter.card }}}">
+<meta name="twitter:site" content="{{{ meta.cards-twitter.site }}}">
+<meta name="twitter:creator" content="{{{ meta.cards-twitter.creator }}}">
+<meta name="twitter:url" content="{{{ meta.cards-twitter.url }}}">
+<meta name="twitter:title" content="{{#if lang_cs}}{{{ meta.basic.subject-cs }}}{{else}}{{{ meta.basic.subject }}}{{/if}}">
+<meta name="twitter:description" content="{{#if lang_cs}}{{{ meta.basic.description-cs }}}{{else}}{{{ meta.basic.description }}}{{/if}}">
+<meta name="twitter:image" content="{{{ meta.cards-twitter.image }}}">
+
+<!--  Google+ / Schema.org -->
+<meta itemprop="name" content="{{#if lang_cs}}{{{ meta.basic.subject-cs }}}{{else}}{{{ meta.basic.subject }}}{{/if}}">
+<meta itemprop="description" content="{{#if lang_cs}}{{{ meta.basic.description-cs }}}{{else}}{{{ meta.basic.description }}}{{/if}}">
+<meta itemprop="image" content="{{{ meta.cards-google.image }}}">
+
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- Stylesheets -->
+<link class="js-stylesheet-main" rel="stylesheet" href="{{{ stylesheets.stylesheet-main }}}">
+
+<noscript>
+  <link rel="stylesheet" href="{{{ stylesheets.stylesheet-font-awesome }}}">
+
+  <link rel="stylesheet" href="{{{ stylesheets.stylesheet-font-raleway }}}">
+
+  <style>
+    html {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
+<!--[if lte IE 8]>
+  <style>
+    html.no-svg {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+<![endif]-->
+
+<script src="js/plugins/modernizr-custom.js" async defer></script>
+
+<!-- Hotjar Tracking Code for alexdevero.com -->
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:38630,hjsv:5};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- start Mixpanel -->
+<!-- <script type="text/javascript">
+  (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+  mixpanel.init("cd7cdc2337524fdfa2a03523b2c8b169");
+</script> -->
+<!-- end Mixpanel -->
+
+<!-- Polyfill for HTML5 elements for IE 8 and lower -->
+<!--[if lte IE 8]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script>window.html5 || document.write('<script src="js/plugins/html5shiv.min.js"><\/script>')</script>
+<![endif]-->
+
+<!-- Polyfill for addEventListener, dispatchEvent, DOM3, document.createEvent, DOMContentLoaded for IE 8 -->
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.7.0/ie8.js"></script>
+<![endif]-->
+
+<!-- Polyfill for classList object for IE 9 and lower -->
+<!--[if IE]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+<![endif]-->
