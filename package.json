@@ -31,7 +31,7 @@
     "url": "https://github.com/alexdevero/alex-devero-website.git"
   },
   "scripts": {
-    "build": "set NODE_ENV=build && npm run test && gulp build",
+    "build": "set NODE_ENV=build && gulp build:prod",
     "deploy": "gulp clean && gulp deploy",
     "start": "set NODE_ENV=development && gulp dev",
     "test": "set NODE_ENV=test && gulp test"
