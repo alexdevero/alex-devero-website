@@ -2,18 +2,19 @@
 
 import gulp from 'gulp';
 
-const browserSync = require('browser-sync');
-const csscomb = require('gulp-csscomb');
-const cssnano = require('cssnano');
-const cssnext = require('postcss-cssnext');
-const plumber = require('gulp-plumber');
-const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
+import browserSync from 'browser-sync';
+import csscomb from 'gulp-csscomb';
+import cssnano from 'cssnano';
+import cssnext from 'postcss-cssnext';
+import plumber from 'gulp-plumber';
+import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
+import sass from 'gulp-sass';
+import sourcemaps from 'gulp-sourcemaps';
 
 // Sass to CSS
 gulp.task('sass', () => {
+  const sassPath = './dist/styles';
   const processors = [
     cssnext({
       browsers: ['last 5 versions', 'ie >= 8']
@@ -37,7 +38,7 @@ gulp.task('sass', () => {
       suffix: '.min'
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest(sassPath))
     .pipe(browserSync.stream({
       match: '**/*.css'
     }));

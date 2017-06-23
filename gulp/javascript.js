@@ -10,6 +10,7 @@ gulp.task('js', () => {
   const babel = require('gulp-babel');
   const browserSync = require('browser-sync');
   const changed = require('gulp-changed');
+  const jsPath = './dist/js';
   const moduleConfig = {
     entry: './src/js/main.js',
     output: {
@@ -29,17 +30,21 @@ gulp.task('js', () => {
 
   return gulp.src(['src/js/main.js'])
     .pipe(plumber())
-    .pipe(changed('dist/js'))
+    .pipe(changed(jsPath))
     //.pipe(babel())
     .pipe(webpackStream(moduleConfig, webpack))
-    .pipe(uglify({ compress: { drop_console: true } }).on('error', (e) => {
+    .pipe(uglify({
+      compress: {
+        drop_console: true
+      }
+    }).on('error', (e) => {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
     }))
     .pipe(rename({
       basename: 'main',
       suffix: '.min'
     }))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(jsPath))
     .pipe(browserSync.stream({
       match: '**/*.js'
     }));
