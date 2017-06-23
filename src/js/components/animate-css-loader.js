@@ -7,7 +7,7 @@ const animateStylesheetLoader = () => {
   let stylesheetAnimateCSS = document.createElement('link');
 
   stylesheetAnimateCSS.rel = 'stylesheet';
-  stylesheetAnimateCSS.href = 'css/animate.css';
+  stylesheetAnimateCSS.href = 'styles/animate.css';
   stylesheetAnimateCSS.classList.add('jsLoaded');
 
   mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, mainStyleSheet.nextSibling);
