@@ -131,20 +131,6 @@
     </div>
   </main>
 
-  <!-- Scripts -->
-  <!-- jQuery library hosted on CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    var newEl = document.createElement('script');
-    newEl.async = true;
-    newEl.src = './js/vendor/jquery.min.js';
-    var bodyEl = document.querySelector('body');
-    bodyEl.appendChild(newEl);
-  </script>
-
-  <!-- Main Scripts -->
-  <script src="js/main.min.js" async charset="utf-8"></script>
-
-  {{> google-analytics }}
+  {{> scripts has-jquery=true }}
 </body>
 </html>
