@@ -3120,6 +3120,13 @@ gulp-postcss@^7.0.0:
     postcss-load-config "^1.2.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
+gulp-prune@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/gulp-prune/-/gulp-prune-0.2.0.tgz#6bb8da772f0f68c7008effd37b1aa25c0b89d80f"
+  dependencies:
+    globby "^5.0.0"
+    gulp-util "^3.0.7"
+
 gulp-rename@^1.2.0, gulp-rename@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
