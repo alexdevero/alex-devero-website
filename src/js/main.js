@@ -8,6 +8,9 @@ import { contactForm } from './components/contact-form.js';
 // import { customSlider } from './components/custom-slider.js';
 import { fadeInCustom } from './components/fade-in-custom.js';
 // import { fadeOutCustom } from './components/fade-out-custom.js';
+// imports for ML-powered fish on homepage
+import { fishSea } from './components/fish-sea.js';
+// .end imports for ML-powered fish on homepage
 import { fontAwesomeLoader } from './components/font-awesome-loader.js';
 import { fontRalewayLoader } from './components/font-raleway-loader.js';
 import { lazyImages } from './components/lazy-images.js';
@@ -29,8 +32,9 @@ import { pageTransition } from './components/page-transition.js';
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
       // particles: document.querySelectorAll('.js-particles'),
-      portfolioItem: document.querySelectorAll('.work__item')
+      portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
+      shoalFish: document.querySelectorAll('.js-shoal-fish-canvas')
       // typedJS: document.querySelectorAll('.js-typed')
       // waypoint: document.querySelectorAll('.wp')
     },
@@ -65,6 +69,12 @@ import { pageTransition } from './components/page-transition.js';
       // ParticlesJS controller
       particlesController: () => {
         particles();
+      },
+      shoalFishController: () => {
+      //   fishVector();
+      //   fishFood();
+      //   fishFish();
+        fishSea();
       },
       // TypedJS controller
       typedJSController: () => {
@@ -155,6 +165,11 @@ import { pageTransition } from './components/page-transition.js';
           app.appControllers.particlesController();
         })();
       } */
+
+      // Shoal fish
+      if (app.appAnchors.shoalFish.length > 0) {
+        app.appControllers.shoalFishController();
+      }
 
       // Slideable content
       /* if (app.appAnchors.slideableContent.length > 0) {

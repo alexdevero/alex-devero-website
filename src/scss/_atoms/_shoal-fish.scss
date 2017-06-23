@@ -1,0 +1,19 @@
+// Shoal fish
+// info: http://cazala.github.io/shoal/
+
+.shoal-fish-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+
+.shoal-fish-info {
+  position: fixed;
+  bottom: remy(66px);
+  left: remy(16px);
+  font-size: remy(13px);
+}
