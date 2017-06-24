@@ -5,11 +5,11 @@
 .page--contact {
   .sec__main {
     position: relative;
-    min-height: remy(780px);
+    min-height: remy(700px);
 
     @media screen and (min-width: 768px) {
       margin-bottom: remy(-63px);
-      height: 100%;
+      height: calc(100% - 101px); // 101 - height of header
     }
   }
 
@@ -23,10 +23,11 @@
     }
 
     @media screen and (min-width: 768px) and (min-height: 800px) {
+      position: absolute;
+      top: 25%;
       right: 0;
       left: 0;
-
-      @include vertical-align(absolute);
+      transform: translateY(-25%);
     }
   }
 
@@ -42,6 +43,17 @@
   footer {
     @media screen and (max-height: 744px) {
       margin-top: remy(32px);
+    }
+  }
+
+  .contact-card--hidden {
+    display: none;
+  }
+
+  .contact-card--qr {
+    img {
+      margin: auto;
+      display: block;
     }
   }
 }
