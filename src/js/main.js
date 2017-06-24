@@ -4,8 +4,8 @@
 // import { example } from './components/example.js';
 // import { animateStylesheetLoader } from './components/animate-css-loader.js';
 import { browserDetector } from './components/browser-detector.js';
-import { contactForm } from './components/contact-form.js';
 import { contactFlipper } from './components/contact-flipper.js';
+import { contactForm } from './components/contact-form.js';
 // import { customSlider } from './components/custom-slider.js';
 import { fadeInCustom } from './components/fade-in-custom.js';
 // import { fadeOutCustom } from './components/fade-out-custom.js';
