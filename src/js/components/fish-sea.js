@@ -4,10 +4,10 @@ import { Food } from './fish-food.js';
 
 const fishSea = () => {
   // POPULATION SETUP
-  const POPULATION = 30; // 60
+  const POPULATION = 40; // 60
   const MIN_MASS = .5;
   const MAX_MASS = 3.5;
-  const FOOD_RATIO = .2;
+  const FOOD_RATIO = .25; // .2
   const SCREEN = 1.5;
 
   // canvas elements
@@ -34,6 +34,10 @@ const fishSea = () => {
     // resize sea
     // sea.width = $(window).width() * SCREEN;
     // sea.height = $(window).height() * SCREEN;
+
+    window.onclick = function () {
+      Fish.showBehavior = !Fish.showBehavior;
+    }
 
     // resize canvas element
     var e = document.getElementById('canvas');
