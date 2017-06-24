@@ -28,7 +28,7 @@ function Fish(mass, x, y, hue) {
   this.velocity = new Vector(0, 0);
   this.acceleration = new Vector(0, 0);
   this.wandering = new Vector(.2, .2);
-  this.hue = hue || Math.random() < .5 ? Math.random() * .5 : 1 - Math.random() * .5; // <- the hue is used for color generation and mating
+  this.hue = hue || Math.random() < .5 ? Math.random() * .5 : 1 - Math.random() * .5;
   this.color = Fish.rgb2hex(Fish.hsv2rgb(this.hue, 1, 1));
   this.skin = this.color;
   this.dead = false;
@@ -568,7 +568,7 @@ Fish.prototype = {
 }
 
 // draw behaviour flag
-Fish.showBehavior = false;
+Fish.showBehavior = true; // false
 
 // Color Utilities
 Fish.hex2rgb = function(h) {
