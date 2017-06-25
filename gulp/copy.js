@@ -71,7 +71,7 @@ gulp.task('copy:other', () => {
     './src/robots.txt'
   ])
     .pipe(plumber())
-    .pipe(prune(otherPath))
+    .pipe(prune({ dest: otherPath, ext: ['.htaccess', '.php', '.txt', '.xml']}))
     .pipe(changed(otherPath))
     .pipe(gulp.dest(otherPath));
 });
