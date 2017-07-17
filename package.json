@@ -71,7 +71,7 @@
     "postcss-cssnext": "^3.0.2",
     "require-dir": "^0.3.2",
     "vinyl-ftp": "^0.6.0",
-    "webpack": "^3.2.0",
+    "webpack": "^3.3.0",
     "webpack-stream": "^3.2.0"
   },
   "private": true
