@@ -45,7 +45,7 @@
     "cssnano": "^3.10.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "^7.0.0",
     "gulp-changed": "^3.1.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-eslint": "^4.0.0",
@@ -71,8 +71,8 @@
     "postcss-cssnext": "^3.0.2",
     "require-dir": "^0.3.2",
     "vinyl-ftp": "^0.6.0",
-    "webpack": "^3.4.1",
-    "webpack-stream": "^3.2.0"
+    "webpack": "^3.5.2",
+    "webpack-stream": "^4.0.0"
   },
   "private": true
 }
