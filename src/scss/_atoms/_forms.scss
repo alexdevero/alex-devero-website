@@ -6,11 +6,11 @@ input:not([type=submit]):not([name=nav-check]):not([type=checkbox]), // sass-lin
 select,
 textarea {
   display: block;
-  padding: remy(13px);
+  padding: 13px;
   margin: auto;
   width: 100%;
   font-family: $font-quicksand;
-  font-size: remy(16px);
+  font-size: 16px;
   color: map-get($palette-custom, black);
   background: transparent;
   border-top: 0;
@@ -35,7 +35,7 @@ label {
   display: inline-block;
   width: 100%;
   font-family: $font-monospace;
-  font-size: remy(14px);
+  font-size: 14px;
   font-weight: 700;
   color: rgba(33, 33, 33, .85);
   text-transform: uppercase;
@@ -49,14 +49,14 @@ label {
 
 .form__details,
 .form__message {
-  margin-bottom: remy(16px);
+  margin-bottom: 16px;
 }
 
 .form__details {
   .col-md-6 {
     &:first-of-type {
       @media screen and (max-width: 768px) {
-        margin-bottom: remy(32px);
+        margin-bottom: 32px;
       }
     }
   }
@@ -64,7 +64,7 @@ label {
 
 .form__message {
   textarea {
-    height: remy(160px);
+    height: 160px;
     resize: vertical;
   }
 }
@@ -83,20 +83,20 @@ label {
   position: relative;
   z-index: 1;
   display: inline-block;
-  width: remy(16px);
-  height: remy(16px);
-  border: remy(2px) solid #212121;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #212121;
   overflow: hidden;
 
   &:before {
     content: '\00d7';
     position: absolute;
     top: 0;
-    left: remy(-2px);
+    left: -2px;
     z-index: 2;
     width: 100%;
     height: 100%;
-    font-size: remy(30px);
+    font-size: 30px;
     text-align: center;
     line-height: .3;
     transform: scale(0);
@@ -116,7 +116,7 @@ label {
 [class*=safari-] {
   .checkbox--custom {
     &:before {
-      left: remy(-2.5px);
+      left: -2.5px;
       line-height: .4;
     }
   }
@@ -138,7 +138,7 @@ label {
 .ie-11 {
   .checkbox--custom {
     &:before {
-      left: remy(-2.5px);
+      left: -2.5px;
       line-height: .5;
     }
   }
@@ -146,7 +146,7 @@ label {
 
 .checkbox__label {
   position: relative;
-  top: remy(-3px);
+  top: -3px;
 }
 
 .form__button {

@@ -37,7 +37,7 @@
   /*@at-root {
     .ie-8 &,
     .ie-9 & {
-      padding-top: remy(7px);
+      padding-top: 7px;
       display: block;
 
       @media screen and (min-width: 768px) {
@@ -75,15 +75,15 @@
   @media screen and (max-width: 767px) {
     display: inline;
     float: right;
-    padding: remy(3px) remy(7px);
+    padding: 3px 7px;
     margin-right: 1rem;
-    width: remy(76.52px);
-    font-size: remy(19px);
+    width: 76.52px;
+    font-size: 19px;
     font-weight: 700;
     color: map-get($palette-custom, black);
     text-align: center;
     text-transform: uppercase;
-    border: remy(3px) solid;
+    border: 3px solid;
   }
 
   @media screen and (min-width: 768px) {
@@ -100,13 +100,13 @@
 .nav-item--togglers {
   @media screen and (max-width: 767px) {
     /* position: absolute;
-    top: remy(24px);
-    right: remy(24px); */
-    font-size: remy(48px);
+    top: 24px;
+    right: 24px; */
+    font-size: 48px;
   }
 
   @media screen and (min-width: 300px) and (max-width: 767px) {
-    right: remy(50px);
+    right: 50px;
   }
 
   @media screen and (min-width: 768px) {
@@ -117,7 +117,7 @@
 .nav-item {
   @media screen and (min-width: 768px) {
     &:nth-child(n+2) {
-      margin-left: remy(18px);
+      margin-left: 18px;
     }
   }
 }
@@ -135,9 +135,9 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: remy(-2px);
+    left: -2px;
     width: 0%;
-    height: remy(2px);
+    height: 2px;
     background-color: map-get($palette-custom, red);
     transform: translateY(-50%);
 
@@ -152,12 +152,12 @@
   }
 
   @media screen and (max-width: 767px) {
-    font-size: remy(24px);
+    font-size: 24px;
     color: #fff;
   }
 
   @media screen and (min-width: 768px) {
-    font-size: remy(18px);
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     color: map-get($palette-custom, black);
@@ -165,7 +165,7 @@
 }
 
 .navbar-toggler {
-  font-size: remy(40px);
+  font-size: 40px;
   color: #fff;
   width: inherit;
   line-height: 1;
@@ -199,7 +199,7 @@
     float: left;
 
     &:nth-of-type(n+2) {
-      margin-left: remy(16px);
+      margin-left: 16px;
     }
   }
 }
@@ -225,7 +225,7 @@
     display: block;
 
     @media (max-width: 767px) {
-      padding-top: remy(60px);
+      padding-top: 60px;
     }
 
     @media screen and (min-width: 768px) {

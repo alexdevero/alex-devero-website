@@ -16,9 +16,9 @@
 .icon--burger {
   position: relative;
   display: inline-block;
-  margin: remy(16px) remy(7px);
-  width: remy(20px);
-  height: remy(2px);
+  margin: 16px 7px;
+  width: 20px;
+  height: 2px;
   font-style: normal;
   color: #ddd;
   text-align: left;
@@ -41,17 +41,17 @@
 }
 
 .icon--big {
-  max-width: remy(272px);
+  max-width: 272px;
 }
 
 .icon--medium {
-  max-width: remy(256px);
+  max-width: 256px;
 }
 
 .icon--smaller {
-  max-width: remy(200px);
+  max-width: 200px;
 }
 
 .icon--small {
-  max-width: remy(100px);
+  max-width: 100px;
 }

@@ -5,7 +5,7 @@
 .page--portfolio {
   .sec__main {
     min-height: 0;
-    height: remy(110px);
+    height: 110px;
   }
 }
 
@@ -18,7 +18,7 @@ main {
 
 .sec__works {
   [class*='col-'] {
-    padding: remy(16px);
+    padding: 16px;
   }
 }
 
@@ -45,8 +45,8 @@ main {
 
 .thumbnail__info {
   display: none;
-  padding-top: remy(16px);
-  padding-left: remy(16px);
+  padding-top: 16px;
+  padding-left: 16px;
   color: #fff;
   width: 100%;
   text-align: center;

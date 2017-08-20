@@ -2,12 +2,6 @@
 // Functions
 //
 
-// Px to rem
-
-@function remy($target) {
-  @return ($target / $font-size-base) * 1rem;
-}
-
 // Color grabber for color palettes
 @function palette-grabber($palette, $color, $shade) {
   $color-map: map-get($palette, $color);

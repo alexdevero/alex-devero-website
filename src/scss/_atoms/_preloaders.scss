@@ -19,40 +19,40 @@
     }
 
     25% {
-      width: remy(164.888px);
+      width: 164.888px;
     }
 
     50% {
-      width: remy(329.776px);
+      width: 329.776px;
     }
 
     75% {
-      width: remy(494.664px);
+      width: 494.664px;
     }
 
     100% {
-      width: remy(659.552px);
+      width: 659.552px;
     }
   }
 
   position: relative;
   top: 50%;
   z-index: 1001;/* anything higher than 'z-index: 1000' of .loader-section */
-  margin-top: remy(-75px);
+  margin-top: -75px;
   margin-left: auto;
   margin-right: auto;
   width: 0%;
-  height: remy(128px);
+  height: 128px
   overflow: hidden;
   animation: width 2.25s linear 1.5s;
 
   &:before {
     content: '';
     position: absolute;
-    bottom: remy(-28px);
+    bottom: -28px;
     z-index: 99;
     width: 100%;
-    height: remy(14px);
+    height: 14px;
     background: #ba8747;
   }
 }
@@ -87,7 +87,7 @@
   .cls-1 {
     fill: #ba8747;
     font-family: 'Devero';
-    font-size: remy(140px);
+    font-size: 140px;
     text-anchor: middle;
     text-transform: uppercase;
   }

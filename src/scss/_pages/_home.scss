@@ -8,14 +8,14 @@
 
   .sec__main {
     position: relative;
-    margin-bottom: remy(-63px);
+    margin-bottom: -63px;
   }
 
   .hero--big {
-    min-height: remy(606px);
+    min-height: 606px;
 
     @media screen and (min-width: 460px) {
-      min-height: remy(480px);
+      min-height: 480px;
     }
   }
 
@@ -62,10 +62,10 @@
   h2,
   h3 {
     span {
-      padding-top: remy(4px);
-      padding-right: remy(15px);
-      padding-bottom: remy(4px);
-      padding-left: remy(15px);
+      padding-top: 4px;
+      padding-right: 15px;
+      padding-bottom: 4px;
+      padding-left: 15px;
     }
   }
 
@@ -73,43 +73,43 @@
     margin-bottom: 0;
     line-height: 1.1;
     font-family: 'Devero', arial, sans-serif;
-    font-size: remy(64px);
+    font-size: 64px;
     font-weight: 600;
     color: map-get($palette-custom, red);
 
     @media screen and (min-width: 390px) {
-      font-size: remy(96px);
+      font-size: 96px;
     }
 
     @media screen and (min-width: 768px) {
-      font-size: remy(112px);
+      font-size: 112px;
     }
   }
 
   h2 {
     margin-top: 0;
-    font-size: remy(20px);
+    font-size: 20px;
     font-weight: 700;
     color: map-get($palette-custom, black);
 
     @media screen and (min-width: 555px) {
-      font-size: remy(28px);
+      font-size: 28px;
     }
   }
 
   h3 {
     margin-top: 0;
-    margin-bottom: remy(28px);
+    margin-bottom: 28px;
     font-family: $font-monospace;
     font-size: 1rem;
     font-weight: 500;
 
     @media screen and (min-width: 555px) {
-      font-size: remy(18px);
+      font-size: 18px;
     }
 
     @media screen and (min-width: 768px) {
-      font-size: remy(21px);
+      font-size: 21px;
     }
   }
 
@@ -123,10 +123,10 @@
       margin-right: auto;
       margin-left: auto;
       display: block;
-      max-width: remy(320px);
+      max-width: 320px;
 
       &:last-of-type {
-        margin-top: remy(16px);
+        margin-top: 16px;
       }
     }
   } */

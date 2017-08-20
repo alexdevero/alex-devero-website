@@ -23,9 +23,9 @@
 // Mixin for box-shadow
 @mixin box-shadow($level) {
   @if $level == 1 {
-    box-shadow: 0 remy(2px) remy(4px) rgba(0, 0, 0, .05), 0 remy(3px) remy(6px) rgba(0, 0, 0, .15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .05), 0 3px 6px rgba(0, 0, 0, .15);
   } @else if $level == 2 {
-    box-shadow: 0 remy(6px) remy(9px) rgba(0, 0, 0, .05), 0 remy(9px) remy(12px) rgba(0, 0, 0, .15);
+    box-shadow: 0 6px 9px rgba(0, 0, 0, .05), 0 9px 12px rgba(0, 0, 0, .15);
   }
 }
 

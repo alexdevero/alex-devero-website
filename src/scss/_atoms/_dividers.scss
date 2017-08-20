@@ -3,24 +3,24 @@
  */
 
 .divider {
-  max-width: remy(32px);
-  height: remy(2px);
+  max-width: 32px;
+  height: 2px;
   background-color: #1b1b1b;
   border: 0;
 }
 
 .divider--primary {
-  margin-bottom: remy(48px);
+  margin-bottom: 48px;
 }
 
 .divider--secondary {
-  margin-bottom: remy(16px);
+  margin-bottom: 16px;
 }
 
 .divider--svg {
   display: block;
   margin-right: auto;
-  margin-bottom: remy(48px);
+  margin-bottom: 48px;
   margin-left: auto;
 }
 

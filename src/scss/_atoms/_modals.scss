@@ -23,11 +23,11 @@
 
 .modal-message {
   display: none;
-  padding: remy(32px);
+  padding: 32px;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  max-width: remy(420px);
+  max-width: 420px;
   text-align: center;
   background-color: #fff;
   border-radius: 0; // $radius;
@@ -38,12 +38,12 @@
 
   p {
     &:first-of-type {
-      margin-top: remy(8px);
-      margin-bottom: remy(16px);
+      margin-top: 8px;
+      margin-bottom: 16px;
     }
 
     &:last-of-type {
-      margin-bottom: remy(24px);
+      margin-bottom: 24px;
     }
   }
 }

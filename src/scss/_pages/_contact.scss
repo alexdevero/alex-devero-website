@@ -5,21 +5,21 @@
 .page--contact {
   .sec__main {
     position: relative;
-    min-height: remy(700px);
+    min-height: 700px;
 
     @media screen and (min-width: 768px) {
-      margin-bottom: remy(-63px);
+      margin-bottom: -63px;
       height: calc(100% - 101px); // 101 - height of header
     }
   }
 
   .about__contact {
     @media screen and (max-width: 767px) {
-      margin-bottom: remy(32px);
+      margin-bottom: 32px;
     }
 
     @media screen and (max-height: 744px) {
-      margin-top: remy(32px);
+      margin-top: 32px;
     }
 
     @media screen and (min-width: 768px) and (min-height: 800px) {
@@ -37,12 +37,12 @@
   }
 
   p {
-    font-size: remy(18px);
+    font-size: 18px;
   }
 
   footer {
     @media screen and (max-height: 744px) {
-      margin-top: remy(32px);
+      margin-top: 32px;
     }
   }
 

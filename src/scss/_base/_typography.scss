@@ -40,41 +40,41 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-bottom: remy(13px);
+  margin-bottom: 13px;
   font-weight: 600;
 }
 
 h1,
 .h1 {
-  margin-bottom: remy(26px);
-  font-size: remy(40px);
+  margin-bottom: 26px;
+  font-size: 40px;
 }
 
 h2,
 .h2 {
-  margin-bottom: remy(18px);
-  font-size: remy(27px);
+  margin-bottom: 18px;
+  font-size: 27px;
 }
 
 h3,
 .h3 {
-  margin-bottom: remy(16px);
-  font-size: remy(22px);
+  margin-bottom: 16px;
+  font-size: 22px;
 }
 
 h4,
 .h4 {
-  font-size: remy(19.2px);
+  font-size: 19.2px;
 }
 
 h5,
 .h5 {
-  font-size: remy(16px);
+  font-size: 16px;
 }
 
 h6,
 .h6 {
-  font-size: remy(14px);
+  font-size: 14px;
   font-style: italic;
   font-weight: normal;
 }
@@ -83,7 +83,7 @@ h1 + h2,
 h1 + .h2,
 .h1 + h2,
 .h1 + .h2, {
-  margin-top: remy(26px);
+  margin-top: 26px;
 }
 
 h2 + h3,
@@ -98,14 +98,14 @@ h4 + h5,
 .h4 + h5,
 h4 + .h5,
 .h4 + .h5 {
-  margin-top: remy(13px);
+  margin-top: 13px;
 }
 
 h5 + h6,
 .h5 + h6,
 h5 + .h6,
 .h5 + .h6 {
-  margin-top: remy(-13px);
+  margin-top: -13px;
 }
 
 /* end. Guttenberg */
@@ -113,7 +113,7 @@ h5 + .h6,
 li,
 p,
 .text--regular {
-  font-size: remy(18px);
+  font-size: 18px;
 }
 
 p,
@@ -121,7 +121,7 @@ p,
   margin-top: 0;
 
   & + & {
-    margin-top: remy(20px);
+    margin-top: 20px;
   }
 }
 
@@ -132,7 +132,7 @@ em,
 
 small,
 .small {
-  font-size: remy(14px);
+  font-size: 14px;
 }
 
 strong,
