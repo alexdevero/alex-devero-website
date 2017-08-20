@@ -8,6 +8,7 @@ import cssnano from 'cssnano';
 import cssnext from 'postcss-cssnext';
 import plumber from 'gulp-plumber';
 import postcss from 'gulp-postcss';
+import pxtorem from 'postcss-pxtorem';
 import rename from 'gulp-rename';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
@@ -15,13 +16,32 @@ import sourcemaps from 'gulp-sourcemaps';
 // Sass to CSS
 gulp.task('sass', () => {
   const sassPath = './dist/styles';
+
+  const cssnanoConfig = {
+    autoprefixer: false
+  }
+
+  const cssnextConfig = {
+    browsers: [
+      'last 5 versions',
+      'ie >= 8'
+    ]
+  };
+
+  const pxtoremConfig = {
+    rootValue: 16,
+    unitPrecision: 5,
+    propList: ['*'],
+    selectorBlackList: ['html', 'body'],
+    replace: true,
+    mediaQuery: false,
+    minPixelValue: 0
+  };
+
   const processors = [
-    cssnext({
-      browsers: ['last 5 versions', 'ie >= 8']
-    }),
-    cssnano({
-      autoprefixer: false
-    })
+    cssnano(cssnanoConfig),
+    cssnext(cssnextConfig),
+    pxtorem(pxtoremConfig)
   ];
 
   return gulp.src('src/scss/main.scss')
