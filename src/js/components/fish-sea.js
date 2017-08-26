@@ -78,7 +78,7 @@ const fishSea = () => {
   // one time-step of the timeline loop
   var step = function() {
     // print info
-    info.innerHTML = 'Population: ' + sea.population.length;
+    info.innerHTML = 'Info:<br>Implementation of autonomous agents<br>combined with genetic algorithms.<br><br>Current population: ' + sea.population.length;
 
     // clear the screen (with a fade)
     ctx.globalAlpha = 0.8;
