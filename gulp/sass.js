@@ -2,6 +2,7 @@
 
 import gulp from 'gulp';
 
+import assets  from 'postcss-assets';
 import browserSync from 'browser-sync';
 import csscomb from 'gulp-csscomb';
 import cssnano from 'cssnano';
@@ -16,6 +17,11 @@ import sourcemaps from 'gulp-sourcemaps';
 // Sass to CSS
 gulp.task('sass', () => {
   const sassPath = './dist/styles';
+
+  const assetsConfig = {
+    basePath: './src/',
+    loadPaths: ['./images/']
+  }
 
   const cssnanoConfig = {
     autoprefixer: false
@@ -39,6 +45,7 @@ gulp.task('sass', () => {
   };
 
   const processors = [
+    assets(assetsConfig),
     cssnano(cssnanoConfig),
     cssnext(cssnextConfig),
     pxtorem(pxtoremConfig)
