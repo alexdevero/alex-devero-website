@@ -17,8 +17,16 @@ main {
 }
 
 .sec__works {
+  .container-fluid {
+    max-width: 1440px;
+  }
+
   [class*='col-'] {
-    padding: 16px;
+    padding: 28px;
+
+    @media (min-width: 1200px) {
+      padding: 32px;
+    }
   }
 }
 
@@ -28,8 +36,18 @@ main {
   //overflow: hidden;
 
   &:focus > div + img,
-  &:hover > div + img {
-    transform: scale(1.15);
+  &:hover > div + img,
+  &:focus > div + img + noscript > img,
+  &:hover > div + img + noscript > img {
+    transform: scale(1.05);
+
+    @media (min-width: 768px) {
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 992px) {
+      transform: scale(1.15);
+    }
   }
 }
 
