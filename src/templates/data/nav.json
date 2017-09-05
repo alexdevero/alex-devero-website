@@ -2,6 +2,8 @@
   "links": {
     "about": "about.html",
     "about-cs": "about-cs.html",
+    "ai": "ai.html",
+    "ai-cs": "ai-cs.html",
     "blog": "http://blog.alexdevero.com/",
     "clients": "clients.html",
     "clients-cs": "clients-cs.html",
@@ -20,6 +22,8 @@
   "titles": {
     "about": "Information about me",
     "about-cs": "Informace o mě",
+    "ai": "Small AI playground",
+    "ai-cs": "Malé AI hřiště",
     "blog": "My blog about design, web development and business",
     "blog-cs": "Můj blog o designu, web developmentu a podnikání",
     "clients": "Clients' testimonials",
