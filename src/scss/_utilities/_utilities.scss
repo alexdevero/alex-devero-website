@@ -11,6 +11,10 @@
   margin: 0 !important; // sass-lint:disable-line no-important
 }
 
+.pt-4 {
+  padding-bottom: 64px;
+}
+
 .pt-3 {
   padding-top: 48px;
 }
@@ -21,6 +25,10 @@
 
 .pt-1 {
   padding-top: 16px;
+}
+
+.pb-4 {
+  padding-bottom: 64px;
 }
 
 .pb-3 {
@@ -35,6 +43,10 @@
   padding-bottom: 16px;
 }
 
+.mt-4 {
+  margin-top: 64px;
+}
+
 .mt-3 {
   margin-top: 48px;
 }
@@ -45,6 +57,10 @@
 
 .mt-1 {
   margin-top: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 64px;
 }
 
 .mb-3 {
