@@ -4,6 +4,7 @@
 // import { example } from './components/example.js';
 // import { animateStylesheetLoader } from './components/animate-css-loader.js';
 import { browserDetector } from './components/browser-detector.js';
+import { canvasVisualization } from './components/canvas-visualization.js';
 import { contactFlipper } from './components/contact-flipper.js';
 import { contactForm } from './components/contact-form.js';
 // import { customSlider } from './components/custom-slider.js';
@@ -27,6 +28,7 @@ import { pageTransition } from './components/page-transition.js';
 (() => {
   const app = {
     appAnchors: {
+      canvasVisualizationEl: document.querySelectorAll('#canvas-visualization'),
       contactForm: document.querySelectorAll('#contactForm'),
       // indexCanvas: document.querySelectorAll('#indexCanvas'),
       lazyImages: document.querySelectorAll('.lazy'),
@@ -43,6 +45,10 @@ import { pageTransition } from './components/page-transition.js';
       // Animate stylesheet loader controller
       animateStylesheetLoaderController: () => {
         animateStylesheetLoader();
+      },
+      // Canvas visualization controller
+      canvasVisualizationController: () => {
+        canvasVisualization();
       },
       // Contact controller
       contactController: () => {
@@ -137,6 +143,13 @@ import { pageTransition } from './components/page-transition.js';
 
           // Page transitions for clicks on links
           // app.appControllers.pageTransitionController();
+        })();
+      }
+
+      // Canvas visualization controller
+      if (app.appAnchors.canvasVisualizationEl.length > 0) {
+        (() => {
+          app.appControllers.canvasVisualizationController();
         })();
       }
 
