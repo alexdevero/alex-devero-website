@@ -1,8 +1,10 @@
-[![Build Status](https://circleci.com/gh/alexdevero/alex-devero-website.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/alexdevero/alex-devero-website/)
-[![Dependency Status](https://david-dm.org/alexdevero/alex-devero-website.svg?style=flat)](https://david-dm.org/alexdevero/alex-devero-website)
-[![devDependency Status](https://david-dm.org/alexdevero/alex-devero-website/dev-status.svg?style=flat)](https://david-dm.org/alexdevero/alex-devero-website?type=dev)
-[![Built with Gulp](https://img.shields.io/badge/build%20with-gulp-orange.svg)](http://gulpjs.com/)
-[![Built by DEVERO](https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320)](https://alexdevero.com)
+<p align="center">
+  <a href="https://circleci.com/gh/alexdevero/alex-devero-website/"><img alt="Dependency Status" src="https://circleci.com/gh/alexdevero/alex-devero-website.svg?style=shield&circle-token=:circle-token"></a>
+  <a href="https://david-dm.org/alexdevero/alex-devero-website"><img alt="Dependency Status" src="https://david-dm.org/alexdevero/alex-devero-website.svg?style=flat"></a>
+  <a href="https://david-dm.org/alexdevero/alex-devero-website?type=dev"><img alt="devDependency Status" src="https://david-dm.org/alexdevero/alex-devero-website/dev-status.svg?style=flat"></a>
+  <a href="http://gulpjs.com/"><img alt="Built with Gulp.js" src="https://img.shields.io/badge/build%20with-gulp-orange.svg"></a>
+  <a href="https://alexdevero.com"><img alt="Built by DEVERO" src="https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320"></a>
+</p>
 
 # Alex Devero
 Repository for my website and portfolio on [alexdevero.com](http://www.alexdevero.com).
