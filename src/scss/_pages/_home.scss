@@ -1,6 +1,7 @@
 /**
  * Home page
  */
+
 .page--home {
   main {
     position: relative;
@@ -8,7 +9,15 @@
 
   .sec__main {
     position: relative;
-    margin-bottom: -63px;
+    margin-bottom: -107px;
+
+    @media (min-width: 461px) {
+      margin-bottom: -63px;
+    }
+
+    @media (max-width: 505px) {
+      overflow-x: hidden;
+    }
   }
 
   .hero--big {
@@ -54,6 +63,7 @@
 
 .home__intro {
   z-index: 3;
+  padding: 0 18px;
   color: map-get($palette-custom, black);
   text-align: center;
 
@@ -61,6 +71,8 @@
 
   h2,
   h3 {
+    margin-top: 0;
+
     span {
       padding-top: 4px;
       padding-right: 15px;
@@ -69,72 +81,54 @@
     }
   }
 
+  // .heading-devero {
+  //   font-family: 'Devero', arial, sans-serif;
+  //   font-size: 64px;
+  //   font-weight: 600;
+  //   line-height: 1.4;
+  //
+  //   @media screen and (min-width: 390px) {
+  //     font-size: 96px;
+  //   }
+  //
+  //   @media screen and (min-width: 768px) {
+  //     font-size: 112px;
+  //   }
+  // }
+
   h1 {
-    margin-bottom: 0;
-    line-height: 1.1;
-    font-family: 'Devero', arial, sans-serif;
-    font-size: 64px;
-    font-weight: 600;
+    margin-bottom: 32px;
+    line-height: 1.4;
+    font-size: 28px;
+    font-weight: 700;
     color: map-get($palette-custom, red);
 
-    @media screen and (min-width: 390px) {
-      font-size: 96px;
+    @media screen and (min-width: 481px) {
+      font-size: 42px;
     }
 
-    @media screen and (min-width: 768px) {
-      font-size: 112px;
+    br {
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
   }
 
   h2 {
-    margin-top: 0;
-    font-size: 20px;
-    font-weight: 700;
+    margin-bottom: 32px;
+    font-size: 26px;
+    font-weight: 600;
     color: map-get($palette-custom, black);
 
-    @media screen and (min-width: 555px) {
+    @media screen and (min-width: 481px) {
       font-size: 28px;
     }
   }
 
   h3 {
-    margin-top: 0;
-    margin-bottom: 28px;
+    margin-bottom: 0;
     font-family: $font-monospace;
-    font-size: 1rem;
+    font-size: 21px;
     font-weight: 500;
-
-    @media screen and (min-width: 555px) {
-      font-size: 18px;
-    }
-
-    @media screen and (min-width: 768px) {
-      font-size: 21px;
-    }
   }
-
-  /* @media screen and (max-width: 450px) {
-    .intro__btn-container,
-    .btn {
-      transform: rotate(180deg);
-    }
-
-    .btn {
-      margin-right: auto;
-      margin-left: auto;
-      display: block;
-      max-width: 320px;
-
-      &:last-of-type {
-        margin-top: 16px;
-      }
-    }
-  } */
 }
-
-/* .js {
-  .intro__btn-container {
-    display: none;
-    opacity: 0;
-  }
-} */
