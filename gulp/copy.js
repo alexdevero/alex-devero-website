@@ -34,6 +34,7 @@ gulp.task('copy:jsplugins', () => {
   return gulp.src([
     './src/js/plugins/*',
     './node_modules/html5shiv/dist/html5shiv.min.js',
+    './node_modules/three/build/three.min.js',
     // 'node_modules/particlesjs/dist/particles.min.js',
     // 'node_modules/typed.js/dist/typed.min.js',
     // 'node_modules/waypoints/lib/noframework.waypoints.min.js'
@@ -68,10 +69,30 @@ gulp.task('copy:other', () => {
     './src/contact.php',
     './src/crossdomain.xml',
     './src/humans.txt',
-    './src/robots.txt'
+    './src/robots.txt',
+    './src/renders/*',
+    './src/videos/*'
   ])
     .pipe(plumber())
     .pipe(prune({ dest: otherPath, ext: ['.htaccess', '.php', '.txt', '.xml']}))
     .pipe(changed(otherPath))
     .pipe(gulp.dest(otherPath));
+});
+
+gulp.task('copy:renders', () => {
+  const renderPath = './dist/renders';
+
+  return gulp.src('./src/renders/*')
+    .pipe(plumber())
+    .pipe(changed(renderPath))
+    .pipe(gulp.dest(renderPath));
+});
+
+gulp.task('copy:videos', () => {
+  const renderPath = './dist/videos';
+
+  return gulp.src('./src/videos/*')
+    .pipe(plumber())
+    .pipe(changed(renderPath))
+    .pipe(gulp.dest(renderPath));
 });

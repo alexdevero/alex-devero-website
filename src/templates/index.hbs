@@ -27,7 +27,8 @@
         <h3>{{{ pageHome.h3-en }}}</h3>
       </div>
 
-      <canvas id="canvas-visualization" class="canvas-visualization"></canvas>
+      <canvas id="canvas-iphone" class="canvas--absolute canvas--fullwidth canvas-iphone"></canvas>
+      {{!-- <canvas id="canvas-visualization" class="canvas-visualization"></canvas> --}}
 
       {{!-- {{> particles }} --}}
       {{!-- {{> shoal-fish }} --}}
@@ -36,6 +37,6 @@
     {{> footer }}
   </main>
 
-  {{> scripts }}
+  {{> scripts has-threejs=true }}
 </body>
 </html>

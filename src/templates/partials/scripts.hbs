@@ -39,6 +39,30 @@ bodyEl.appendChild(typedjsEl);
   bodyEl.appendChild(waypointsEl);
 </script>
 {{/if}}
+{{#if has-threejs }}
+<!-- Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+<script src="./js/plugins/ColladaLoader.min.js"></script>
+<script src="./js/plugins/TrackballControls.min.js"></script>
+<script>
+  // var bodyEl = document.querySelector('body');
+  // var threeEl = document.createElement('script');
+  // threeEl.async = true;
+  // threeEl.src = './js/plugins/three.min.js';
+  // bodyEl.appendChild(threeEl);
+  //
+  // var trackballEll = document.createElement('script');
+  // trackballEll.async = false;
+  // trackballEll.src = './js/plugins/TrackballControls.min.js';
+  // bodyEl.appendChild(trackballEll);
+  //
+  // var colladaEll = document.createElement('script');
+  // colladaEll.async = false;
+  // colladaEll.src = './js/plugins/ColladaLoader.min.js';
+  // bodyEl.appendChild(colladaEll);
+
+</script>
+{{/if}}
 
 <!-- Main Scripts -->
 <script src="./js/main.min.js"></script>

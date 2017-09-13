@@ -72,6 +72,7 @@
   h2,
   h3 {
     margin-top: 0;
+    color: #8a8a8a;
 
     span {
       padding-top: 4px;
@@ -118,7 +119,7 @@
     margin-bottom: 32px;
     font-size: 26px;
     font-weight: 600;
-    color: map-get($palette-custom, black);
+    // color: map-get($palette-custom, black);
 
     @media screen and (min-width: 481px) {
       font-size: 28px;

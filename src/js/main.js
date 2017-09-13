@@ -16,6 +16,7 @@ import { fishSea } from './components/fish-sea.js';
 import { fontAwesomeLoader } from './components/font-awesome-loader.js';
 import { fontRalewayLoader } from './components/font-raleway-loader.js';
 import { lazyImages } from './components/lazy-images.js';
+import { iphoneRenderer } from './components/iphone-render.js';
 // import { particles } from './components/particles.js';
 import { pageTransition } from './components/page-transition.js';
 // import { typedjs } from './components/typedjs.js';
@@ -35,6 +36,7 @@ import { pageTransition } from './components/page-transition.js';
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
       // particles: document.querySelectorAll('.js-particles'),
+      iphoneRenderer: document.querySelectorAll('.canvas-iphone'),
       portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
       shoalFish: document.querySelectorAll('.js-shoal-fish-canvas')
@@ -65,6 +67,10 @@ import { pageTransition } from './components/page-transition.js';
       // Font Raleway loader controller
       fontRalewayLoaderController: () => {
         fontRalewayLoader();
+      },
+      // iPhone renderer controller
+      iphoneRendererController: () => {
+        iphoneRenderer();
       },
       // LazyImages controller
       lazyImagesController: () => {
@@ -157,6 +163,13 @@ import { pageTransition } from './components/page-transition.js';
       if (app.appAnchors.contactForm.length > 0) {
         (() => {
           app.appControllers.contactController();
+        })();
+      }
+
+      // iPhone renderer
+      if (app.appAnchors.iphoneRenderer.length > 0) {
+        (() => {
+          app.appControllers.iphoneRendererController();
         })();
       }
 

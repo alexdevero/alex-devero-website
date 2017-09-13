@@ -12,7 +12,7 @@ if (environment !== undefined) {
 }
 
 // Automate copying
-gulp.task('copy:all', sequence('copy:other', 'copy:css', 'copy:fonts', 'copy:jsplugins', 'copy:jsvendor'));
+gulp.task('copy:all', sequence('copy:other', 'copy:css', 'copy:fonts', 'copy:jsplugins', 'copy:jsvendor', 'copy:renders'/*, 'copy:videos'*/));
 
 // Builds the website
 gulp.task('build:dev', sequence('copy:all', 'hb:dev', /*'html',*/ 'images', 'sass', 'js'));

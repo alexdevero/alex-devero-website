@@ -2,13 +2,22 @@
  * Canvas visualization
  */
 
-.canvas-visualization {
+canvas {
+  padding: 0;
+  margin: 0;
+}
+
+.canvas--absolute {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0;
-  margin: 0;
+}
+
+.canvas--fullwidth {
   width: 100vw;
   height: 100vh;
+}
+
+.canvas-visualization {;
   opacity: .7;
 }
