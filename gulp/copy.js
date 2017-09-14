@@ -69,9 +69,7 @@ gulp.task('copy:other', () => {
     './src/contact.php',
     './src/crossdomain.xml',
     './src/humans.txt',
-    './src/robots.txt',
-    './src/renders/*',
-    './src/videos/*'
+    './src/robots.txt'
   ])
     .pipe(plumber())
     .pipe(prune({ dest: otherPath, ext: ['.htaccess', '.php', '.txt', '.xml']}))
