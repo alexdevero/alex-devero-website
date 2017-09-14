@@ -36,16 +36,13 @@ main {
   flex-wrap: wrap;
   padding-bottom: 4px;
 
-  @media (min-width: 768px) {
-    padding-bottom: 50px;
-  }
-
   @media (max-width: 767px) {
     align-items: center;
     text-align: center;
   }
 
   @media (min-width: 768px) {
+    padding-bottom: 50px;
     flex-direction: row;
   }
 
@@ -68,9 +65,23 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    &:first-of-type {
+      text-align: right;
+    }
+  }
 }
 
 .work__thumbnail {
+  @media (min-width: 768px) {
+    &:first-of-type {
+      img {
+        margin-left: auto;
+      }
+    }
+  }
+
   img {
     width: 100%;
     max-width: 480px;
