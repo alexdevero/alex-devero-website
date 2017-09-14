@@ -122,16 +122,16 @@ import { pageTransition } from './components/page-transition.js';
             } */
 
             // Cache html element
-            let el = document.querySelector('html');
+            // let el = document.querySelector('html');
             // el.style.display = 'none';
 
-            setTimeout(() => {
+            // setTimeout(() => {
               // $('html').attr('id', 'loaded');
-              el.setAttribute('id', 'loaded');
+              // el.setAttribute('id', 'loaded');
 
               // Fade in cached html element
-              fadeInCustom(el);
-            }, 250);
+              // fadeInCustom(el);
+            // }, 250);
 
             // TypedJS
             /* if (app.appAnchors.typedJS.length > 0) {
@@ -214,7 +214,7 @@ import { pageTransition } from './components/page-transition.js';
       } */
     },
     init: () => {
-      document.querySelector('html').style.display = 'none';
+      // document.querySelector('html').style.display = 'none';
 
       if (document.querySelectorAll('.no-js').length > 0) {
         if (!document.querySelector('.no-js').classList.contains('js')) {
