@@ -107,14 +107,14 @@ import { pageTransition } from './components/page-transition.js';
           // Loading fonts and stylesheets
           window.onload = () => {
             // Load Font Awesome
-            if (true) {
+            /*if (true) {
               app.appControllers.fontAwesomeLoaderController();
-            }
+            }*/
 
             // Load Raleway font
-            if (true) {
+            /*if (true) {
               app.appControllers.fontRalewayLoaderController()
-            }
+            }*/
 
             /* if (document.URL.indexOf('process') > 0) {
               // Load Animate CSS
