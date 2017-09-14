@@ -4,39 +4,54 @@
 
 {{#if has-particlesjs }}
 <!-- Particles.js -->
-<script src="./js/plugins/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.0.2/particles.js"></script>
+<script>
+  if (window.Particles === undefined) {
+    var particlesjsEl = document.createElement('script');
+    particlesjsEl.async = true;
+    particlesjsEl.src = './js/plugins/particles.min.js';
+    var bodyEl = document.querySelector('body');
+    bodyEl.appendChild(particlesjsEl);
+  }
+</script>
 {{/if}}
 {{#if has-typedjs }}
 <!-- Typed.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
 <script>
-var typedjsEl = document.createElement('script');
-typedjsEl.async = true;
-typedjsEl.src = './js/plugins/typed.min.js';
-var bodyEl = document.querySelector('body');
-bodyEl.appendChild(typedjsEl);
+  if (window.Typed === undefined) {
+    var typedjsEl = document.createElement('script');
+    typedjsEl.async = true;
+    typedjsEl.src = './js/plugins/typed.min.js';
+    var bodyEl = document.querySelector('body');
+    bodyEl.appendChild(typedjsEl);
+  }
 </script>
 {{/if}}
 {{#if has-jquery }}
 <!-- jQuery library hosted on CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-  var jqueryEl = document.createElement('script');
-  jqueryEl.async = true;
-  jqueryEl.src = './js/vendor/jquery.min.js';
-  var bodyEl = document.querySelector('body');
-  bodyEl.appendChild(jqueryEl);
+  if (window.jQuery === undefined) {
+    var jqueryEl = document.createElement('script');
+    jqueryEl.async = true;
+    jqueryEl.src = './js/vendor/jquery.min.js';
+    var bodyEl = document.querySelector('body');
+    bodyEl.appendChild(jqueryEl);
+  }
 </script>
 {{/if}}
 {{#if has-waypoints }}
 <!-- Waypoints -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 <script>
-  var waypointsEl = document.createElement('script');
-  waypointsEl.async = true;
-  waypointsEl.src = './js/plugins/noframework.waypoints.min.js';
-  var bodyEl = document.querySelector('body');
-  bodyEl.appendChild(waypointsEl);
+  if (window.Waypoint === undefined) {
+    var waypointsEl = document.createElement('script');
+    waypointsEl.async = true;
+    waypointsEl.src = './js/plugins/noframework.waypoints.min.js';
+    var bodyEl = document.querySelector('body');
+    bodyEl.appendChild(waypointsEl);
+  }
 </script>
 {{/if}}
 {{#if has-threejs }}
@@ -44,24 +59,23 @@ bodyEl.appendChild(typedjsEl);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
 <script src="./js/plugins/ColladaLoader.min.js"></script>
 <script src="./js/plugins/TrackballControls.min.js"></script>
-<script>
-  // var bodyEl = document.querySelector('body');
-  // var threeEl = document.createElement('script');
-  // threeEl.async = true;
-  // threeEl.src = './js/plugins/three.min.js';
-  // bodyEl.appendChild(threeEl);
-  //
-  // var trackballEll = document.createElement('script');
-  // trackballEll.async = false;
-  // trackballEll.src = './js/plugins/TrackballControls.min.js';
-  // bodyEl.appendChild(trackballEll);
-  //
-  // var colladaEll = document.createElement('script');
-  // colladaEll.async = false;
-  // colladaEll.src = './js/plugins/ColladaLoader.min.js';
-  // bodyEl.appendChild(colladaEll);
+{{!-- <script>
+  var bodyEl = document.querySelector('body');
+  var threeEl = document.createElement('script');
+  threeEl.async = true;
+  threeEl.src = './js/plugins/three.min.js';
+  bodyEl.appendChild(threeEl);
 
-</script>
+  var trackballEll = document.createElement('script');
+  trackballEll.async = false;
+  trackballEll.src = './js/plugins/TrackballControls.min.js';
+  bodyEl.appendChild(trackballEll);
+
+  var colladaEll = document.createElement('script');
+  colladaEll.async = false;
+  colladaEll.src = './js/plugins/ColladaLoader.min.js';
+  bodyEl.appendChild(colladaEll);
+</script> --}}
 {{/if}}
 
 <!-- Main Scripts -->
