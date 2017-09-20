@@ -8,15 +8,15 @@ import { canvasVisualization } from './components/canvas-visualization.js';
 import { contactFlipper } from './components/contact-flipper.js';
 import { contactForm } from './components/contact-form.js';
 // import { customSlider } from './components/custom-slider.js';
-import { fadeInCustom } from './components/fade-in-custom.js';
+// import { fadeInCustom } from './components/fade-in-custom.js';
 // import { fadeOutCustom } from './components/fade-out-custom.js';
 // imports for ML-powered fish on homepage
 import { fishSea } from './components/fish-sea.js';
 // .end imports for ML-powered fish on homepage
 import { fontAwesomeLoader } from './components/font-awesome-loader.js';
 import { fontRalewayLoader } from './components/font-raleway-loader.js';
-import { lazyImages } from './components/lazy-images.js';
 import { iphoneRenderer } from './components/iphone-render.js';
+import { lazyImages } from './components/lazy-images.js';
 // import { particles } from './components/particles.js';
 import { pageTransition } from './components/page-transition.js';
 // import { typedjs } from './components/typedjs.js';
@@ -32,11 +32,11 @@ import { pageTransition } from './components/page-transition.js';
       canvasVisualizationEl: document.querySelectorAll('#canvas-visualization'),
       contactForm: document.querySelectorAll('#contactForm'),
       // indexCanvas: document.querySelectorAll('#indexCanvas'),
+      iphoneRenderer: document.querySelectorAll('.canvas-iphone'),
       lazyImages: document.querySelectorAll('.lazy'),
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
       // particles: document.querySelectorAll('.js-particles'),
-      iphoneRenderer: document.querySelectorAll('.canvas-iphone'),
       portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
       shoalFish: document.querySelectorAll('.js-shoal-fish-canvas')
@@ -102,55 +102,55 @@ import { pageTransition } from './components/page-transition.js';
     appSwitches: () => {
       // Custom transitions for page loading and closing
       // info: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
-      if (true) {
+      /* if (true) {
         (() => {
           // Loading fonts and stylesheets
           window.onload = () => {
             // Load Font Awesome
-            /*if (true) {
+            if (true) {
               app.appControllers.fontAwesomeLoaderController();
-            }*/
+            }
 
             // Load Raleway font
-            /*if (true) {
+            if (true) {
               app.appControllers.fontRalewayLoaderController()
-            }*/
+            }
 
-            /* if (document.URL.indexOf('process') > 0) {
-              // Load Animate CSS
+            // Load Animate CSS
+            if (document.URL.indexOf('process') > 0) {
               app.appControllers.animateStylesheetLoaderController();
-            } */
+            }
 
             // Cache html element
-            // let el = document.querySelector('html');
-            // el.style.display = 'none';
+            let el = document.querySelector('html');
+            el.style.display = 'none';
 
-            // setTimeout(() => {
-              // $('html').attr('id', 'loaded');
-              // el.setAttribute('id', 'loaded');
+            setTimeout(() => {
+              $('html').attr('id', 'loaded');
+              el.setAttribute('id', 'loaded');
 
-              // Fade in cached html element
-              // fadeInCustom(el);
-            // }, 250);
+              Fade in cached html element
+              fadeInCustom(el);
+            }, 250);
 
             // TypedJS
-            /* if (app.appAnchors.typedJS.length > 0) {
+            if (app.appAnchors.typedJS.length > 0) {
               (() => {
                 app.appControllers.typedJSController();
               })();
-            } */
+            }
           }
 
           // Detect history change (back or forward button)
           // and force the page to reload (with new url) and load new page
-          /* window.onpopstate = () => {
+          window.onpopstate = () => {
             location.reload();
-          } */
+          }
 
           // Page transitions for clicks on links
-          // app.appControllers.pageTransitionController();
+          app.appControllers.pageTransitionController();
         })();
-      }
+      } */
 
       // Canvas visualization controller
       if (app.appAnchors.canvasVisualizationEl.length > 0) {
