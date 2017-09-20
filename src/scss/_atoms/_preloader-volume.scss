@@ -37,7 +37,7 @@
 
   100% {
     opacity: 0;
-    transform: scale(0.001);
+    transform: scale(.001);
   }
 }
 
@@ -77,7 +77,7 @@
   height: 100vh;
   background-color: #fff;
   opacity: 0;
-  transform: scale(0.001);
+  transform: scale(.001);
   animation: preloader-volume-hide-wrapper 3.5s ease-in;
 }
 
