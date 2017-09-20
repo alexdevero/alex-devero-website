@@ -27,6 +27,7 @@ gulp.task('js', () => {
   }
   const rename = require('gulp-rename');
   const uglify = require('gulp-uglify');
+  const uglifyDropConsole = (process.env.NODE_ENV.trim() === 'development') ? false : true;
 
   return gulp.src(['src/js/main.js'])
     .pipe(plumber())
@@ -35,7 +36,7 @@ gulp.task('js', () => {
     .pipe(webpackStream(moduleConfig, webpack))
     .pipe(uglify({
       compress: {
-        drop_console: true
+        drop_console: uglifyDropConsole
       }
     }).on('error', (e) => {
       console.log(e + '\r\n There\'s something wrong with the JavaScript file(s).')
