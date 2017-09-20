@@ -28,11 +28,11 @@
 @import '_base/_typography';
 
 // Atoms
-@import '_atoms/_buttons';
 @import '_atoms/_browser-notification';
+@import '_atoms/_buttons';
 @import '_atoms/_canvas';
-@import '_atoms/_dividers';
 // @import '_atoms/_diffusion-efect';
+@import '_atoms/_dividers';
 @import '_atoms/_forms';
 // @import '_atoms/_glitch';
 @import '_atoms/_heroes';
@@ -44,28 +44,28 @@
 @import '_atoms/_overlays';
 // @import '_atoms/_particles';
 @import '_atoms/_preloader-volume';
-// @import '_atoms/_spinner';
 @import '_atoms/_shoal-fish';
+// @import '_atoms/_spinner';
 // @import '_atoms/_tooltips';
 // @import '_atoms/_typedjs';
 // @import '_atoms/_waypoints';
 
 // Components
+@import '_components/_footer';
 @import '_components/_header';
 @import '_components/_sections';
-@import '_components/_footer';
 
 // Templates
 @import '_templates/_grid';
 @import '_templates/_print';
 
 // Pages
-@import '_pages/_home';
-@import '_pages/_portfolio';
 @import '_pages/_about';
-// @import '_pages/_faq';
-// @import '_pages/_process';
 @import '_pages/_contact';
+// @import '_pages/_faq';
+@import '_pages/_home';
+// @import '_pages/_process';
+@import '_pages/_work';
 
 // Utilities
 @import '_utilities/_hacks';

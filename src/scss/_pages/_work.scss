@@ -1,5 +1,5 @@
 /**
- * Portfolio Page - Work
+ * Work page
  */
 
 .page--portfolio {
@@ -85,6 +85,11 @@ main {
   img {
     width: 100%;
     max-width: 480px;
+  }
+
+  img[src='images/loader.gif'] {
+    margin: auto;
+    max-width: 42px;
   }
 }
 
