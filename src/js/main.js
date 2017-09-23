@@ -16,7 +16,7 @@ import { fishSea } from './components/fish-sea.js';
 import { fontAwesomeLoader } from './components/font-awesome-loader.js';
 import { fontRalewayLoader } from './components/font-raleway-loader.js';
 import { iphoneRenderer } from './components/iphone-render.js';
-import { lazyImages } from './components/lazy-images.js';
+// import { lazyImages } from './components/lazy-images.js';
 // import { particles } from './components/particles.js';
 import { pageTransition } from './components/page-transition.js';
 // import { typedjs } from './components/typedjs.js';
@@ -33,7 +33,7 @@ import { pageTransition } from './components/page-transition.js';
       contactForm: document.querySelectorAll('#contactForm'),
       // indexCanvas: document.querySelectorAll('#indexCanvas'),
       iphoneRenderer: document.querySelectorAll('.canvas-iphone'),
-      lazyImages: document.querySelectorAll('.lazy'),
+      // lazyImages: document.querySelectorAll('.lazy'),
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
       // particles: document.querySelectorAll('.js-particles'),
@@ -73,9 +73,9 @@ import { pageTransition } from './components/page-transition.js';
         iphoneRenderer();
       },
       // LazyImages controller
-      lazyImagesController: () => {
-        lazyImages();
-      },
+      // lazyImagesController: () => {
+        // lazyImages();
+      // },
       // Page transition controller
       pageTransitionController: () => {
         pageTransition();
@@ -174,11 +174,11 @@ import { pageTransition } from './components/page-transition.js';
       }
 
       // Lazy images
-      if (app.appAnchors.lazyImages.length > 0) {
+      /* if (app.appAnchors.lazyImages.length > 0) {
         (() => {
           app.appControllers.lazyImagesController();
         })();
-      }
+      } */
 
       // Modal messages
       /* if (app.appAnchors.modalMessage.length > 0) {
