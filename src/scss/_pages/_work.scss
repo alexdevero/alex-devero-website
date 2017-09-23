@@ -87,7 +87,8 @@ main {
     max-width: 480px;
   }
 
-  img[src='images/loader.gif'] {
+  img[src*='loader.gif'],
+  .img-loading {
     margin: auto;
     max-width: 42px;
   }
