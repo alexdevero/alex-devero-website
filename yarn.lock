@@ -7241,7 +7241,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
 
-vanilla-lazyload@^8.2.0:
+vanilla-lazyload@8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-8.2.0.tgz#a4b8da4ea712751f16573612c12f4027e61f8c10"
 
