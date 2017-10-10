@@ -9,7 +9,7 @@ import prune from 'gulp-prune'
 gulp.task('copy:css', () => {
   const cssPath = './dist/styles'
 
-  return gulp.src('./src/styles/vendor/*')
+  return gulp.src('./src/styles/_vendor/*')
     .pipe(plumber())
     .pipe(prune(cssPath))
     .pipe(changed(cssPath))
