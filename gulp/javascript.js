@@ -7,7 +7,7 @@ import webpackStream from 'webpack-stream'
 
 // Minify JavaScript files
 gulp.task('js', () => {
-  const babel = require('gulp-babel')
+  // const babel = require('gulp-babel')
   const browserSync = require('browser-sync')
   const changed = require('gulp-changed')
   const jsPath = './dist/js'
