@@ -1,7 +1,7 @@
 // Particles component
 
 const particles = () => {
-  console.log('Particles initiated');
+  console.log('Particles initiated')
 
   // Docs:https://github.com/marcbruederlin/particles.js
 
@@ -37,7 +37,7 @@ const particles = () => {
     selector: '.js-particles',
     sizeVariations: 4,
     speed: 0.85
-  });
-},
+  })
+}
 
-export { particles };
+export { particles }

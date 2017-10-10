@@ -1,26 +1,24 @@
-'use strict'; // eslint-disable-line strict
+'use strict' // eslint-disable-line strict
 
 // Example import
-// import { example } from './components/example.js';
-// import { animateStylesheetLoader } from './components/animate-css-loader.js';
-import { browserDetector } from './components/browser-detector.js';
-import { canvasVisualization } from './components/canvas-visualization.js';
-import { contactFlipper } from './components/contact-flipper.js';
-import { contactForm } from './components/contact-form.js';
-// import { customSlider } from './components/custom-slider.js';
-// import { fadeInCustom } from './components/fade-in-custom.js';
-// import { fadeOutCustom } from './components/fade-out-custom.js';
-// imports for ML-powered fish on homepage
-import { fishSea } from './components/fish-sea.js';
-// .end imports for ML-powered fish on homepage
-import { fontAwesomeLoader } from './components/font-awesome-loader.js';
-import { fontRalewayLoader } from './components/font-raleway-loader.js';
-import { iphoneRenderer } from './components/iphone-render.js';
-// import { lazyImages } from './components/lazy-images.js';
-// import { particles } from './components/particles.js';
-import { pageTransition } from './components/page-transition.js';
-// import { typedjs } from './components/typedjs.js';
-// import { waypoints } from './components/waypoints.js';
+// import { example } from './components/example.js'
+// import { animateStylesheetLoader } from './components/animate-css-loader.js'
+import { browserDetector } from './components/browser-detector.js'
+import { canvasVisualization } from './components/canvas-visualization.js'
+import { contactFlipper } from './components/contact-flipper.js'
+import { contactForm } from './components/contact-form.js'
+// import { customSlider } from './components/custom-slider.js'
+// import { fadeInCustom } from './components/fade-in-custom.js'
+// import { fadeOutCustom } from './components/fade-out-custom.js'
+import { fishSea } from './components/fish-sea.js'
+// import { fontAwesomeLoader } from './components/font-awesome-loader.js'
+// import { fontRalewayLoader } from './components/font-raleway-loader.js'
+import { iphoneRenderer } from './components/iphone-render.js'
+// import { lazyImages } from './components/lazy-images.js'
+// import { particles } from './components/particles.js'
+import { pageTransition } from './components/page-transition.js'
+// import { typedjs } from './components/typedjs.js'
+// import { waypoints } from './components/waypoints.js'
 
 /**
  * @author Alex Devero <deveroalex@gmail.com>
@@ -45,59 +43,59 @@ import { pageTransition } from './components/page-transition.js';
     },
     appControllers: {
       // Animate stylesheet loader controller
-      animateStylesheetLoaderController: () => {
-        animateStylesheetLoader();
-      },
+      // animateStylesheetLoaderController: () => {
+      //   animateStylesheetLoader()
+      // },
       // Canvas visualization controller
       canvasVisualizationController: () => {
-        canvasVisualization();
+        canvasVisualization()
       },
       // Contact controller
       contactController: () => {
-        contactForm();
-        contactFlipper();
+        contactForm()
+        contactFlipper()
       },
-      customSliderController: () => {
-        customSlider('.js-slideable', '.js-slideable-anchor');
-      },
+      // customSliderController: () => {
+      //   customSlider('.js-slideable', '.js-slideable-anchor')
+      // },
       // Font Awesome loader controller
-      fontAwesomeLoaderController: () => {
-        fontAwesomeLoader();
-      },
+      // fontAwesomeLoaderController: () => {
+      //   fontAwesomeLoader()
+      // },
       // Font Raleway loader controller
-      fontRalewayLoaderController: () => {
-        fontRalewayLoader();
-      },
+      // fontRalewayLoaderController: () => {
+      //   fontRalewayLoader()
+      // },
       // iPhone renderer controller
       iphoneRendererController: () => {
-        iphoneRenderer();
+        iphoneRenderer()
       },
       // LazyImages controller
       // lazyImagesController: () => {
-        // lazyImages();
+      //   lazyImages()
       // },
       // Page transition controller
       pageTransitionController: () => {
-        pageTransition();
+        pageTransition()
       },
       // ParticlesJS controller
-      particlesController: () => {
-        particles();
-      },
+      // particlesController: () => {
+      //   particles()
+      // },
       shoalFishController: () => {
-      //   fishVector();
-      //   fishFood();
-      //   fishFish();
-        fishSea();
-      },
-      // TypedJS controller
-      typedJSController: () => {
-        typedjs();
-      },
-      // Waypoints controller
-      waypointsController: () => {
-        waypoints();
+      //   fishVector()
+      //   fishFood()
+      //   fishFish()
+        fishSea()
       }
+      // TypedJS controller
+      // typedJSController: () => {
+      //   typedjs()
+      // },
+      // Waypoints controller
+      // waypointsController: () => {
+      //   waypoints()
+      // }
     },
     appSwitches: () => {
       // Custom transitions for page loading and closing
@@ -108,7 +106,7 @@ import { pageTransition } from './components/page-transition.js';
           window.onload = () => {
             // Load Font Awesome
             if (true) {
-              app.appControllers.fontAwesomeLoaderController();
+              app.appControllers.fontAwesomeLoaderController()
             }
 
             // Load Raleway font
@@ -118,125 +116,125 @@ import { pageTransition } from './components/page-transition.js';
 
             // Load Animate CSS
             if (document.URL.indexOf('process') > 0) {
-              app.appControllers.animateStylesheetLoaderController();
+              app.appControllers.animateStylesheetLoaderController()
             }
 
             // Cache html element
-            let el = document.querySelector('html');
-            el.style.display = 'none';
+            let el = document.querySelector('html')
+            el.style.display = 'none'
 
             setTimeout(() => {
-              $('html').attr('id', 'loaded');
-              el.setAttribute('id', 'loaded');
+              $('html').attr('id', 'loaded')
+              el.setAttribute('id', 'loaded')
 
               Fade in cached html element
-              fadeInCustom(el);
-            }, 250);
+              fadeInCustom(el)
+            }, 250)
 
             // TypedJS
             if (app.appAnchors.typedJS.length > 0) {
               (() => {
-                app.appControllers.typedJSController();
-              })();
+                app.appControllers.typedJSController()
+              })()
             }
           }
 
           // Detect history change (back or forward button)
           // and force the page to reload (with new url) and load new page
           window.onpopstate = () => {
-            location.reload();
+            location.reload()
           }
 
           // Page transitions for clicks on links
-          app.appControllers.pageTransitionController();
-        })();
+          app.appControllers.pageTransitionController()
+        })()
       } */
 
       // Canvas visualization controller
       if (app.appAnchors.canvasVisualizationEl.length > 0) {
         (() => {
-          app.appControllers.canvasVisualizationController();
-        })();
+          app.appControllers.canvasVisualizationController()
+        })()
       }
 
       // Form controller
       if (app.appAnchors.contactForm.length > 0) {
         (() => {
-          app.appControllers.contactController();
-        })();
+          app.appControllers.contactController()
+        })()
       }
 
       // iPhone renderer
       if (app.appAnchors.iphoneRenderer.length > 0) {
         (() => {
-          app.appControllers.iphoneRendererController();
-        })();
+          app.appControllers.iphoneRendererController()
+        })()
       }
 
       // Lazy images
       /* if (app.appAnchors.lazyImages.length > 0) {
         (() => {
-          app.appControllers.lazyImagesController();
-        })();
+          app.appControllers.lazyImagesController()
+        })()
       } */
 
       // Modal messages
       /* if (app.appAnchors.modalMessage.length > 0) {
         (() => {
-          app.appControllers.modalMessagesController();
-        })();
+          app.appControllers.modalMessagesController()
+        })()
       } */
 
       // Particles
       /* if (app.appAnchors.particles.length > 0) {
         (() => {
-          app.appControllers.particlesController();
-        })();
+          app.appControllers.particlesController()
+        })()
       } */
 
       // Shoal fish
       if (app.appAnchors.shoalFish.length > 0) {
-        app.appControllers.shoalFishController();
+        app.appControllers.shoalFishController()
       }
 
       // Slideable content
       /* if (app.appAnchors.slideableContent.length > 0) {
         (() => {
-          app.appControllers.customSliderController();
-        })();
+          app.appControllers.customSliderController()
+        })()
       } */
 
       // Waypoints
       /* if (app.appAnchors.waypoint.length > 0) {
         (() => {
-          app.appControllers.waypointsController();
+          app.appControllers.waypointsController()
         })()
       } */
     },
     init: () => {
-      // document.querySelector('html').style.display = 'none';
+      // document.querySelector('html').style.display = 'none'
 
       if (document.querySelectorAll('.no-js').length > 0) {
         if (!document.querySelector('.no-js').classList.contains('js')) {
-          document.querySelector('.no-js').classList.add('js');
+          document.querySelector('.no-js').classList.add('js')
         }
 
-        document.querySelector('.no-js').classList.remove('no-js');
+        document.querySelector('.no-js').classList.remove('no-js')
       }
 
-      browserDetector();
+      browserDetector()
 
       if (document.querySelectorAll('.no-js-img').length > 0) {
-        let imagesArray = document.querySelectorAll('.no-js-img');
+        let imagesArray = document.querySelectorAll('.no-js-img')
 
         for (let i = 0; i < imagesArray.length; i++) {
-          imagesArray[i].classList.remove('no-js-img');
+          imagesArray[i].classList.remove('no-js-img')
         }
       }
 
-      app.appSwitches();
+      app.appSwitches()
     }
-  };
+  }
 
-  app.init();
-})();
+  app.init()
+})()

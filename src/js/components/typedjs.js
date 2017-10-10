@@ -1,13 +1,13 @@
 // TypedJS component
 
-import { fadeInCustom } from './fade-in-custom.js';
+import { fadeInCustom } from './fade-in-custom.js'
 
 const typedjs = () => {
-  console.log('TypedJS initiated');
+  console.log('TypedJS initiated')
 
   // docs: https://github.com/mattboldt/typed.js
 
-  document.querySelector('html').style.overflow = 'hidden';
+  document.querySelector('html').style.overflow = 'hidden'
 
   if (document.querySelectorAll('.js-typed-en').length !== 0) {
     setTimeout(() => {
@@ -37,24 +37,24 @@ const typedjs = () => {
                     strings: ['UI/UX/Web Design &amp; Web Development'],
                     typeSpeed: 35, // typing speed
                     callback: () => {
-                      document.querySelector('html').style.overflow = 'initial';
+                      document.querySelector('html').style.overflow = 'initial'
 
                       setTimeout(() => {
-                        fadeInCustom(document.querySelector('.intro__btn-container'));
+                        fadeInCustom(document.querySelector('.intro__btn-container'))
 
                         setTimeout(() => {
-                          document.querySelector('.js-typed-h1').classList.add('glitch');
-                        }, 750);
-                      }, 100);
+                          document.querySelector('.js-typed-h1').classList.add('glitch')
+                        }, 750)
+                      }, 100)
                     }
-                  });
-                }, 100);
+                  })
+                }, 100)
               }
-            });
-          }, 100);
+            })
+          }, 100)
         }
-      });
-    }, 900);
+      })
+    }, 900)
   } else {
     setTimeout(() => {
       Typed.new('.js-typed-h1', {
@@ -84,22 +84,22 @@ const typedjs = () => {
                     typeSpeed: 35, // typing speed
                     callback: () => {
                       setTimeout(() => {
-                        fadeInCustom(document.querySelector('.intro__btn-container'));
+                        fadeInCustom(document.querySelector('.intro__btn-container'))
 
                         setTimeout(() => {
-                          document.querySelector('.js-typed-h1').classList.add('glitch');
-                        }, 750);
-                      }, 100);
+                          document.querySelector('.js-typed-h1').classList.add('glitch')
+                        }, 750)
+                      }, 100)
                     }
-                  });
-                }, 100);
+                  })
+                }, 100)
               }
-            });
-          }, 100);
+            })
+          }, 100)
         }
-      });
-    }, 900);
+      })
+    }, 900)
   }
 }
 
-export { typedjs };
+export { typedjs }

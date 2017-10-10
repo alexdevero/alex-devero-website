@@ -1,75 +1,75 @@
 // Modal messages component
 
-import { fadeOutCustom } from './fade-out-custom.js';
-import { fadeInCustom } from './fade-in-custom.js';
+import { fadeOutCustom } from './fade-out-custom.js'
+import { fadeInCustom } from './fade-in-custom.js'
 
 const modalMessages = ($messageType) => {
-  console.log('Modal messages initiated');
+  console.log('Modal messages initiated')
 
-  const modalOverlay = document.querySelector('.js-modal-overlay');
-  const modalButton = modalOverlay.querySelectorAll('.js-modal-button');
-  const messageCheck = modalOverlay.querySelector('.js-modal-message-check');
-  const messageFailure = modalOverlay.querySelector('.js-modal-message-failure');
-  const messageInfo = modalOverlay.querySelector('.js-modal-message-info');
-  const messageSuccess = modalOverlay.querySelector('.js-modal-message-success');
+  const modalOverlay = document.querySelector('.js-modal-overlay')
+  const modalButton = modalOverlay.querySelectorAll('.js-modal-button')
+  const messageCheck = modalOverlay.querySelector('.js-modal-message-check')
+  const messageFailure = modalOverlay.querySelector('.js-modal-message-failure')
+  const messageInfo = modalOverlay.querySelector('.js-modal-message-info')
+  const messageSuccess = modalOverlay.querySelector('.js-modal-message-success')
 
   // Close modal and hide message by clicking on the button
   for (let i = 0, j = modalButton.length; i < j; i++) {
     modalButton[i].addEventListener('click', (e) => {
-      e.target.parentNode.classList.remove('modal-message-visible');
+      e.target.parentNode.classList.remove('modal-message-visible')
 
-      fadeOutCustom(modalOverlay);
-    });
+      fadeOutCustom(modalOverlay)
+    })
   }
 
   if ($messageType === 'check') {
     const messageCheckLoader = () => {
       // Show modal message
-      messageCheck.classList.add('modal-message-visible');
+      messageCheck.classList.add('modal-message-visible')
 
       // Show modal overlay
-      fadeInCustom(modalOverlay);
+      fadeInCustom(modalOverlay)
     }
 
     // Initiate message loader function
-    messageCheckLoader();
+    messageCheckLoader()
   } else if ($messageType === 'failure') {
     // Failure message
     const messageFailureLoader = () => {
       // Show modal message
-      messageFailure.classList.add('modal-message-visible');
+      messageFailure.classList.add('modal-message-visible')
 
       // Show modal overlay
-      fadeInCustom(modalOverlay);
+      fadeInCustom(modalOverlay)
     }
 
     // Initiate message loader function
-    messageFailureLoader();
+    messageFailureLoader()
   } else if ($messageType === 'info') {
     // Info message
     const messageInfoLoader = () => {
       // Show modal message
-      messageInfo.classList.add('modal-message-visible');
+      messageInfo.classList.add('modal-message-visible')
 
       // Show modal overlay
-      fadeInCustom(modalOverlay);
+      fadeInCustom(modalOverlay)
     }
 
     // Initiate message loader function
-    messageInfoLoader();
+    messageInfoLoader()
   } else if ($messageType === 'success') {
     // Success message
     const messageSuccessLoader = () => {
       // Show modal message
-      messageSuccess.classList.add('modal-message-visible');
+      messageSuccess.classList.add('modal-message-visible')
 
       // Show modal overlay
-      fadeInCustom(modalOverlay);
+      fadeInCustom(modalOverlay)
     }
 
     // Initiate message loader function
-    messageSuccessLoader();
+    messageSuccessLoader()
   }
-};
+}
 
-export { modalMessages };
+export { modalMessages }

@@ -1,108 +1,107 @@
 // helper library to work with vectors
-// const fishVector = () => {
-  function Vector(x, y) {
-    this.x = x;
-    this.y = y;
-  }
 
-  Vector.prototype = {
-    set: function(x, y) {
-      this.x = x;
-      this.y = y;
+function Vector (x, y) {
+  this.x = x
+  this.y = y
+}
 
-      return this;
-    },
-    add: function(v) {
-      this.x += v.x;
-      this.y += v.y;
+Vector.prototype = {
+  set: function (x, y) {
+    this.x = x
+    this.y = y
 
-      return this;
-    },
-    sub: function(v) {
-      this.x -= v.x;
-      this.y -= v.y;
+    return this
+  },
+  add: function (v) {
+    this.x += v.x
+    this.y += v.y
 
-      return this;
-    },
-    mul: function(s) {
-      this.x *= s;
-      this.y *= s;
+    return this
+  },
+  sub: function (v) {
+    this.x -= v.x
+    this.y -= v.y
 
-      return this;
-    },
-    div: function(s) {
-      !s && console.log('Division by zero!');
+    return this
+  },
+  mul: function (s) {
+    this.x *= s
+    this.y *= s
 
-      this.x /= s;
-      this.y /= s;
+    return this
+  },
+  div: function (s) {
+    !s && console.log('Division by zero!')
 
-      return this;
-    },
-    mag: function() {
-      return Math.sqrt(this.x * this.x + this.y * this.y);
-    },
-    normalize: function() {
-      var mag = this.mag();
+    this.x /= s
+    this.y /= s
 
-      mag && this.div(mag);
+    return this
+  },
+  mag: function () {
+    return Math.sqrt(this.x * this.x + this.y * this.y)
+  },
+  normalize: function () {
+    var mag = this.mag()
 
-      return this;
-    },
-    angle: function() {
-      return Math.atan2(this.y, this.x);
-    },
-    setMag: function(m) {
-      var angle = this.angle();
+    mag && this.div(mag)
 
-      this.x = m * Math.cos(angle);
-      this.y = m * Math.sin(angle);
+    return this
+  },
+  angle: function () {
+    return Math.atan2(this.y, this.x)
+  },
+  setMag: function (m) {
+    var angle = this.angle()
 
-      return this;
-    },
-    setAngle: function(a) {
-      var mag = this.mag();
+    this.x = m * Math.cos(angle)
+    this.y = m * Math.sin(angle)
 
-      this.x = mag * Math.cos(a);
-      this.y = mag * Math.sin(a);
+    return this
+  },
+  setAngle: function (a) {
+    var mag = this.mag()
 
-      return this;
-    },
-    rotate: function(a) {
-      this.setAngle(this.angle() + a);
+    this.x = mag * Math.cos(a)
+    this.y = mag * Math.sin(a)
 
-      return this;
-    },
-    limit: function(l) {
-      var mag = this.mag();
+    return this
+  },
+  rotate: function (a) {
+    this.setAngle(this.angle() + a)
 
-      if (mag > l) {
-        this.setMag(l);
-      }
+    return this
+  },
+  limit: function (l) {
+    var mag = this.mag()
 
-      return this;
-    },
-    angleBetween: function(v) {
-      return this.angle() - v.angle();
-    },
-    dot: function(v) {
-      return this.x * v.x + this.y * v.y;
-    },
-    lerp: function(v, amt) {
-      this.x += (v.x - this.x) * amt;
-      this.y += (v.y - this.y) * amt;
-
-      return this;
-    },
-    dist: function(v) {
-      var dx = this.x - v.x;
-      var dy = this.y - v.y;
-
-      return Math.sqrt(dx * dx + dy * dy);
-    },
-    copy: function() {
-      return new Vector(this.x, this.y);
+    if (mag > l) {
+      this.setMag(l)
     }
-  }
-// }
 
-export { Vector/*, fishVector*/ };
+    return this
+  },
+  angleBetween: function (v) {
+    return this.angle() - v.angle()
+  },
+  dot: function (v) {
+    return this.x * v.x + this.y * v.y
+  },
+  lerp: function (v, amt) {
+    this.x += (v.x - this.x) * amt
+    this.y += (v.y - this.y) * amt
+
+    return this
+  },
+  dist: function (v) {
+    var dx = this.x - v.x
+    var dy = this.y - v.y
+
+    return Math.sqrt(dx * dx + dy * dy)
+  },
+  copy: function () {
+    return new Vector(this.x, this.y)
+  }
+}
+
+export { Vector }

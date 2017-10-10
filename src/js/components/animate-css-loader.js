@@ -1,16 +1,16 @@
 // Animate CSS loader component
 
 const animateStylesheetLoader = () => {
-  console.log('Animate CSS loader initiated');
+  console.log('Animate CSS loader initiated')
 
-  const mainStyleSheet = document.querySelector('.js-stylesheet-main');
-  let stylesheetAnimateCSS = document.createElement('link');
+  const mainStyleSheet = document.querySelector('.js-stylesheet-main')
+  let stylesheetAnimateCSS = document.createElement('link')
 
-  stylesheetAnimateCSS.rel = 'stylesheet';
-  stylesheetAnimateCSS.href = 'styles/animate.css';
-  stylesheetAnimateCSS.classList.add('jsLoaded');
+  stylesheetAnimateCSS.rel = 'stylesheet'
+  stylesheetAnimateCSS.href = 'styles/animate.css'
+  stylesheetAnimateCSS.classList.add('jsLoaded')
 
-  mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, mainStyleSheet.nextSibling);
+  mainStyleSheet.parentNode.insertBefore(stylesheetAnimateCSS, mainStyleSheet.nextSibling)
 }
 
-export { animateStylesheetLoader };
+export { animateStylesheetLoader }
