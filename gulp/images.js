@@ -1,15 +1,15 @@
-'use strict';
+'use strict'
 
-import gulp from 'gulp';
+import gulp from 'gulp'
 
 // Compress images
 gulp.task('images', () => {
-  const changed = require('gulp-changed');
-  const imagesPath = './dist/images';
-  const imagemin = require('gulp-imagemin');
-  const plumber = require('gulp-plumber');
-  const pngquant = require('imagemin-pngquant');
-  const prune = require('gulp-prune');
+  const changed = require('gulp-changed')
+  const imagesPath = './dist/images'
+  const imagemin = require('gulp-imagemin')
+  const plumber = require('gulp-plumber')
+  const pngquant = require('imagemin-pngquant')
+  const prune = require('gulp-prune')
 
   return gulp.src(['src/images/**/*', '!src/images/**/*.rar', '!src/images/**/*.7z', '!src/images/**/*.zip', '!src/images/case-studies/**/*'])
     .pipe(plumber())
@@ -24,5 +24,5 @@ gulp.task('images', () => {
       }],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest(imagesPath));
-});
+    .pipe(gulp.dest(imagesPath))
+})

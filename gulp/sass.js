@@ -1,22 +1,22 @@
-'use strict';
+'use strict'
 
-import gulp from 'gulp';
+import gulp from 'gulp'
 
-import assets  from 'postcss-assets';
-import browserSync from 'browser-sync';
-import csscomb from 'gulp-csscomb';
-import cssnano from 'cssnano';
-import cssnext from 'postcss-cssnext';
-import plumber from 'gulp-plumber';
-import postcss from 'gulp-postcss';
-import pxtorem from 'postcss-pxtorem';
-import rename from 'gulp-rename';
-import sass from 'gulp-sass';
-import sourcemaps from 'gulp-sourcemaps';
+import assets from 'postcss-assets'
+import browserSync from 'browser-sync'
+import csscomb from 'gulp-csscomb'
+import cssnano from 'cssnano'
+import cssnext from 'postcss-cssnext'
+import plumber from 'gulp-plumber'
+import postcss from 'gulp-postcss'
+import pxtorem from 'postcss-pxtorem'
+import rename from 'gulp-rename'
+import sass from 'gulp-sass'
+import sourcemaps from 'gulp-sourcemaps'
 
 // Sass to CSS
 gulp.task('sass', () => {
-  const sassPath = './dist/styles';
+  const sassPath = './dist/styles'
 
   const assetsConfig = {
     basePath: './src/',
@@ -32,7 +32,7 @@ gulp.task('sass', () => {
       'last 5 versions',
       'ie >= 8'
     ]
-  };
+  }
 
   const pxtoremConfig = {
     rootValue: 16,
@@ -42,14 +42,14 @@ gulp.task('sass', () => {
     replace: true,
     mediaQuery: false,
     minPixelValue: 0
-  };
+  }
 
   const processors = [
     assets(assetsConfig),
     cssnano(cssnanoConfig),
     cssnext(cssnextConfig),
     pxtorem(pxtoremConfig)
-  ];
+  ]
 
   return gulp.src('src/styles/main.scss')
     .pipe(plumber())
@@ -68,17 +68,17 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(sassPath))
     .pipe(browserSync.stream({
       match: '**/*.css'
-    }));
-});
+    }))
+})
 
 gulp.task('sass:test', () => {
-  const sassLint = require('gulp-sass-lint');
+  const sassLint = require('gulp-sass-lint')
 
-  console.log('Running Sass lint test');
+  console.log('Running Sass lint test')
 
   return gulp.src('./src/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sassLint())
     .pipe(sassLint.format())
-    .pipe(sassLint.failOnError());
-});
+    .pipe(sassLint.failOnError())
+})
