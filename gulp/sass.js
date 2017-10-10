@@ -51,7 +51,7 @@ gulp.task('sass', () => {
     pxtorem(pxtoremConfig)
   ];
 
-  return gulp.src('src/scss/main.scss')
+  return gulp.src('src/styles/main.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -76,7 +76,7 @@ gulp.task('sass:test', () => {
 
   console.log('Running Sass lint test');
 
-  return gulp.src('./src/scss/**/*.scss')
+  return gulp.src('./src/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sassLint())
     .pipe(sassLint.format())
