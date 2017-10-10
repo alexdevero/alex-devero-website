@@ -95,9 +95,9 @@
   animation: preloader-volume-hide-blocks 3s ease-in-out;
 
   > div {
-    display: inline-block;
     padding: 0;
     margin: 0;
+    float: left;
     height: 100%;
     width: 3px;
     background-color: #333;
