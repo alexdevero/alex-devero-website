@@ -38,7 +38,8 @@ const browserDetector = () => {
       }
     },
 
-    dataBrowser: [{
+    dataBrowser: [
+      {
         string: navigator.userAgent,
         subString: 'Edge',
         identity: 'ms-edge'
@@ -62,9 +63,7 @@ const browserDetector = () => {
         string: navigator.userAgent,
         subString: 'OPR',
         identity: 'opera'
-      },
-
-      {
+      }, {
         string: navigator.userAgent,
         subString: 'Chrome',
         identity: 'chrome'
