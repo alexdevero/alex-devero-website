@@ -5,7 +5,7 @@ const fadeOutCustom = (element) => {
 
   let elementOpacity = 1 // initial opacity
 
-  let timer = setInterval(function () {
+  let timer = setInterval(() => {
     if (elementOpacity <= 0.1) {
       clearInterval(timer)
 

@@ -7,7 +7,7 @@ const fadeInCustom = (element) => {
 
   element.style.display = 'block'
 
-  let timer = setInterval(function () {
+  let timer = setInterval(() => {
     if (elementOpacity >= 1) {
       clearInterval(timer)
     }
