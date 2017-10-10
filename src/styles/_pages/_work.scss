@@ -87,7 +87,7 @@ main {
     max-width: 480px;
   }
 
-  img[src*='loader.gif'],
+  img[src*='loader.gif'], // sass-lint:disable-line no-qualifying-elements
   .img-loading {
     margin: auto;
     max-width: 42px;
