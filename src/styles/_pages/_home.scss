@@ -76,9 +76,14 @@
   }
 
   h2,
+  h3,
+  .intro__icon {
+    color: #a9a9a9;
+  }
+
+  h2,
   h3 {
     margin-top: 0;
-    color: #708090;
 
     span {
       padding-top: 4px;
@@ -86,6 +91,12 @@
       padding-bottom: 4px;
       padding-left: 15px;
     }
+  }
+
+  .intro__icon {
+    margin-top: 18px;
+    font-size: 34px;
+    cursor: -webkit-grab;
   }
 
   // .heading-devero {
