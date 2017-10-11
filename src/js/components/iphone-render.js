@@ -23,9 +23,9 @@ const iphoneRenderer = () => {
   // Trackball Controller
   const controls = new THREE.TrackballControls(camera)
   controls.rotateSpeed = 5.0
-  controls.zoomSpeed = 3.2
+  // controls.zoomSpeed = 3.2
   controls.panSpeed = 0.8
-  controls.noZoom = false
+  controls.noZoom = true
   controls.noPan = true
   controls.staticMoving = false
   controls.dynamicDampingFactor = 0.2
