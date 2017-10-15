@@ -1,6 +1,6 @@
 {
   "stylesheet-font-awesome": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-  "stylesheet-font-quicksand": "https://fonts.googleapis.com/css?family=Quicksand:400,500,700&amp;subset=latin-ext",
+  "stylesheet-font-quicksand": "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=latin-ext",
   "stylesheet-font-raleway": "https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&amp;subset=latin-ext",
   "stylesheet-main": "./styles/main.min.css"
 }
