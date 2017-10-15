@@ -113,7 +113,9 @@ h5 + .h6,
 li,
 p,
 .text--regular {
-  font-size: 18px;
+  // font-size: 18px;
+  font-size: 22px;
+  font-weight: 100;
 }
 
 p,
@@ -137,7 +139,8 @@ small,
 
 strong,
 .strong {
-  font-weight: bold;
+  // font-weight: bold;
+  font-weight: bolder;
 }
 
 ul {
