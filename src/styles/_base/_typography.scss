@@ -21,25 +21,9 @@ h5,
 h6,
 .h6 {
   margin-top: 0;
-  font-family: $font-raleway;
-  font-family: $font-futura;
+  font-family: $font-quicksand;
+  font-weight: 500;
   line-height: 1.3;
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  // font-weight: 600;
-  font-weight: 400;
 }
 
 h4,
@@ -120,9 +104,8 @@ h5 + .h6,
 li,
 p,
 .text--regular {
-  // font-size: 18px;
   font-size: 22px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 p,
