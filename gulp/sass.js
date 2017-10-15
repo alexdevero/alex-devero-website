@@ -29,8 +29,11 @@ gulp.task('sass', () => {
 
   const cssnextConfig = {
     browsers: [
-      'last 5 versions',
-      'ie >= 8'
+      'Firefox >= 48',
+      'Chrome >= 54',
+      'ie >= 8',
+      'last 4 versions',
+      'Safari >= 8'
     ]
   }
 
