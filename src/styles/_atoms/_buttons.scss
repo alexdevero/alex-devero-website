@@ -9,7 +9,7 @@
 .btn {
   padding: 8px 32px;
   display: inline-block;
-  font-family: $font-raleway;
+  font-family: $font-futura;
   font-size: 16px;
   // border-radius: $radius;
   border-radius: 0;
@@ -113,9 +113,8 @@
 
 .btn--ghost--black-inverted,
 .btn--ghost--red-inverted {
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 2px;
-  // text-transform: uppercase;
   background: transparent;
 
   &:focus,
