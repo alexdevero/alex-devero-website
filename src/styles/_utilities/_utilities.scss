@@ -90,7 +90,7 @@
 
 .text--underline {
   // text-decoration: underline;
-  border-bottom: 1px solid map-get($palette-custom, red);
+  border-bottom: 1px solid;
 
   // &:focus,
   // &:hover {
