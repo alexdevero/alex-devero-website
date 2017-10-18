@@ -39,7 +39,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "browser-sync": "^2.18.13",
     "cssnano": "^3.10.0",
@@ -75,7 +75,7 @@
     "three": "^0.87.1",
     "vanilla-lazyload": "10.3.1",
     "vinyl-ftp": "^0.6.0",
-    "webpack": "^3.7.1",
+    "webpack": "^3.8.1",
     "webpack-stream": "^4.0.0"
   },
   "private": true
