@@ -3147,12 +3147,12 @@ gulp-babel@^7.0.0:
     through2 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
-gulp-changed@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/gulp-changed/-/gulp-changed-3.1.0.tgz#87cd1593a0bb4a5129dc2f229bece6d9488c272a"
+gulp-changed@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/gulp-changed/-/gulp-changed-3.1.1.tgz#7cdd5621bacd29c9da151e27a70a8865dffc4415"
   dependencies:
     gulp-util "^3.0.0"
-    pify "^2.3.0"
+    pify "^3.0.0"
     through2 "^2.0.0"
 
 gulp-csscomb@^3.0.8:
@@ -3190,9 +3190,9 @@ gulp-hb@^6.0.2:
     object-assign "^4.1.1"
     through2 "^2.0.3"
 
-gulp-htmlhint@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/gulp-htmlhint/-/gulp-htmlhint-0.3.1.tgz#68604533da2b3f8c5972b43b516606255218dd1e"
+gulp-htmlhint@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-htmlhint/-/gulp-htmlhint-1.0.0.tgz#519fd1487dc6b039b7f501e97eefd9cafcf5aeba"
   dependencies:
     gulp-util "^3.0.0"
     htmlhint "^0.9.5"
@@ -5285,6 +5285,10 @@ performance-now@^0.2.0:
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
+
+pify@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
 
 pinkie-promise@^2.0.0:
   version "2.0.1"
