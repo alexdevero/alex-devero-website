@@ -47,11 +47,12 @@
     background-color: transparent;
 
     a {
-      color: map-get($palette-custom, black);
+      color: #ababab;
 
       &:focus,
       &:hover {
         color: map-get($palette-custom, red);
+        opacity: 1;
       }
     }
   }
