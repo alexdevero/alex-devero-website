@@ -25,14 +25,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  font-family: $font-quicksand;
-  font-size: $font-size-base;
-  font-weight: 400;
-  color: map-get($palette-foundation, oil);
-  line-height: 1.414;
-}
-
 fieldset {
   border: 0;
 }
