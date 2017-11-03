@@ -15,7 +15,7 @@ import { fishSea } from './components/fish-sea.js'
 // import { fontRalewayLoader } from './components/font-raleway-loader.js'
 import { iphoneRenderer } from './components/iphone-render.js'
 // import { lazyImages } from './components/lazy-images.js'
-// import { particles } from './components/particles.js'
+import { particles } from './components/particles.js'
 import { pageTransition } from './components/page-transition.js'
 // import { typedjs } from './components/typedjs.js'
 // import { waypoints } from './components/waypoints.js'
@@ -34,7 +34,7 @@ import { pageTransition } from './components/page-transition.js'
       // lazyImages: document.querySelectorAll('.lazy'),
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
-      // particles: document.querySelectorAll('.js-particles'),
+      particles: document.querySelectorAll('.js-particles'),
       portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
       shoalFish: document.querySelectorAll('.js-shoal-fish-canvas')
@@ -79,9 +79,9 @@ import { pageTransition } from './components/page-transition.js'
         pageTransition()
       },
       // ParticlesJS controller
-      // particlesController: () => {
-      //   particles()
-      // },
+      particlesController: () => {
+        particles()
+      },
       shoalFishController: () => {
       //   fishVector()
       //   fishFood()
@@ -186,11 +186,11 @@ import { pageTransition } from './components/page-transition.js'
       } */
 
       // Particles
-      /* if (app.appAnchors.particles.length > 0) {
+      if (app.appAnchors.particles.length > 0) {
         (() => {
           app.appControllers.particlesController()
         })()
-      } */
+      }
 
       // Shoal fish
       if (app.appAnchors.shoalFish.length > 0) {

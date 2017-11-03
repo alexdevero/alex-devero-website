@@ -68,6 +68,7 @@
     "imagemin-pngquant": "^5.0.1",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
+    "particlesjs": "^2.1.0",
     "postcss-assets": "^5.0.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-pxtorem": "^4.0.1",

@@ -34,9 +34,9 @@ gulp.task('copy:jsplugins', () => {
   return gulp.src([
     './src/js/plugins/*',
     './node_modules/html5shiv/dist/html5shiv.min.js',
-    './node_modules/three/build/three.min.js',
-    './node_modules/vanilla-lazyload/dist/lazyload.min.js'
-    // 'node_modules/particlesjs/dist/particles.min.js',
+    // './node_modules/three/build/three.min.js',
+    './node_modules/vanilla-lazyload/dist/lazyload.min.js',
+    'node_modules/particlesjs/dist/particles.min.js'
     // 'node_modules/typed.js/dist/typed.min.js',
     // 'node_modules/waypoints/lib/noframework.waypoints.min.js'
   ])

@@ -26,21 +26,21 @@
 
         <h2>{{{ pageHome.h2-en }}}</h2>
 
-        <h3>{{{ pageHome.h3-en }}}</h3>
+        {{!-- <h3>{{{ pageHome.h3-en }}}</h3> --}}
 
-        <span class="intro__icon fa fa-hand-rock-o" aria-hidden="true"></span>
+        {{!-- <span class="intro__icon fa fa-hand-rock-o" aria-hidden="true"></span> --}}
       </div>
 
-      <canvas id="canvas-iphone" class="canvas--absolute canvas--fullwidth canvas-iphone"></canvas>
+      {{!-- <canvas id="canvas-iphone" class="canvas--absolute canvas--fullwidth canvas-iphone"></canvas> --}}
       {{!-- <canvas id="canvas-visualization" class="canvas-visualization"></canvas> --}}
 
-      {{!-- {{> particles }} --}}
+      {{> particles }}
       {{!-- {{> shoal-fish }} --}}
     </section>
 
     {{> footer }}
   </main>
 
-  {{> scripts has-threejs=true }}
+  {{> scripts has-particlesjs=true }}
 </body>
 </html>
