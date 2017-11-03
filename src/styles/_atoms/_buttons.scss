@@ -14,14 +14,14 @@
   border-radius: 0;
   cursor: pointer;
 
-  @include box-shadow(2);
+  // @include box-shadow(2);
 
   @include transition(all);
 
-  &:focus,
-  &:hover {
-    @include box-shadow(2);
-  }
+  // &:focus,
+  // &:hover {
+  //   @include box-shadow(2);
+  // }
 }
 
 .btn--full {
