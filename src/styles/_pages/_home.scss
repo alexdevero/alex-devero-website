@@ -75,10 +75,15 @@
     color: map-get($palette-custom, red);
   }
 
+  // h2,
+  // h3,
+  // .intro__icon {
+  //   color: #a9a9a9;
+  // }
+
   h2,
-  h3,
-  .intro__icon {
-    color: #a9a9a9;
+  h3 {
+    color: map-get($palette-custom, black);
   }
 
   h2,
@@ -93,11 +98,11 @@
     }
   }
 
-  .intro__icon {
-    margin-top: 18px;
-    font-size: 34px;
-    cursor: -webkit-grab;
-  }
+  // .intro__icon {
+  //   margin-top: 18px;
+  //   font-size: 34px;
+  //   cursor: -webkit-grab;
+  // }
 
   // .heading-devero {
   //   font-family: 'Devero', arial, sans-serif;
@@ -117,7 +122,6 @@
   h1 {
     // margin-bottom: 32px;
     margin-bottom: 14px;
-    font-family: 'True lies';
     font-size: 38px;
     font-weight: 400;
     line-height: 1.4;
