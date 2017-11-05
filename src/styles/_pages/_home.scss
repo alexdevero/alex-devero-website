@@ -45,16 +45,6 @@
   footer {
     width: 100%;
     background-color: transparent;
-
-    a {
-      color: #ababab;
-
-      &:focus,
-      &:hover {
-        color: map-get($palette-custom, red);
-        opacity: 1;
-      }
-    }
   }
 
   .footer__media {
