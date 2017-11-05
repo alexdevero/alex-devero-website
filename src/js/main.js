@@ -7,6 +7,7 @@ import { browserDetector } from './components/browser-detector.js'
 import { canvasVisualization } from './components/canvas-visualization.js'
 import { contactFlipper } from './components/contact-flipper.js'
 import { contactForm } from './components/contact-form.js'
+// import { globeInitiator } from './components/globe.js'
 // import { customSlider } from './components/custom-slider.js'
 // import { fadeInCustom } from './components/fade-in-custom.js'
 // import { fadeOutCustom } from './components/fade-out-custom.js'
@@ -30,6 +31,7 @@ import { pageTransition } from './components/page-transition.js'
       canvasVisualizationEl: document.querySelectorAll('#canvas-visualization'),
       contactForm: document.querySelectorAll('#contactForm'),
       // indexCanvas: document.querySelectorAll('#indexCanvas'),
+      // globeCanvas: document.querySelectorAll('#canvas-globe'),
       iphoneRenderer: document.querySelectorAll('.canvas-iphone'),
       // lazyImages: document.querySelectorAll('.lazy'),
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
@@ -65,6 +67,10 @@ import { pageTransition } from './components/page-transition.js'
       // Font Raleway loader controller
       // fontRalewayLoaderController: () => {
       //   fontRalewayLoader()
+      // },
+      // Globe canvas
+      // globeCanvasController: () => {
+      //   globeInitiator()
       // },
       // iPhone renderer controller
       iphoneRendererController: () => {
@@ -163,6 +169,13 @@ import { pageTransition } from './components/page-transition.js'
           app.appControllers.contactController()
         })()
       }
+
+      // Globe canvas controller
+      // if (app.appAnchors.globeCanvas.length > 0) {
+      //   (() => {
+      //     app.appControllers.globeCanvasController()
+      //   })()
+      // }
 
       // iPhone renderer
       if (app.appAnchors.iphoneRenderer.length > 0) {
