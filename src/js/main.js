@@ -4,7 +4,7 @@
 // import { example } from './components/example.js'
 // import { animateStylesheetLoader } from './components/animate-css-loader.js'
 import { browserDetector } from './components/browser-detector.js'
-import { canvasVisualization } from './components/canvas-visualization.js'
+// import { canvasVisualization } from './components/canvas-visualization.js'
 import { contactFlipper } from './components/contact-flipper.js'
 import { contactForm } from './components/contact-form.js'
 // import { globeInitiator } from './components/globe.js'
@@ -14,7 +14,7 @@ import { contactForm } from './components/contact-form.js'
 import { fishSea } from './components/fish-sea.js'
 // import { fontAwesomeLoader } from './components/font-awesome-loader.js'
 // import { fontRalewayLoader } from './components/font-raleway-loader.js'
-import { iphoneRenderer } from './components/iphone-render.js'
+// import { iphoneRenderer } from './components/iphone-render.js'
 // import { lazyImages } from './components/lazy-images.js'
 import { particles } from './components/particles.js'
 import { pageTransition } from './components/page-transition.js'
@@ -49,9 +49,9 @@ import { pageTransition } from './components/page-transition.js'
       //   animateStylesheetLoader()
       // },
       // Canvas visualization controller
-      canvasVisualizationController: () => {
-        canvasVisualization()
-      },
+      // canvasVisualizationController: () => {
+      //   canvasVisualization()
+      // },
       // Contact controller
       contactController: () => {
         contactForm()
@@ -73,9 +73,9 @@ import { pageTransition } from './components/page-transition.js'
       //   globeInitiator()
       // },
       // iPhone renderer controller
-      iphoneRendererController: () => {
-        iphoneRenderer()
-      },
+      // iphoneRendererController: () => {
+      //   iphoneRenderer()
+      // },
       // LazyImages controller
       // lazyImagesController: () => {
       //   lazyImages()
@@ -157,11 +157,11 @@ import { pageTransition } from './components/page-transition.js'
       } */
 
       // Canvas visualization controller
-      if (app.appAnchors.canvasVisualizationEl.length > 0) {
-        (() => {
-          app.appControllers.canvasVisualizationController()
-        })()
-      }
+      // if (app.appAnchors.canvasVisualizationEl.length > 0) {
+      //   (() => {
+      //     app.appControllers.canvasVisualizationController()
+      //   })()
+      // }
 
       // Form controller
       if (app.appAnchors.contactForm.length > 0) {
@@ -178,11 +178,11 @@ import { pageTransition } from './components/page-transition.js'
       // }
 
       // iPhone renderer
-      if (app.appAnchors.iphoneRenderer.length > 0) {
-        (() => {
-          app.appControllers.iphoneRendererController()
-        })()
-      }
+      // if (app.appAnchors.iphoneRenderer.length > 0) {
+      //   (() => {
+      //     app.appControllers.iphoneRendererController()
+      //   })()
+      // }
 
       // Lazy images
       /* if (app.appAnchors.lazyImages.length > 0) {
