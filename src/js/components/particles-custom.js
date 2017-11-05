@@ -103,7 +103,7 @@ const particlesCustom = () => {
         (this.canvas.width = this.i.size.width),
         (this.canvas.height = this.i.size.height),
         this.l(this.i, { position: 'absolute' }),
-        this.l(this.canvas, { 'z-index': '2', position: 'relative' }),
+        this.l(this.canvas, { 'z-index': '2', position: 'relative', 'display': 'block' }),
         window.addEventListener(
           'resize',
           function() {
