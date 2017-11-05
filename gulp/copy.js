@@ -78,20 +78,20 @@ gulp.task('copy:other', () => {
     .pipe(gulp.dest(otherPath))
 })
 
-gulp.task('copy:renders', () => {
-  const renderPath = './dist/renders'
+// gulp.task('copy:renders', () => {
+//   const renderPath = './dist/renders'
+//
+//   return gulp.src('./src/renders/*')
+//     .pipe(plumber())
+//     .pipe(changed(renderPath))
+//     .pipe(gulp.dest(renderPath))
+// })
 
-  return gulp.src('./src/renders/*')
-    .pipe(plumber())
-    .pipe(changed(renderPath))
-    .pipe(gulp.dest(renderPath))
-})
-
-gulp.task('copy:videos', () => {
-  const renderPath = './dist/videos'
-
-  return gulp.src('./src/videos/*')
-    .pipe(plumber())
-    .pipe(changed(renderPath))
-    .pipe(gulp.dest(renderPath))
-})
+// gulp.task('copy:videos', () => {
+//   const renderPath = './dist/videos'
+//
+//   return gulp.src('./src/videos/*')
+//     .pipe(plumber())
+//     .pipe(changed(renderPath))
+//     .pipe(gulp.dest(renderPath))
+// })
