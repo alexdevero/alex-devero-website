@@ -35,7 +35,7 @@ const particles = () => {
     ],
     selector: '.js-particles',
     sizeVariations: 4,
-    speed: 1.5
+    speed: 0.95
   })
 }
 
