@@ -17,7 +17,8 @@ import { fishSea } from './components/fish-sea.js'
 // import { iphoneRenderer } from './components/iphone-render.js'
 // import { lazyImages } from './components/lazy-images.js'
 import { pageTransition } from './components/page-transition.js'
-import { particles } from './components/particles.js'
+// import { particles } from './components/particles.js'
+import { particlesCustom } from './components/particles-custom.js'
 // import { typedjs } from './components/typedjs.js'
 // import { waypoints } from './components/waypoints.js'
 
@@ -85,9 +86,9 @@ import { particles } from './components/particles.js'
         pageTransition()
       },
       // ParticlesJS controller
-      particlesController: () => {
-        particles()
-      },
+      // particlesController: () => {
+      //   particles()
+      // },
       shoalFishController: () => {
       //   fishVector()
       //   fishFood()
@@ -199,11 +200,11 @@ import { particles } from './components/particles.js'
       } */
 
       // Particles
-      if (app.appAnchors.particles.length > 0) {
-        (() => {
-          app.appControllers.particlesController()
-        })()
-      }
+      // if (app.appAnchors.particles.length > 0) {
+      //   (() => {
+      //     app.appControllers.particlesController()
+      //   })()
+      // }
 
       // Shoal fish
       if (app.appAnchors.shoalFish.length > 0) {
