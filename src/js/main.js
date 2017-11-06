@@ -37,7 +37,8 @@ import { particlesCustom } from './components/particles-custom.js'
       // lazyImages: document.querySelectorAll('.lazy'),
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
-      particles: document.querySelectorAll('.js-particles'),
+      // particles: document.querySelectorAll('.js-particles'),
+      particlesCustom: document.querySelectorAll('.js-particles-custom'),
       // portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
       shoalFish: document.querySelectorAll('.js-shoal-fish-canvas')
@@ -89,6 +90,20 @@ import { particlesCustom } from './components/particles-custom.js'
       // particlesController: () => {
       //   particles()
       // },
+      // Particles custom controller
+      particlesCustomController: () => {
+        const canvasDiv = document.querySelector('.js-particles-custom')
+
+        const options = {
+          particleColor: '#aaa',
+          // background: 'https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg',
+          interactive: true,
+          speed: 'medium',
+          density: 'high'
+        }
+
+        particlesCustom(canvasDiv, options)
+      },
       shoalFishController: () => {
       //   fishVector()
       //   fishFood()
@@ -157,21 +172,21 @@ import { particlesCustom } from './components/particles-custom.js'
         })()
       } */
 
-      // Canvas visualization controller
+      // Canvas visualization
       // if (app.appAnchors.canvasVisualizationEl.length > 0) {
       //   (() => {
       //     app.appControllers.canvasVisualizationController()
       //   })()
       // }
 
-      // Form controller
+      // Form
       if (app.appAnchors.contactForm.length > 0) {
         (() => {
           app.appControllers.contactController()
         })()
       }
 
-      // Globe canvas controller
+      // Globe canvas
       // if (app.appAnchors.globeCanvas.length > 0) {
       //   (() => {
       //     app.appControllers.globeCanvasController()
@@ -205,6 +220,13 @@ import { particlesCustom } from './components/particles-custom.js'
       //     app.appControllers.particlesController()
       //   })()
       // }
+
+      // Particles custom
+      if (app.appAnchors.particlesCustom.length > 0) {
+        (() => {
+          app.appControllers.particlesCustomController()
+        })()
+      }
 
       // Shoal fish
       if (app.appAnchors.shoalFish.length > 0) {
