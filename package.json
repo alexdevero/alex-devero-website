@@ -73,7 +73,6 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-pxtorem": "^4.0.1",
     "require-dir": "^0.3.2",
-    "three": "^0.88.0",
     "vanilla-lazyload": "10.3.1",
     "vinyl-ftp": "^0.6.0",
     "webpack": "^3.8.1",
