@@ -3,6 +3,8 @@
  */
 
 .page--home {
+  background: #212121;
+
   main {
     position: relative;
   }
@@ -34,7 +36,10 @@
     z-index: 99;
 
     a,
-    .navbar-toggler {
+    .navbar-toggler,
+    .nav-main__label {
+      color: #fff;
+
       &:focus,
       &:hover {
         color: map-get($palette-custom, red);
@@ -55,14 +60,12 @@
 .home__intro {
   z-index: 3;
   padding: 0 18px;
-  color: map-get($palette-custom, black);
+  // color: map-get($palette-custom, black);
   text-align: center;
 
   @include vertical-align;
 
-  h1,
-  h2,
-  h3 {
+  h1 {
     color: map-get($palette-custom, red);
   }
 
@@ -75,7 +78,8 @@
   h2,
   h3 {
     margin-top: 0;
-    color: map-get($palette-custom, black);
+    // color: map-get($palette-custom, black);
+    color: #fff;
 
     span {
       padding-top: 4px;
