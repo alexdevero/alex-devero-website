@@ -5,7 +5,11 @@
 footer {
   position: relative;
   z-index: 3;
-  padding-bottom: 28px;
+  padding-bottom: 24px;
+
+  @media (min-width: 461px) {
+    padding-bottom: 28px;
+  }
 
   a {
     color: #ababab;
