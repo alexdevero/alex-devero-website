@@ -3,7 +3,9 @@
  */
 
 .page--home {
-  background: #212121;
+  &:not(.page--ai) {
+    background: #212121;
+  }
 
   main {
     position: relative;
@@ -38,11 +40,19 @@
     a,
     .navbar-toggler,
     .nav-main__label {
-      color: #fff;
-
       &:focus,
       &:hover {
         color: map-get($palette-custom, red);
+      }
+    }
+  }
+
+  &:not(.page--ai) {
+    header {
+      a,
+      .navbar-toggler,
+      .nav-main__label {
+        color: #fff;
       }
     }
   }
