@@ -5,7 +5,8 @@ import { fadeInCustom } from './fade-in-custom.js'
 const typedjs = () => {
   console.log('TypedJS initiated')
 
-  // docs: https://github.com/mattboldt/typed.js
+  // Docs: https://github.com/mattboldt/typed.js
+  // yarn add typed.js
 
   document.querySelector('html').style.overflow = 'hidden'
 

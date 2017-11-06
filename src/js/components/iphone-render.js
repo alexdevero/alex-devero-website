@@ -1,6 +1,7 @@
 // Example component
 const iphoneRenderer = () => {
   // info: https://webdesign.tutsplus.com/tutorials/a-noobs-guide-to-threejs--cms-28639
+  // yarn add threejs
 
   console.log('iPhone renderer is running')
 

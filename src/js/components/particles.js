@@ -3,7 +3,8 @@
 const particles = () => {
   console.log('Particles initiated')
 
-  // Docs:https://github.com/marcbruederlin/particles.js
+  // Docs: https://github.com/marcbruederlin/particles.js
+  // yarn add particlesjs
 
   Particles.init({
     color: '#212121',

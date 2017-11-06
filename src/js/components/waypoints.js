@@ -4,6 +4,7 @@ const waypoints = () => {
   console.log('Waypoints initiated')
 
   // Docs: http://imakewebthings.com/waypoints/
+  // yarn add waypoints
 
   // setTimeout function is used to let the dom be loaded.
   // Otherwise, icons have no width or height

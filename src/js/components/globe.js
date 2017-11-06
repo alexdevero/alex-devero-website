@@ -10,6 +10,7 @@
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 */
+// yarn add threejs
 
 var DAT = DAT || {}
 
