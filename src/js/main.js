@@ -16,7 +16,7 @@ import { fishSea } from './components/fish-sea.js'
 // import { fontRalewayLoader } from './components/font-raleway-loader.js'
 // import { iphoneRenderer } from './components/iphone-render.js'
 // import { lazyImages } from './components/lazy-images.js'
-import { pageTransition } from './components/page-transition.js'
+// import { pageTransition } from './components/page-transition.js'
 // import { particles } from './components/particles.js'
 import { particlesCustom } from './components/particles-custom.js'
 // import { typedjs } from './components/typedjs.js'
@@ -29,16 +29,16 @@ import { particlesCustom } from './components/particles-custom.js'
 (() => {
   const app = {
     appAnchors: {
-      canvasVisualizationEl: document.querySelectorAll('#canvas-visualization'),
+      // canvasVisualizationEl: document.querySelectorAll('#canvas-visualization'),
       contactForm: document.querySelectorAll('#contactForm'),
       // indexCanvas: document.querySelectorAll('#indexCanvas'),
       // globeCanvas: document.querySelectorAll('#canvas-globe'),
-      iphoneRenderer: document.querySelectorAll('.canvas-iphone'),
+      // iphoneRenderer: document.querySelectorAll('.canvas-iphone'),
       // lazyImages: document.querySelectorAll('.lazy'),
       // mainStyleSheet: document.querySelector('.js-stylesheet-main'),
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
       particles: document.querySelectorAll('.js-particles'),
-      portfolioItem: document.querySelectorAll('.work__item'),
+      // portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
       shoalFish: document.querySelectorAll('.js-shoal-fish-canvas')
       // typedJS: document.querySelectorAll('.js-typed')
@@ -82,9 +82,9 @@ import { particlesCustom } from './components/particles-custom.js'
       //   lazyImages()
       // },
       // Page transition controller
-      pageTransitionController: () => {
-        pageTransition()
-      },
+      // pageTransitionController: () => {
+      //   pageTransition()
+      // },
       // ParticlesJS controller
       // particlesController: () => {
       //   particles()
