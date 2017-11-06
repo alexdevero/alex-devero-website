@@ -19,6 +19,7 @@ import { fishSea } from './components/fish-sea.js'
 // import { pageTransition } from './components/page-transition.js'
 // import { particles } from './components/particles.js'
 import { particlesCustom } from './components/particles-custom.js'
+import { particlesTrails } from './components/particles-trail.js'
 // import { typedjs } from './components/typedjs.js'
 // import { waypoints } from './components/waypoints.js'
 
@@ -39,6 +40,7 @@ import { particlesCustom } from './components/particles-custom.js'
       // modalMessage: document.querySelectorAll('.js-modal-overlay'),
       // particles: document.querySelectorAll('.js-particles'),
       particlesCustom: document.querySelectorAll('.js-particles-custom'),
+      particlesTrails: document.querySelectorAll('.js-particles-trails'),
       // portfolioItem: document.querySelectorAll('.work__item'),
       // slideableContent: document.querySelectorAll('.js-slideable'),
       shoalFish: document.querySelectorAll('.js-shoal-fish-canvas')
@@ -103,6 +105,12 @@ import { particlesCustom } from './components/particles-custom.js'
         }
 
         particlesCustom(canvasDiv, options)
+      },
+      // Particles trails controller
+      particlesTrailsController: () => {
+        setTimeout(() => {
+          particlesTrails()
+        }, 3500)
       },
       shoalFishController: () => {
       //   fishVector()
@@ -225,6 +233,13 @@ import { particlesCustom } from './components/particles-custom.js'
       if (app.appAnchors.particlesCustom.length > 0) {
         (() => {
           app.appControllers.particlesCustomController()
+        })()
+      }
+
+      // Particles trails
+      if (app.appAnchors.particlesTrails.length > 0) {
+        (() => {
+          app.appControllers.particlesTrailsController()
         })()
       }
 
