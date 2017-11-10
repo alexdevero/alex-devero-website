@@ -3,8 +3,8 @@
   "version": "2.6.3",
   "description": "Personal portfolio of Alex Devero",
   "engines": {
-    "node": "8.x",
-    "npm": "5.x"
+    "node": ">=8.x",
+    "npm": ">=5.x"
   },
   "keywords": [
     "ui"
