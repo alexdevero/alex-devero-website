@@ -147,15 +147,32 @@
     // margin-bottom: 32px;
     margin-bottom: 18px;
     font-size: 26px;
+    line-height: 1.718;
     // color: map-get($palette-custom, black);
 
     @media screen and (min-width: 481px) {
       font-size: 28px;
+    }
+
+    @media (max-width: 666px) {
+      br {
+        display: none;
+      }
     }
   }
 
   h3 {
     margin-bottom: 0;
     font-size: 24px;
+  }
+}
+
+html[lang=cs] .page--home {
+  h2 {
+    @media (max-width: 732px) {
+      br {
+        display: none;
+      }
+    }
   }
 }
