@@ -5,9 +5,7 @@
 <!-- Emergence.js: https://github.com/xtianmiller/emergence.js -->
 <script src="./js/plugins/emergence.min.js"></script>
 <script>
-  emergence.init({
-    elemCushion: 0.45
-  });
+  emergence.init();
 </script>
 {{/if}}
 {{#if has-jquery }}
@@ -33,16 +31,8 @@
   };
 </script>
 <!-- Download the script and execute it after lazyLoadOptions is defined -->
-{{!-- <script async src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.2.0/lazyload.min.js"></script> --}}
-<script async>
-  if (window.LazyLoad === undefined) {
-    var lazyloadEl = document.createElement('script');
-    lazyloadEl.async = true;
-    lazyloadEl.src = './js/plugins/lazyload.min.js';
-    var bodyEl = document.querySelector('body');
-    bodyEl.appendChild(lazyloadEl);
-  }
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.2.0/lazyload.min.js"></script>
+{{!-- <script src="./js/plugins/lazyload.min.js"></script> --}}
 {{/if}}
 {{#if has-particlesjs }}
 <!-- Particles.js -->
