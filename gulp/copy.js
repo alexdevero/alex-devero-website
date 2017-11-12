@@ -32,16 +32,17 @@ gulp.task('copy:jsplugins', () => {
   const jspluginsPath = './dist/js/plugins/'
 
   return gulp.src([
-    './src/js/plugins/*',
+    './src/js/plugins/*.js',
     './node_modules/html5shiv/dist/html5shiv.min.js',
-    // './node_modules/three/build/three.min.js',
+    './node_modules/emergence.js/dist/emergence.min.js',
     './node_modules/vanilla-lazyload/dist/lazyload.min.js',
-    'node_modules/particlesjs/dist/particles.min.js'
+    './node_modules/particlesjs/dist/particles.min.js'
+    // './node_modules/three/build/three.min.js',
     // 'node_modules/typed.js/dist/typed.min.js',
     // 'node_modules/waypoints/lib/noframework.waypoints.min.js'
   ])
     .pipe(plumber())
-    .pipe(prune(jspluginsPath))
+    .pipe(prune({ dest: jspluginsPath, ext: ['.js'] }))
     .pipe(changed(jspluginsPath))
     .pipe(gulp.dest(jspluginsPath))
 })
