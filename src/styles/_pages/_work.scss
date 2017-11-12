@@ -110,13 +110,16 @@ main {
     transform: scale(.3) translateZ(0);
     transition: transform .6s cubic-bezier(.58, .3, .005, 1);
 
-    &[data-emergence=visible] {
+    &[data-emergence=visible] { // sass-lint:disable-line no-qualifying-elements
       transform: scale(.9) translateZ(0);
       animation: popup .6s both cubic-bezier(0.580, 0.300, 0.005, 1.000);
     }
+
+    img:not([src]) {
+      visibility: hidden;
+    }
   }
 
-  img[src*='loader.gif'], // sass-lint:disable-line no-qualifying-elements
   .img-loading {
     margin: auto;
     max-width: 42px;
