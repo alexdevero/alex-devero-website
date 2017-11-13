@@ -75,7 +75,6 @@
 .home__intro {
   z-index: 3;
   padding: 0 18px;
-  // color: map-get($palette-custom, black);
   text-align: center;
 
   @include vertical-align;
@@ -84,16 +83,9 @@
     color: map-get($palette-custom, red);
   }
 
-  // h2,
-  // h3,
-  // .intro__icon {
-  //   color: #a9a9a9;
-  // }
-
   h2,
   h3 {
     margin-top: 0;
-    // color: map-get($palette-custom, black);
     color: #fff;
 
     span {
@@ -104,29 +96,7 @@
     }
   }
 
-  // .intro__icon {
-  //   margin-top: 18px;
-  //   font-size: 34px;
-  //   cursor: -webkit-grab;
-  // }
-
-  // .heading-devero {
-  //   font-family: 'Devero', arial, sans-serif;
-  //   font-size: 64px;
-  //   font-weight: 600;
-  //   line-height: 1.4;
-  //
-  //   @media screen and (min-width: 390px) {
-  //     font-size: 96px;
-  //   }
-  //
-  //   @media screen and (min-width: 768px) {
-  //     font-size: 112px;
-  //   }
-  // }
-
   h1 {
-    // margin-bottom: 32px;
     margin-bottom: 14px;
     font-size: 38px;
     font-weight: 700;
@@ -149,11 +119,9 @@
   }
 
   h2 {
-    // margin-bottom: 32px;
     margin-bottom: 18px;
     font-size: 26px;
     line-height: 1.718;
-    // color: map-get($palette-custom, black);
 
     @media screen and (min-width: 481px) {
       font-size: 28px;
