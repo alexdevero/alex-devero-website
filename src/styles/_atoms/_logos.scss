@@ -15,6 +15,7 @@
   margin-top: 64px;
 }
 
+.logos--tech-stack,
 .logos--companies,
 .logos--publications {
   .col-sm-6 {
@@ -26,6 +27,7 @@
   }
 }
 
+.logos--tech-stack,
 .logos--companies {
   .col-sm-6 {
     &:nth-of-type(n+3) {
@@ -33,6 +35,12 @@
         margin-top: 56px;
       }
     }
+  }
+}
+
+.logos--tech-stack {
+  .logo {
+    max-height: 100px;
   }
 }
 
@@ -58,6 +66,12 @@
   width: 100%;
   max-width: 125px;
   filter: grayscale(100);
+  object-fit: contain;
+}
+
+.logo--git,
+.logo--bootstrap {
+  width: auto;
 }
 
 .logo--spacebar {
