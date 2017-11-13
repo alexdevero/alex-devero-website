@@ -53,6 +53,11 @@
       .navbar-toggler,
       .nav-main__label {
         color: #fff;
+
+        &:focus,
+        &:hover {
+          color: map-get($palette-custom, red);
+        }
       }
     }
   }
