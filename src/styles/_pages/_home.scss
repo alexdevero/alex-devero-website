@@ -79,10 +79,6 @@
 
   @include vertical-align;
 
-  h1 {
-    color: map-get($palette-custom, red);
-  }
-
   h2,
   h3 {
     margin-top: 0;
@@ -97,11 +93,12 @@
   }
 
   h1 {
-    margin-bottom: 14px;
+    margin-bottom: 0;
     font-size: 38px;
     font-weight: 700;
     line-height: 1.4;
     text-transform: uppercase;
+    color: map-get($palette-custom, red);
 
     @media screen and (min-width: 481px) {
       font-size: 48px;
