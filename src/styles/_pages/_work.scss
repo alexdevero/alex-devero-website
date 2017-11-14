@@ -8,15 +8,15 @@
   }
 
   25% {
-    transform: scale3d(1.1, 0.9, 1) translateZ(0);
+    transform: scale3d(1.1, .9, 1) translateZ(0);
   }
 
   50% {
-    transform: scale3d(0.95, 1.05, 1) translateZ(0);
+    transform: scale3d(.95, 1.05, 1) translateZ(0);
   }
 
   75% {
-    transform: scale3d(1.02, 0.98, 1) translateZ(0);
+    transform: scale3d(1.02, .98, 1) translateZ(0);
   }
 
   100% {
@@ -112,11 +112,13 @@ main {
 
     &[data-emergence=visible] { // sass-lint:disable-line no-qualifying-elements
       transform: scale(.9) translateZ(0);
-      animation: popup .6s both cubic-bezier(0.580, 0.300, 0.005, 1.000);
+      animation: popup .6s both cubic-bezier(.58, .3, .005, 1);
     }
 
-    img:not([src]) {
-      visibility: hidden;
+    img {
+      &:not([src]) {
+        visibility: hidden;
+      }
     }
   }
 

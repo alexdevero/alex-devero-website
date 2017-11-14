@@ -5,6 +5,21 @@
 .page--home {
   &:not(.page--ai) {
     background: #212121;
+
+    // sass-lint:disable nesting-depth
+    header {
+      a,
+      .navbar-toggler,
+      .nav-main__label {
+        color: #fff;
+
+        &:focus,
+        &:hover {
+          color: map-get($palette-custom, red);
+        }
+      }
+    }
+    // sass-lint:enable nesting-depth
   }
 
   main {
@@ -43,21 +58,6 @@
       &:focus,
       &:hover {
         color: map-get($palette-custom, red);
-      }
-    }
-  }
-
-  &:not(.page--ai) {
-    header {
-      a,
-      .navbar-toggler,
-      .nav-main__label {
-        color: #fff;
-
-        &:focus,
-        &:hover {
-          color: map-get($palette-custom, red);
-        }
       }
     }
   }
@@ -137,11 +137,13 @@
   }
 }
 
-html[lang=cs] .page--home {
-  h2 {
-    @media (max-width: 732px) {
-      br {
-        display: none;
+html[lang=cs] { // sass-lint:disable-line no-qualifying-elements
+  .page--home {
+    h2 {
+      @media (max-width: 732px) {
+        br {
+          display: none;
+        }
       }
     }
   }
