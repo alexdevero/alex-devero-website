@@ -97,11 +97,11 @@ import { particlesTrails } from './components/particles-trail.js'
         const canvasDiv = document.querySelector('.js-particles-custom')
 
         const options = {
-          particleColor: '#aaa',
           // background: 'https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg',
+          density: 'high',
           interactive: true,
-          speed: 'medium',
-          density: 'high'
+          particleColor: '#aaa',
+          speed: 'medium'
         }
 
         particlesCustom(canvasDiv, options)
