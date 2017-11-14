@@ -12,7 +12,8 @@ footer {
   }
 
   a {
-    color: #ababab;
+    display: block;
+    color: rgba(171, 171, 171, .75);
 
     &:focus,
     &:hover {
