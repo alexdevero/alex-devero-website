@@ -107,12 +107,12 @@ main {
   img {
     width: 100%;
     max-width: 480px;
-    transform: scale(.3) translateZ(0);
-    transition: transform .6s cubic-bezier(.58, .3, .005, 1);
+    transform: scale(.73) translateZ(0);
+    transition: transform .9s cubic-bezier(.58, .3, .005, 1);
 
     &[data-emergence=visible] { // sass-lint:disable-line no-qualifying-elements
-      transform: scale(.9) translateZ(0);
-      animation: popup .6s both cubic-bezier(.58, .3, .005, 1);
+      transform: scale(1) translateZ(0);
+      // animation: popup .9s both cubic-bezier(.58, .3, .005, 1);
     }
 
     img {
