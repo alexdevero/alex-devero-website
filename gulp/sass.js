@@ -29,11 +29,11 @@ gulp.task('sass', () => {
 
   const cssnextConfig = {
     browsers: [
-      'Firefox >= 48',
-      'Chrome >= 54',
+      'Firefox >= 52',
+      'Chrome >= 55',
       'ie >= 8',
       'last 4 versions',
-      'Safari >= 8'
+      'Safari >= 9'
     ]
   }
 
