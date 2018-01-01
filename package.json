@@ -1,6 +1,6 @@
 {
   "name": "alex-devero-portfolio",
-  "version": "2.6.4",
+  "version": "2.6.5",
   "description": "Personal portfolio of Alex Devero",
   "engines": {
     "node": ">=8.x",
