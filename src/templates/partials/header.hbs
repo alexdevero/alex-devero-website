@@ -36,8 +36,12 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link{{#if active_ai}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.ai-cs }}}{{else}}{{{ nav.links.ai }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.ai-cs }}}{{else}}{{{ nav.titles.ai }}}{{/if}}">AI</a>
+            <a class="nav-link{{#if active_lab}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.lab-cs }}}{{else}}{{{ nav.links.lab }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.lab-cs }}}{{else}}{{{ nav.titles.lab }}}{{/if}}">{{#if lang_cs}}Lab{{else}}Lab{{/if}}</a>
           </li>
+
+          {{!-- <li class="nav-item">
+            <a class="nav-link{{#if active_ai}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.ai-cs }}}{{else}}{{{ nav.links.ai }}}{{/if}}" title="{{#if lang_cs}}{{{ nav.titles.ai-cs }}}{{else}}{{{ nav.titles.ai }}}{{/if}}">AI</a>
+          </li> --}}
 
           <!-- <li class="nav-item">
             <a class="nav-link {{#if active_faq}} nav-link--active{{/if}}" href="{{#if lang_cs}}{{{ nav.links.faq-cs }}}{{else}}{{{ nav.links.faq }}}{{/if}}" title="Frequently asked questions">FAQ</a>
