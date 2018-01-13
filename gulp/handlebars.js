@@ -14,7 +14,7 @@ const hbPath = './dist'
 
 // Compile handlebars to HTML
 gulp.task('hb:dev', () => {
-  return gulp.src('./src/templates/*.hbs')
+  return gulp.src(['./src/templates/*.hbs', './src/templates/pages-experiments/*.hbs'])
     .pipe(plumber())
     .pipe(prune({ dest: hbPath, ext: ['.hbs', '.html'] }))
     .pipe(changed(hbPath))
@@ -34,7 +34,7 @@ gulp.task('hb:dev', () => {
 
 // Compile handlebars to HTML, minify HTML
 gulp.task('hb:prod', () => {
-  return gulp.src('./src/templates/*.hbs')
+  return gulp.src(['./src/templates/*.hbs', './src/templates/pages-experiments/*.hbs'])
     .pipe(plumber())
     .pipe(prune({ dest: hbPath, ext: ['.hbs', '.html'] }))
     .pipe(changed(hbPath))
