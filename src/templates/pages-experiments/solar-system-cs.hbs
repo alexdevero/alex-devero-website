@@ -8,7 +8,7 @@
 
   {{> head active_solar_system=true lang_cs=true }}
 </head>
-<body class="page--home page--solar-system opening view-3D zoom-large">
+<body class="page--home page--solar-system opening view--3d zoom--large">
   {{> browser-notification }}
 
   {{> manifest }}
@@ -17,13 +17,13 @@
     {{> header active_solar_system=true lang_cs=true }}
 
     <section id="sec__main" class="sec__main hero hero--main hero--big">
-      <div class="system__universe scale-stretched view">
+      <div class="system__universe scale--stretched view">
         <div class="system__galaxy">
           <div class="system__solar-system">
             <div class="system__mercury orbit">
               <div class="pos">
                 <div class="planet">
-                  <dl class="infos">
+                  <dl class="planet__info">
                     <dt>Mercury</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -34,7 +34,7 @@
             <div class="system__venus orbit">
               <div class="pos">
                 <div class="planet">
-                  <dl class="infos">
+                  <dl class="planet__info">
                     <dt>Venus</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="planet">
-                  <dl class="infos">
+                  <dl class="planet__info">
                     <dt>Earth</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -62,7 +62,7 @@
             <div class="system__mars orbit">
               <div class="pos">
                 <div class="planet">
-                  <dl class="infos">
+                  <dl class="planet__info">
                     <dt>Mars</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -73,7 +73,7 @@
             <div class="system__jupiter orbit">
               <div class="pos">
                 <div class="planet">
-                  <dl class="infos">
+                  <dl class="planet__info">
                     <dt>Jupiter</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -84,8 +84,8 @@
             <div class="system__saturn orbit">
               <div class="pos">
                 <div class="planet">
-                  <div class="ring"></div>
-                  <dl class="infos">
+                  <div class="planet__ring"></div>
+                  <dl class="planet__info">
                     <dt>Saturn</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -96,7 +96,7 @@
             <div class="system__uranus orbit">
               <div class="pos">
                 <div class="planet">
-                  <dl class="infos">
+                  <dl class="planet__info">
                     <dt>Uranus</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -107,7 +107,7 @@
             <div class="system__neptune orbit">
               <div class="pos">
                 <div class="planet">
-                  <dl class="infos">
+                  <dl class="planet__info">
                     <dt>Neptune</dt>
                     <dd><span></span></dd>
                   </dl>
@@ -116,7 +116,7 @@
             </div>
 
             <div class="system__sun">
-              <dl class="infos">
+              <dl class="planet__info">
                 <dt>Sun</dt>
                 <dd><span></span></dd>
               </dl>
