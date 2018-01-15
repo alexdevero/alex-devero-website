@@ -2,15 +2,74 @@
  * Solar system
  */
 
+@keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes suborbit {
+  0% {
+    transform: rotateX(90deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(90deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes invert {
+  0% {
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
 .system__universe {
   position: absolute;
   z-index: 1;
   overflow: hidden;
   width: 100%;
   height: 100%;
+  background-image: url(../images/experiments/solar-system/bcg-universe.png);
   background-repeat: no-repeat;
   background-position: center 40%;
   background-size: cover;
+
+  @media (max-width: 299px) {
+    font-size: 20%;
+  }
+
+  @media (min-width: 300px) {
+    font-size: 24%;
+  }
+
+  @media (min-width: 500px) {
+    font-size: 36%;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 44%;
+  }
+
+  @media (min-width: 760px) {
+    font-size: 58%;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 73%;
+  }
+
+  // @media (min-width: 1300px) {
+  //   font-size: 100%;
+  // }
 }
 
 .system__galaxy {
@@ -24,8 +83,17 @@
   position: absolute;
   width: 100%;
   height: 100%;
-
   transform-style: preserve-3d;
+
+  @media screen and (min-width: 1600px) {
+    .zoom--close {
+      .scale--d {
+        & {
+          margin-left: -120%;
+        }
+      }
+    }
+  }
 }
 
 .system__orbit {
@@ -37,7 +105,6 @@
   animation-name: orbit;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-
   transform-style: preserve-3d;
 
   .system__orbit {
@@ -55,7 +122,6 @@
   animation-name: invert;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-
   transform-style: preserve-3d;
 }
 
@@ -166,36 +232,6 @@
 
 /* --------------------------------------------------------------------------- animations */
 
-@keyframes orbit {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateZ(-360deg);
-  }
-}
-
-@keyframes suborbit {
-  0% {
-    transform: rotateX(90deg) rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateX(90deg) rotateZ(-360deg);
-  }
-}
-
-@keyframes invert {
-  0% {
-    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
-  }
-}
-
 /* --------------------------------------------------------------------------- opening */
 
 .view--3d {
@@ -238,8 +274,10 @@
   }
 }
 
-.system__universe.opening .system__sun {
-  box-shadow: 0 0 0 rgba(255, 160, 60, 0);
+.system__universe.opening {
+  .system__sun {
+    box-shadow: 0 0 0 rgba(255, 160, 60, 0);
+  }
 }
 
 /* --------------------------------------------------------------------------- 2D view */
@@ -274,30 +312,42 @@
   }
 
   &.view--2d {
-    .scale--stretched .system__solar-system {
-      font-size: 26%;
+    .scale--stretched {
+      .system__solar-system {
+        font-size: 26%;
+      }
     }
 
-    .scale--d .system__solar-system {
-      font-size: 22%;
+    .scale--d {
+      .system__solar-system {
+        font-size: 22%;
+      }
     }
 
-    .scale--s .system__solar-system {
-      font-size: 7%;
+    .scale--s {
+      .system__solar-system {
+        font-size: 7%;
+      }
     }
   }
 
   &.view--3d {
-    .scale--stretched .system__solar-system {
-      font-size: 62%;
+    .scale--stretched {
+      .system__solar-system {
+        font-size: 62%;
+      }
     }
 
-    .scale--d .system__solar-system {
-      font-size: 48%;
+    .scale--d {
+      .system__solar-system {
+        font-size: 48%;
+      }
     }
 
-    .scale--s .system__solar-system {
-      font-size: 14%;
+    .scale--s {
+      .system__solar-system {
+        font-size: 14%;
+      }
     }
   }
 }
@@ -310,36 +360,50 @@
     font-size: 100%;
   }
 
-  .scale--stretched .system__solar-system {
-    margin-left: -100%;
+  .scale--stretched {
+    .system__solar-system {
+      margin-left: -100%;
+    }
   }
 
-  .scale--d .system__solar-system {
-    margin-left: -106%;
+  .scale--d {
+    .system__solar-system {
+      margin-left: -106%;
+    }
   }
 
   &.view--2d {
-    .scale--d .system__solar-system {
-      font-size: 84%;
+    .scale--d {
+      .system__solar-system {
+        font-size: 84%;
+      }
     }
 
-    .scale--s .system__solar-system {
-      font-size: 40%;
+    .scale--s {
+      .system__solar-system {
+        font-size: 40%;
+      }
     }
   }
 
   &.view--3d {
-    .scale--d .system__solar-system {
-      font-size: 84%;
+    .scale--d {
+      .system__solar-system {
+        font-size: 84%;
+      }
     }
 
-    .scale--s .system__solar-system {
-      font-size: 40%;
+    .scale--s {
+      .system__solar-system {
+        font-size: 40%;
+      }
     }
   }
 
-  .scale--s .system__solar-system {
-    margin-left: -145%;
+  .scale--s {
+    .system__solar-system {
+      margin-left: -145%;
+    }
   }
 
   .system__orbit,
@@ -352,17 +416,21 @@
     animation-play-state: paused !important;
   }
 
-  &.view--2d .system__planet,
-  &.view--2d .system__moon {
-    transform: rotateX(0deg);
+  &.view--2d {
+    .system__planet,
+    .system__moon {
+      transform: rotateX(0deg);
+    }
   }
 
-  &.view--3d .system__planet {
-    transform: rotateX(-90deg);
-  }
+  &.view--3d {
+    .system__planet {
+      transform: rotateX(-90deg);
+    }
 
-  &.view--3d .system__moon {
-    transform: rotateX(90deg);
+    .system__moon {
+      transform: rotateX(90deg);
+    }
   }
 
   .pos {
@@ -444,8 +512,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------- planets sizes */
-
 /* --------------------------------------------------------------------------- stretched sizes */
 
 .scale--stretched {
@@ -453,12 +519,16 @@
     font-size: 24em;
   }
 
-  .system__mercury .system__planet {
-    font-size: 1.5em;
+  .system__mercury {
+    .system__planet {
+      font-size: 1.5em;
+    }
   }
 
-  .system__venus .system__planet {
-    font-size: 3.72em;
+  .system__venus {
+    .system__planet {
+      font-size: 3.72em;
+    }
   }
 
   .system__earth {
@@ -471,24 +541,34 @@
     }
   }
 
-  .system__mars .system__planet {
-    font-size: 2.9em;
+  .system__mars {
+    .system__planet {
+      font-size: 2.9em;
+    }
   }
 
-  .system__jupiter .system__planet {
-    font-size: 12em;
+  .system__jupiter {
+    .system__planet {
+      font-size: 12em;
+    }
   }
 
-  .system__saturn .system__planet {
-    font-size: 10.8em;
+  .system__saturn {
+    .system__planet {
+      font-size: 10.8em;
+    }
   }
 
-  .system__uranus .system__planet {
-    font-size: 4.68em;
+  .system__uranus {
+    .system__planet {
+      font-size: 4.68em;
+    }
   }
 
-  .system__neptune .system__planet {
-    font-size: 4.9em;
+  .system__neptune {
+    .system__planet {
+      font-size: 4.9em;
+    }
   }
 }
 
@@ -507,12 +587,16 @@
     font-size: 41.73048em;
   }
 
-  .system__mercury .system__planet {
-    font-size: .14634em;
+  .system__mercury {
+    .system__planet {
+      font-size: .14634em;
+    }
   }
 
-  .system__venus .system__planet {
-    font-size: .36306em;
+  .system__venus {
+    .system__planet {
+      font-size: .36306em;
+    }
   }
 
   .system__earth {
@@ -525,24 +609,34 @@
     }
   }
 
-  .system__mars .system__planet {
-    font-size: .20334em;
+  .system__mars {
+    .system__planet {
+      font-size: .20334em;
+    }
   }
 
-  .system__jupiter .system__planet {
-    font-size: 4.19466em;
+  .system__jupiter {
+    .system__planet {
+      font-size: 4.19466em;
+    }
   }
 
-  .system__saturn .system__planet {
-    font-size: 3.49392em;
+  .system__saturn {
+    .system__planet {
+      font-size: 3.49392em;
+    }
   }
 
-  .system__uranus .system__planet {
-    font-size: 1.52172em;
+  .system__uranus {
+    .system__planet {
+      font-size: 1.52172em;
+    }
   }
 
-  .system__neptune .system__planet {
-    font-size: 1.47732em;
+  .system__neptune {
+    .system__planet {
+      font-size: 1.47732em;
+    }
   }
 }
 
@@ -551,12 +645,16 @@
     font-size: 41.73048em;
   }
 
-  .system__mercury .system__planet {
-    font-size: .14634em;
+  .system__mercury {
+    .system__planet {
+      font-size: .14634em;
+    }
   }
 
-  .system__venus .system__planet {
-    font-size: .36306em;
+  .system__venus {
+    .system__planet {
+      font-size: .36306em;
+    }
   }
 
   .system__earth {
@@ -569,24 +667,34 @@
     }
   }
 
-  .system__mars .system__planet {
-    font-size: .20334em;
+  .system__mars {
+    .system__planet {
+      font-size: .20334em;
+    }
   }
 
-  .system__jupiter .system__planet {
-    font-size: 4.19466em;
+  .system__jupiter {
+    .system__planet {
+      font-size: 4.19466em;
+    }
   }
 
-  .system__saturn .system__planet {
-    font-size: 3.49392em;
+  .system__saturn {
+    .system__planet {
+      font-size: 3.49392em;
+    }
   }
 
-  .system__uranus .system__planet {
-    font-size: 1.52172em;
+  .system__uranus {
+    .system__planet {
+      font-size: 1.52172em;
+    }
   }
 
-  .system__neptune .system__planet {
-    font-size: 1.47732em;
+  .system__neptune {
+    .system__planet {
+      font-size: 1.47732em;
+    }
   }
 }
 
@@ -597,12 +705,16 @@
     font-size: 417.3048em;
   }
 
-  .system__mercury .system__planet {
-    font-size: 1.4634em;
+  .system__mercury {
+    .system__planet {
+      font-size: 1.4634em;
+    }
   }
 
-  .system__venus .system__planet {
-    font-size: 3.6306em;
+  .system__venus {
+    .system__planet {
+      font-size: 3.6306em;
+    }
   }
 
   .system__earth {
@@ -615,24 +727,34 @@
     }
   }
 
-  .system__mars .system__planet {
-    font-size: 2.0334em;
+  .system__mars {
+    .system__planet {
+      font-size: 2.0334em;
+    }
   }
 
-  .system__jupiter .system__planet {
-    font-size: 41.9466em;
+  .system__jupiter {
+    .system__planet {
+      font-size: 41.9466em;
+    }
   }
 
-  .system__saturn .system__planet {
-    font-size: 34.9392em;
+  .system__saturn {
+    .system__planet {
+      font-size: 34.9392em;
+    }
   }
 
-  .system__uranus .system__planet {
-    font-size: 15.2172em;
+  .system__uranus {
+    .system__planet {
+      font-size: 15.2172em;
+    }
   }
 
-  .system__neptune .system__planet {
-    font-size: 14.7732em;
+  .system__neptune {
+    .system__planet {
+      font-size: 14.7732em;
+    }
   }
 }
 
@@ -767,11 +889,13 @@
   }
 
   /* Moon */
-  .system__earth .system__orbit {
-    margin-top: -.5em;
-    margin-left: -.5em;
-    width: 1em;
-    height: 1em;
+  .system__earth {
+    .system__orbit {
+      margin-top: -.5em;
+      margin-left: -.5em;
+      width: 1em;
+      height: 1em;
+    }
   }
 }
 
@@ -835,11 +959,13 @@
   }
 
   /* Moon */
-  .system__earth .system__orbit {
-    margin-top: -.5em;
-    margin-left: -.5em;
-    width: 1em;
-    height: 1em;
+  .system__earth {
+    .system__orbit {
+      margin-top: -.5em;
+      margin-left: -.5em;
+      width: 1em;
+      height: 1em;
+    }
   }
 }
 
@@ -890,10 +1016,14 @@
   }
 }
 
-.scaled.view--2d .system__mercury .system__planet,
-.scaled.view--3d .system__mercury .system__planet {
-  /* Right */
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__mercury {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- venus ; pos: Left */
@@ -1409,81 +1539,65 @@
 }
 
 .system__universe {
-  background-image: url(../images/experiments/solar-system/bcg-universe.png);
 
-  @media (max-width: 299px) {
-    font-size: 20%;
-  }
-
-  @media (min-width: 300px) {
-    font-size: 24%;
-  }
-
-  @media (min-width: 500px) {
-    font-size: 36%;
-  }
-
-  @media (min-width: 600px) {
-    font-size: 44%;
-  }
-
-  @media (min-width: 760px) {
-    font-size: 58%;
-  }
-
-  @media (min-width: 1000px) {
-    font-size: 73%;
-  }
-
-  // @media (min-width: 1300px) {
-  //   font-size: 100%;
-  // }
 }
 
 .system__sun {
   background-image: url(../images/experiments/solar-system/planet-sun.png);
 }
 
-.system__mercury .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-mercury.png);
+.system__mercury {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-mercury.png);
+  }
 }
 
-.system__venus .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-venus.png);
+.system__venus {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-venus.png);
+  }
 }
 
-.system__earth .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-earth.png);
+.system__earth {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-earth.png);
+  }
 }
 
-.system__earth .system__moon {
-  background-color: white;
+.system__earth {
+  .system__moon {
+    background-color: white;
+  }
 }
 
-.system__mars .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-mars.png);
+.system__mars {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-mars.png);
+  }
 }
 
-.system__jupiter .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-saturn.png);
+.system__jupiter {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-saturn.png);
+  }
 }
 
-.system__saturn .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-saturn.png);
+.system__saturn {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-saturn.png);
+  }
 }
 
-.system__uranus .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-uranus.png);
+.system__uranus {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-uranus.png);
+  }
 }
 
-.system__neptune .system__planet {
-  background-image: url(../images/experiments/solar-system/planet-neptune.png);
+.system__neptune {
+  .system__planet {
+    background-image: url(../images/experiments/solar-system/planet-neptune.png);
+  }
 }
 
 /* --------------------------------------------------------------------------- responsive styles */
-
-@media screen and (min-width: 1600px) {
-  .zoom--close .scale--d .system__solar-system {
-    margin-left: -120%;
-  }
-}
