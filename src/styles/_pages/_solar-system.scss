@@ -230,8 +230,6 @@
   z-index: 1;
 }
 
-/* --------------------------------------------------------------------------- animations */
-
 /* --------------------------------------------------------------------------- opening */
 
 .view--3d {
@@ -411,9 +409,9 @@
   .system__planet,
   .satelite,
   .planet__ring {
-    animation: none !important;
-    animation-duration: 0s !important;
-    animation-play-state: paused !important;
+    animation: none;
+    animation-duration: 0s;
+    animation-play-state: paused;
   }
 
   &.view--2d {
@@ -434,8 +432,8 @@
   }
 
   .pos {
-    top: 50% !important;
-    left: 100% !important;
+    top: 50%;
+    left: 100%;
   }
 }
 
@@ -576,9 +574,8 @@
 
 /*
 (planets radius * 2) * ratio
+$distanceScaleRatio:   0.000075em;
 */
-
-/*$distanceScaleRatio:   0.000075em;*/
 
 /* --------------------------------------------------------------------------- planets distance scale sizes */
 
@@ -1071,10 +1068,14 @@
   }
 }
 
-.scaled.view--2d .system__venus .system__planet,
-.scaled.view--3d .system__venus .system__planet {
-  /* Right */
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__venus {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- earth ; pos: Right */
@@ -1129,10 +1130,14 @@
   }
 }
 
-.scaled.view--2d .system__earth .system__planet,
-.scaled.view--3d .system__earth .system__planet {
-  /* Right */
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__earth {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- mars ; pos: Bottom */
@@ -1180,10 +1185,14 @@
   }
 }
 
-.scaled.view--2d .system__mars .system__planet,
-.scaled.view--3d .system__mars .system__planet {
-  /* Right */
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__mars {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- jupiter ; pos: Right */
@@ -1231,10 +1240,14 @@
   }
 }
 
-.scaled.view--2d .system__jupiter .system__planet,
-.scaled.view--3d .system__jupiter .system__planet {
-  /* Right */
-  box-shadow: inset -16px 0 5px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__jupiter {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -16px 0 5px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- saturn ; pos: Left */
@@ -1282,10 +1295,14 @@
   }
 }
 
-.scaled.view--2d .system__saturn .system__planet,
-.scaled.view--3d .system__saturn .system__planet {
-  /* Right */
-  box-shadow: inset -16px 0 5px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__saturn {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -16px 0 5px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- saturn ring */
@@ -1328,9 +1345,13 @@
   }
 }
 
-.scaled.view--2d .system__saturn .planet__ring,
-.scaled.view--3d .system__saturn .planet__ring {
-  box-shadow: inset 16px 0 4px rgba(20, 40, 50, .6);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__saturn {
+    .planet__ring {
+      box-shadow: inset 16px 0 4px rgba(20, 40, 50, .6);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- uranus ; pos: Left */
@@ -1378,10 +1399,14 @@
   }
 }
 
-.scaled.view--2d .system__uranus .system__planet,
-.scaled.view--3d .system__uranus .system__planet {
-  /* Right */
-  box-shadow: inset -8px 0 5px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__uranus {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -8px 0 5px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- neptune ; pos: Top */
@@ -1429,10 +1454,14 @@
   }
 }
 
-.scaled.view--2d .system__neptune .system__planet,
-.scaled.view--3d .system__neptune .system__planet {
-  /* Right */
-  box-shadow: inset -12px 0 5px rgba(0, 0, 0, .5);
+.scaled.view--2d,
+.scaled.view--3d {
+  .system__neptune {
+    .system__planet {
+      /* Right */
+      box-shadow: inset -12px 0 5px rgba(0, 0, 0, .5);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- DEBUG */
@@ -1533,13 +1562,8 @@
 }
 
 /* --------------------------------------------------------------------------- images */
-
 .page--solar-system:not(.page--ai) {
   background-image: url(../images/experiments/solar-system/bcg-body-space.png);
-}
-
-.system__universe {
-
 }
 
 .system__sun {
@@ -1599,5 +1623,3 @@
     background-image: url(../images/experiments/solar-system/planet-neptune.png);
   }
 }
-
-/* --------------------------------------------------------------------------- responsive styles */
