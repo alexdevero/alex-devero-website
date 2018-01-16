@@ -119,7 +119,7 @@ rules:
   nesting-depth:
     - 2
     -
-      max-depth: 2
+      max-depth: 3
   property-sort-order: 0
   pseudo-element: 0
   quotes:
