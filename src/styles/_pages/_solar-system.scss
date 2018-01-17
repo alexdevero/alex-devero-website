@@ -32,6 +32,61 @@
   }
 }
 
+/* images */
+.page--solar-system {
+  &:not(.page--ai) {
+    background-image: url(../images/experiments/solar-system/bcg-body-space.png);
+  }
+}
+
+
+.system__solar-system,
+.system__sun,
+.system__orbit,
+.pos,
+.system__planet,
+.planet__ring {
+  transition-timing-function: ease-in-out;
+  transition-duration: .8s;
+}
+
+.system__solar-system,
+.system__orbit,
+.system__planet,
+.planet__ring {
+  transition-property: width, height, top, left, margin-left, margin-top, webkit-transform;
+}
+
+.system__solar-system,
+.system__sun,
+.system__planet,
+.planet__ring {
+  transition-delay: 0s;
+}
+
+.opening {
+  .system__solar-system,
+  .system__sun,
+  .system__orbit,
+  .pos,
+  .system__planet,
+  .planet__ring,
+  .planet__info {
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+
+  .pos {
+    transition-delay: 0s;
+  }
+
+  .system__solar-system {
+    .planet__info {
+      display: none;
+    }
+  }
+}
+
 .system__universe {
   position: absolute;
   z-index: 1;
@@ -706,7 +761,6 @@ $distanceScaleRatio:   0.000075em;
     .system__orbit,
     .pos,
     .system__planet,
-    .satelite,
     .planet__ring {
       transition-duration: 4s;
     }
@@ -852,7 +906,6 @@ $distanceScaleRatio:   0.000075em;
   .system__orbit,
   .pos,
   .system__planet,
-  .satelite,
   .planet__ring {
     animation: none;
     animation-duration: 0s;
@@ -1360,7 +1413,7 @@ $distanceScaleRatio:   0.000075em;
 .system__planet,
 .system__orbit,
 .planet__ring {
-  animation-duration: 20s !important;
+  animation-duration: 20s;
 } */
 
 /* navigation styles */
@@ -1389,61 +1442,3 @@ $distanceScaleRatio:   0.000075em;
   border: 1px solid rgba(255, 255, 255, .8);
 }
 // sass-lint:enable force-element-nesting
-
-.system__solar-system,
-.system__sun,
-.system__orbit,
-.pos,
-.system__planet,
-.satelite,
-.planet__ring {
-  transition-timing-function: ease-in-out;
-  transition-duration: .8s;
-}
-
-.system__solar-system,
-.system__orbit,
-.system__planet,
-.satelite,
-.planet__ring {
-  transition-property: width, height, top, left, margin-left, margin-top, webkit-transform;
-}
-
-.system__solar-system,
-.system__sun,
-.system__planet,
-.satelite,
-.planet__ring {
-  transition-delay: 0s;
-}
-
-.opening {
-  .system__solar-system,
-  .system__sun,
-  .system__orbit,
-  .pos,
-  .system__planet,
-  .satelite,
-  .planet__ring,
-  .planet__info {
-    transition-delay: 0s;
-    transition-duration: 0s;
-  }
-
-  .pos {
-    transition-delay: 0s;
-  }
-
-  .system__solar-system {
-    .planet__info {
-      display: none;
-    }
-  }
-}
-
-/* images */
-.page--solar-system {
-  &:not(.page--ai) {
-    background-image: url(../images/experiments/solar-system/bcg-body-space.png);
-  }
-}
