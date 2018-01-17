@@ -1346,47 +1346,23 @@ $distanceScaleRatio:   0.000075em;
 .scaled {
   &.view--2d,
   &.view--3d {
-    .system__mercury {
-      .system__planet {
-        /* Right */
-        box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
-      }
-    }
-
-    .system__venus {
-      .system__planet {
-        /* Right */
-        box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
-      }
-    }
-
-    .system__earth {
-      .system__planet {
-        /* Right */
-        box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
-      }
-    }
-
+    .system__mercury,
+    .system__venus,
+    .system__earth,
     .system__mars {
       .system__planet {
-        /* Right */
         box-shadow: inset -4px 0 2px rgba(0, 0, 0, .5);
       }
     }
 
-    .system__jupiter {
+    .system__jupiter,
+    .system__saturn {
       .system__planet {
-        /* Right */
         box-shadow: inset -16px 0 5px rgba(0, 0, 0, .5);
       }
     }
 
     .system__saturn {
-      .system__planet {
-        /* Right */
-        box-shadow: inset -16px 0 5px rgba(0, 0, 0, .5);
-      }
-
       .planet__ring {
         box-shadow: inset 16px 0 4px rgba(20, 40, 50, .6);
       }
@@ -1394,14 +1370,12 @@ $distanceScaleRatio:   0.000075em;
 
     .system__uranus {
       .system__planet {
-        /* Right */
         box-shadow: inset -8px 0 5px rgba(0, 0, 0, .5);
       }
     }
 
     .system__neptune {
       .system__planet {
-        /* Right */
         box-shadow: inset -12px 0 5px rgba(0, 0, 0, .5);
       }
     }
