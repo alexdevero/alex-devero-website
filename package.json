@@ -37,11 +37,11 @@
     "test": "set NODE_ENV=test && gulp test"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.1",
     "cssnano": "^3.10.0",
     "emergence.js": "^1.1.2",
     "font-awesome": "^4.7.0",
