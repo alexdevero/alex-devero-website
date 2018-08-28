@@ -5,6 +5,12 @@ import plumber from 'gulp-plumber'
 import webpack from 'webpack'
 import webpackStream from 'webpack-stream'
 
+let environment
+
+if (process.env.NODE_ENV !== undefined) {
+  environment = process.env.NODE_ENV.trim()
+}
+
 // Minify JavaScript files
 gulp.task('js', () => {
   // const babel = require('gulp-babel')
@@ -16,6 +22,7 @@ gulp.task('js', () => {
     output: {
       filename: 'main.js'
     },
+    mode: environment === 'development' ? 'development' : 'production',
     module: {
       rules: [
         {
