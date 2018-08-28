@@ -17,7 +17,7 @@ gulp.task('js', () => {
       filename: 'main.js'
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.js$/,
           loader: 'babel-loader'
