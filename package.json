@@ -67,7 +67,7 @@
     "gulp-util": "^3.0.8",
     "html5shiv": "^3.7.3",
     "imagemin-pngquant": "^5.1.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "normalize.css": "^8.0.0",
     "particlesjs": "^2.2.3",
     "postcss-assets": "^5.0.0",
