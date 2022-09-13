@@ -56,7 +56,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-prune": "^0.2.0",
+    "gulp-prune": "^2.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-rimraf": "^0.2.2",
     "gulp-sass": "^4.0.2",
