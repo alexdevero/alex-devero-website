@@ -63,7 +63,7 @@
     "gulp-sass-lint": "^1.4.0",
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
+    "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "html5shiv": "^3.7.3",
     "imagemin-pngquant": "^5.1.0",
