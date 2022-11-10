@@ -51,7 +51,7 @@
     "gulp-csscomb": "^3.0.8",
     "gulp-eslint": "^5.0.0",
     "gulp-hb": "^7.0.1",
-    "gulp-htmlhint": "^2.2.1",
+    "gulp-htmlhint": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.0",
