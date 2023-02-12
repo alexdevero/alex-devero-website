@@ -47,7 +47,7 @@
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
-    "gulp-changed": "^3.2.0",
+    "gulp-changed": "^4.0.3",
     "gulp-csscomb": "^3.0.8",
     "gulp-eslint": "^5.0.0",
     "gulp-hb": "^7.0.1",
